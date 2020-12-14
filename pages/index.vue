@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <div>
-      <Logo />
+      <Blog />
       <h1 class="title">
         zen_web
       </h1>
