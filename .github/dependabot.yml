@@ -8,9 +8,9 @@ updates:
     time: '00:00'
   open-pull-requests-limit: 10
   reviewers:
-    - grvlle
+    - martin-zencex
   assignees:
-    - grvlle
+    - martin-zencex
   commit-message:
     prefix: fix
     prefix-development: chore
