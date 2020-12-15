@@ -2,9 +2,9 @@
   <div class="container">
     <div>
       <div>
-        <li v-for="post of posts" :key="post.slug">
-          <NuxtLink :to="post.slug">
-            {{ post.title }}
+        <li v-for="article of articles" :key="article.slug">
+          <NuxtLink :to="articles/article.slug">
+            {{ article.title }}
           </NuxtLink>
         </li>
       </div>
@@ -18,10 +18,10 @@
 <script>
 export default {
   async asyncData ({ $content }) {
-    const posts = await $content('blog').fetch()
+    const articles = await $content('articles').fetch()
 
     return {
-      posts
+      articles
     }
   },
   head () {
