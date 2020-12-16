@@ -2,6 +2,7 @@
   <div>
     <h2>{{ article.title }}</h2>
     <nuxt-content :document="article" />
+    <p>Article last updated: {{ formatDate(article.date) }}</p>
   </div>
 </template>
 
@@ -19,6 +20,13 @@ export default {
     return {
       article
     }
+  },
+  methods: {
+    formatDate (date) {
+      const options = { year: 'numeric', month: 'long', day: 'numeric' }
+      return new Date(date).toLocaleDateString('en', options)
+    }
   }
 }
+
 </script>
