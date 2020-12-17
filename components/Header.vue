@@ -1,6 +1,6 @@
 <template>
-  <div class="header">
-    <canvas id="canvas" />
+  <div id="header" class="header">
+    <canvas width="1260" height="1244" />
     <div id="homeView" class="current-state ajaxhidden" style="visibility: inherit;">
       <div class="layout layout-homepage">
         <article class="slideshow">
@@ -20,18 +20,6 @@
 
 <script>
 export default {
-  head () {
-    return {
-      script: [
-        {
-          src: 'https://cdnjs.cloudflare.com/ajax/libs/three.js/r68/three.min.js'
-        },
-        {
-          src: 'waves.js'
-        }
-      ]
-    }
-  }
 }
 </script>
 
@@ -72,9 +60,12 @@ h2.sub-title {
 }
 
 canvas{
-  position: relative;
+  border: 1px red;
+  position: absolute;
   top:0;
   left:0;
+  width: 1260px;
+  height: 1244px;
   z-index:-1;
 }
 #homeView {
@@ -95,7 +86,7 @@ canvas{
     height: auto;
 }
 .layout-homepage .slideshow .item {
-margin-top: 20%;
+margin-top: 14rem;
 }
 .visual {
     display: block;

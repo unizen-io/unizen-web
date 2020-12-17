@@ -23,6 +23,7 @@ export default {
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
+    { src: '~/plugins/waves2.js', mode: 'module' }
   ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)

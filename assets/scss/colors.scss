@@ -77,5 +77,14 @@ body {
 
 // Header animation
   .waves {
-      margin-top: -130rem !important;
+      position: absolute !important;
+  }
+
+  .parent-waves {
+    position: relative !important;
+}
+
+  canvas {
+      position: absolute !important;
+      margin-top: -15rem;
   }

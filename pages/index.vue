@@ -1,5 +1,5 @@
 <template>
-  <main>
+  <main id="main">
     <NavBar />
     <Header />
     <b-container>
@@ -17,12 +17,18 @@
           </b-col>
         </b-card-group>
       </b-row>
+      <b-row>
+        <ArticleCarousel />
+      </b-row>
     </b-container>
+    </div>
   </main>
 </template>
 
 <script>
+
 export default {
+
   async fetch () {
     this.articles = await this.$content('articles').fetch()
   },
@@ -41,6 +47,7 @@ export default {
 </script>
 
 <style style="scss">
+
 main {
   left: 0;
   top: 0;

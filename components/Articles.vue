@@ -8,7 +8,7 @@
       :sub-title="`${desc}`"
       img-src="https://placekitten.com/300/300"
       img-alt="Image"
-      img-left
+      img-top
       tag="article"
       style=""
       class="mb-3"
