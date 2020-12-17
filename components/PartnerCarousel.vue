@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div class="py-5">
     <div class="card-carousel-wrapper">
       <div class="card-carousel--nav__left" :disabled="atHeadOfList" @click="moveCarousel(-1)" />
       <div class="card-carousel">
         <div class="card-carousel--overflow-container">
           <div class="card-carousel-cards" :style="{ transform: 'translateX' + '(' + currentOffset + 'px' + ')'}">
-            <div v-for="item in items" :key="item.name" class="b-card mr-3">
-              <img src="https://placehold.it/200x200">
+            <div v-for="item in items" :key="item.name" class="mr-3">
+              <img :src="item.img">
               <div class="card-carousel--card--footer">
                 <p>{{ item.name }}</p>
                 <p v-for="(tag,index) in item.tag" :key="tag" class="tag" :class="index &gt; 0 ? 'secondary' : ''">
@@ -30,13 +30,11 @@ export default {
       windowSize: 3,
       paginationFactor: 220,
       items: [
-        { name: 'Kin Khao', tag: ['Thai'] },
-        { name: 'fsd', tag: ['Sushi', 'Japanese', '$$$$'] },
-        { name: 'Delfina', tag: ['Pizza', 'Casual'] },
-        { name: 'San Tung', tag: ['Chinese', '$$'] },
-        { name: 'Anchor Oyster Bar', tag: ['Seafood', 'Cioppino'] },
-        { name: 'Locanda', tag: ['Italian'] },
-        { name: 'Garden Creamery', tag: ['Ice cream'] }
+        { name: 'BlockUnify', img: require('~/assets/img/mini_logo.png') },
+        { name: 'SifChain', img: '' },
+        { name: 'BeTrust', img: '' },
+        { name: 'LunarCrush', img: '' },
+        { name: 'Reef', img: '' }
       ]
     }
   },
@@ -81,7 +79,7 @@ $light-gray: #f8f8f8;
 .card-carousel {
   display: flex;
   justify-content: center;
-  width: 640px;
+  width: 100%;
 
   &--overflow-container {
     overflow: hidden;

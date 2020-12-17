@@ -3,25 +3,15 @@
     <NavBar />
     <Header />
     <b-container>
+      <Intro />
+
+      <Articles
+        :articles="articles"
+      />
       <b-row>
-        <b-card-group class="mt-4" deck>
-          <b-col>
-            <Articles
-              v-for="a in articles"
-              :key="a.slug"
-              :title="a.title"
-              :desc="a.description"
-              :date="a.date"
-              :slug="a.slug"
-            />
-          </b-col>
-        </b-card-group>
-      </b-row>
-      <b-row>
-        <ArticleCarousel />
+        <PartnerCarousel />
       </b-row>
     </b-container>
-    </div>
   </main>
 </template>
 

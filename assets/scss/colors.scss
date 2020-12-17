@@ -1,6 +1,7 @@
 // All of your custom SCSS variables go first
 $primary:       #01d5a3 ;
 $secondary:     #00f5a4 ;
+$green:         #00AFA3 ;
 $light:         #f5f5f5 ;
 $dark:          #222222 ;
 
@@ -16,12 +17,26 @@ body {
     font-family: D DIN, sans-serif;
   }
 
+h1 {
+    font-family: Montserrat Semi-Bold;
+    font-size: 2.3em !important;
+    color: $primary !important;
+}
+
   @font-face {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 800;
     font-display: swap;
     src: url('~assets/fonts/Montserrat-ExtraBold.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Montserrat Semi-Bold';
+    font-style: normal;
+    font-weight: 600;
+    font-display: swap;
+    src: url('~assets/fonts/Montserrat-SemiBold.ttf') format('truetype');
   }
 
   @font-face {
@@ -88,3 +103,276 @@ body {
       position: absolute !important;
       margin-top: -15rem;
   }
+
+  .card
+{
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 0 30px 0 rgba(196, 202, 214, 0.5) !important;
+
+    min-width: 0;
+
+    word-wrap: break-word;
+
+    border: 1px solid rgba(0, 0, 0, .05);
+    border-radius: .375rem; 
+    background-color: #fff;
+    background-clip: border-box;
+}
+.card > hr
+{
+    margin-right: 0;
+    margin-left: 0;
+}
+.card > .list-group:first-child .list-group-item:first-child
+{
+    border-top-left-radius: .375rem;
+    border-top-right-radius: .375rem;
+}
+.card > .list-group:last-child .list-group-item:last-child
+{
+    border-bottom-right-radius: .375rem;
+    border-bottom-left-radius: .375rem;
+}
+
+.card-body
+{
+    min-height: 1px;
+    padding: 1.5rem; 
+
+    flex: 1 1 auto;
+}
+
+.card-title
+{
+    margin-bottom: 1.25rem;
+}
+
+.card-subtitle
+{
+    margin-top: -.625rem;
+    margin-bottom: 0;
+}
+
+.card-text:last-child
+{
+    margin-bottom: 0;
+}
+
+.card-link:hover
+{
+    text-decoration: none;
+}
+
+.card-link + .card-link
+{
+    margin-left: 1.5rem;
+}
+
+.card-header
+{
+    margin-bottom: 0;
+    padding: 1.25rem 1.5rem;
+
+    border-bottom: 1px solid rgba(0, 0, 0, .05); 
+    background-color: #fff;
+}
+.card-header:first-child
+{
+    border-radius: calc(.375rem - 1px) calc(.375rem - 1px) 0 0;
+}
+.card-header + .list-group .list-group-item:first-child
+{
+    border-top: 0;
+}
+
+.card-footer
+{
+    padding: 1.25rem 1.5rem;
+
+    border-top: 1px solid rgba(0, 0, 0, .05); 
+    background-color: #fff;
+}
+.card-footer:last-child
+{
+    border-radius: 0 0 calc(.375rem - 1px) calc(.375rem - 1px);
+}
+
+.card-header-tabs
+{
+    margin-right: -.75rem;
+    margin-bottom: -1.25rem;
+    margin-left: -.75rem;
+
+    border-bottom: 0;
+}
+
+.card-header-pills
+{
+    margin-right: -.75rem;
+    margin-left: -.75rem;
+}
+
+.card-img-overlay
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+
+    padding: 1.25rem;
+}
+
+.card-img,
+.card-img-top,
+.card-img-bottom
+{
+    width: 100%; 
+
+    flex-shrink: 0;
+}
+
+.card-img,
+.card-img-top
+{
+    border-top-left-radius: calc(.375rem - 1px);
+    border-top-right-radius: calc(.375rem - 1px);
+    height: 200px;
+}
+
+.card-img,
+.card-img-bottom
+{
+    border-bottom-right-radius: calc(.375rem - 1px);
+    border-bottom-left-radius: calc(.375rem - 1px);
+}
+
+.card-deck .card
+{
+    margin-bottom: 15px;
+}
+
+@media (min-width: 576px)
+{
+    .card-deck
+    {
+        display: flex;
+
+        margin-right: -15px;
+        margin-left: -15px; 
+
+        flex-flow: row wrap;
+    }
+    .card-deck .card
+    {
+        margin-right: 15px;
+        margin-bottom: 0;
+        margin-left: 15px; 
+
+        flex: 1 0;
+    }
+}
+
+.card-group > .card
+{
+    margin-bottom: 15px;
+}
+
+@media (min-width: 576px)
+{
+    .card-group
+    {
+        display: flex;
+
+        flex-flow: row wrap;
+    }
+    .card-group > .card
+    {
+        margin-bottom: 0; 
+
+        flex: 1 0;
+    }
+    .card-group > .card + .card
+    {
+        margin-left: 0;
+
+        border-left: 0;
+    }
+    .card-group > .card:not(:last-child)
+    {
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .card-group > .card:not(:last-child) .card-img-top,
+    .card-group > .card:not(:last-child) .card-header
+    {
+        border-top-right-radius: 0;
+    }
+    .card-group > .card:not(:last-child) .card-img-bottom,
+    .card-group > .card:not(:last-child) .card-footer
+    {
+        border-bottom-right-radius: 0;
+    }
+    .card-group > .card:not(:first-child)
+    {
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+    }
+    .card-group > .card:not(:first-child) .card-img-top,
+    .card-group > .card:not(:first-child) .card-header
+    {
+        border-top-left-radius: 0;
+    }
+    .card-group > .card:not(:first-child) .card-img-bottom,
+    .card-group > .card:not(:first-child) .card-footer
+    {
+        border-bottom-left-radius: 0;
+    }
+}
+
+.card-columns .card
+{
+    margin-bottom: 1.25rem;
+}
+
+@media (min-width: 576px)
+{
+    .card-columns
+    {
+        column-count: 3;
+        column-gap: 1.25rem;
+        orphans: 1;
+        widows: 1;
+    }
+    .card-columns .card
+    {
+        display: inline-block;
+
+        width: 100%;
+    }
+}
+
+.accordion > .card
+{
+    overflow: hidden;
+}
+.accordion > .card:not(:last-of-type)
+{
+    border-bottom: 0;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.accordion > .card:not(:first-of-type)
+{
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+.accordion > .card > .card-header
+{
+    margin-bottom: -1px; 
+
+    border-radius: 0;
+}

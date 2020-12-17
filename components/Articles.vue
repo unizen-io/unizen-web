@@ -1,51 +1,46 @@
 <template>
-  <div>
-    <!-- <NuxtLink :to="`articles/${slug}`">
+  <div class="py-5">
+    <h1>Latest blog articles.</h1><br>
+    <b-row class="mt-3">
+      <b-card-group class="mt-4" deck>
+        <!-- <NuxtLink :to="`articles/${slug}`">
       {{ title }}
     </NuxtLink> -->
-    <b-card
-      :title="`${title}`"
-      :sub-title="`${desc}`"
-      img-src="https://placekitten.com/300/300"
-      img-alt="Image"
-      img-top
-      tag="article"
-      style=""
-      class="mb-3"
-    >
-      <b-card-text>
-        {{ desc }}
-      </b-card-text>
+        <b-card
+          v-for="a in articles"
+          :key="a.slug"
+          :title="a.title"
+          :sub-title="a.description"
+          img-src="https://placekitten.com/300/300"
+          img-alt="Image"
+          img-top
+          tag="article"
+          style=""
+          class="mb-3 blog-card"
+        >
+          <b-card-text>
+            {{ a.description }}
+          </b-card-text>
 
-      <b-button :to="`articles/${slug}`" variant="primary" nuxt>
-        Read Article
-      </b-button>
+          <b-button :to="`articles/${a.slug}`" variant="primary" nuxt>
+            Read Article
+          </b-button>
 
-      <b-card-text id="footer-content" class="small text-muted mr-2 mb-1">
-        Last updated {{ formatDate(date) }}
-      </b-card-text>
-    </b-card>
+          <template #footer>
+            <img src="~/assets/img/mini_logo.png" style="margin-bottom: -6px; margin-top: -6px;"><small style="float: right;" class="text-muted">Last updated {{ formatDate(a.date) }}</small>
+          </template>
+        </b-card>
+      </b-card-group>
+    </b-row>
   </div>
 </template>
 
 <script>
 export default {
   props: {
-    title: {
-      type: String,
-      default: 'Title'
-    },
-    desc: {
-      type: String,
-      default: 'Description'
-    },
-    date: {
-      type: String,
-      default: 'NaN'
-    },
-    slug: {
-      type: String,
-      default: '/'
+    articles: {
+      type: Array,
+      default: () => []
     }
   },
   methods: {
@@ -58,9 +53,8 @@ export default {
 </script>
 
 <style>
+
 #footer-content {
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  float: right;
 }
 </style>
