@@ -26,7 +26,7 @@ export default {
 <style lang="scss">
 
 .header {
-    margin-bottom: 20rem;
+    margin-bottom: 25rem;
 }
 
 h2.title {
@@ -36,6 +36,7 @@ h2.title {
     text-shadow: 0px 2px 27px rgba(0, 245, 163, 0.397);
 }
 h2.sub-title {
+    margin-top: -1rem;
     text-align: center;
     color: $dark;
 }
@@ -45,7 +46,7 @@ h2.sub-title {
   background-color: $primary;
 
   /* Create the gradient. */
-  background-image: linear-gradient(90deg, $primary, $secondary);
+  background-image: linear-gradient(to right top, #00afae, #00b6b0, #00bdb1, #00c3b1, #00cab1, #00d0b1, #00d6b0, #00dcaf, #00e2ad, #00e9ab, #00efa8, #00f5a4);
 
   /* Set the background size and repeat properties. */
   background-size: 100%;
@@ -70,8 +71,8 @@ canvas{
 }
 #homeView {
     width: auto;
-   -webkit-animation:fadeInUp 2s; /* Safari & Chrome */
-  animation:fadeInUp 2s;
+   -webkit-animation:fadeIn 2s; /* Safari & Chrome */
+  animation:fadeIn 2s;
 }
 .layout-homepage {
     height: auto;
@@ -95,14 +96,12 @@ margin-top: 14rem;
     height: 72px;
 }
 
-@-webkit-keyframes fadeInUp{
+@-webkit-keyframes fadeIn{
   0%{
     opacity: 0;
-    -webkit-transform: translateY(80px);
   }
   100%{
     opacity: 1;
-    -webkit-transform: translateY(0);
   }
 }
 </style>

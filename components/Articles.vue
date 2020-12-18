@@ -1,7 +1,9 @@
 <template>
-  <div class="py-5">
-    <h1>Latest blog articles.</h1><br>
-    <b-row class="mt-3">
+  <div class="py-5 mt-5">
+    <h1 class="articles">
+      Latest blog articles.
+    </h1><br>
+    <b-row class="mt-1">
       <b-card-group class="mt-4" deck>
         <!-- <NuxtLink :to="`articles/${slug}`">
       {{ title }}
@@ -9,8 +11,6 @@
         <b-card
           v-for="a in articles"
           :key="a.slug"
-          :title="a.title"
-          :sub-title="a.description"
           img-src="https://placekitten.com/300/300"
           img-alt="Image"
           img-top
@@ -19,12 +19,17 @@
           class="mb-3 blog-card"
         >
           <b-card-text>
-            {{ a.description }}
+            <router-link
+              :to="`articles/${a.slug}`"
+            >
+              <h2 class="articles">
+                {{ a.title }}
+              </h2>
+            </router-link>
+            <p class="articles">
+              {{ a.description }}
+            </p>
           </b-card-text>
-
-          <b-button :to="`articles/${a.slug}`" variant="primary" nuxt>
-            Read Article
-          </b-button>
 
           <template #footer>
             <img src="~/assets/img/mini_logo.png" style="margin-bottom: -6px; margin-top: -6px;"><small style="float: right;" class="text-muted">Last updated {{ formatDate(a.date) }}</small>
@@ -52,7 +57,24 @@ export default {
 }
 </script>
 
-<style>
+<style lang="scss">
+
+h2.articles {
+    font-family: Montserrat Medium !important;
+    color: $dark !important;
+    font-size: 20px;
+}
+
+h1.articles {
+    font-family: Montserrat Medium !important;
+    color: $dark !important;
+    font-weight: bold;
+}
+
+p.articles {
+    font-family: Montserrat Medium;
+    font-size: 14px;
+}
 
 #footer-content {
   float: right;

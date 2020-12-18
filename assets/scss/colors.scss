@@ -1,9 +1,11 @@
 // All of your custom SCSS variables go first
-$primary:       #01d5a3 ;
+$primary:       #00D3B0 ;
 $secondary:     #00f5a4 ;
-$green:         #00AFA3 ;
+$green:         #00AFAE ;
+$blue:          #008B9D ;
+$dak-blue:      #11687F ;
 $light:         #f5f5f5 ;
-$dark:          #222222 ;
+$dark:          #2F4858 ;
 
 $enable-shadows: true ;
 $enable-gradients: true ;
@@ -15,6 +17,8 @@ $enable-gradients: true ;
 
 body {
     font-family: D DIN, sans-serif;
+    overflow-x: hidden;
+    overflow: -moz-scrollbars-horizontal;
   }
 
 h1 {
