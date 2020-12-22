@@ -1,5 +1,5 @@
 <template>
-  <b-row class="binance py-5">
+  <b-row class="binance py-5 mb-5">
     <b-container>
       <b-row class="pt-4">
         <b-col>
@@ -76,7 +76,7 @@ export default {
 
 <style lang="scss">
 .binance {
-    background: none;
+    background: #EFEFEF;
 }
 
 .binance-card {

@@ -1,6 +1,12 @@
 <template>
   <div>
-    <b-navbar toggleable="lg" fixed="top" type="light" class="navbar-modified">
+    <b-navbar
+      toggleable="lg"
+      fixed="top"
+      type="light"
+      class="navbar-modified"
+      :class="{ 'navbar--hidden': !showNavbar }"
+    >
       <b-navbar-brand href="#">
         <img src="~/assets/img/mini_logo.png" class="d-inline-block align-top mr-1" alt="Logo">
         <span class="logo-text"><b>ZEN</b>EXCHANGE</span>
@@ -36,7 +42,33 @@
 
 <script>
 export default {
-
+  data () {
+    return {
+      showNavbar: true,
+      lastScrollPosition: 0
+    }
+  },
+  mounted () {
+    window.addEventListener('scroll', this.onScroll)
+  },
+  beforeDestroy () {
+    window.removeEventListener('scroll', this.onScroll)
+  },
+  methods: {
+    onScroll () {
+      const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
+      if (currentScrollPosition < 0) {
+        return
+      }
+      // Stop executing this function if the difference between
+      // current scroll position and last scroll position is less than some offset
+      if (Math.abs(currentScrollPosition - this.lastScrollPosition) < 360) {
+        return
+      }
+      this.showNavbar = currentScrollPosition < this.lastScrollPosition
+      this.lastScrollPosition = currentScrollPosition
+    }
+  }
 }
 </script>
 
@@ -48,19 +80,28 @@ export default {
 }
 
 .navbar-modified {
-    background-color: $light !important;
+    background: rgba(219, 219, 219, 0.185) !important;
+    backdrop-filter: blur(15px);
+
     // background: rgba(219, 219, 219, 0.185) !important;
     // backdrop-filter: blur(15px) !important;
     // box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 20px 0px !important;
     box-shadow: 0 0 30px 0 rgba(196, 202, 214, 0.5) !important;
     min-height: 5rem;
     z-index: 99999 !important;
-    position: sticky !important;
+    transform: translate3d(0, 0, 0);
+    transition: 0.3s all ease-out;
+}
+
+.navbar.navbar--hidden {
+  box-shadow: none;
+  transform: translate3d(0, -100%, 0);
 }
 
 .nav-item.nav-item.nav-item a {
   font-family: Lato Regular !important;
   font-size: 0.9em;
+  font-weight: bold;
   color: $dark;
   -o-transition:.5s;
   -ms-transition:.5s;

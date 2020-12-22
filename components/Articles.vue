@@ -36,8 +36,7 @@
               <!-- </p><p> {{ a | truncate(10, 30) }}</p> -->
               <p class="articles" />
             </b-card-text>
-
-            <template #footer>
+            <template #footer class="footer-articles">
               <img src="~/assets/img/mini_logo.png" style="margin-bottom: -6px; margin-top: -6px;"><small style="float: right;" class="text-muted">Last updated {{ formatDate(a.date) }}</small>
             </template>
           </b-card>
@@ -75,9 +74,17 @@ export default {
 
 <style lang="scss">
 
-#footer {
-    background: rgba(219, 219, 219, 0.185) !important;
-    backdrop-filter: blur(15px) !important;
+.blog-card {
+    min-height: 35rem;
+}
+
+.footer-articles {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    border-top: 1px #000 solid !important;
+    height: 4rem;
+    width: 100%;
 }
 
 h2.articles {
@@ -99,5 +106,7 @@ p.articles {
 
 #footer-content {
   float: right;
+      background: rgba(219, 219, 219, 0.185) !important;
+    backdrop-filter: blur(15px) !important;
 }
 </style>
