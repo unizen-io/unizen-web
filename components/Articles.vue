@@ -30,6 +30,11 @@
               <p class="articles">
                 {{ a.description }}
               </p>
+              <p>
+                <!-- <nuxt-content :document="a" /> -->
+              </p>
+              <!-- </p><p> {{ a | truncate(10, 30) }}</p> -->
+              <p class="articles" />
             </b-card-text>
 
             <template #footer>
@@ -44,6 +49,15 @@
 
 <script>
 export default {
+  filters: {
+    truncate (text, length, suffix) {
+      if (text.length > length) {
+        return text.substring(0, length) + suffix
+      } else {
+        return text
+      }
+    }
+  },
   props: {
     articles: {
       type: Array,

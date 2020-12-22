@@ -1,7 +1,7 @@
 <template>
-  <b-row class="binance">
+  <b-row class="binance py-5">
     <b-container>
-      <b-row class="pt-5">
+      <b-row class="pt-4">
         <b-col>
           <h3 class="binance-text">
             ZEN Innovation Powered by:
@@ -10,7 +10,7 @@
         </b-col>
         <b-col />
       </b-row>
-      <b-row class="pt-3">
+      <b-row class="pt-5">
         <b-col />
         <b-col cols="8">
           <p class="binance-text">
@@ -19,34 +19,41 @@
         </b-col>
         <b-col />
       </b-row>
-      <b-row class="py-3">
-        <b-col class="center">
-          <div class="liquidity" />
-          <p class="binance-subtitle">
-            <b>High Liquidity</b>
-          </p>
-          <p class="binance-text-small">
-            Absorb orders with large transaction volume<br><br>
-            Shared trading liquidity and depth with Binance directly at launch.
-          </p>
-        </b-col>
+      <b-row class="py-5">
         <b-col>
           <div class="performance text-center" />
           <p class="binance-subtitle">
             <b>Performance</b>
           </p>
+          <p class="binance-subtitle-small">
+            Runs smooth when it matters the most
+          </p>
           <p class="binance-text-small">
-            Runs smooth when it matters the most<br><br>
             Highly responsive UI even at tremendous load. Binance’s matching engines stand up to stress even at peak trading times.
           </p>
         </b-col>
+        <b-col class="center">
+          <div class="liquidity" />
+          <p class="binance-subtitle">
+            <b>High Liquidity</b>
+          </p>
+          <p class="binance-subtitle-small">
+            Absorb orders with large transaction volume
+          </p>
+          <p class="binance-text-small">
+            Shared trading liquidity and depth with Binance directly at launch.
+          </p>
+        </b-col>
+
         <b-col>
           <div class="security" />
           <p class="binance-subtitle">
             <b>Binance Security</b>
           </p>
+          <p class="binance-subtitle-small">
+            Reliable custody & trading
+          </p>
           <p class="binance-text-small">
-            Reliable custody & trading<br><br>
             Top-tier security measures that have been withstanding millions of malicious attempts over several years, will be enforced throughout the exchange.
           </p>
         </b-col>
@@ -67,9 +74,14 @@ export default {
 }
 
 a.binance {
-  text-decoration: none;
+  text-decoration: none !important;
   display: inline-table;
   color: $light;
+}
+
+a.binance:hover {
+  text-decoration: none !important;
+  color: $light !important;
 }
 
 a.binance:after {
@@ -91,20 +103,27 @@ h3.binance-text {
 
 p.binance-text {
     font-size: 1.2em !important;
-    padding: 30px;
+    padding: 0px;
     color: $light;
     text-align: center;
 }
 
 p.binance-subtitle {
-    font-size: 1.2em !important;
+    font-size: 1.3em !important;
+    padding-top: 30px;
     color: $light;
     text-align: center;
 }
 
 p.binance-text-small {
     font-size: 1em !important;
-    padding: 0px 30px 30px 30px;
+    color: $light;
+    text-align: center;
+}
+
+p.binance-subtitle-small {
+    font-size: 0.9em !important;
+    margin-top: -20px;
     color: $light;
     text-align: center;
 }
