@@ -1,64 +1,66 @@
 <template>
-  <div class="py-5">
-    <b-row>
-      <div>
+  <b-container>
+    <div class="py-5">
+      <b-row>
         <div>
-          <b-card-group deck>
-            <b-card text-variant="white" class="text-center custom-card card4">
-              <b-row>
-                <b-col cols="2">
-                  <span style="font-size:50px;">🤝</span>
-                </b-col>
-                <b-col>
-                  <b-card-text>
-                    <p style="text-align:left; padding-left: 20px;">
-                      <b>Deep Hybrid Liquidity</b><br>
-                      Tap into centralized <span style="color: #F0B90B; font-weight:bold;">Binance</span> shared- liquidity with top tier market maker support, or decentralized, network-agnostic, cross-chain liquidity. Both available right at your fingertips.
-                    </p>
-                  </b-card-text>
-                </b-col>
-              </b-row>
-            </b-card>
+          <div>
+            <b-card-group deck>
+              <b-card text-variant="white" class="text-center card4">
+                <b-row>
+                  <b-col cols="2">
+                    <span style="font-size:50px;">🤝</span>
+                  </b-col>
+                  <b-col>
+                    <b-card-text>
+                      <p style="text-align:left; padding-left: 20px;">
+                        <b>Deep Hybrid Liquidity</b><br>
+                        Tap into centralized <span style="color: #F0B90B; font-weight:bold;">Binance</span> shared- liquidity with top tier market maker support, or decentralized, network-agnostic, cross-chain liquidity. Both available right at your fingertips.
+                      </p>
+                    </b-card-text>
+                  </b-col>
+                </b-row>
+              </b-card>
 
-            <b-card bg-variant="primary" text-variant="white" class="text-center custom-card card1">
-              <b-row>
-                <b-col cols="2">
-                  <span style="font-size:50px;">🦾</span>
-                </b-col>
-                <b-col>
-                  <b-card-text>
-                    <p style="text-align:left; padding-left: 20px;">
-                      <b>Intuitive Platform</b><br>
-                      UI/UX focused on a seamless, familiar and effective user experience across all trading applications with top industry, battle-tested security and performance powered by <span style="color: #F0B90B; font-weight:bold;">Binance Cloud</span>.
-                    </p>
-                  </b-card-text>
-                </b-col>
-              </b-row>
-            </b-card>
+              <b-card text-variant="white" class="text-center card1">
+                <b-row>
+                  <b-col cols="2">
+                    <span style="font-size:50px;">🦾</span>
+                  </b-col>
+                  <b-col>
+                    <b-card-text>
+                      <p style="text-align:left; padding-left: 20px;">
+                        <b>Intuitive Platform</b><br>
+                        UI/UX focused on a seamless, familiar and effective user experience across all trading applications with top industry, battle-tested security and performance powered by <span style="color: #F0B90B; font-weight:bold;">Binance Cloud</span>.
+                      </p>
+                    </b-card-text>
+                  </b-col>
+                </b-row>
+              </b-card>
 
-            <b-card bg-variant="info" text-variant="white" class="text-center custom-card card3">
-              <b-row>
-                <b-col cols="2">
-                  <span style="font-size:50px;">💗</span>
-                </b-col>
-                <b-col>
-                  <b-card-text>
-                    <p style="text-align:left; padding-left: 20px;">
-                      <b>ZenX Incubation</b><br>
-                      360 incubator fully equipped to support projects
-                      from genesis of innovation to the finality of market realization.
-                      Get further faster with
-                      clarity of mission, positioning, product momentum and ecosystem empowerment.
-                    </p>
-                  </b-card-text>
-                </b-col>
-              </b-row>
-            </b-card>
-          </b-card-group>
+              <b-card text-variant="white" class="text-center card3 cards">
+                <b-row>
+                  <b-col cols="2">
+                    <span style="font-size:50px;">💗</span>
+                  </b-col>
+                  <b-col>
+                    <b-card-text>
+                      <p style="text-align:left; padding-left: 20px;">
+                        <b>ZenX Incubation</b><br>
+                        360 incubator fully equipped to support projects
+                        from genesis of innovation to the finality of market realization.
+                        Get further faster with
+                        clarity of mission, positioning, product momentum and ecosystem empowerment.
+                      </p>
+                    </b-card-text>
+                  </b-col>
+                </b-row>
+              </b-card>
+            </b-card-group>
+          </div>
         </div>
-      </div>
-    </b-row>
-  </div>
+      </b-row>
+    </div>
+  </b-container>
 </template>
 
 <script>
@@ -68,9 +70,6 @@ export default {
 </script>
 
 <style lang="scss">
-.custom-card {
-
-}
 
 .card1 {
     border: none !important;

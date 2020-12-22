@@ -5207,6 +5207,11 @@ hookable@^4.3.1:
   resolved "https://registry.yarnpkg.com/hookable/-/hookable-4.3.1.tgz#aabad1925197701d2b3ea8de1a0d36f69cddaee7"
   integrity sha512-E4YA6bjSfXDT6QsFIjz9F1rjJ8RH6qax5HBosvP7dhTTlErVTfe4RpuwpPEKhJOCBJwaI+snBWufbKa26eZBoQ==
 
+hooper@^0.3.4:
+  version "0.3.4"
+  resolved "https://registry.yarnpkg.com/hooper/-/hooper-0.3.4.tgz#afb425d23f47f931ce2a9c00b755992cb0e2bcf9"
+  integrity sha512-hV1c+MCiCfVjltdvZIgTrGYHInvhKiNLVNOT/hRWbfjZNIS9H6F6ZUPeaxhxrYkjsEL96Z0RIs+4YPoBqrrrHQ==
+
 hoopy@^0.1.4:
   version "0.1.4"
   resolved "https://registry.yarnpkg.com/hoopy/-/hoopy-0.1.4.tgz#609207d661100033a9a9402ad3dea677381c1b1d"

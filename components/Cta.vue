@@ -40,6 +40,7 @@ export default {
     background-image: url('../assets/img/zen-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
+    box-shadow: 0 0 30px 0 rgba(196, 202, 214, 0.596) !important;
     min-height: 50vh;
     border-radius: 5px;
 }

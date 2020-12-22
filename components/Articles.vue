@@ -1,43 +1,45 @@
 <template>
-  <div class="py-5 mt-5">
-    <h1 class="articles">
-      Latest blog articles.
-    </h1><br>
-    <b-row class="mt-1">
-      <b-card-group class="mt-4" deck>
-        <!-- <NuxtLink :to="`articles/${slug}`">
+  <b-container>
+    <div class="py-5 mt-5">
+      <h1 class="articles">
+        Latest blog articles.
+      </h1><br>
+      <b-row class="mt-1">
+        <b-card-group class="mb-5 mt-4" deck>
+          <!-- <NuxtLink :to="`articles/${slug}`">
       {{ title }}
     </NuxtLink> -->
-        <b-card
-          v-for="a in articles"
-          :key="a.slug"
-          img-src="https://placekitten.com/300/300"
-          img-alt="Image"
-          img-top
-          tag="article"
-          style=""
-          class="mb-3 blog-card"
-        >
-          <b-card-text>
-            <router-link
-              :to="`articles/${a.slug}`"
-            >
-              <h2 class="articles">
-                {{ a.title }}
-              </h2>
-            </router-link>
-            <p class="articles">
-              {{ a.description }}
-            </p>
-          </b-card-text>
+          <b-card
+            v-for="a in articles"
+            :key="a.slug"
+            img-src="https://placekitten.com/300/300"
+            img-alt="Image"
+            img-top
+            tag="article"
+            style=""
+            class="mb-3 blog-card"
+          >
+            <b-card-text>
+              <router-link
+                :to="`articles/${a.slug}`"
+              >
+                <h2 class="articles">
+                  {{ a.title }}
+                </h2>
+              </router-link>
+              <p class="articles">
+                {{ a.description }}
+              </p>
+            </b-card-text>
 
-          <template #footer>
-            <img src="~/assets/img/mini_logo.png" style="margin-bottom: -6px; margin-top: -6px;"><small style="float: right;" class="text-muted">Last updated {{ formatDate(a.date) }}</small>
-          </template>
-        </b-card>
-      </b-card-group>
-    </b-row>
-  </div>
+            <template #footer>
+              <img src="~/assets/img/mini_logo.png" style="margin-bottom: -6px; margin-top: -6px;"><small style="float: right;" class="text-muted">Last updated {{ formatDate(a.date) }}</small>
+            </template>
+          </b-card>
+        </b-card-group>
+      </b-row>
+    </div>
+  </b-container>
 </template>
 
 <script>

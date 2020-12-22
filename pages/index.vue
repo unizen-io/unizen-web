@@ -2,27 +2,21 @@
   <main id="main">
     <NavBar />
     <Header />
-    <b-container>
-      <Intro />
-    </b-container>
-    <Introduction />
-    <b-container>
-      <Articles
-        :articles="articles"
-      />
-    </b-container>
-    <b-row>
-      <PartnerCarousel />
-    </b-row>
+    <Intro />
+    <Cta />
+    <Zen />
+    <PoweredByBinance />
+    <PartnerCarousel />
+    <Articles
+      :articles="articles"
+    />
     <Footer />
   </main>
 </template>
 
 <script>
-import Introduction from '~/components/Introduction.vue'
 
 export default {
-  components: { Introduction },
 
   async fetch () {
     this.articles = await this.$content('articles').fetch()
