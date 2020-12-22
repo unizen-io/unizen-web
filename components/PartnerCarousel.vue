@@ -15,7 +15,7 @@
           </b-col>
         </b-row>
       </b-container>
-      <div class="p-5 text-center">
+      <div class="text-center">
         <hooper :settings="cardsHooper">
           <slide>
             <b-img fluid src="~assets/img/partners/blockunify.png" />

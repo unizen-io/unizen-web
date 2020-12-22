@@ -1,9 +1,9 @@
 <template>
   <div class="zen">
     <b-container>
-      <b-row class="mt-5 zen pt-5 macbook">
+      <b-row class="zen pt-5 macbook">
         <b-col>
-          <div class="text-box mt-5">
+          <b-card class="text-box mt-5">
             <b-card-body>
               <b-row>
                 <b-col cols="3">
@@ -29,7 +29,7 @@
                 ✔️ Highly competitive listing and trading fees
               </b-list-group-item>
             </b-list-group>
-          </div>
+          </b-card>
         </b-col>
         <b-col />
         <b-col />
@@ -48,10 +48,8 @@ export default {
 <style lang="scss">
 .zen {
     // background: rgb(250, 250, 250);
-    background-image: url('../assets/img/bg.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 980px;
+    height: 1080px;
+    margin-left: -350px;
 }
 
 .zen-item {
@@ -100,13 +98,12 @@ p.zen-text-small {
 }
 
 .macbook {
-    background-image: url('../assets/img/Macbook.png');
+    background-image: url('../assets/img/iMac.png');
     background-size: cover;
     width: 1920px;
 }
 
 .text-box {
-  border: none !important;
   border-radius: 5px !important;
   background: rgba(219, 219, 219, 0.185) !important;
   backdrop-filter: blur(15px);

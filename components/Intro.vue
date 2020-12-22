@@ -1,11 +1,11 @@
 <template>
   <b-container>
-    <div class="py-5">
+    <div class="pt-5">
       <b-row>
         <div>
           <div>
             <b-card-group deck>
-              <b-card text-variant="white" class="text-center card4">
+              <b-card text-variant="dark" class="text-center card4">
                 <b-row>
                   <b-col cols="2">
                     <span style="font-size:50px;">🤝</span>
@@ -21,7 +21,7 @@
                 </b-row>
               </b-card>
 
-              <b-card text-variant="white" class="text-center card1">
+              <b-card text-variant="dark" class="text-center card1">
                 <b-row>
                   <b-col cols="2">
                     <span style="font-size:50px;">🦾</span>
@@ -37,7 +37,7 @@
                 </b-row>
               </b-card>
 
-              <b-card text-variant="white" class="text-center card3 cards">
+              <b-card text-variant="dark" class="text-center card3 cards">
                 <b-row>
                   <b-col cols="2">
                     <span style="font-size:50px;">💗</span>
@@ -72,10 +72,11 @@ export default {
 <style lang="scss">
 
 .card1 {
-    border: none !important;
-    background-image: linear-gradient(to right top, #00afae, #00b6b0, #00bdb1, #00c3b1, #00cab1, #00d0b1, #00d6b0, #00dcaf, #00e2ad, #00e9ab, #00efa8, #00f5a4) !important;
+      background: rgba(219, 219, 219, 0.185) !important;
+  backdrop-filter: blur(15px);
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 20px 0px !important;
    -webkit-animation:fadeInUp 3s; /* Safari & Chrome */
-  animation:fadeInUp 3s;
+    animation:fadeInUp 3s;
 }
 
 // .card2 {
@@ -83,15 +84,17 @@ export default {
 //     background-image: linear-gradient(to right top, #d16ba5, #c777b9, #ba83ca, #aa8fd8, #9a9ae1, #8aa7ec, #79b3f4, #69bff8, #52cffe, #41dfff, #46eefa, #5ffbf1) !important;
 // }
 .card3 {
-    border: none !important;
-    background-image: linear-gradient(to left bottom, #feac5e, #ff986d, #ff8782, #ff7b9b, #f176b4, #d97fce, #b989e2, #9094ed, #60a4f2, #32b1eb, #29badb, #4bc0c8) !important;
+  background: rgba(219, 219, 219, 0.185) !important;
+  backdrop-filter: blur(15px);
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 20px 0px !important;
    -webkit-animation:fadeInUp 4s; /* Safari & Chrome */
   animation:fadeInUp 4s;
 }
 
 .card4 {
-    border: none !important;
-    background-image: linear-gradient(to left bottom, #ec008c, #f22183, #f7357a, #fa4673, #fc556d, #f85766, #f45a5f, #ef5c59, #e6534f, #dc4b45, #d3423c, #c93932) !important;
+  background: rgba(219, 219, 219, 0.185) !important;
+  backdrop-filter: blur(15px);
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 20px 0px !important;
    -webkit-animation:fadeInUp 2s; /* Safari & Chrome */
   animation:fadeInUp 2s;
 }

@@ -74,7 +74,7 @@ function init () {
   const material = new THREE.ShaderMaterial({
 
     uniforms: {
-      color: { value: new THREE.Color(0xF1F3F5) }
+      color: { value: new THREE.Color(0xE3E3E3) }
     },
     vertexShader: vShader,
     fragmentShader: fShader
@@ -91,7 +91,7 @@ function init () {
   renderer = new THREE.WebGLRenderer({ antialias: true })
   renderer.setPixelRatio(window.devicePixelRatio)
   renderer.setSize(window.innerWidth, window.innerHeight)
-  renderer.setClearColor(0xFFFFFF, 1)
+  renderer.setClearColor(0xF5F5F5, 1)
   container.appendChild(renderer.domElement)
 
   container.style.touchAction = 'none'

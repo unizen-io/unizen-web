@@ -75,6 +75,11 @@ export default {
 
 <style lang="scss">
 
+#footer {
+    background: rgba(219, 219, 219, 0.185) !important;
+    backdrop-filter: blur(15px) !important;
+}
+
 h2.articles {
     font-family: Montserrat Medium !important;
     color: $dark !important;

@@ -48,6 +48,7 @@ export default {
 }
 
 .navbar-modified {
+    background-color: $light !important;
     // background: rgba(219, 219, 219, 0.185) !important;
     // backdrop-filter: blur(15px) !important;
     // box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 20px 0px !important;
