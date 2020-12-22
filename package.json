@@ -15,7 +15,7 @@
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/pwa": "^3.0.2",
     "bootstrap": "^4.5.2",
-    "bootstrap-vue": "^2.17.3",
+    "bootstrap-vue": "^2.21.1",
     "core-js": "^3.6.5",
     "hooper": "^0.3.4",
     "moment": "^2.29.1",
