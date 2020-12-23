@@ -1,16 +1,19 @@
 <template>
   <main id="main">
-    <NavBar />
-    <Header />
-    <Intro />
-    <Zen />
-    <PoweredByBinance />
-    <Cta />
-    <Articles
-      :articles="articles"
-    />
-    <PartnerCarousel />
-    <Footer />
+    <div>
+      <NavBar />
+      <Header />
+      <Intro />
+      <Zen />
+      <PoweredByBinance />
+      <Cta />
+      <Articles
+        :articles="articles"
+      />
+      <PartnerCarousel />
+      <Footer />
+      <!-- <b-overlay :show="show" opacity="1" z-index="100000" no-wrap /> -->
+    </div>
   </main>
 </template>
 
@@ -23,6 +26,7 @@ export default {
   },
   data () {
     return {
+      show: true,
       articles: []
     }
   },

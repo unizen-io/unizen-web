@@ -5,7 +5,7 @@ export default {
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
-    title: 'zen_web',
+    title: 'ZEN Smart Exchange Ecosystem',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
@@ -32,7 +32,23 @@ export default {
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
     // https://go.nuxtjs.dev/eslint
-    '@nuxtjs/eslint-module'
+    '@nuxtjs/eslint-module',
+    ['@nuxtjs/fontawesome', {
+      component: 'fa', // customize component name
+      imports: [{
+        set: '@fortawesome/free-solid-svg-icons',
+        icons: ['faLightbulb']
+      },
+      {
+        set: '@fortawesome/free-brands-svg-icons',
+        icons: ['faTelegram']
+      },
+      {
+        set: '@fortawesome/free-regular-svg-icons',
+        icons: ['faLightbulb']
+      }
+      ]
+    }]
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -60,6 +76,11 @@ export default {
 
   styleResources: {
     scss: ['./assets/scss/*.scss']
-  }
+  },
 
+  fontawesome: {
+    icons: {
+      solid: ['faHome']
+    }
+  }
 }

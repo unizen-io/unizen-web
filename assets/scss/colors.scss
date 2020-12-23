@@ -26,6 +26,13 @@ h1 {
     font-size: 2.3em !important;
     color: $primary !important;
 }
+@font-face {
+    font-family: 'icomoon';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('~assets/fonts/IcoMoon-Free.ttf') format('truetype');
+  }
 
   @font-face {
     font-family: 'Montserrat';

@@ -36,9 +36,9 @@
               <!-- </p><p> {{ a | truncate(10, 30) }}</p> -->
               <p class="articles" />
             </b-card-text>
-            <template #footer class="footer-articles">
+            <div id="footer" class="footer-articles">
               <img src="~/assets/img/mini_logo.png" style="margin-bottom: -6px; margin-top: -6px;"><small style="float: right;" class="text-muted">Last updated {{ formatDate(a.date) }}</small>
-            </template>
+            </div>
           </b-card>
         </b-card-group>
       </b-row>
@@ -79,12 +79,13 @@ export default {
 }
 
 .footer-articles {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    border-top: 1px #000 solid !important;
-    height: 4rem;
+    background-color: none !important;
+    border-top: 1px #DFDFDF solid;
     width: 100%;
+    padding: 15px;
+    bottom: 0;
+    left: 0;
+    position: fixed;
 }
 
 h2.articles {

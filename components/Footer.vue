@@ -50,18 +50,25 @@
       <div />
     </b-row>
     <b-row style="color: #f5f5f5;" class="bottom text-center pl-5 text-center" align-v="center">
-      © 2017 - 2021 zencex.com. All rights reserved.
+      © 2020 - 2021 zencex.com. All rights reserved.
     </b-row>
   </div>
 </template>
 
 <script>
 export default {
-
+  head: {
+    script: [
+      {
+        src: 'https://use.fontawesome.com/83286dadbf.js'
+      }
+    ]
+  }
 }
 </script>
 
 <style lang="scss">
+
 h2.footer-text {
     color: $light !important;
     font-size: 1.4em;
@@ -80,17 +87,6 @@ a.footer-text {
 .footer {
     min-height: 18rem;
     background-color: $dark;
-}
-
-@font-face {
-font-family: 'icomoon';
-src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.eot?3qkin2');
-src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.eot?#iefix3qkin2') format('embedded-opentype'),
-url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.woff?3qkin2') format('woff'),
-url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.ttf?3qkin2') format('truetype'),
-url('fhttps://s3-us-west-2.amazonaws.com/s.cdpn.io/93/icomoon.svg?3qkin2#icomoon') format('svg');
-font-weight: normal;
-font-style: normal;
 }
 
 .social-networks {
@@ -161,7 +157,7 @@ font-style: normal;
     animation: bounce 1s;
   }
 
-  $networks: linkedin '\eac9' #0077b5, twitter '\e618' #00b0ed, github '\eab1' #4183c4, instagram '\e604' #3f729b, vimeo '\ea9c' #1ab7ea, telegram '\ea95' #0088cc, twitch '\ea9b' #6441a5, pinterest '\e605' #cc2127;
+  $networks: linkedin '\eac9' #0077b5, twitter '\ea96' #00b0ed, github '\eab0' #4183c4, instagram '\e604' #3f729b, vimeo '\ea9c' #1ab7ea, telegram '\ea95' #0088cc, twitch '\ea9b' #6441a5, pinterest '\e605' #cc2127;
 
   @each $network in $networks {
      .icon-#{nth($network, 1)} {
