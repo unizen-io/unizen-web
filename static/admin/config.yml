@@ -2,6 +2,8 @@ backend:
   name: git-gateway
   branch: master
 
+logo_url: assets/img/logo.png
+
 media_folder: static/img
 public_folder: /img
 
@@ -18,4 +20,5 @@ collections:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Publish Date', name: 'date', widget: 'datetime' }
       - { label: 'Description', name: 'description', widget: 'string' }
+      - { label: "Featured Image", name: "thumbnail", default: "default.jpg", widget: "image" }
       - { label: 'Body', name: 'body', widget: 'markdown' }

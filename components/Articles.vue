@@ -12,8 +12,8 @@
           <b-card
             v-for="a in articles"
             :key="a.slug"
-            img-src="https://placekitten.com/300/300"
-            img-alt="Image"
+            :img-src="a.thumbnail"
+            img-alt="https://placekitten.com/300/300"
             img-top
             tag="article"
             style=""
