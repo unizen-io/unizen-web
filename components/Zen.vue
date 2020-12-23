@@ -7,7 +7,7 @@
             <b-card-body>
               <b-row>
                 <b-col cols="3">
-                  <p v-align="center" style="font-size: 5rem;">
+                  <p style="font-size: 5rem;">
                     🦄
                   </p>
                 </b-col>

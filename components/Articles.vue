@@ -13,7 +13,7 @@
             v-for="a in articles"
             :key="a.slug"
             :img-src="a.thumbnail"
-            img-alt="https://placekitten.com/300/300"
+            img-alt="Image not found"
             img-top
             tag="article"
             style=""
@@ -33,7 +33,7 @@
               <p>
                 <!-- <nuxt-content :document="a" /> -->
               </p>
-              <!-- </p><p> {{ a | truncate(10, 30) }}</p> -->
+              <!-- <p> {{ a }}</p> -->
               <p class="articles" />
             </b-card-text>
             <div id="footer" class="footer-articles">
