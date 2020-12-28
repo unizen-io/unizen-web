@@ -7,7 +7,7 @@
       class="navbar-modified"
       :class="{ 'navbar--hidden': !showNavbar }"
     >
-      <b-navbar-brand href="#">
+      <b-navbar-brand href="/">
         <img src="~/assets/img/mini_logo.png" class="d-inline-block align-top mr-1" alt="Logo">
         <span class="logo-text"><b>ZEN</b>EXCHANGE</span>
       </b-navbar-brand>
@@ -16,10 +16,13 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
-          <b-nav-item class="ml-auto" href="#">
+          <b-nav-item class="ml-auto" href="/">
             HOME
           </b-nav-item>
-          <b-nav-item class="ml-auto" href="#">
+          <b-nav-item class="ml-auto" to="/blog" exact>
+            BLOG
+          </b-nav-item>
+          <b-nav-item class="ml-auto" href="#" disabled>
             TRADE
           </b-nav-item>
           <b-nav-item class="ml-auto" href="#" disabled>
@@ -28,7 +31,7 @@
           <b-nav-item class="ml-auto" href="#" disabled>
             FLEXIBLE STAKING
           </b-nav-item>
-          <b-nav-item class="ml-auto" href="#">
+          <b-nav-item class="ml-auto" href="/team">
             TEAM
           </b-nav-item>
           <b-nav-item class="ml-auto" href="#">

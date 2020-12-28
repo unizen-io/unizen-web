@@ -61,7 +61,6 @@ h2.sub-title {
 }
 
 canvas{
-  border: 1px red;
   position: absolute;
   top:0;
   left:0;

@@ -22,9 +22,9 @@ export default {
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  plugins: [
-    { src: '~/plugins/waves2.js', mode: 'module' }
-  ],
+  // plugins: [
+  //   { src: '~/plugins/waves2.js', mode: 'client' }
+  // ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -35,7 +35,7 @@ export default {
     '@nuxtjs/eslint-module',
     ['@nuxtjs/fontawesome', {
       component: 'fa', // customize component name
-      imports: [{
+      icons: [{
         set: '@fortawesome/free-solid-svg-icons',
         icons: ['faLightbulb']
       },
@@ -72,7 +72,8 @@ export default {
   content: {},
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {},
+  build: {
+  },
 
   styleResources: {
     scss: ['./assets/scss/*.scss']
