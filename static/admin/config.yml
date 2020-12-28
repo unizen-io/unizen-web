@@ -8,17 +8,24 @@ media_folder: static/img
 public_folder: /img
 
 collections:
-  - name: 'articles'
-    label: 'Article'
-    folder: 'content/articles'
-    format: 'frontmatter'
+  - name: "articles"
+    label: "Article"
+    folder: "content/articles"
+    format: "frontmatter"
     create: true
-    slug: '{{year}}-{{month}}-{{day}}-{{slug}}'
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     editor:
       preview: false
     fields:
-      - { label: 'Title', name: 'title', widget: 'string' }
-      - { label: 'Publish Date', name: 'date', widget: 'datetime' }
-      - { label: 'Description', name: 'description', widget: 'string' }
-      - { label: "Featured Image", name: "thumbnail", default: "img/default.jpg", widget: "image" }
-      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Description", name: "description", widget: "string" }
+      - {
+          label: "Cover Image",
+          name: "image",
+          widget: "image",
+          default: "img/default.jpg",
+          required: true,
+          tagname: "",
+        }
+      - { label: "Body", name: "body", widget: "markdown" }
