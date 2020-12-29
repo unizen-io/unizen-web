@@ -57,13 +57,7 @@
 
 <script>
 export default {
-  head: {
-    script: [
-      {
-        src: 'https://use.fontawesome.com/83286dadbf.js'
-      }
-    ]
-  }
+
 }
 </script>
 

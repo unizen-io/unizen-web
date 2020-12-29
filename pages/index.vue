@@ -1,23 +1,23 @@
 <template>
   <main id="main">
     <div>
-      <NavBar />
       <Header />
       <Intro />
       <Zen />
       <PoweredByBinance />
       <Cta />
-      <Articles
+      <TopArticles
         :articles="articles"
       />
       <PartnerCarousel />
-      <Footer />
+
       <!-- <b-overlay :show="show" opacity="1" z-index="100000" no-wrap /> -->
     </div>
   </main>
 </template>
 
 <script>
+import waves from '../plugins/waves3'
 
 export default {
 
@@ -30,6 +30,10 @@ export default {
       articles: []
     }
   },
+  mounted () {
+    waves.methods.initAnimation()
+    waves.methods.animate()
+  },
   head () {
     return {
       script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
@@ -41,8 +45,9 @@ export default {
 
 <style style="scss">
 body {
-    background-image: linear-gradient(to bottom, #f5f5f5, #f4f4f4, #f2f3f2, #f1f1f1, #f0f0f0);
+  background-image: linear-gradient(to bottom, #f5f5f5, #f4f4f4, #f2f3f2, #f1f1f1, #f0f0f0);
 }
+
 main {
   overflow: hidden;
   left: 0;

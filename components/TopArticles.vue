@@ -10,9 +10,9 @@
       {{ title }}
     </NuxtLink> -->
           <b-card
-            v-for="a in articles"
+            v-for="a in sortedArticles.slice(0, 3)"
             :key="a.slug"
-            :img-src="a.thumbnail"
+            :img-src="a.image"
             img-alt="Image not found"
             img-top
             tag="article"
@@ -30,10 +30,6 @@
               <p class="articles">
                 {{ a.description }}
               </p>
-              <p>
-                <!-- <nuxt-content :document="a" /> -->
-              </p>
-              <!-- <p> {{ a }}</p> -->
               <p class="articles" />
             </b-card-text>
             <div id="footer" class="footer-articles">
@@ -61,6 +57,13 @@ export default {
     articles: {
       type: Array,
       default: () => []
+    }
+  },
+  computed: {
+    sortedArticles () {
+      return this.articles.slice().sort(function (a, b) {
+        return new Date(b.date) - new Date(a.date)
+      })
     }
   },
   methods: {
