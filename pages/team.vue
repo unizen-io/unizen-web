@@ -6,10 +6,12 @@
           Meet the team.
         </h1>
         <b-row class="mb-5">
-          <b-col />
           <b-col>
             <b-row>
-              <img src="../assets/img/team/brandon.png" class="team" alt="Brandon Dallman">
+              <b-col>
+                <b-img center src="../assets/img/team/brandon.png" class="team" alt="Brandon Dallman" />
+              </b-col>
+              <div class="w-100" />
               <b-col>
                 <h5 class="team">
                   Brandon Dallman
@@ -22,7 +24,10 @@
           </b-col>
           <b-col>
             <b-row>
-              <img src="../assets/img/team/tom.png" class="team" alt="Tom Sweeney">
+              <b-col>
+                <b-img center src="../assets/img/team/tom.png" class="team" alt="Tom Sweeney" />
+              </b-col>
+              <div class="w-100" />
               <b-col>
                 <h5 class="team">
                   Tom Sweeney
@@ -35,7 +40,10 @@
           </b-col>
           <b-col>
             <b-row>
-              <img src="../assets/img/team/sean.png" class="team" alt="Sean Noga">
+              <b-col>
+                <b-img center src="../assets/img/team/sean.png" class="team" alt="Sean Noga" />
+              </b-col>
+              <div class="w-100" />
               <b-col>
                 <h5 class="team">
                   Sean Noga
@@ -48,7 +56,10 @@
           </b-col>
           <b-col>
             <b-row>
-              <img src="../assets/img/team/martin.png" class="team" alt="Martin Granström">
+              <b-col>
+                <b-img center src="../assets/img/team/martin.png" class="team" alt="Martin Granström" />
+              </b-col>
+              <div class="w-100" />
               <b-col>
                 <h5 class="team">
                   Martin Granström
@@ -61,7 +72,10 @@
           </b-col>
           <b-col>
             <b-row>
-              <img src="../assets/img/team/alex.png" class="team" alt="Alex Man">
+              <b-col>
+                <b-img center src="../assets/img/team/alex.png" class="team" alt="Alex Man" />
+              </b-col>
+              <div class="w-100" />
               <b-col>
                 <h5 class="team">
                   Alex Man
@@ -72,7 +86,6 @@
               </b-col>
             </b-row>
           </b-col>
-          <b-col />
         </b-row>
       </b-container>
     </b-row>
@@ -83,13 +96,20 @@
         </h1>
         <b-row>
           <b-col cols="3">
-            <b-img center src="../assets/img/advisors/ian.png" class="team" alt="Ian Sobieski" />
-            <h5 class="team">
-              Dr Ian Sobieski
-            </h5>
-            <p class="team">
-              Chairman & Founder, Band of Angels
-            </p>
+            <b-row>
+              <b-col>
+                <b-img center src="../assets/img/advisors/ian.png" class="team" alt="Ian Sobieski" />
+              </b-col>
+              <div class="w-100" />
+              <b-col>
+                <h5 class="team">
+                  Dr. Ian Sobieski
+                </h5>
+                <p class="team">
+                  Chairman & Founder, Band of Angels
+                </p>
+              </b-col>
+            </b-row>
           </b-col>
           <b-col>
             <b-card>
