@@ -27,14 +27,14 @@
                   <router-link
                     :to="`articles/${a.slug}`"
                   >
-                    <h2 class="articles">
+                    <h2 class="blog">
                       {{ a.title }}
                     </h2>
                   </router-link>
-                  <p class="articles">
+                  <p class="blog">
                     {{ a.description }}
                   </p>
-                  <p class="articles" />
+                  <p class="blog" />
                 </b-card-text>
                 <div id="footer" class="footer-articles">
                   <img src="~/assets/img/mini_logo.png" style="float: left; margin-bottom: -6px; margin-top: -6px;"><small style="float: right;" class="text-muted">Last updated {{ formatDate(a.date) }}</small>
@@ -110,10 +110,11 @@ export default {
     position: fixed;
 }
 
-h2.articles {
+h2.blog {
     font-family: Montserrat Medium !important;
     color: $dark !important;
     font-size: 20px;
+    text-align: left;
 }
 
 h1.blog {
@@ -123,9 +124,10 @@ h1.blog {
     text-align: center;
 }
 
-p.articles {
+p.blog {
     font-family: Montserrat Medium;
     font-size: 14px;
+    text-align: left;
 }
 
 #footer-content {
