@@ -34,7 +34,7 @@
           <b-nav-item class="ml-auto" href="/team">
             TEAM
           </b-nav-item>
-          <b-nav-item class="ml-auto" href="#">
+          <b-nav-item class="ml-auto" to="/contact">
             CONTACT
           </b-nav-item>
         </b-navbar-nav>
