@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="main">
     <b-row>
       <b-container class="py-5 my-5">
         <h1 class="blog py-5 mt-5">
@@ -12,7 +12,7 @@
             We would love to talk to you about any business inquiry or partner proposal. If this relates to support for any of our exchange modules, please reach out to support@zencex.com.
           </b-card>
           <br>
-          <b-form-group data-netlify-recaptcha="true" name="contact" method="POST" data-netlify="true">
+          <b-form data-netlify-recaptcha="true" name="contact" method="POST" data-netlify="true">
             <b-form-input
               id="input-1"
               v-model="name"
@@ -48,7 +48,7 @@
             <b-button variant="outline-primary" size="lg" class="contact" type="submit">
               Send
             </b-button>
-          </b-form-group>
+          </b-form>
         </b-col>
         <b-col />
       </b-container>
@@ -104,6 +104,10 @@ export default {
 </script>
 
 <style lang="scss">
+.main {
+    background-image: linear-gradient(to bottom, #f5f5f5, #f4f4f4, #f2f3f2, #f1f1f1, #f0f0f0);
+    min-height: 1000px;
+}
 .contact {
     width: 100% !important;
 }
