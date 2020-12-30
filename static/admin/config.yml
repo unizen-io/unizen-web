@@ -24,7 +24,6 @@ collections:
           label: "Cover Image",
           name: "image",
           widget: "image",
-          default: "img/default.jpg",
           required: true,
           tagname: "",
         }
