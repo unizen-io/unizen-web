@@ -13,8 +13,7 @@
           </b-card>
           <br>
           <b-form
-            data-netlify-recaptcha="true"
-            action="/thanks"
+            action="/thanks/"
             name="contactus"
             method="POST"
             netlify-honeypot="bot-field"
@@ -52,7 +51,6 @@
               name="message"
             />
             <br>
-            <div data-netlify-recaptcha="true" />
             <b-button variant="outline-primary" size="lg" class="contact" type="submit">
               Send
             </b-button>

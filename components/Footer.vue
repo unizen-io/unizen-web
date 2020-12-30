@@ -39,10 +39,10 @@
               Social
             </h2>
             <ul class="social-networks bounce">
-              <li><a href="https://telegram.com" class="icon-telegram">Telegram</a></li>
-              <li><a href="https://www.linkedin.com/" class="icon-linkedin">LinkedIn</a></li>
-              <li><a href="https://twitter.com/" class="icon-twitter">Twitter</a></li>
-              <li><a href="https://github.com" class="icon-github">GitHub</a></li>
+              <li><a href="https://t.me/zencexofficial" class="icon-telegram">Telegram</a></li>
+              <li><a href="https://www.linkedin.com/company/zencexofficial" class="icon-linkedin">LinkedIn</a></li>
+              <li><a href="https://twitter.com/ZencexOfficial" class="icon-twitter">Twitter</a></li>
+              <li><a href="https://github.com/ZencexOfficial" class="icon-github">GitHub</a></li>
             </ul>
           </b-col>
         </b-row>
