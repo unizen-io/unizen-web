@@ -2,7 +2,7 @@
 title: "Zen Exchange "
 date: 2020-12-29T21:39:30.408Z
 description: Smart Exchange Ecosystem Overview
-image: img/default.jpg
+image: /img/sean-stratton-obpce_x3j6u-unsplash.jpg
 ---
 \
 **The Zen Cryptocurrency Exchange** (ZenCEX), which is set to launch in Q1 of 2021, offers an intelligently designed market ecosystem -- with a comprehensive focus on an exuberance of  liquidity paired with proven AI-driven trade indicators.
