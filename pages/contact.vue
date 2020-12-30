@@ -49,6 +49,30 @@
               Send
             </b-button>
           </b-form>
+          <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
+            <div class="form-group">
+              <label for="name">Name:</label>
+              <input id="name" type="text" class="form-control" name="name" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email:</label>
+              <input id="email" type="email" class="form-control" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="subject">Subject:</label>
+              <input id="subject" type="text" class="form-control" name="subject" required>
+            </div>
+            <div class="form-group">
+              <label for="message">Message:</label>
+              <textarea id="message" class="form-control" rows="10" name="message" required />
+            </div>
+            <div class="form-group">
+              <div data-netlify-recaptcha="true" />
+            </div>
+            <button type="submit" class="btn btn-primary">
+              Submit
+            </button>
+          </form>
         </b-col>
         <b-col />
       </b-container>
