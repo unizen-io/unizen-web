@@ -15,7 +15,7 @@
           <b-form
             data-netlify-recaptcha="true"
             action="/thanks"
-            name="contact"
+            name="contactus"
             method="POST"
             netlify-honeypot="bot-field"
             data-netlify="true"
