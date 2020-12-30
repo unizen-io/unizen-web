@@ -158,12 +158,10 @@ h5.team {
 .overlay {
     background: rgba(255, 255, 255, 0.185) !important;
     backdrop-filter: blur(15px);
-    box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 20px 0px !important;
     opacity: 0;
     position: absolute;
     width: 100% !important;
     border-radius: 0.3rem;
-    margin-left: 15px;
     margin-top: 30px;
     top:0;
     left:0;
