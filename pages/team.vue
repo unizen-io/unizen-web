@@ -8,8 +8,20 @@
         <b-row class="mb-5">
           <b-col v-for="member in team" :key="member.name">
             <b-row>
-              <b-col>
+              <b-col class="block">
                 <b-img-lazy center :src="member.img" class="team" :alt="member.name" />
+                <div class="parent-cont">
+                  <div class="overlay">
+                    <div class="text">
+                      <ul class="social-networks bounce mt-4">
+                        <li><a href="https://telegram.com" class="icon-telegram">Telegram</a></li>
+                        <li><a href="https://www.linkedin.com/" class="mb-3 icon-linkedin">LinkedIn</a></li>
+                        <li><a href="https://twitter.com/" class="icon-twitter">Twitter</a></li>
+                        <li><a href="https://github.com" class="icon-github">GitHub</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
               </b-col>
               <div class="w-100" />
               <b-col>
@@ -131,6 +143,40 @@ h5.team {
     font-weight: bold;
     text-align: center !important;
     padding-top: 15px;
+}
+.text {
+        font-family: Montserrat Medium !important;
+    color: $dark !important;
+    font-weight: bold;
+    text-align: center !important;
+    padding-top: 15px;
+}
+
+.block {
+    position: relative;
+}
+.overlay {
+    background: rgba(255, 255, 255, 0.185) !important;
+    backdrop-filter: blur(15px);
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 20px 0px !important;
+    opacity: 0;
+    position: absolute;
+    width: 100% !important;
+    border-radius: 0.3rem;
+    margin-left: 15px;
+    margin-top: 30px;
+    top:0;
+    left:0;
+    transition:opacity 1s ease;
+}
+
+.block:hover .overlay {
+    opacity:1;
+}
+
+.parent-cont {
+  display: flex;
+  justify-content: center;
 }
 
 </style>
