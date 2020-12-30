@@ -12,7 +12,14 @@
             We would love to talk to you about any business inquiry or partner proposal. If this relates to support for any of our exchange modules, please reach out to support@zencex.com.
           </b-card>
           <br>
-          <b-form data-netlify-recaptcha="true" name="contact" method="POST" data-netlify="true">
+          <b-form
+            data-netlify-recaptcha="true"
+            action="/thanks"
+            name="contact"
+            method="POST"
+            netlify-honeypot="bot-field"
+            data-netlify="true"
+          >
             <b-form-input
               id="input-1"
               v-model="name"
@@ -49,30 +56,6 @@
               Send
             </b-button>
           </b-form>
-          <form name="contact" method="POST" data-netlify="true" data-netlify-recaptcha="true">
-            <div class="form-group">
-              <label for="name">Name:</label>
-              <input id="name" type="text" class="form-control" name="name" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email:</label>
-              <input id="email" type="email" class="form-control" name="email" required>
-            </div>
-            <div class="form-group">
-              <label for="subject">Subject:</label>
-              <input id="subject" type="text" class="form-control" name="subject" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Message:</label>
-              <textarea id="message" class="form-control" rows="10" name="message" required />
-            </div>
-            <div class="form-group">
-              <div data-netlify-recaptcha="true" />
-            </div>
-            <button type="submit" class="btn btn-primary">
-              Submit
-            </button>
-          </form>
         </b-col>
         <b-col />
       </b-container>
