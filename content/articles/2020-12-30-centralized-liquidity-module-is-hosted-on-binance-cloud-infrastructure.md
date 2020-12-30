@@ -1,7 +1,7 @@
 ---
-title: Centralized Liquidity Module is hosted on Binance Cloud Infrastructure
+title: Binance Shared Liquidity, Security and Performance
 date: 2020-12-30T14:22:22.564Z
-description: Binance Shared Liquidity, Security and Performance
+description: Centralized Liquidity Module is hosted on Binance Cloud Infrastructure
 image: /img/binance-cloud-la-gi-blogtienao.png
 ---
 ZEN centralized liquidity module is built on the Binance Cloud ecosystem to ensure optimal performance, with a highly responsive User Interface (UI) that has been extensively stress-tested to ensure it can withstand
