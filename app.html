@@ -6,9 +6,9 @@
 </head>
 
 <body {{ BODY_ATTRS }}>
-    <form name="contactus" netlify netlify-honeypot="bot-field" hidden>
+    <form name="contactus" netlify data-netlify-recaptcha="true" netlify-honeypot="bot-field" hidden>
         <input type="text" name="name" />
-        <input type="radio" name="email" />
+        <input type="email" name="email" />
         <textarea name="message"></textarea>
     </form>
     {{ APP }}
