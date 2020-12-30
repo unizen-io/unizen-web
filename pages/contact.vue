@@ -16,9 +16,10 @@
             action="/thanks/"
             name="contactus"
             method="POST"
-            netlify-honeypot="bot-field"
+            data-netlify-honeypot="bot-field"
             data-netlify="true"
           >
+            <input type="hidden" name="form-name" value="contactus">
             <b-form-input
               id="input-1"
               v-model="name"
@@ -34,7 +35,7 @@
               id="input-2"
               v-model="email"
               placeholder="What's your e-mail?"
-              type="email"
+              type="radio"
               name="email"
               size="lg"
               :state="emailState"
