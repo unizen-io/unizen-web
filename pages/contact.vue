@@ -23,6 +23,7 @@
             <b-form-input
               id="input-1"
               v-model="name"
+              name="name"
               novalidate="true"
               placeholder="What's your name?"
               size="lg"
