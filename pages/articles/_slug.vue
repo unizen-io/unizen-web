@@ -15,7 +15,8 @@
           </p>
         </b-container>
         <br><br>
-        Article last updated: {{ formatDate(article.date) }}
+        <p>
+          Article last updated: {{ formatDate(article.date) }}
         </p>
       </b-card>
     </b-container>
