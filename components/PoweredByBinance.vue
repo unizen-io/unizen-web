@@ -6,7 +6,7 @@
           <h3 class="binance-text">
             ZEN Innovation Powered by:
           </h3>
-          <img src="~assets/img/binance/bc-logo.png">
+          <b-img fluid src="~assets/img/binance/bc-logo.png" />
         </b-col>
         <b-col />
       </b-row>

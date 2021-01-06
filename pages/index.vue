@@ -17,7 +17,6 @@
 </template>
 
 <script>
-import waves from '../plugins/waves3'
 
 export default {
 
@@ -30,10 +29,7 @@ export default {
       articles: []
     }
   },
-  mounted () {
-    waves.methods.initAnimation()
-    waves.methods.animate()
-  },
+
   head () {
     return {
       script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
