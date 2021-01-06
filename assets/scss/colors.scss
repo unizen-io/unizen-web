@@ -7,8 +7,8 @@ $dak-blue:      #11687F ;
 $light:         #f5f5f5 ;
 $dark:          #2F4858 ;
 
-$enable-shadows: true ;
-$enable-gradients: true ;
+$enable-shadows: false ;
+// $enable-gradients: true ;
 
 //bootstrap & bootstrap-vue should be added after 
 //so that they inherit the custom SCSS variables

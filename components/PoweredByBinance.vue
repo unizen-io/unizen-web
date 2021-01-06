@@ -1,14 +1,14 @@
 <template>
   <b-row class="binance py-5 mb-5">
     <b-container>
-      <b-row class="pt-4">
-        <b-col>
+      <b-row class="pt-5">
+        <b-col sm>
           <h3 class="binance-text">
             ZEN Innovation Powered by:
           </h3>
           <b-img fluid src="~assets/img/binance/bc-logo.png" />
         </b-col>
-        <b-col />
+        <b-col sm />
       </b-row>
       <b-row class="pt-5">
         <b-col />
@@ -19,9 +19,9 @@
         </b-col>
         <b-col />
       </b-row>
-      <b-row class="py-5">
+      <b-row class="pb-5 pt-2">
         <b-col sm>
-          <b-card class="binance-card">
+          <b-card class="binance-card mt-3">
             <div class="performance text-center" />
             <p class="binance-subtitle">
               <b>Performance</b>
@@ -35,7 +35,7 @@
           </b-card>
         </b-col>
         <b-col class="center" sm>
-          <b-card class="binance-card">
+          <b-card class="binance-card mt-3">
             <div class="liquidity" />
             <p class="binance-subtitle">
               <b>High Liquidity</b>
@@ -50,7 +50,7 @@
         </b-col>
 
         <b-col sm>
-          <b-card class="binance-card">
+          <b-card class="binance-card mt-3">
             <div class="security" />
             <p class="binance-subtitle">
               <b>Binance Security</b>
