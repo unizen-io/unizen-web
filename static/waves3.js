@@ -34,17 +34,17 @@ let particles; let count = 0
 export default {
   methods: {
     onWindowResize () {
-      camera.aspect = window.innerWidth / window.innerHeight
+      camera.aspect = container.clientWidth / container.clientHeight
       camera.updateProjectionMatrix()
 
-      renderer.setSize(window.innerWidth, window.innerHeight)
+      renderer.setSize(container.clientWidth, container.clientHeight)
     },
 
     initAnimation () {
-      container = document.createElement('div', { id: 'waves' })
-      document.body.appendChild(container)
+      container = document.getElementById('canvas-project')
+      document.getElementById('header').appendChild(container)
 
-      camera = new THREE.PerspectiveCamera(120, window.innerWidth / window.innerHeight, 1, 10000)
+      camera = new THREE.PerspectiveCamera(120, container.clientWidth / container.clientHeight, 1, 10000)
       camera.position.y = 550 // changes how far back you can see i.e the particles towards horizon
       camera.position.z = 300 // This is how close or far the particles are seen
 
@@ -96,7 +96,7 @@ export default {
 
       renderer = new THREE.WebGLRenderer({ antialias: true })
       renderer.setPixelRatio(window.devicePixelRatio)
-      renderer.setSize(window.innerWidth, window.innerHeight)
+      renderer.setSize(container.clientWidth, container.clientHeight)
       renderer.setClearColor(0xF5F5F5, 1)
       container.appendChild(renderer.domElement)
 
@@ -104,13 +104,17 @@ export default {
 
       //
 
-      window.addEventListener('resize', this.onWindowResize, false)
+      window.addEventListener('resize', this.onWindowResize, true)
     },
 
     animate () {
       requestAnimationFrame(this.animate.bind(this))
 
       this.render()
+    },
+
+    stopAnimation () {
+      scene.remove(particles)
     },
 
     render () {

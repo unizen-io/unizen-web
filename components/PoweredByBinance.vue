@@ -6,7 +6,7 @@
           <h3 class="binance-text">
             ZEN Innovation Powered by:
           </h3>
-          <img src="~assets/img/binance/bc-logo.png">
+          <b-img fluid src="~assets/img/binance/bc-logo.png" />
         </b-col>
         <b-col />
       </b-row>
@@ -20,7 +20,7 @@
         <b-col />
       </b-row>
       <b-row class="py-5">
-        <b-col>
+        <b-col sm>
           <b-card class="binance-card">
             <div class="performance text-center" />
             <p class="binance-subtitle">
@@ -34,7 +34,7 @@
             </p>
           </b-card>
         </b-col>
-        <b-col class="center">
+        <b-col class="center" sm>
           <b-card class="binance-card">
             <div class="liquidity" />
             <p class="binance-subtitle">
@@ -49,7 +49,7 @@
           </b-card>
         </b-col>
 
-        <b-col>
+        <b-col sm>
           <b-card class="binance-card">
             <div class="security" />
             <p class="binance-subtitle">

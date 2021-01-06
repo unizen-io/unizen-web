@@ -1,6 +1,8 @@
 <template>
   <div id="header" class="header">
-    <canvas width="1260" height="1244" />
+    <div style="position: fixed;">
+      <div id="canvas-project" static="true" />
+    </div>
     <div id="homeView" class="current-state ajaxhidden" style="visibility: inherit;">
       <div class="layout layout-homepage">
         <article class="slideshow">
@@ -19,7 +21,17 @@
 </template>
 
 <script>
+import waves from '../static/waves3'
 export default {
+
+  mounted () {
+    if (this.$route.name === 'index') {
+      waves.methods.initAnimation()
+      waves.methods.animate()
+    } else {
+      waves.methods.stopAnimation()
+    }
+  }
 }
 </script>
 
@@ -60,13 +72,11 @@ h2.sub-title {
   -moz-text-fill-color: transparent;
 }
 
-canvas{
-  position: absolute;
-  top:0;
-  left:0;
-  width: 1260px;
-  height: 1244px;
-  z-index:-1;
+#canvas-project {
+    position: absolute !important;
+    height: 800px !important;
+    width: 100% !important;
+    z-index: -1;
 }
 #homeView {
     width: auto;
