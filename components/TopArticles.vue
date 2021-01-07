@@ -4,14 +4,23 @@
       <h1 class="articles">
         Latest blog articles.
       </h1><br>
-      <b-row class="mt-1">
-        <b-card-group class="mb-5 mt-4" deck>
+      <b-row
+        class="mt-1"
+        cols="1"
+        cols-sm="1"
+        cols-md="2"
+        cols-lg="3"
+      >
+        <b-col
+          v-for="a in sortedArticles.slice(0, 3)"
+          :key="a.slug"
+          class="mb-5"
+        >
           <!-- <NuxtLink :to="`articles/${slug}`">
       {{ title }}
     </NuxtLink> -->
           <b-card
-            v-for="a in sortedArticles.slice(0, 3)"
-            :key="a.slug"
+
             :img-src="a.image"
             img-alt="Image not found"
             img-top
@@ -36,7 +45,7 @@
               <img src="~/assets/img/mini_logo.png" style="margin-bottom: -6px; margin-top: -6px;"><small style="float: right;" class="text-muted">Last updated {{ formatDate(a.date) }}</small>
             </div>
           </b-card>
-        </b-card-group>
+        </b-col>
       </b-row>
     </div>
   </b-container>

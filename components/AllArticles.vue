@@ -1,51 +1,51 @@
 <template>
-  <div class="py-5 my-5">
-    <b-row class="mx-auto">
-      <div class="mx-auto container-cent">
-        <h1 class="blog py-5 mt-5">
-          ZEN Blog.
-        </h1>
-        <br>
-        <b-col>
-          <center>
-            <b-card-group class="mx-auto mb-5 mt-4" deck>
-              <!-- <NuxtLink :to="`articles/${slug}`">
+  <b-container class="py-5 my-5">
+    <h1 class="blog py-5 mt-5">
+      ZEN Blog.
+    </h1>
+    <b-row
+      class="mx-auto"
+      cols="1"
+      cols-sm="1"
+      cols-md="2"
+      cols-lg="3"
+    >
+      <br>
+
+      <!-- <b-card-group class="mx-auto mb-5 mt-4" deck> -->
+      <!-- <NuxtLink :to="`articles/${slug}`">
       {{ title }}
     </NuxtLink> -->
-
-              <b-card
-                v-for="a in sortedArticles.slice(0, 8)"
-                :key="a.slug"
-                :img-src="a.image"
-                img-alt="Image not found"
-                img-top
-                tag="article"
-                style=""
-                class="mb-4 article-card"
-              >
-                <b-card-text>
-                  <router-link
-                    :to="`articles/${a.slug}`"
-                  >
-                    <h2 class="blog">
-                      {{ a.title }}
-                    </h2>
-                  </router-link>
-                  <p class="blog">
-                    {{ a.description }}
-                  </p>
-                  <p class="blog" />
-                </b-card-text>
-                <div id="footer" class="footer-articles">
-                  <img src="~/assets/img/mini_logo.png" style="float: left; margin-bottom: -6px; margin-top: -6px;"><small style="float: right;" class="text-muted">Last updated {{ formatDate(a.date) }}</small>
-                </div>
-              </b-card>
-            </b-card-group>
-          </center>
-        </b-col>
-      </div>
+      <b-col v-for="a in sortedArticles.slice(0, 8)" :key="a.slug" sm>
+        <b-card
+          :img-src="a.image"
+          img-alt="Image not found"
+          img-top
+          tag="article"
+          style=""
+          class="mb-5 article-card"
+        >
+          <b-card-text>
+            <router-link
+              :to="`articles/${a.slug}`"
+            >
+              <h2 class="blog">
+                {{ a.title }}
+              </h2>
+            </router-link>
+            <p class="blog">
+              {{ a.description }}
+            </p>
+            <p class="blog" />
+          </b-card-text>
+          <div id="footer" class="footer-articles">
+            <img src="~/assets/img/mini_logo.png" style="float: left; margin-bottom: -6px; margin-top: -6px;"><small style="float: right;" class="text-muted">Last updated {{ formatDate(a.date) }}</small>
+          </div>
+        </b-card>
+      </b-col>
+      <!-- </b-card-group> -->
     </b-row>
-  </div>
+  </b-container>
 </template>
 
 <script>
@@ -90,14 +90,10 @@ export default {
 
 <style lang="scss">
 
-.container-cent {
-  width: 1320px;
-}
-
 .article-card {
     min-height: 30rem !important;
-    max-width: 25rem;
-    min-width: 25rem !important;
+    // max-width: 25rem;
+    // min-width: 25rem !important;
 }
 
 .footer-articles {

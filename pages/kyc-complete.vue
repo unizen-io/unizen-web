@@ -30,9 +30,9 @@
             <h3 class="success">
               Thank you!
             </h3>
-            <h5>You have successfully completed the ZEN Exchange KYC proceedure.</h5>
+            <h5>You have successfully completed the ZEN Exchange KYC procedure.</h5>
             <br>
-            <b-button variant="outline-secondary" size="lg" to="/">
+            <b-button variant="secondary" size="lg" to="/">
               Return to ZEN
             </b-button>
           </b-card>

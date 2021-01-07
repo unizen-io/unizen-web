@@ -1,40 +1,39 @@
 <template>
   <div class="zen">
-    <b-container>
-      <b-row class="zen pt-5 macbook">
-        <b-col>
-          <b-card class="text-box mt-5">
-            <b-card-body>
-              <b-row>
-                <b-col cols="3">
-                  <p style="font-size: 5rem;">
-                    🦄
-                  </p>
-                </b-col>
-                <b-col>
-                  <p class="zen-text">
-                    A new class of digital asset exchange that provides global traders and retail investors with access to exciting blockchain projects through the combined functionality of a secure CEX, DEX, AI-driven social sentiment indicators and Binance-level liquidity: all in one seamless user experience.
-                  </p>
-                </b-col>
-              </b-row>
-            </b-card-body>
-            <b-list-group flush>
-              <b-list-group-item class="zen-item">
-                ✔️ High regulatory compliance
-              </b-list-group-item>
-              <b-list-group-item class="zen-item">
-                ✔️ Fast listing times
-              </b-list-group-item>
-              <b-list-group-item class="zen-item" style="border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
-                ✔️ Highly competitive listing and trading fees
-              </b-list-group-item>
-            </b-list-group>
-          </b-card>
-        </b-col>
-        <b-col />
-        <b-col />
-      </b-row>
-    </b-container>
+    <b-row class="zen pt-5 macbook mx-auto" aligh-h="center">
+      <b-col sm>
+        <b-card class="text-box mt-5">
+          <b-card-body>
+            <b-row>
+              <b-col cols="4">
+                <p style="font-size: 5rem;">
+                  🦄
+                </p>
+              </b-col>
+              <b-col sm>
+                <p class="zen-text">
+                  A new class of digital asset exchange that provides global traders and retail investors with access to exciting blockchain projects through the combined functionality of a secure CEX, DEX, AI-driven social sentiment indicators and Binance-level liquidity: all in one seamless user experience.
+                </p>
+              </b-col>
+            </b-row>
+          </b-card-body>
+          <b-list-group flush>
+            <b-list-group-item class="zen-item">
+              ✔️ High regulatory compliance
+            </b-list-group-item>
+            <b-list-group-item class="zen-item">
+              ✔️ Fast listing times
+            </b-list-group-item>
+            <b-list-group-item class="zen-item" style="border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
+              ✔️ Highly competitive listing and trading fees
+            </b-list-group-item>
+          </b-list-group>
+        </b-card>
+      </b-col>
+      <b-col class="d-none d-lg-block" />
+      <b-col class="d-none d-lg-block" />
+    </b-row>
+
   <!-- <div class="float-right macbook" /> -->
   </div>
 </template>
@@ -49,7 +48,7 @@ export default {
 .zen {
     // background: rgb(250, 250, 250);
     height: 1080px;
-    margin-left: -350px;
+    margin-right: -430px;
 }
 
 .zen-item {
@@ -100,7 +99,7 @@ p.zen-text-small {
 .macbook {
     background-image: url('../assets/img/iMac.png');
     background-size: cover;
-    width: 1920px;
+    max-width: 1920px;
 }
 
 .text-box {
@@ -110,6 +109,8 @@ p.zen-text-small {
   box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 20px 0px !important;
   -webkit-animation:fadeInUp 3s; /* Safari & Chrome */
   animation:fadeInUp 3s;
+  max-width: 520px;
+  min-width: 420px !important;
 }
 
 </style>
