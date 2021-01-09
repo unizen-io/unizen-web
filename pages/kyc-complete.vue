@@ -30,11 +30,16 @@
             <h3 class="success">
               Thank you!
             </h3>
-            <h5>You have successfully completed the ZEN Exchange KYC procedure.</h5>
+            <h5>
+              Your KYC application has been submitted for review by the Fractal Team. Please check your email for further steps.
+              <br><br>
+              Warmest regards,<br>
+              The Zen Team
+            </h5>
             <br>
             <b-button variant="secondary" size="lg" to="/">
               Return to ZEN
-            </b-button>
+            </b-button><br><br>
           </b-card>
         </b-col>
         <b-col sm />
