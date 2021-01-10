@@ -11,7 +11,7 @@
               ZEN
             </h2>
             <h2 class="sub-title">
-              Smart Exchange Ecosytem
+              Smart Exchange Ecosystem
             </h2>
           </div>
         </article>
