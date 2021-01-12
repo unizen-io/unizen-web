@@ -23,7 +23,7 @@
     "hooper": "^0.3.4",
     "moment": "^2.29.1",
     "nuxt": "^2.14.6",
-    "three": "^0.123.0",
+    "three": "^0.124.0",
     "vue-gtag": "^1.10.0"
   },
   "devDependencies": {
