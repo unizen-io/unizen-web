@@ -54,6 +54,8 @@ export default {
   // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
     // https://go.nuxtjs.dev/bootstrap
+    '@nuxtjs/sitemap',
+    '@nuxtjs/google-analytics',
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
@@ -67,6 +69,11 @@ export default {
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
+
+  googleAnalytics: {
+    id: process.env.ANALYTICS_ID,
+    dev: false
+  },
 
   // Content module configuration (https://go.nuxtjs.dev/config-content)
   content: {},
