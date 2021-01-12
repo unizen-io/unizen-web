@@ -75,6 +75,15 @@ export default {
     dev: false
   },
 
+  sitemap: {
+    hostname: 'https://zencex.com',
+    gzip: true,
+    exclude: [
+      '/secret',
+      '/admin/**'
+    ]
+  },
+
   // Content module configuration (https://go.nuxtjs.dev/config-content)
   content: {},
 
