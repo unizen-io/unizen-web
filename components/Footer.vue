@@ -13,11 +13,11 @@
             <NuxtLink to="/team" class="footer-text">
               Team
             </NuxtLink><br>
-            <NuxtLink to="#" :class="{ disabled: true }" class="footer-text">
+            <NuxtLink to="#" class="footer-text footer-disabled">
               ZCX Token
             </NuxtLink><br>
-            <a :class="{ disabled: true }" class="footer-text">CoinMarketCap</a><br>
-            <a :class="{ disabled: true }" class="footer-text">CoinGecko</a><br>
+            <a class="footer-text footer-disabled">CoinMarketCap</a><br>
+            <a class="footer-text footer-disabled">CoinGecko</a><br>
             <NuxtLink to="/contact" class="footer-text">
               Contact Us
             </NuxtLink>
@@ -26,7 +26,7 @@
             <h2 class="footer-text">
               Business
             </h2>
-            <a :class="{ disabled: true }" class="footer-text">
+            <a class="footer-text footer-disabled">
               Listing Application</a><br>
             <NuxtLink to="/contact" class="footer-text">
               Business Contact
@@ -39,11 +39,11 @@
             <h2 class="footer-text">
               Technology
             </h2>
-            <a :class="{ disabled: true }" class="footer-text">
+            <a class="footer-text footer-disabled">
               API Doc</a><br>
-            <a :class="{ disabled: true }" class="footer-text">SDK</a><br>
+            <a class="footer-disabled footer-text">SDK</a><br>
             <a href="https://github.com/ZencexOfficial" class="footer-text">GitHub</a><br>
-            <a :class="{ disabled: true }" class="footer-text">Litepaper</a>
+            <a class="footer-disabled footer-text">Litepaper</a>
           </b-col>
           <b-col>
             <h2 class="footer-text">
@@ -73,7 +73,7 @@ export default {
 </script>
 
 <style lang="scss">
-.disabled {
+.footer-disabled {
    opacity: 0.4;
    pointer-events: none;
 }
