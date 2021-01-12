@@ -7,32 +7,43 @@
             <h2 class="footer-text">
               General
             </h2>
-            <a class="footer-text">
-              About Us</a><br>
-            <a class="footer-text">Team</a><br>
-            <a class="footer-text">ZCX Token</a><br>
-            <a class="footer-text">CoinMarketCap</a><br>
-            <a class="footer-text">CoinGecko</a><br>
-            <a class="footer-text">Contact Us</a>
+            <NuxtLink to="/blog" class="footer-text">
+              Blog
+            </NuxtLink><br>
+            <NuxtLink to="/team" class="footer-text">
+              Team
+            </NuxtLink><br>
+            <NuxtLink to="#" :class="{ disabled: true }" class="footer-text">
+              ZCX Token
+            </NuxtLink><br>
+            <a :class="{ disabled: true }" class="footer-text">CoinMarketCap</a><br>
+            <a :class="{ disabled: true }" class="footer-text">CoinGecko</a><br>
+            <NuxtLink to="/contact" class="footer-text">
+              Contact Us
+            </NuxtLink>
           </b-col>
           <b-col>
             <h2 class="footer-text">
               Business
             </h2>
-            <a class="footer-text">
+            <a :class="{ disabled: true }" class="footer-text">
               Listing Application</a><br>
-            <a class="footer-text">Business Contact</a><br>
-            <a class="footer-text">Partnership Inquiry</a>
+            <NuxtLink to="/contact" class="footer-text">
+              Business Contact
+            </NuxtLink><br>
+            <NuxtLink to="/contact" class="footer-text">
+              Partnership Inquiry
+            </NuxtLink>
           </b-col>
           <b-col>
             <h2 class="footer-text">
               Technology
             </h2>
-            <a class="footer-text">
+            <a :class="{ disabled: true }" class="footer-text">
               API Doc</a><br>
-            <a class="footer-text">SDK</a><br>
-            <a class="footer-text">GitHub</a><br>
-            <a class="footer-text">Litepaper</a>
+            <a :class="{ disabled: true }" class="footer-text">SDK</a><br>
+            <a href="https://github.com/ZencexOfficial" class="footer-text">GitHub</a><br>
+            <a :class="{ disabled: true }" class="footer-text">Litepaper</a>
           </b-col>
           <b-col>
             <h2 class="footer-text">
@@ -62,6 +73,10 @@ export default {
 </script>
 
 <style lang="scss">
+.disabled {
+   opacity: 0.4;
+   pointer-events: none;
+}
 
 h2.footer-text {
     color: $light !important;
