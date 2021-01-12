@@ -12,7 +12,7 @@ export default {
       { hid: 'description', name: 'description', content: 'A new class of digital asset exchange that provides global traders and retail investors with access to exciting blockchain projects through the combined functionality of a secure CEX, DEX, AI-driven social sentiment indicators and Binance-level liquidity: all in one seamless user experience. Buy Bitcoin, Ethereum, Polkadot or any other Altcoin with a Zen State of Mind.' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: './assets/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '@/assets/favicon.ico' }
     ]
   },
 
@@ -22,9 +22,9 @@ export default {
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
-  // plugins: [
-  //   { src: '~/plugins/waves2.js', mode: 'client' }
-  // ],
+  plugins: [
+    '@/plugins/gtag'
+  ],
 
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
@@ -70,10 +70,10 @@ export default {
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
   axios: {},
 
-  googleAnalytics: {
-    id: process.env.NUXT_ENV_ANALYTICS_ID,
-    dev: false
-  },
+  // googleAnalytics: {
+  //   id: process.env.NUXT_ENV_ANALYTICS_ID,
+  //   dev: false
+  // },
 
   sitemap: {
     hostname: 'https://zencex.com',
