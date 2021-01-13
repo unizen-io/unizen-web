@@ -32,6 +32,12 @@ export default {
 
   head () {
     return {
+      title: 'ZEN: Smart Exchange Ecosystem - Home.',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { hid: 'description', name: 'description', content: 'ZEN Exchange is the easy, fast and secure way to buy any available digital asset.' }
+      ],
       script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
       ]
     }
