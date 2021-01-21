@@ -9,7 +9,7 @@
     >
       <b-navbar-brand to="/">
         <img src="~/assets/img/mini_logo.png" class="d-inline-block align-top mr-1" alt="Logo">
-        <span class="logo-text"><b>ZEN</b>EXCHANGE</span>
+        <span class="logo-text gradient-text"><b>ZEN</b>EXCHANGE</span>
       </b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse" />

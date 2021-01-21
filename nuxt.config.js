@@ -12,7 +12,7 @@ export default {
       { hid: 'description', name: 'description', content: 'A new class of digital asset exchange that provides global traders and retail investors with access to exciting blockchain projects through the combined functionality of a secure CEX, DEX, AI-driven social sentiment indicators and Binance-level liquidity: all in one seamless user experience. Buy Bitcoin, Ethereum, Polkadot or any other Altcoin with a Zen State of Mind.' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '@/assets/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: 'assets/favicon.ico' }
     ]
   },
 
@@ -35,6 +35,7 @@ export default {
   // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
     // https://go.nuxtjs.dev/eslint
+    ['@nuxtjs/dotenv', { filename: '.env' }],
     '@nuxtjs/eslint-module',
     ['@nuxtjs/fontawesome', {
       component: 'fa', // customize component name

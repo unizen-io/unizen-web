@@ -13,7 +13,7 @@
             <NuxtLink to="/team" class="footer-text">
               Team
             </NuxtLink><br>
-            <NuxtLink to="#" class="footer-text footer-disabled">
+            <NuxtLink to="/token" class="footer-text">
               ZCX Token
             </NuxtLink><br>
             <a class="footer-text footer-disabled">CoinMarketCap</a><br>
@@ -61,7 +61,7 @@
       <div />
     </b-row>
     <b-row style="color: #f5f5f5;" class="bottom text-center pl-5 text-center" align-v="center">
-      © 2020 - 2021 zencex.com. All rights reserved.
+      © 2021 - 2022 zencex.com. All rights reserved.
     </b-row>
   </div>
 </template>
@@ -166,7 +166,7 @@ a.footer-text {
     animation: bounce 1s;
   }
 
-  $networks: linkedin '\eac9' #0077b5, twitter '\ea96' #00b0ed, github '\eab0' #4183c4, instagram '\e604' #3f729b, vimeo '\ea9c' #1ab7ea, telegram '\ea95' #0088cc, twitch '\ea9b' #6441a5, pinterest '\e605' #cc2127;
+  $networks: linkedin '\eac9' #0077b5, cloneicon '\f24d' #000, twitter '\ea96' #00b0ed, github '\eab0' #4183c4, instagram '\e604' #3f729b, vimeo '\ea9c' #1ab7ea, telegram '\ea95' #0088cc, twitch '\ea9b' #6441a5, pinterest '\e605' #cc2127;
 
   @each $network in $networks {
      .icon-#{nth($network, 1)} {

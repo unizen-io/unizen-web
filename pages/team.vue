@@ -1,4 +1,4 @@
-// <template>
+<template>
   <div class="py-5 my-5">
     <b-row class="pb-5">
       <b-container fluid>
@@ -206,7 +206,7 @@ img.team {
   margin-left: auto;
   margin-right: auto;
   padding: 5px;
-  background-image: linear-gradient(to right, #00afae, #00b6b0, #00bdb1, #00c3b1, #00cab1, #00d0b1, #00d6b0, #00dcaf, #00e2ad, #00e9ab, #00efa8, #00f5a4) !important;
+  background-image: linear-gradient(to right, #00f5a4, #00afae) !important;
   border-radius: 100px;
   color: #122dff;
   display: inline-block;
