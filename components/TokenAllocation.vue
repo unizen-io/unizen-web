@@ -5,9 +5,8 @@
         Token Sale & Allocation.
       </h1>
       <b-row
-        cols="2"
+        cols="1"
         cols-sm="1"
-        cols-xs="1"
         cols-md="1"
         cols-lg="2"
       >
@@ -68,7 +67,7 @@ export default {
             // label: 'Income',
             // backgroundColor: ["red", "orange", "yellow"],
             backgroundColor: [chartColors.color1, chartColors.color2, chartColors.color3, chartColors.color4, chartColors.color5, chartColors.color6, chartColors.color7],
-            data: [5, 30, 28.5, 5.5, 20, 5, 6]
+            data: [20, 30, 28.5, 5.5, 5, 5, 6]
           }
         ]
       },

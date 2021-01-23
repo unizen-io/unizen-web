@@ -1,6 +1,12 @@
 <template>
   <b-container>
-    <b-row class="pb-5" cols="2">
+    <b-row
+      class="pb-5"
+      cols="1"
+      cols-sm="1"
+      cols-md="1"
+      cols-lg="2"
+    >
       <b-col style="padding-left:50px;">
         <p class="zen-text">
           ZCX is an exchange-based utility token, created on the Ethereum blockchain as an ERC-20 token.<br><br>
