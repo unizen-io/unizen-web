@@ -1,3 +1,3 @@
 export default {
-  LcApiKey: process.env.LC_API
+  LcApiKey: process.env.NUXT_ENV_LC_API
 }
