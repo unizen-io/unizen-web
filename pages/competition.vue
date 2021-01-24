@@ -1,6 +1,27 @@
 <template>
-  <div style="height: 1000px;" class="pt-5 mt-5">
-    <b-container>
+  <div class="pt-5 mt-5">
+    <center>
+      <h5 v-if="competitionEnded">
+        Competition Ended
+      </h5>
+      <h5 v-if="competitionRunning">
+        Competition Running
+      </h5>
+      <h5 v-else>
+        Competition hasn't started yet
+      </h5>
+    </center>
+    <ZssChart
+      v-if="!loading"
+      :competitor-asset="FirstCompetitor.asset"
+      :challenger-asset="SecondCompetitor.asset"
+      :competitor-color="FirstCompetitor.color"
+      :challenger-color="SecondCompetitor.color"
+      :competitor-zss-data="FirstCompetitor.ZSS.score"
+      :challenger-zss-data="SecondCompetitor.ZTI.score"
+    />
+    <b-container v-if="!competitionEnded && competitionStarted">
+      <h1>{{ FirstCompetitor.asset }}</h1>
       <p>
         {{ FirstCompetitor.ZTI.tweets }}
         {{ FirstCompetitor.ZTI.tweetQuotes }}
@@ -20,6 +41,7 @@
         ZSS score: {{ FirstCompetitor.ZSS.score }}
       </p>
       <br><br><br>
+      <h1>{{ SecondCompetitor.asset }}</h1>
       <p>
         {{ SecondCompetitor.ZTI.tweets }}
         {{ SecondCompetitor.ZTI.tweetQuotes }}
@@ -38,6 +60,7 @@
         <br><br><br>
         ZSS score: {{ SecondCompetitor.ZSS.score }}
       </p>
+      <br><br><br>
     </b-container>
   </div>
 </template>
@@ -50,11 +73,16 @@ export default {
     return {
       competitionStartDate: 1611324904, // Fri, 22 Jan 2021 14:15:04 GMT
       competitionEndDate: 1611584104, // Fri, 25 Jan 2021 14:15:04 GMT
-      updateInterval: 10000, // 1 sec
+      currentTime: Math.round((new Date()).getTime() / 1000),
+      updateInterval: 60000, // 1 min
+      winner: null,
+      loser: null,
+      competitionStatus: 'Competition hasn\'t started yet',
       errored: false,
       loading: false,
       FirstCompetitor: {
-        asset: 'LTC',
+        asset: 'DAG',
+        color: '#8C46FF',
         ZTI: {
           tweets: [],
           tweetQuotes: [],
@@ -77,7 +105,8 @@ export default {
         }
       },
       SecondCompetitor: {
-        asset: 'BTC',
+        asset: 'QNT',
+        color: '#46DEC9',
         ZTI: {
           tweets: [],
           tweetQuotes: [],
@@ -104,30 +133,48 @@ export default {
       sentimentData: []
     }
   },
+  computed: {
+    competitionEnded () {
+      return this.currentTime > this.competitionEndDate
+    },
+    competitionStarted () {
+      return this.currentTime > this.competitionStartDate
+    },
+    competitionRunning () {
+      return this.currentTime > this.competitionStartDate && this.currentTime < this.competitionEndDate
+    }
+  },
   created () {
     this.LcApiKey = ENV.LcApiKey
-    this.initCompetition(this.FirstCompetitor, this.SecondCompetitor)
+    if (this.competitionStarted && !this.competitionEnded) {
+      this.initCompetition(this.FirstCompetitor, this.SecondCompetitor)
+    }
+    const self = this
+    setInterval(function () {
+      self.currentTime = Math.round((new Date()).getTime() / 1000)
+    }, 1000)
   },
 
   methods: {
     initCompetition (competitor, challanger) {
       this.getHistoricalZtiData(competitor)
       this.getHistoricalZsiData(competitor)
-      this.aggregateScore(competitor)
+
       setInterval(() => this.getZtiData(competitor), this.updateInterval)
       setInterval(() => this.getZsiData(competitor), this.updateInterval)
-      setInterval(() => this.aggregateScore(competitor), 1000)
+      setInterval(() => this.aggregateScore(competitor), 5000)
 
       this.getHistoricalZtiData(challanger)
       this.getHistoricalZsiData(challanger)
-      this.aggregateScore(challanger)
+
       setInterval(() => this.getZtiData(challanger), this.updateInterval)
       setInterval(() => this.getZsiData(challanger), this.updateInterval)
-      setInterval(() => this.aggregateScore(challanger), 1000)
+      setInterval(() => this.aggregateScore(challanger), 5000)
     },
     async getHistoricalZtiData (competitor) {
+      this.loading = true
       const url = 'https://api.lunarcrush.com/v2?data=assets&key=' + this.LcApiKey + '&symbol=' + competitor.asset + '&start=' + this.competitionStartDate + '&end=' + this.competitionEndDate + 'time_series_indicators=tweets,tweet_quotes,tweet_retweets,tweet_replies,tweet_favorites'
-      await this.$axios.$get(url).then((response) => {
+      await this.$axios.$get(url, { progress: false }).then((response) => {
         response.data[0].timeSeries.forEach((value) => {
           competitor.ZTI.tweets.push(value.tweets)
           competitor.ZTI.tweetQuotes.push(value.tweet_quotes)
@@ -140,15 +187,21 @@ export default {
       }).catch((error) => {
         console.log(error)
         this.errored = true
-      }).finally(() => { this.loading = false })
+      }).finally(() => {
+        this.aggregateScore(competitor)
+        this.loading = false
+      })
     },
     async getZtiData (competitor) {
+      this.loading = true
       const url = 'https://api.lunarcrush.com/v2?data=assets&key=' + this.LcApiKey + '&symbol=' + competitor.asset + '&start=' + this.competitionStartDate + '&end=' + this.competitionEndDate + 'time_series_indicators=tweets,tweet_quotes,tweet_retweets,tweet_replies,tweet_favorites'
-      await this.$axios.$get(url).then((response) => {
+      await this.$axios.$get(url, { progress: false }).then((response) => {
         const timeSeries = response.data[0].timeSeries
         const timeSeriesLastObject = timeSeries[timeSeries.length - 1]
         // if not last item in ts array matches last ts in response: don't append data
-        if (timeSeriesLastObject.time !== competitor.ZTI.ts[competitor.ZTI.ts.length - 1]) {
+        if (response.data[0].timeSeries.length <= 0) {
+          return competitor
+        } else if (timeSeriesLastObject.time !== competitor.ZTI.ts[competitor.ZTI.ts.length - 1]) {
           competitor.ZTI.tweets.push(timeSeriesLastObject.tweets)
           competitor.ZTI.tweetQuotes.push(timeSeriesLastObject.tweet_quotes)
           competitor.ZTI.retweets.push(timeSeriesLastObject.tweet_retweets)
@@ -160,11 +213,15 @@ export default {
       }).catch((error) => {
         console.log(error)
         this.errored = true
-      }).finally(() => { this.loading = false })
+      }).finally(() => {
+        this.aggregateScore(competitor)
+        this.loading = false
+      })
     },
     async getHistoricalZsiData (competitor) {
+      this.loading = true
       const url = 'https://api.lunarcrush.com/v2?data=assets&key=' + this.LcApiKey + '&symbol=' + competitor.asset + '&start=' + this.competitionStartDate + '&end=' + this.competitionEndDate + 'time_series_indicators=tweet_sentiment4,tweet_sentiment5,social_contributors'
-      await this.$axios.$get(url).then((response) => {
+      await this.$axios.$get(url, { progress: false }).then((response) => {
         response.data[0].timeSeries.forEach((value) => {
           competitor.ZSI.sentiment4.push(value.tweet_sentiment4)
           competitor.ZSI.sentiment5.push(value.tweet_sentiment5)
@@ -175,15 +232,21 @@ export default {
       }).catch((error) => {
         console.log(error)
         this.errored = true
-      }).finally(() => { this.loading = false })
+      }).finally(() => {
+        this.aggregateScore(competitor)
+        this.loading = false
+      })
     },
     async getZsiData (competitor) {
+      this.loading = true
       const url = 'https://api.lunarcrush.com/v2?data=assets&key=' + this.LcApiKey + '&symbol=' + competitor.asset + '&start=' + this.competitionStartDate + '&end=' + this.competitionEndDate + 'time_series_indicators=tweet_sentiment4,tweet_sentiment5,social_contributors'
-      await this.$axios.$get(url).then((response) => {
+      await this.$axios.$get(url, { progress: false }).then((response) => {
         const timeSeries = response.data[0].timeSeries
         const timeSeriesLastObject = timeSeries[timeSeries.length - 1]
         // if not last item in ts array matches last ts in response: don't append data
-        if (timeSeriesLastObject.time !== competitor.ZTI.ts[competitor.ZTI.ts.length - 1]) {
+        if (response.data[0].timeSeries.length <= 0) {
+          return competitor
+        } else if (timeSeriesLastObject.time !== competitor.ZTI.ts[competitor.ZTI.ts.length - 1]) {
           competitor.ZSI.sentiment4.push(timeSeriesLastObject.tweet_sentiment4)
           competitor.ZSI.sentiment5.push(timeSeriesLastObject.tweet_sentiment5)
           competitor.ZSI.socialContributors.push(timeSeriesLastObject.social_contributors)
@@ -193,7 +256,10 @@ export default {
       }).catch((error) => {
         console.log(error)
         this.errored = true
-      }).finally(() => { this.loading = false })
+      }).finally(() => {
+        this.aggregateScore(competitor)
+        this.loading = false
+      })
     },
     aggregateScore (competitor) {
       let ZTIScore = 0
@@ -209,7 +275,6 @@ export default {
       competitor.ZTI.score = ZTIScore
       competitor.ZSI.score = ZSIScore
       competitor.ZSS.score = competitor.ZTI.score + competitor.ZSI.score
-
       return competitor
     }
   }
