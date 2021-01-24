@@ -1,67 +1,125 @@
 <template>
-  <div class="pt-5 mt-5">
+  <div class="pt-5 my-5">
     <center>
-      <h5 v-if="competitionEnded">
-        Competition Ended
-      </h5>
-      <h5 v-if="competitionRunning">
-        Competition Running
-      </h5>
-      <h5 v-else>
-        Competition hasn't started yet
-      </h5>
+      <div class="mt-5 pt-5">
+        <h5 v-if="competitionEnded">
+          Competition Ended
+        </h5>
+        <h5 v-if="competitionRunning">
+          Competition Running
+        </h5>
+        <h5 v-else>
+          Competition hasn't started yet
+        </h5>
+      </div>
     </center>
-    <ZssChart
-      v-if="!loading"
-      :competitor-asset="FirstCompetitor.asset"
-      :challenger-asset="SecondCompetitor.asset"
-      :competitor-color="FirstCompetitor.color"
-      :challenger-color="SecondCompetitor.color"
-      :competitor-zss-data="FirstCompetitor.ZSS.score"
-      :challenger-zss-data="SecondCompetitor.ZTI.score"
-    />
-    <b-container v-if="!competitionEnded && competitionStarted">
-      <h1>{{ FirstCompetitor.asset }}</h1>
-      <p>
-        {{ FirstCompetitor.ZTI.tweets }}
-        {{ FirstCompetitor.ZTI.tweetQuotes }}
-        {{ FirstCompetitor.ZTI.retweets }}
-        {{ FirstCompetitor.ZTI.replies }}
-        {{ FirstCompetitor.ZTI.favorites }}
-        {{ FirstCompetitor.ZTI.ts }}
-        <br><br>
-        ZTI score: {{ FirstCompetitor.ZTI.score }}
-        <br><br><br>
-        {{ FirstCompetitor.ZSI.sentiment4 }}
-        {{ FirstCompetitor.ZSI.sentiment5 }}
-        {{ FirstCompetitor.ZSI.socialContributors }}
-        {{ FirstCompetitor.ZSI.ts }}   <br><br>
-        ZSI score: {{ FirstCompetitor.ZSI.score }}
-        <br><br><br>
-        ZSS score: {{ FirstCompetitor.ZSS.score }}
-      </p>
-      <br><br><br>
-      <h1>{{ SecondCompetitor.asset }}</h1>
-      <p>
-        {{ SecondCompetitor.ZTI.tweets }}
-        {{ SecondCompetitor.ZTI.tweetQuotes }}
-        {{ SecondCompetitor.ZTI.retweets }}
-        {{ SecondCompetitor.ZTI.replies }}
-        {{ SecondCompetitor.ZTI.favorites }}
-        {{ SecondCompetitor.ZTI.ts }}
-        <br><br>
-        ZTI score: {{ SecondCompetitor.ZTI.score }}
-        <br><br><br>
-        {{ SecondCompetitor.ZSI.sentiment4 }}
-        {{ SecondCompetitor.ZSI.sentiment5 }}
-        {{ SecondCompetitor.ZSI.socialContributors }}
-        {{ SecondCompetitor.ZSI.ts }}   <br><br>
-        ZSI score: {{ SecondCompetitor.ZSI.score }}
-        <br><br><br>
-        ZSS score: {{ SecondCompetitor.ZSS.score }}
-      </p>
-      <br><br><br>
-    </b-container>
+    <div v-if="!competitionEnded && competitionStarted">
+      <b-row style="background: #EFEFEF;" class="py-5">
+        <b-container>
+          <b-row>
+            <b-col>
+              <b><h1 class="competition-headline" :style="'font-family: Montserrat; color: '+FirstCompetitor.color+' !important;'">
+                {{ FirstCompetitor.asset }}
+              </h1></b>
+              <h4 class="competition-sub">
+                ({{ FirstCompetitor.company }})
+              </h4>
+            </b-col>
+            <b-col>
+              <h1 class="competition-headline">
+                vs.
+              </h1>
+            </b-col>
+            <b-col>
+              <h1 class="competition-headline" :style="'font-family: Montserrat; color: '+SecondCompetitor.color+' !important;'">
+                {{ SecondCompetitor.asset }}
+              </h1>
+              <h4 class="competition-sub">
+                ({{ SecondCompetitor.company }})
+              </h4>
+            </b-col>
+          </b-row>
+        </b-container>
+      </b-row>
+      <b-container>
+        <b-row class="mt-5">
+          <b-col>
+            <ZssChart
+              :competitor-asset="FirstCompetitor.asset"
+              :challenger-asset="SecondCompetitor.asset"
+              :competitor-color="FirstCompetitor.color"
+              :challenger-color="SecondCompetitor.color"
+              :competitor-zss-data="FirstCompetitor.ZSS.score"
+              :challenger-zss-data="SecondCompetitor.ZSS.score"
+            />
+          </b-col>
+          <b-col>
+            <MetricsChart
+              :competitor-asset="FirstCompetitor.asset"
+              :challenger-asset="SecondCompetitor.asset"
+              :competitor-color="FirstCompetitor.color"
+              :challenger-color="SecondCompetitor.color"
+              :competitor-zti-data="FirstCompetitor.ZTI"
+              :challenger-zti-data="SecondCompetitor.ZTI"
+              :competitor-zsi-data="FirstCompetitor.ZSI"
+              :challenger-zsi-data="SecondCompetitor.ZSI"
+            />
+          </b-col>
+        </b-row>
+
+        <b-row>
+          <b-col>
+            <b-card class="data-descriptor" title="ZSS Score">
+              <p><b>The ZEN Smart Score™</b> (ZSS), is a custom dataset of aggregated LunarCrush powered social sentiment data. It is the combined metric of <b>ZTI</b> and <b>ZSI</b>. It is also the <u>soul determinator</u> of the competition. </p>
+            </b-card>
+            <br><br><br>
+            <p>
+              {{ FirstCompetitor.ZTI.tweets }}
+              {{ FirstCompetitor.ZTI.tweetQuotes }}
+              {{ FirstCompetitor.ZTI.retweets }}
+              {{ FirstCompetitor.ZTI.replies }}
+              {{ FirstCompetitor.ZTI.favorites }}
+              {{ FirstCompetitor.ZTI.ts }}
+              <br><br>
+              ZTI score: {{ FirstCompetitor.ZTI.score }}
+              <br><br><br>
+              {{ FirstCompetitor.ZSI.sentiment4 }}
+              {{ FirstCompetitor.ZSI.sentiment5 }}
+              {{ FirstCompetitor.ZSI.socialContributors }}
+              {{ FirstCompetitor.ZSI.ts }}   <br><br>
+              ZSI score: {{ FirstCompetitor.ZSI.score }}
+              <br><br><br>
+              ZSS score: {{ FirstCompetitor.ZSS.score }}
+            </p>
+          </b-col>
+          <b-col>
+            <b-card class="data-descriptor" title="ZTI and ZSI Score">
+              <p>The <b>ZEN Twitter Indicator™</b> (ZTI) is an aggregate of twitter activity over a selected digital asset. More specifically, it's an aggregate of <code>number of tweets</code>, <code>quoted retweets</code>, <code>retweets</code>, <code>replies</code> and <code>favorites</code>.<br><br> The <b>ZEN Sentiment Indicator™</b> (ZSI) score, is an aggregate of <i>"bullish"</i> sentiment around a digital asset, on twitter. It leverages <b>LunarCrush</b> powered deep learning algorithms and language processing to determine the social sentiment.</p>
+            </b-card>
+            <br><br><br>
+            <p>
+              {{ SecondCompetitor.ZTI.tweets }}
+              {{ SecondCompetitor.ZTI.tweetQuotes }}
+              {{ SecondCompetitor.ZTI.retweets }}
+              {{ SecondCompetitor.ZTI.replies }}
+              {{ SecondCompetitor.ZTI.favorites }}
+              {{ SecondCompetitor.ZTI.ts }}
+              <br><br>
+              ZTI score: {{ SecondCompetitor.ZTI.score }}
+              <br><br><br>
+              {{ SecondCompetitor.ZSI.sentiment4 }}
+              {{ SecondCompetitor.ZSI.sentiment5 }}
+              {{ SecondCompetitor.ZSI.socialContributors }}
+              {{ SecondCompetitor.ZSI.ts }}   <br><br>
+              ZSI score: {{ SecondCompetitor.ZSI.score }}
+              <br><br><br>
+              ZSS score: {{ SecondCompetitor.ZSS.score }}
+            </p>
+            <br><br><br>
+          </b-col>
+        </b-row>
+      </b-container>
+    </div>
   </div>
 </template>
 
@@ -81,7 +139,8 @@ export default {
       errored: false,
       loading: false,
       FirstCompetitor: {
-        asset: 'DAG',
+        asset: 'HTR',
+        company: 'Hathor Network',
         color: '#8C46FF',
         ZTI: {
           tweets: [],
@@ -106,6 +165,7 @@ export default {
       },
       SecondCompetitor: {
         asset: 'QNT',
+        company: 'Quant Network',
         color: '#46DEC9',
         ZTI: {
           tweets: [],
@@ -282,5 +342,18 @@ export default {
 </script>
 
 <style lang="scss">
+h1.competition-headline {
+    text-align: center;
+    color: $dark !important;
+    font-size: 7rem !important;
+}
+
+h4.competition-sub {
+    text-align: center;
+}
+
+.data-descriptor {
+    min-height: 19.5rem;
+}
 
 </style>

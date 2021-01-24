@@ -1,19 +1,21 @@
 <template>
   <div>
-    <bar-chart :chart-data="fillData" :styles="myStyles" :options="barChartOptions" />
+    <horizontal-bar :chart-data="fillData" :styles="myStyles" :options="barChartOptions" />
   </div>
 </template>
 
 <script>
-import BarChart from '~/components/BarChart'
+import HorizontalBar from '~/components/HorizontalBarChart'
 
 export default {
   components: {
-    BarChart
+    HorizontalBar
   },
   props: {
-    competitorZssData: { type: Number, default: 50 },
-    challengerZssData: { type: Number, default: 50 },
+    competitorZsiData: { type: Object, default: null },
+    challengerZsiData: { type: Object, default: null },
+    competitorZtiData: { type: Object, default: null },
+    challengerZtiData: { type: Object, default: null },
     competitorAsset: { type: String, default: 'No Competitor' },
     challengerAsset: { type: String, default: 'No Challenger' },
     competitorColor: { type: String, default: '#00afae' },
@@ -46,11 +48,6 @@ export default {
         responsive: true,
         maintainAspectRatio: false,
         tooltips: {
-          callbacks: {
-            label (tooltipItem, data) {
-              return data.labels[tooltipItem.index] + ': ' + data.datasets[0].data[tooltipItem.index] + ' ZSS'
-            }
-          },
           bodyFontStyle: 'bold',
           bodyFontFamily: 'Montserrat',
           bodyFontSize: 14,
@@ -59,7 +56,7 @@ export default {
           displayColors: false
         },
         legend: {
-          display: true,
+          display: false,
           labels: {
             boxWidth: 12,
             padding: 30,
@@ -77,19 +74,29 @@ export default {
     }
   },
   computed: {
+
     fillData () {
       const chartData = {
-        labels: [this.challengerAsset, this.competitorAsset],
+        labels: ['ZTI Score', 'ZSI Score'],
         datasets: [
           {
             borderWidth: 0,
             hoverBackgroundColor: '#00F5A4',
-            // label: 'Income',
             // backgroundColor: ["red", "orange", "yellow"],
-            backgroundColor: [this.challengerColor, this.competitorColor],
-            data: [this.challengerZssData, this.competitorZssData]
+            label: this.competitorAsset,
+            backgroundColor: this.competitorColor,
+            data: [this.competitorZsiData.score, this.competitorZtiData.score]
+          },
+          {
+            borderWidth: 0,
+            hoverBackgroundColor: '#00F5A4',
+            // backgroundColor: ["red", "orange", "yellow"],
+            label: this.challengerAsset,
+            backgroundColor: this.challengerColor,
+            data: [this.challengerZsiData.score, this.challengerZtiData.score]
           }
         ]
+
       }
       return chartData
     }
