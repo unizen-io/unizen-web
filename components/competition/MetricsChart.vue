@@ -12,6 +12,7 @@ export default {
     HorizontalBar
   },
   props: {
+    challengerMcapDiff: { type: Number, default: 0 },
     competitorZsiData: { type: Object, default: null },
     challengerZsiData: { type: Object, default: null },
     competitorZtiData: { type: Object, default: null },
@@ -93,7 +94,7 @@ export default {
             // backgroundColor: ["red", "orange", "yellow"],
             label: this.challengerAsset,
             backgroundColor: this.challengerColor,
-            data: [this.challengerZsiData.score, this.challengerZtiData.score]
+            data: [Number((this.challengerZsiData.score / this.challengerMcapDiff).toFixed(0)), Number((this.challengerZtiData.score / this.challengerMcapDiff).toFixed(0))]
           }
         ]
 

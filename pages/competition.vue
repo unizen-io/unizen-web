@@ -1,5 +1,62 @@
 <template>
   <div class="pt-5 mt-5">
+    <h1 class="token mx-auto mt-4">
+      The Tournament of Altcoins.
+    </h1>
+
+    <b-container>
+      <b-row>
+        <b-col>
+          <p class="zen-text">
+            Welcome to <b>The Tournament of Altcoins</b> (<code>#TournamentofAlts</code>)! <br><br> This is a <b>ZEN Exchange</b> hosted competition where the winner gets a free listing on our CEX module with Binance-shared liquidity and top tier market making support. The final round will last for <u>3 days</u> and the Altcoin with the highest <b>ZEN Smart Score™</b> when the timer runs out, will win the free listing.<br><br>
+            The respective communities of each finalist can directly influence the outcome of the competition by supporting their favorite project with <i id="popover-target-1">positive sentiment</i> and <i id="popover-target-2">factually driven marketing</i> on <b>Twitter</b>. We're leveraging the smart data feeds of our partner <b>LunarCrush</b> to monitor community sentiment over any digital asset on <b>Twitter</b>. There's more information available on each index below their respective charts.
+          </p>
+          <b-popover target="popover-target-1" triggers="hover" placement="top">
+            <b>OOoOooOOoooooOOOooOoOooOOOOoOF!!!!</b><br><br> <a href="#">$CASHTAG</a>
+          </b-popover>
+          <b-popover target="popover-target-2" triggers="hover" placement="top">
+            <template #title>
+              shill
+            </template>
+            A person engaged in advertising. The shill attempts to spread buzz by personally endorsing the product in public forums.
+          </b-popover>
+        </b-col>
+        <b-col style="padding-left:50px;">
+          <b-row>
+            <b-col>
+              <small class="text-muted">TICKER</small><br><h2 class="metrics gradient-text">
+                ZCX
+              </h2>
+            </b-col>
+            <b-col>
+              <small class="text-muted">TOKEN TYPE</small><br><h2 class="metrics gradient-text">
+                ERC-20
+              </h2>
+            </b-col>
+            <div class="w-100" />
+            <b-col>
+              <small class="text-muted">CIRCULATING SUPPLY</small><br><h2 class="metrics gradient-text">
+                33.75m
+              </h2>
+            </b-col>
+            <b-col>
+              <small class="text-muted">TOTAL SUPPLY</small><br><h2 class="metrics gradient-text">
+                1b
+              </h2>
+            </b-col>
+            <div class="w-100" />
+            <b-col>
+              <br><small class="text-muted">CONTRACT ADDRESS</small><br>
+              <h5>
+                0xc52c326331e9ce41f04484d3b5e5648158028804 <a href="#" class="copy-icon">❐ </a>
+                <a href="https://etherscan.io/token/0xc52c326331e9ce41f04484d3b5e5648158028804" class="copy-icon">⤤</a>
+              </h5>
+            </b-col>
+          </b-row>
+        </b-col>
+        <b-row />
+      </b-row>
+    </b-container>
     <center>
       <div class="mt-5 pt-5">
         <h5 v-if="competitionEnded">
@@ -14,9 +71,16 @@
       </div>
     </center>
     <div v-if="!competitionEnded && competitionStarted">
-      <b-row style="background: #EFEFEF;" class="py-5 mb-5">
+      <b-row
+        style="background: #EFEFEF;"
+      >
         <b-container>
-          <b-row>
+          <b-row
+            class="py-5 mb-5"
+            cols="1"
+            cols-md="3"
+            cols-sm="1"
+          >
             <b-col>
               <b><h1 class="competition-headline" :style="'font-family: Montserrat; color: '+FirstCompetitor.color+' !important;'">
                 {{ FirstCompetitor.asset }}
@@ -42,22 +106,12 @@
         </b-container>
       </b-row>
       <b-container>
-        <center>
-          <p class="zen-text my-5 py-5">
-            Welcome to the final round of <b>The Tournament of Altcoins</b> (<code>#TournamentofAlts</code>)! <br><br> This is a <b>ZEN Exchange</b> hosted competition where the winner gets a free listing on our CEX module with Binance-shared liquidity and top tier market making support. The final round will last for <u>3 days</u> and the Altcoin with the highest <b>ZEN Smart Score™</b> when the timer runs out, will win the free listing.<br><br>
-            The respective communities of each finalist can directly influence the outcome of the competition by supporting their favorite project with <i id="popover-target-1">positive sentiment</i> and <i id="popover-target-2">factually driven marketing</i> on <b>Twitter</b>. We're leveraging the smart data feeds of our partner <b>LunarCrush</b> to monitor community sentiment over any digital asset on <b>Twitter</b>. There's more information available on each index below their respective charts.
-          </p>
-          <b-popover target="popover-target-1" triggers="hover" placement="top">
-            <b>OOoOooOOoooooOOOooOoOooOOOOoOF!!!!</b><br><br> <a href="#">$CASHTAG</a>
-          </b-popover>
-          <b-popover target="popover-target-2" triggers="hover" placement="top">
-            <template #title>
-              shill
-            </template>
-            A person engaged in advertising. The shill attempts to spread buzz by personally endorsing the product in public forums.
-          </b-popover>
-        </center>
-        <b-row class="mt-5">
+        <b-row
+          class="mt-5"
+          cols="1"
+          cols-md="2"
+          cols-sm="1"
+        >
           <b-col>
             <ZssChart
               :competitor-asset="FirstCompetitor.asset"
@@ -66,6 +120,7 @@
               :challenger-color="SecondCompetitor.color"
               :competitor-zss-data="FirstCompetitor.ZSS.score"
               :challenger-zss-data="SecondCompetitor.ZSS.score"
+              :challenger-mcap-diff="SecondCompetitor.mcapDiff"
             />
             <div class="small-chart-text">
               <small>*Chart data updates every full hour</small>
@@ -81,22 +136,24 @@
               :challenger-zti-data="SecondCompetitor.ZTI"
               :competitor-zsi-data="FirstCompetitor.ZSI"
               :challenger-zsi-data="SecondCompetitor.ZSI"
+              :challenger-mcap-diff="SecondCompetitor.mcapDiff"
             />
             <div class="small-chart-text">
               <small>*Chart data updates every full hour</small>
             </div>
           </b-col>
-        </b-row>
-
-        <b-row>
-          <b-col>
+          <b-col class="mb-5">
             <b-card class="data-descriptor" title="ZSS Score">
-              <p><b>The ZEN Smart Score™</b> (ZSS), is a custom dataset of aggregated LunarCrush powered social sentiment data. It is the combined metric of <b>ZTI</b> and <b>ZSI</b>. It is also the <u>soul determinator</u> of the competition. </p>
+              <p>
+                <b>The ZEN Smart Score™</b> (ZSS), is a custom dataset of aggregated LunarCrush powered social sentiment data. It is the combined metric of <b>ZTI</b> and <b>ZSI</b>. It is also the <u>soul determinator</u> of the competition.
+              </p>
             </b-card>
           </b-col>
           <b-col>
             <b-card class="data-descriptor" title="ZTI and ZSI Score">
-              <p>The <b>ZEN Twitter Indicator™</b> (ZTI) is an aggregate of twitter activity over a selected digital asset. More specifically, it's an aggregate of <code>number of tweets</code>, <code>quoted retweets</code>, <code>retweets</code>, <code>replies</code> and <code>favorites</code>.<br><br> The <b>ZEN Sentiment Indicator™</b> (ZSI) score, is an aggregate of <i>"bullish"</i> sentiment around a digital asset, on twitter. It leverages <b>LunarCrush</b> powered deep learning algorithms and language processing to determine the social sentiment.</p>
+              <p>
+                The <b>ZEN Twitter Indicator™</b> (ZTI) is an aggregate of twitter activity over a selected digital asset. More specifically, it's an aggregate of <code>number of tweets</code>, <code>quoted retweets</code>, <code>retweets</code>, <code>replies</code> and <code>favorites</code>.<br><br> The <b>ZEN Sentiment Indicator™</b> (ZSI) score, is an aggregate of <i>"bullish"</i> sentiment around a digital asset, on twitter. It leverages <b>LunarCrush</b> powered deep learning algorithms and language processing to determine the social sentiment.
+              </p>
             </b-card>
           </b-col>
         </b-row>
@@ -190,6 +247,7 @@ export default {
         asset: 'QNT',
         company: 'Quant Network',
         color: '#46DEC9',
+        mcapDiff: 6, // Times difference in mcap
         ZTI: {
           tweets: [],
           tweetQuotes: [],
@@ -269,14 +327,14 @@ export default {
 
       setInterval(() => this.getZtiData(competitor), this.updateInterval)
       setInterval(() => this.getZsiData(competitor), this.updateInterval)
-      setInterval(() => this.aggregateScore(competitor), 5000)
+      setInterval(() => this.aggregateScore(competitor), this.updateInterval + 5000)
 
       this.getHistoricalZtiData(challanger)
       this.getHistoricalZsiData(challanger)
 
       setInterval(() => this.getZtiData(challanger), this.updateInterval)
       setInterval(() => this.getZsiData(challanger), this.updateInterval)
-      setInterval(() => this.aggregateScore(challanger), 5000)
+      setInterval(() => this.aggregateScore(challanger), this.updateInterval + 5000)
     },
     async getHistoricalZtiData (competitor) {
       this.loading = true

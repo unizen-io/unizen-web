@@ -12,6 +12,7 @@ export default {
     BarChart
   },
   props: {
+    challengerMcapDiff: { type: Number, default: 0 },
     competitorZssData: { type: Number, default: 50 },
     challengerZssData: { type: Number, default: 50 },
     competitorAsset: { type: String, default: 'No Competitor' },
@@ -72,6 +73,10 @@ export default {
           align: 'center'
         },
         scales: {
+          ticks: {
+            precision: 0
+          }
+
         }
       }
     }
@@ -87,7 +92,7 @@ export default {
             // label: 'Income',
             // backgroundColor: ["red", "orange", "yellow"],
             backgroundColor: [this.challengerColor, this.competitorColor],
-            data: [this.challengerZssData, this.competitorZssData]
+            data: [Number((this.challengerZssData / this.challengerMcapDiff).toFixed(0)), this.competitorZssData]
           }
         ]
       }
