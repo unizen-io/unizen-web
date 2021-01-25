@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-5 my-5">
+  <div class="pt-5 mt-5">
     <center>
       <div class="mt-5 pt-5">
         <h5 v-if="competitionEnded">
@@ -14,7 +14,7 @@
       </div>
     </center>
     <div v-if="!competitionEnded && competitionStarted">
-      <b-row style="background: #EFEFEF;" class="py-5">
+      <b-row style="background: #EFEFEF;" class="py-5 mb-5">
         <b-container>
           <b-row>
             <b-col>
@@ -42,6 +42,21 @@
         </b-container>
       </b-row>
       <b-container>
+        <center>
+          <p class="zen-text my-5 py-5">
+            Welcome to the final round of <b>The Tournament of Altcoins</b> (<code>#TournamentofAlts</code>)! <br><br> This is a <b>ZEN Exchange</b> hosted competition where the winner gets a free listing on our CEX module with Binance-shared liquidity and top tier market making support. The final round will last for <u>3 days</u> and the Altcoin with the highest <b>ZEN Smart Score™</b> when the timer runs out, will win the free listing.<br><br>
+            The respective communities of each finalist can directly influence the outcome of the competition by supporting their favorite project with <i id="popover-target-1">positive sentiment</i> and <i id="popover-target-2">factually driven marketing</i> on <b>Twitter</b>. We're leveraging the smart data feeds of our partner <b>LunarCrush</b> to monitor community sentiment over any digital asset on <b>Twitter</b>. There's more information available on each index below their respective charts.
+          </p>
+          <b-popover target="popover-target-1" triggers="hover" placement="top">
+            <b>OOoOooOOoooooOOOooOoOooOOOOoOF!!!!</b><br><br> <a href="#">$CASHTAG</a>
+          </b-popover>
+          <b-popover target="popover-target-2" triggers="hover" placement="top">
+            <template #title>
+              shill
+            </template>
+            A person engaged in advertising. The shill attempts to spread buzz by personally endorsing the product in public forums.
+          </b-popover>
+        </center>
         <b-row class="mt-5">
           <b-col>
             <ZssChart
@@ -52,6 +67,9 @@
               :competitor-zss-data="FirstCompetitor.ZSS.score"
               :challenger-zss-data="SecondCompetitor.ZSS.score"
             />
+            <div class="small-chart-text">
+              <small>*Chart data updates every full hour</small>
+            </div>
           </b-col>
           <b-col>
             <MetricsChart
@@ -64,6 +82,9 @@
               :competitor-zsi-data="FirstCompetitor.ZSI"
               :challenger-zsi-data="SecondCompetitor.ZSI"
             />
+            <div class="small-chart-text">
+              <small>*Chart data updates every full hour</small>
+            </div>
           </b-col>
         </b-row>
 
@@ -72,54 +93,56 @@
             <b-card class="data-descriptor" title="ZSS Score">
               <p><b>The ZEN Smart Score™</b> (ZSS), is a custom dataset of aggregated LunarCrush powered social sentiment data. It is the combined metric of <b>ZTI</b> and <b>ZSI</b>. It is also the <u>soul determinator</u> of the competition. </p>
             </b-card>
-            <br><br><br>
-            <p>
-              {{ FirstCompetitor.ZTI.tweets }}
-              {{ FirstCompetitor.ZTI.tweetQuotes }}
-              {{ FirstCompetitor.ZTI.retweets }}
-              {{ FirstCompetitor.ZTI.replies }}
-              {{ FirstCompetitor.ZTI.favorites }}
-              {{ FirstCompetitor.ZTI.ts }}
-              <br><br>
-              ZTI score: {{ FirstCompetitor.ZTI.score }}
-              <br><br><br>
-              {{ FirstCompetitor.ZSI.sentiment4 }}
-              {{ FirstCompetitor.ZSI.sentiment5 }}
-              {{ FirstCompetitor.ZSI.socialContributors }}
-              {{ FirstCompetitor.ZSI.ts }}   <br><br>
-              ZSI score: {{ FirstCompetitor.ZSI.score }}
-              <br><br><br>
-              ZSS score: {{ FirstCompetitor.ZSS.score }}
-            </p>
           </b-col>
           <b-col>
             <b-card class="data-descriptor" title="ZTI and ZSI Score">
               <p>The <b>ZEN Twitter Indicator™</b> (ZTI) is an aggregate of twitter activity over a selected digital asset. More specifically, it's an aggregate of <code>number of tweets</code>, <code>quoted retweets</code>, <code>retweets</code>, <code>replies</code> and <code>favorites</code>.<br><br> The <b>ZEN Sentiment Indicator™</b> (ZSI) score, is an aggregate of <i>"bullish"</i> sentiment around a digital asset, on twitter. It leverages <b>LunarCrush</b> powered deep learning algorithms and language processing to determine the social sentiment.</p>
             </b-card>
-            <br><br><br>
-            <p>
-              {{ SecondCompetitor.ZTI.tweets }}
-              {{ SecondCompetitor.ZTI.tweetQuotes }}
-              {{ SecondCompetitor.ZTI.retweets }}
-              {{ SecondCompetitor.ZTI.replies }}
-              {{ SecondCompetitor.ZTI.favorites }}
-              {{ SecondCompetitor.ZTI.ts }}
-              <br><br>
-              ZTI score: {{ SecondCompetitor.ZTI.score }}
-              <br><br><br>
-              {{ SecondCompetitor.ZSI.sentiment4 }}
-              {{ SecondCompetitor.ZSI.sentiment5 }}
-              {{ SecondCompetitor.ZSI.socialContributors }}
-              {{ SecondCompetitor.ZSI.ts }}   <br><br>
-              ZSI score: {{ SecondCompetitor.ZSI.score }}
-              <br><br><br>
-              ZSS score: {{ SecondCompetitor.ZSS.score }}
-            </p>
-            <br><br><br>
           </b-col>
         </b-row>
       </b-container>
     </div>
+    <b-row
+      :style="'background-image: linear-gradient(to right,' + FirstCompetitor.color + ',' + SecondCompetitor.color + ') !important;'
+      "
+      class="mt-5"
+      cols="2"
+      cols-md="4"
+      cols-sm="2"
+    >
+      <b-col>
+        <h1 class="competition-headline-light">
+          {{ timeLeft.days }}
+        </h1>
+        <p class="competition-text">
+          DAYS
+        </p>
+      </b-col>
+      <b-col>
+        <h1 class="competition-headline-light">
+          {{ timeLeft.hours }}
+        </h1>
+        <p class="competition-text">
+          HOURS
+        </p>
+      </b-col>
+      <b-col>
+        <h1 class="competition-headline-light">
+          {{ timeLeft.minutes }}
+        </h1>
+        <p class="competition-text">
+          MINUTES
+        </p>
+      </b-col>
+      <b-col>
+        <h1 class="competition-headline-light">
+          {{ timeLeft.seconds }}
+        </h1>
+        <p class="competition-text">
+          SECONDS
+        </p>
+      </b-col>
+    </b-row>
   </div>
 </template>
 
@@ -129,8 +152,8 @@ import ENV from '../components/env'
 export default {
   data () {
     return {
-      competitionStartDate: 1611324904, // Fri, 22 Jan 2021 14:15:04 GMT
-      competitionEndDate: 1611584104, // Fri, 25 Jan 2021 14:15:04 GMT
+      competitionStartDate: 1611567446, // Monday 25 January 2021 09:37:26
+      competitionEndDate: 1611837446, // Monday 25 January 2021 12:37:26
       currentTime: Math.round((new Date()).getTime() / 1000),
       updateInterval: 60000, // 1 min
       winner: null,
@@ -188,6 +211,12 @@ export default {
           score: 0
         }
       },
+      timeLeft: {
+        days: '',
+        hours: '',
+        minutes: '',
+        seconds: ''
+      },
       LcApiKey: '',
       ws: null,
       sentimentData: []
@@ -214,8 +243,26 @@ export default {
       self.currentTime = Math.round((new Date()).getTime() / 1000)
     }, 1000)
   },
-
+  mounted () {
+    setInterval(() => this.getTimer(), 1000)
+  },
   methods: {
+    getTimer () {
+      const date = new Date(this.competitionEndDate - this.currentTime * 1000)
+      const days = Math.trunc((this.competitionEndDate - this.currentTime) / 60 / 60 / 24)
+      // Hours part from the timestamp
+      const hours = date.getUTCHours()
+      // Minutes part from the timestamp
+      const minutes = '0' + date.getUTCMinutes()
+      // Seconds part from the timestamp
+      const seconds = '0' + date.getUTCSeconds()
+
+      // Will display time in 10:30:23 format
+      this.timeLeft.days = days
+      this.timeLeft.hours = hours
+      this.timeLeft.minutes = minutes.substr(-2)
+      this.timeLeft.seconds = seconds.substr(-2)
+    },
     initCompetition (competitor, challanger) {
       this.getHistoricalZtiData(competitor)
       this.getHistoricalZsiData(competitor)
@@ -346,6 +393,27 @@ h1.competition-headline {
     text-align: center;
     color: $dark !important;
     font-size: 7rem !important;
+}
+
+h1.competition-headline-light {
+    font-family: D DIN;
+    text-align: center;
+    margin-bottom: -25px;
+    margin-top: 25px;
+    color: $light !important;
+    font-size: 6rem !important;
+}
+
+p.competition-text {
+    text-align: center;
+    font-size: 1.2em !important;
+    padding: 30px;
+    color: $light;
+}
+
+.small-chart-text {
+    margin-top: -230px !important;
+    margin-bottom: 80px;
 }
 
 h4.competition-sub {
