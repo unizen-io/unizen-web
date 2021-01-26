@@ -46,7 +46,7 @@
             <b-col>
               <b-card class="data-descriptor" title="ZSS Score">
                 <p>
-                  The <b>ZEN Smart Score™</b> (ZSS), is a custom dataset of aggregated LunarCrush powered social sentiment data. It is the combined metric of <b>ZTI</b> and <b>ZSI</b>. It is also the <u>soul determinator</u> of the competition.
+                  The <b>ZEN Smart Score™</b> (ZSS), is a custom dataset of aggregated LunarCrush powered social sentiment data. It is the combined metric of <b>ZTI</b> and <b>ZSI</b>. It is also the <u>sole determinator</u> of the competition.
                 </p>
               </b-card>
               <b-card class="data-descriptor" title="ZTI Score">

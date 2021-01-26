@@ -93,9 +93,9 @@ export default {
       errored: false,
       loading: false,
       FirstCompetitor: {
-        asset: 'HTR',
-        company: 'Hathor Network',
-        color: '#8C46FF',
+        asset: 'INJ',
+        company: 'Injective Protocol',
+        color: '#26A5E0',
         ZTI: {
           tweets: [],
           tweetQuotes: [],
@@ -118,10 +118,10 @@ export default {
         }
       },
       SecondCompetitor: {
-        asset: 'QNT',
-        company: 'Quant Network',
-        color: '#46DEC9',
-        mcapDiff: 6, // Times difference in mcap
+        asset: 'DAG',
+        company: 'Constellation Network',
+        color: '#1B43B2',
+        mcapDiff: 1, // Times difference in mcap
         ZTI: {
           tweets: [],
           tweetQuotes: [],
