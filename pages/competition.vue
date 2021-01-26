@@ -5,10 +5,10 @@
     </h1>
 
     <b-container>
-      <b-row>
+      <b-row class="mb-5">
         <b-col>
           <p class="zen-text">
-            Welcome to <b>The Tournament of Altcoins</b> (<code>#TournamentofAlts</code>)! <br><br> This is a <b>ZEN Exchange</b> hosted competition where the winner gets a free listing on our CEX module with Binance-shared liquidity and top tier market making support. The final round will last for <u>3 days</u> and the Altcoin with the highest <b>ZEN Smart Score™</b> when the timer runs out, will win the free listing.<br><br>
+            <code>#TournamentofAlts</code> is a <b>ZEN Exchange</b> hosted competition where the winner gets a free listing on our CEX module with Binance-shared liquidity and top tier market making support. The final round will last for <u>3 days</u> and the Altcoin with the highest <b>ZEN Smart Score™</b> when the timer runs out, will win the free listing.<br><br>
             The respective communities of each finalist can directly influence the outcome of the competition by supporting their favorite project with <i id="popover-target-1">positive sentiment</i> and <i id="popover-target-2">factually driven marketing</i> on <b>Twitter</b>. We're leveraging the smart data feeds of our partner <b>LunarCrush</b> to monitor community sentiment over any digital asset on <b>Twitter</b>. There's more information available on each index below their respective charts.
           </p>
           <b-popover target="popover-target-1" triggers="hover" placement="top">
@@ -46,15 +46,41 @@
             </b-col>
             <div class="w-100" />
             <b-col>
-              <br><small class="text-muted">CONTRACT ADDRESS</small><br>
-              <h5>
-                0xc52c326331e9ce41f04484d3b5e5648158028804 <a href="#" class="copy-icon">❐ </a>
-                <a href="https://etherscan.io/token/0xc52c326331e9ce41f04484d3b5e5648158028804" class="copy-icon">⤤</a>
-              </h5>
+              <br><small class="text-muted">POWERED BY</small><br>
+              <b-img lazy src="../assets/img/partners/lunarcrush-text.png" />
             </b-col>
           </b-row>
         </b-col>
-        <b-row />
+      </b-row>
+      <b-row cols="2">
+        <b-col>
+          <b-form>
+            <label for="input-with-list">First competitor (ticker)</label>
+            <b-form-input id="new-competition" v-model="FirstCompetitor.asset" />
+            <label for="input-with-list">Company Name</label>
+            <b-form-input id="new-competition" v-model="FirstCompetitor.company" />
+            <label for="input-with-list">Brand color</label>
+            <b-form-input id="new-competition" v-model="FirstCompetitor.color" />
+            <br><br>
+            <label for="input-with-list">Start Date (Unix TS)</label>
+            <b-form-input id="new-competition" v-model="competitionStartDate" />
+            <label for="input-with-list">End Date (Unix TS)</label>
+            <b-form-input id="new-competition" v-model="competitionEndDate" />
+          </b-form>
+        </b-col>
+        <b-col>
+          <b-form>
+            <label for="input-with-list">Second competitor (ticker)</label>
+            <b-form-input id="new-competition" v-model="SecondCompetitor.asset" />
+            <label for="input-with-list">Company Name</label>
+            <b-form-input id="new-competition" v-model="SecondCompetitor.company" />
+            <label for="input-with-list">Brand color</label>
+            <b-form-input id="new-competition" v-model="SecondCompetitor.color" />
+            <br><br>
+            <label for="input-with-list">Difference in mcap</label>
+            <b-form-input id="new-competition" v-model="SecondCompetitor.mcapDiff" />
+          </b-form>
+        </b-col>
       </b-row>
     </b-container>
     <center>
@@ -209,7 +235,7 @@ import ENV from '../components/env'
 export default {
   data () {
     return {
-      competitionStartDate: 1611567446, // Monday 25 January 2021 09:37:26
+      competitionStartDate: 1611481844, // Monday 25 January 2021 09:37:26
       competitionEndDate: 1611837446, // Monday 25 January 2021 12:37:26
       currentTime: Math.round((new Date()).getTime() / 1000),
       updateInterval: 60000, // 1 min
@@ -325,12 +351,12 @@ export default {
       this.getHistoricalZtiData(competitor)
       this.getHistoricalZsiData(competitor)
 
+      this.getHistoricalZtiData(challanger)
+      this.getHistoricalZsiData(challanger)
+
       setInterval(() => this.getZtiData(competitor), this.updateInterval)
       setInterval(() => this.getZsiData(competitor), this.updateInterval)
       setInterval(() => this.aggregateScore(competitor), this.updateInterval + 5000)
-
-      this.getHistoricalZtiData(challanger)
-      this.getHistoricalZsiData(challanger)
 
       setInterval(() => this.getZtiData(challanger), this.updateInterval)
       setInterval(() => this.getZsiData(challanger), this.updateInterval)
@@ -363,7 +389,7 @@ export default {
       await this.$axios.$get(url, { progress: false }).then((response) => {
         const timeSeries = response.data[0].timeSeries
         const timeSeriesLastObject = timeSeries[timeSeries.length - 1]
-        // if not last item in ts array matches last ts in response: don't append data
+        // if last item in ts array matches last ts in response: append data
         if (response.data[0].timeSeries.length <= 0) {
           return competitor
         } else if (timeSeriesLastObject.time !== competitor.ZTI.ts[competitor.ZTI.ts.length - 1]) {

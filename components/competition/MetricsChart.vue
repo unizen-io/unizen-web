@@ -70,6 +70,11 @@ export default {
           align: 'center'
         },
         scales: {
+          xAxes: [{
+            ticks: {
+              beginAtZero: true
+            }
+          }]
         }
       }
     }
