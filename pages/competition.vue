@@ -73,7 +73,7 @@
         :second-competitor="SecondCompetitor"
       />
     </div>
-    <br>
+    <br><br><br>
   </div>
 </template>
 
