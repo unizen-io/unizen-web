@@ -97,7 +97,7 @@ p.zen-text-small {
 }
 
 .macbook {
-    background-image: url('../assets/img/iMac.png');
+    background-image: url('../../assets/img/iMac.png');
     background-size: cover;
     max-width: 1920px;
 }

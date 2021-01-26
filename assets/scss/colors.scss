@@ -26,6 +26,13 @@ h1 {
     font-size: 2.3em !important;
     color: $primary !important;
 }
+h1.common-headline {
+    text-align: center;
+    // font-size: 4rem !important;
+    padding-top: 4rem !important;
+    padding-bottom: 6rem !important;
+    color: $dark !important;
+}
 @font-face {
     font-family: 'icomoon';
     font-style: normal;

@@ -2,7 +2,7 @@
   <div class="py-5 my-5">
     <b-row class="pb-5">
       <b-container fluid>
-        <h1 class="team py-5 my-5">
+        <h1 class="common-headline">
           Meet the team.
         </h1>
         <b-row class="mb-5">
@@ -47,7 +47,7 @@
     </b-row>
     <b-row style="background-color: #EFEFEF;" class="my-5">
       <b-container>
-        <h1 class="team py-5 my-5">
+        <h1 class="common-headline">
           Meet the advisors.
         </h1>
         <b-row v-for="(advisor, index) in advisors" :key="advisor.name" class="mb-5">
@@ -213,13 +213,6 @@ img.team {
 }
 
 p.team {
-    text-align: center;
-}
-
-h1.team {
-    font-family: Montserrat Medium !important;
-    color: $dark !important;
-    font-weight: bold;
     text-align: center;
 }
 

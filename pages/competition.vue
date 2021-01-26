@@ -1,90 +1,5 @@
 <template>
-  <div class="pt-5 mt-5">
-    <h1 class="token mx-auto mt-4">
-      The Tournament of Altcoins.
-    </h1>
-
-    <b-container>
-      <b-row class="mb-5">
-        <b-col>
-          <p class="zen-text">
-            <code>#TournamentofAlts</code> is a <b>ZEN Exchange</b> hosted competition where the winner gets a free listing on our CEX module with Binance-shared liquidity and top tier market making support. The final round will last for <u>3 days</u> and the Altcoin with the highest <b>ZEN Smart Score™</b> when the timer runs out, will win the free listing.<br><br>
-            The respective communities of each finalist can directly influence the outcome of the competition by supporting their favorite project with <i id="popover-target-1">positive sentiment</i> and <i id="popover-target-2">factually driven marketing</i> on <b>Twitter</b>. We're leveraging the smart data feeds of our partner <b>LunarCrush</b> to monitor community sentiment over any digital asset on <b>Twitter</b>. There's more information available on each index below their respective charts.
-          </p>
-          <b-popover target="popover-target-1" triggers="hover" placement="top">
-            <b>OOoOooOOoooooOOOooOoOooOOOOoOF!!!!</b><br><br> <a href="#">$CASHTAG</a>
-          </b-popover>
-          <b-popover target="popover-target-2" triggers="hover" placement="top">
-            <template #title>
-              shill
-            </template>
-            A person engaged in advertising. The shill attempts to spread buzz by personally endorsing the product in public forums.
-          </b-popover>
-        </b-col>
-        <b-col style="padding-left:50px;">
-          <b-row>
-            <b-col>
-              <small class="text-muted">TICKER</small><br><h2 class="metrics gradient-text">
-                ZCX
-              </h2>
-            </b-col>
-            <b-col>
-              <small class="text-muted">TOKEN TYPE</small><br><h2 class="metrics gradient-text">
-                ERC-20
-              </h2>
-            </b-col>
-            <div class="w-100" />
-            <b-col>
-              <small class="text-muted">CIRCULATING SUPPLY</small><br><h2 class="metrics gradient-text">
-                33.75m
-              </h2>
-            </b-col>
-            <b-col>
-              <small class="text-muted">TOTAL SUPPLY</small><br><h2 class="metrics gradient-text">
-                1b
-              </h2>
-            </b-col>
-            <div class="w-100" />
-            <b-col>
-              <br><small class="text-muted">POWERED BY</small><br>
-              <b-img lazy src="../assets/img/partners/lunarcrush-text.png" />
-            </b-col>
-          </b-row>
-        </b-col>
-      </b-row>
-      <b-form @submit="onSubmit">
-        <b-row cols="2">
-          <b-col>
-            <label for="input-with-list">First competitor (ticker)</label>
-            <b-form-input id="new-competition" v-model="FirstCompetitor.asset" />
-            <label for="input-with-list">Company Name</label>
-            <b-form-input id="new-competition" v-model="FirstCompetitor.company" />
-            <label for="input-with-list">Brand color</label>
-            <b-form-input id="new-competition" v-model="FirstCompetitor.color" />
-            <br><br>
-            <label for="input-with-list">Start Date (Unix TS)</label>
-            <b-form-input id="new-competition" v-model="competitionStartDate" />
-            <label for="input-with-list">End Date (Unix TS)</label>
-            <b-form-input id="new-competition" v-model="competitionEndDate" />
-          </b-col>
-          <b-col>
-            <label for="input-with-list">Second competitor (ticker)</label>
-            <b-form-input id="new-competition" v-model="SecondCompetitor.asset" />
-            <label for="input-with-list">Company Name</label>
-            <b-form-input id="new-competition" v-model="SecondCompetitor.company" />
-            <label for="input-with-list">Brand color</label>
-            <b-form-input id="new-competition" v-model="SecondCompetitor.color" />
-            <br><br>
-            <label for="input-with-list">Difference in mcap</label>
-            <b-form-input id="new-competition" v-model="SecondCompetitor.mcapDiff" />
-            <br><br>
-            <b-button type="submit" variant="primary">
-              Submit
-            </b-button>
-          </b-col>
-        </b-row>
-      </b-form>
-    </b-container>
+  <div class="pt-3 mt-5">
     <center>
       <div class="mt-5 pt-5">
         <h5 v-if="competitionEnded">
@@ -99,135 +14,66 @@
       </div>
     </center>
     <div v-if="!competitionEnded && competitionStarted">
-      <b-row
-        style="background: #EFEFEF;"
-      >
+      <CompetitionHeader
+        :timer="timeLeft"
+        :first-competitor="FirstCompetitor"
+        :second-competitor="SecondCompetitor"
+      />
+      <b-row style="background: #EFEFEF;">
         <b-container>
           <b-row
-            class="py-5 mb-5"
+            class="mt-5"
             cols="1"
-            cols-md="3"
+            cols-md="2"
             cols-sm="1"
           >
             <b-col>
-              <b><h1 class="competition-headline" :style="'font-family: Montserrat; color: '+FirstCompetitor.color+' !important;'">
-                {{ FirstCompetitor.asset }}
-              </h1></b>
-              <h4 class="competition-sub">
-                ({{ FirstCompetitor.company }})
-              </h4>
+              <ZssChart
+                :competitor-asset="FirstCompetitor.asset"
+                :challenger-asset="SecondCompetitor.asset"
+                :competitor-color="FirstCompetitor.color"
+                :challenger-color="SecondCompetitor.color"
+                :competitor-zss-data="FirstCompetitor.ZSS.score"
+                :challenger-zss-data="SecondCompetitor.ZSS.score"
+                :challenger-mcap-diff="SecondCompetitor.mcapDiff"
+              />
+              <div class="small-chart-text">
+                <center><small>*Chart data updates every full hour</small></center>
+              </div>
             </b-col>
             <b-col>
-              <h1 class="competition-headline">
-                vs.
-              </h1>
-            </b-col>
-            <b-col>
-              <h1 class="competition-headline" :style="'font-family: Montserrat; color: '+SecondCompetitor.color+' !important;'">
-                {{ SecondCompetitor.asset }}
-              </h1>
-              <h4 class="competition-sub">
-                ({{ SecondCompetitor.company }})
-              </h4>
+              <MetricsChart
+                :competitor-asset="FirstCompetitor.asset"
+                :challenger-asset="SecondCompetitor.asset"
+                :competitor-color="FirstCompetitor.color"
+                :challenger-color="SecondCompetitor.color"
+                :competitor-zti-data="FirstCompetitor.ZTI"
+                :challenger-zti-data="SecondCompetitor.ZTI"
+                :competitor-zsi-data="FirstCompetitor.ZSI"
+                :challenger-zsi-data="SecondCompetitor.ZSI"
+                :challenger-mcap-diff="SecondCompetitor.mcapDiff"
+              />
+              <div class="small-chart-text">
+                <center><small>*Chart data updates every full hour</small></center>
+              </div>
             </b-col>
           </b-row>
         </b-container>
       </b-row>
-      <b-container>
-        <b-row
-          class="mt-5"
-          cols="1"
-          cols-md="2"
-          cols-sm="1"
-        >
-          <b-col>
-            <ZssChart
-              :competitor-asset="FirstCompetitor.asset"
-              :challenger-asset="SecondCompetitor.asset"
-              :competitor-color="FirstCompetitor.color"
-              :challenger-color="SecondCompetitor.color"
-              :competitor-zss-data="FirstCompetitor.ZSS.score"
-              :challenger-zss-data="SecondCompetitor.ZSS.score"
-              :challenger-mcap-diff="SecondCompetitor.mcapDiff"
-            />
-            <div class="small-chart-text">
-              <small>*Chart data updates every full hour</small>
-            </div>
-          </b-col>
-          <b-col>
-            <MetricsChart
-              :competitor-asset="FirstCompetitor.asset"
-              :challenger-asset="SecondCompetitor.asset"
-              :competitor-color="FirstCompetitor.color"
-              :challenger-color="SecondCompetitor.color"
-              :competitor-zti-data="FirstCompetitor.ZTI"
-              :challenger-zti-data="SecondCompetitor.ZTI"
-              :competitor-zsi-data="FirstCompetitor.ZSI"
-              :challenger-zsi-data="SecondCompetitor.ZSI"
-              :challenger-mcap-diff="SecondCompetitor.mcapDiff"
-            />
-            <div class="small-chart-text">
-              <small>*Chart data updates every full hour</small>
-            </div>
-          </b-col>
-          <b-col class="mb-5">
-            <b-card class="data-descriptor" title="ZSS Score">
-              <p>
-                <b>The ZEN Smart Score™</b> (ZSS), is a custom dataset of aggregated LunarCrush powered social sentiment data. It is the combined metric of <b>ZTI</b> and <b>ZSI</b>. It is also the <u>soul determinator</u> of the competition.
-              </p>
-            </b-card>
-          </b-col>
-          <b-col>
-            <b-card class="data-descriptor" title="ZTI and ZSI Score">
-              <p>
-                The <b>ZEN Twitter Indicator™</b> (ZTI) is an aggregate of twitter activity over a selected digital asset. More specifically, it's an aggregate of <code>number of tweets</code>, <code>quoted retweets</code>, <code>retweets</code>, <code>replies</code> and <code>favorites</code>.<br><br> The <b>ZEN Sentiment Indicator™</b> (ZSI) score, is an aggregate of <i>"bullish"</i> sentiment around a digital asset, on twitter. It leverages <b>LunarCrush</b> powered deep learning algorithms and language processing to determine the social sentiment.
-              </p>
-            </b-card>
-          </b-col>
-        </b-row>
-      </b-container>
+      <ZtiMetrics
+        :first-competitor="FirstCompetitor"
+        :second-competitor="SecondCompetitor"
+      />
+      <ZsiMetrics
+        :first-competitor="FirstCompetitor"
+        :second-competitor="SecondCompetitor"
+      />
+      <ZssMetrics
+        :first-competitor="FirstCompetitor"
+        :second-competitor="SecondCompetitor"
+      />
     </div>
-    <b-row
-      :style="'background-image: linear-gradient(to right,' + FirstCompetitor.color + ',' + SecondCompetitor.color + ') !important;'
-      "
-      class="mt-5"
-      cols="2"
-      cols-md="4"
-      cols-sm="2"
-    >
-      <b-col>
-        <h1 class="competition-headline-light">
-          {{ timeLeft.days }}
-        </h1>
-        <p class="competition-text">
-          DAYS
-        </p>
-      </b-col>
-      <b-col>
-        <h1 class="competition-headline-light">
-          {{ timeLeft.hours }}
-        </h1>
-        <p class="competition-text">
-          HOURS
-        </p>
-      </b-col>
-      <b-col>
-        <h1 class="competition-headline-light">
-          {{ timeLeft.minutes }}
-        </h1>
-        <p class="competition-text">
-          MINUTES
-        </p>
-      </b-col>
-      <b-col>
-        <h1 class="competition-headline-light">
-          {{ timeLeft.seconds }}
-        </h1>
-        <p class="competition-text">
-          SECONDS
-        </p>
-      </b-col>
-    </b-row>
+    <br>
   </div>
 </template>
 
@@ -333,49 +179,6 @@ export default {
     setInterval(() => this.getTimer(), 1000)
   },
   methods: {
-    onSubmit (event) {
-      event.preventDefault()
-      this.resetData()
-      this.initCompetition(this.FirstCompetitor, this.SecondCompetitor)
-    },
-    resetData (event) {
-      this.FirstCompetitor.ZTI = {
-        tweets: [],
-        tweetQuotes: [],
-        retweets: [],
-        replies: [],
-        favorites: [],
-        ts: [],
-        score: 0
-      }
-      this.SecondCompetitor.ZTI = {
-        tweets: [],
-        tweetQuotes: [],
-        retweets: [],
-        replies: [],
-        favorites: [],
-        ts: [],
-        score: 0
-      }
-      this.FirstCompetitor.ZSI = {
-        sentiment4: [],
-        sentiment5: [],
-        socialContributors: [],
-        ts: [],
-        score: 0
-
-      }
-      this.SecondCompetitor.ZSI = {
-        sentiment4: [],
-        sentiment5: [],
-        socialContributors: [],
-        ts: [],
-        score: 0
-
-      }
-      this.FirstCompetitor.ZSS.score = 0
-      this.SecondCompetitor.ZSS.score = 0
-    },
     getTimer () {
       const date = new Date(this.competitionEndDate - this.currentTime * 1000)
       const days = Math.trunc((this.competitionEndDate - this.currentTime) / 60 / 60 / 24)
@@ -530,7 +333,7 @@ h1.competition-headline-light {
     margin-bottom: -25px;
     margin-top: 25px;
     color: $light !important;
-    font-size: 6rem !important;
+    font-size: 4rem !important;
 }
 
 p.competition-text {
@@ -547,10 +350,6 @@ p.competition-text {
 
 h4.competition-sub {
     text-align: center;
-}
-
-.data-descriptor {
-    min-height: 19.5rem;
 }
 
 </style>

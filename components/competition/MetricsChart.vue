@@ -83,7 +83,7 @@ export default {
 
     fillData () {
       const chartData = {
-        labels: ['ZTI Score', 'ZSI Score'],
+        labels: ['ZSI Score', 'ZTI Score'],
         datasets: [
           {
             borderWidth: 0,

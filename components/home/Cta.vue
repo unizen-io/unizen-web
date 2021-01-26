@@ -18,9 +18,9 @@
         <b-row class="mt-5 pt-5">
           <b-col align-self="end">
             <div class="text-align: center;">
-              <a class="introduction">
+              <NuxtLink to="/wenzen" class="introduction">
                 wen zen?
-              </a>
+              </NuxtLink>
             </div>
           </b-col>
         </b-row>
@@ -37,7 +37,7 @@ export default {
 
 <style lang="scss">
 .section {
-    background-image: url('../assets/img/zen-bg.jpg');
+    background-image: url('../../assets/img/zen-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 0 0 30px 0 rgba(196, 202, 214, 0.596) !important;

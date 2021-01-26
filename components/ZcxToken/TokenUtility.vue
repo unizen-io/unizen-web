@@ -2,7 +2,7 @@
   <div>
     <b-row>
       <b-container>
-        <h1 class="token mx-auto">
+        <h1 class="common-headline mx-auto">
           Token Utility.
         </h1>
         <b-row
