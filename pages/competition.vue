@@ -52,9 +52,9 @@
           </b-row>
         </b-col>
       </b-row>
-      <b-row cols="2">
-        <b-col>
-          <b-form>
+      <b-form @submit="onSubmit">
+        <b-row cols="2">
+          <b-col>
             <label for="input-with-list">First competitor (ticker)</label>
             <b-form-input id="new-competition" v-model="FirstCompetitor.asset" />
             <label for="input-with-list">Company Name</label>
@@ -66,10 +66,8 @@
             <b-form-input id="new-competition" v-model="competitionStartDate" />
             <label for="input-with-list">End Date (Unix TS)</label>
             <b-form-input id="new-competition" v-model="competitionEndDate" />
-          </b-form>
-        </b-col>
-        <b-col>
-          <b-form>
+          </b-col>
+          <b-col>
             <label for="input-with-list">Second competitor (ticker)</label>
             <b-form-input id="new-competition" v-model="SecondCompetitor.asset" />
             <label for="input-with-list">Company Name</label>
@@ -79,9 +77,13 @@
             <br><br>
             <label for="input-with-list">Difference in mcap</label>
             <b-form-input id="new-competition" v-model="SecondCompetitor.mcapDiff" />
-          </b-form>
-        </b-col>
-      </b-row>
+            <br><br>
+            <b-button type="submit" variant="primary">
+              Submit
+            </b-button>
+          </b-col>
+        </b-row>
+      </b-form>
     </b-container>
     <center>
       <div class="mt-5 pt-5">
@@ -331,6 +333,49 @@ export default {
     setInterval(() => this.getTimer(), 1000)
   },
   methods: {
+    onSubmit (event) {
+      event.preventDefault()
+      this.resetData()
+      this.initCompetition(this.FirstCompetitor, this.SecondCompetitor)
+    },
+    resetData (event) {
+      this.FirstCompetitor.ZTI = {
+        tweets: [],
+        tweetQuotes: [],
+        retweets: [],
+        replies: [],
+        favorites: [],
+        ts: [],
+        score: 0
+      }
+      this.SecondCompetitor.ZTI = {
+        tweets: [],
+        tweetQuotes: [],
+        retweets: [],
+        replies: [],
+        favorites: [],
+        ts: [],
+        score: 0
+      }
+      this.FirstCompetitor.ZSI = {
+        sentiment4: [],
+        sentiment5: [],
+        socialContributors: [],
+        ts: [],
+        score: 0
+
+      }
+      this.SecondCompetitor.ZSI = {
+        sentiment4: [],
+        sentiment5: [],
+        socialContributors: [],
+        ts: [],
+        score: 0
+
+      }
+      this.FirstCompetitor.ZSS.score = 0
+      this.SecondCompetitor.ZSS.score = 0
+    },
     getTimer () {
       const date = new Date(this.competitionEndDate - this.currentTime * 1000)
       const days = Math.trunc((this.competitionEndDate - this.currentTime) / 60 / 60 / 24)
