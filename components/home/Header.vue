@@ -84,8 +84,8 @@ h2.sub-title {
 }
 .layout-homepage {
     height: auto;
-    overflow-x: hidden;
-    overflow-y: hidden;
+    // overflow-x: hidden;
+    // overflow-y: hidden;
     -webkit-perspective: 500px;
     -moz-perspective: 500px;
     perspective: 500px;

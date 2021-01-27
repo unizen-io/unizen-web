@@ -98,9 +98,9 @@ export default {
       errored: false,
       loading: false,
       FirstCompetitor: {
-        asset: 'NOIA',
-        company: 'Syntropy Network',
-        color: '#050505',
+        asset: 'PRQ',
+        company: 'Parsic',
+        color: '#005CC7',
         ZTI: {
           tweets: [],
           tweetQuotes: [],
