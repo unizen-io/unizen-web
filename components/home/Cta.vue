@@ -9,8 +9,8 @@
       <b-col>
         <b-row>
           <p class="introduction">
-            Most seasoned traders are spending hours everyday to stay in touch with the latest market conditions and current social sentiment. They also typically hop between multiple exchanges.
-            It’s a very time consuming, stressful and sometimes a risky activity, that most traders do as a part-time occupation, which limits their personal time with family and other self-healing activities.
+            Traders are spending hours everyday to stay in touch with the latest market conditions and social sentiment. They also typically hop between multiple exchanges.
+            It’s a very time consuming, stressful and sometimes a risky activity, that most traders do as a part-time occupation, which limits their personal time with family and other self-healing activities. At ZEN we want to make all digital assets available under the same roof.
             <br>
           </p>
         </b-row>

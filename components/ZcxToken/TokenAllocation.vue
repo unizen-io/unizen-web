@@ -12,7 +12,7 @@
       >
         <b-col cols="6">
           <div class="chart-container">
-            <bar-chart :data="barChartData" :styles="myStyles" :options="barChartOptions" />
+            <doughnut-chart :data="barChartData" :styles="myStyles" :options="barChartOptions" />
           </div>
         </b-col>
         <b-col cols="6">
@@ -38,7 +38,7 @@
 </template>
 
 <script>
-import BarChart from '~/components/BarChart'
+import DoughnutChart from '~/components/DoughnutChart'
 
 const chartColors = {
   color1: '#00afae',
@@ -52,7 +52,7 @@ const chartColors = {
 
 export default {
   components: {
-    BarChart
+    DoughnutChart
   },
   data () {
     return {
@@ -88,7 +88,7 @@ export default {
             bottom: 0
           }
         },
-        responsive: true,
+        responsive: false,
         maintainAspectRatio: false,
         tooltips: {
           callbacks: {

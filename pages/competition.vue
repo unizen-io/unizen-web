@@ -88,8 +88,8 @@ import ENV from '../components/env'
 export default {
   data () {
     return {
-      competitionStartDate: 1611743400, // Monday 25 January 2021 09:37:26
-      competitionEndDate: 1611750600, // Monday 25 January 2021 12:37:26
+      competitionStartDate: 1611760800, // Monday 25 January 2021 09:37:26
+      competitionEndDate: 1611771600, // Monday 25 January 2021 12:37:26
       currentTime: Math.round((new Date()).getTime() / 1000),
       updateInterval: 60000, // 1 min
       winner: null,
@@ -123,10 +123,10 @@ export default {
         }
       },
       SecondCompetitor: {
-        asset: 'PRQ',
-        company: 'Parsiq',
-        color: '#005CC7',
-        mcapDiff: 1.29, // Times difference in mcap
+        asset: 'DAG',
+        company: 'Constellation Network',
+        color: '#1B43B2',
+        mcapDiff: 1, // Times difference in mcap
         ZTI: {
           tweets: [],
           tweetQuotes: [],

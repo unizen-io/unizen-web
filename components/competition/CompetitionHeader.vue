@@ -119,7 +119,7 @@
       >
         <center>
           <h1 class="competition-headline-light-winner">
-            {{ normalizeTimestamp(competitionStartTime) }} <b>UTC</b>
+            {{ normalizeTimestamp(competitionStartTime) }}
           </h1>
         </center>
       </b-row>
@@ -140,7 +140,7 @@ export default {
   methods: {
     normalizeTimestamp (ts) {
       const t = new Date(ts * 1000)
-      const formatted = t.getUTCMonth() + t.getUTCDate() + 'th ' + ('0' + t.getUTCHours()).slice(-2) + ':' + ('0' + t.getUTCMinutes()).slice(-2)
+      const formatted = t.toUTCString()
 
       return formatted
     }
