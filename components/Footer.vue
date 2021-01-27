@@ -16,6 +16,9 @@
             <NuxtLink to="/token" class="footer-text">
               ZCX Token
             </NuxtLink><br>
+            <NuxtLink to="/wenzen" class="footer-text">
+              Tournament of Altcoins
+            </NuxtLink><br>
             <a class="footer-text footer-disabled">CoinMarketCap</a><br>
             <a class="footer-text footer-disabled">CoinGecko</a><br>
             <NuxtLink to="/contact" class="footer-text">

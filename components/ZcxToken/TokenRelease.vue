@@ -8,6 +8,26 @@
       <div id="line" class="chart-container">
         <line-chart :styles="myStyles" :options="barChartOptions" />
       </div>
+      <b-row cols="12">
+        <b-col class="one-year-box" />
+        <b-col class="one-year-box" />
+        <div class="w-100" />
+        <b-col>
+          <center>
+            <b><p class="zen-text">
+              2020
+            </p></b>
+          </center>
+        </b-col>
+        <b-col>
+          <center>
+            <p class="zen-text">
+              <b>2021</b>
+            </p>
+          </center>
+        </b-col>
+      </b-row>
+      <br><br><br>
     </b-container>
   </div>
 </template>
@@ -108,6 +128,16 @@ export default {
 }
 </script>
 <style lang="scss">
+.one-year-box{
+  border-bottom: 3px $primary solid;
+  border-right: 3px $primary solid;
+  border-left: 3px $primary solid;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 20px;
+  margin-top: -40px;
+  margin-bottom: 20px;
+}
 .chart-container {
   flex-grow: 1;
   min-height: 0;

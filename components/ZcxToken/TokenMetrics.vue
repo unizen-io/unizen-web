@@ -58,9 +58,10 @@
           <b-col>
             <br><small class="text-muted">CONTRACT ADDRESS</small><br>
             <h5>
-              0xc52c326331e9ce41f04484d3b5e5648158028804 <a href="#" class="copy-icon">❐ </a>
+              {{ contract }} <a class="copy-icon" @click.stop.prevent="copyContract">❐ </a>
               <a href="https://etherscan.io/token/0xc52c326331e9ce41f04484d3b5e5648158028804" class="copy-icon">⤤</a>
             </h5>
+            <input id="contract" type="hidden" :value="contract">
           </b-col>
         </b-row>
       </b-col>
@@ -70,6 +71,31 @@
 
 <script>
 export default {
+
+  data () {
+    return {
+      contract: '0xc52c326331e9ce41f04484d3b5e5648158028804'
+    }
+  },
+  methods: {
+    copyContract () {
+      const testingCodeToCopy = document.querySelector('#contract')
+      testingCodeToCopy.setAttribute('type', 'text') // hidden
+      testingCodeToCopy.select()
+      document.execCommand('copy')
+      // try {
+      //   const successful = document.execCommand('copy')
+      //   const msg = successful ? 'successful' : 'unsuccessful'
+      //   alert('Testing code was copied ' + msg)
+      // } catch (err) {
+      //   console.log('Unable to copy contract')
+      // }
+
+      /* unselect the range */
+      testingCodeToCopy.setAttribute('type', 'hidden')
+      window.getSelection().removeAllRanges()
+    }
+  }
 
 }
 </script>
@@ -84,6 +110,7 @@ a.copy-icon {
 }
 
 a.copy-icon:hover {
+    cursor: pointer;
     color: $primary !important;
     text-decoration: none;
 }

@@ -17,16 +17,15 @@
         </b-col>
         <b-col cols="6">
           <div class="accordion" style="width: 100%;" role="tablist">
-            <b-card v-for="(items, index) in tableData" :key="items.title" no-body class="mb-1">
+            <b-card v-for="(row, index) in tableData" :key="row.title" no-body class="mb-1">
               <b-card-header header-tag="header" :style="'background-color: '+barChartData.datasets[0].backgroundColor[index]+' !important;'" class="header-collapse p-1" role="tab">
                 <b-button block class="allo-btn" @click="expanded=index">
-                  {{ items.title }}
+                  {{ row.title }}
                 </b-button>
               </b-card-header>
               <b-collapse :id="'accordionG'+index" role="tabpanel" :visible="index == expanded">
                 <b-card-body>
-                  <b-card-text>I start opened because <code>visible</code> is <code>true</code></b-card-text>
-                  <b-card-text>{{ text }}</b-card-text>
+                  <b-card-text>{{ row.content }}</b-card-text>
                 </b-card-body>
               </b-collapse>
             </b-card>
@@ -57,7 +56,13 @@ export default {
   data () {
     return {
       expanded: 0,
-      tableData: [{ title: 'Team', content: '' }, { title: 'Ecosystem Reserve / Security Insurance', content: '' }, { title: 'Foundation', content: '' }, { title: 'Partners & Advisors', content: '' }, { title: 'Seed', content: '' }, { title: 'Private Sale', content: '' }, { title: 'Strategic', content: '' }],
+      tableData: [{ title: 'Team', content: 'Used for new hires and company expenses. Tokens are locked until May 2021 and vested Monthly for 10 Months.' },
+        { title: 'Ecosystem Reserve / Security Insurance', content: 'Locked to circumvent cyber hack attempts or until DAO creation. Never sold on the open market.' },
+        { title: 'Foundation', content: 'Consisting of Network Growth, Incubator Grants, Market Making & Marketing. 1st phase: 25,000 $USD equivalent at private sale pricing per month to facilitate high quality listings. This rolls over (month to month if not used). Listing decisions will be done in collaboration with a tier-one exchange. Activation begins 30 days after TGE.' },
+        { title: 'Partners & Advisors', content: 'Tokens are locked until May 2021 and vested Monthly for 10 Months.' },
+        { title: 'Seed', content: '12.5% of purchased tokens will be unlocked upon the TGE (Token Generation Event). 20% shall be unlocked every three months (90 days) thereafter, in arrears, over the remaining three quarters (270 days). 27.5% will become unlocked on the last tranche of release cycle (360 days after TGE).' },
+        { title: 'Private Sale', content: 'Token allocations will be 25% per quarter for four quarters (270 days duration).' },
+        { title: 'Strategic', content: 'Token allocations will be 25% per quarter for four quarters (270 days duration).' }],
       barChartData: {
         labels: ['Team', 'Ecosystem Reserve / Security Insurance', 'Foundation', 'Partners & Advisors', 'Seed', 'Private Sale', 'Strategic Sale'],
         datasets: [
@@ -72,7 +77,7 @@ export default {
         ]
       },
       myStyles: {
-        height: '400px',
+        height: '450px',
         marginTop: '250px',
         marginBottom: '-150px',
         width: '100%',
