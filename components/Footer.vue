@@ -2,7 +2,12 @@
   <div>
     <b-row class="footer">
       <b-container>
-        <b-row class="py-5">
+        <b-row
+          class="py-5 px-5"
+          cols="2"
+          cols-md="4"
+          cols-sm="4"
+        >
           <b-col>
             <h2 class="footer-text">
               General
@@ -84,6 +89,7 @@ export default {
 h2.footer-text {
     color: $light !important;
     font-size: 1.4em;
+    margin-top: 20px;
 }
 
 a.footer-text {
@@ -105,7 +111,7 @@ a.footer-text {
   margin: 0 0 15px;
   padding: 0;
   font-size: 0;
-  text-align: center;
+  text-align: left;
 
   li {
     display: inline-block;
@@ -114,7 +120,7 @@ a.footer-text {
   a {
     display: block;
     position: relative;
-    margin: 0 7px;
+    margin: 7px 7px;
     width: 48px;
     height: 48px;
     font-size: 0;
