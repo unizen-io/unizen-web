@@ -14,19 +14,19 @@
               </b-card>
               <br>
               <b-list-group-item class="zen-item">
-                <b>{{ totalTweetsFirstCompetitor }}</b> Tweets
+                <b>{{ totalTweetsFirstCompetitor }}</b> tweets
               </b-list-group-item>
               <b-list-group-item class="zen-item">
-                <b>{{ totalTweetQuotesFirstCompetitor }}</b> Quoted retweets
+                <b>{{ totalTweetQuotesFirstCompetitor }}</b> quoted retweets
               </b-list-group-item>
               <b-list-group-item class="zen-item">
-                <b>{{ totalRetweetsFirstCompetitor }}</b> Retweets
+                <b>{{ totalRetweetsFirstCompetitor }}</b> retweets
               </b-list-group-item>
               <b-list-group-item class="zen-item">
-                <b>{{ totalFavoritesFirstCompetitor }}</b> Starred tweets
+                <b>{{ totalFavoritesFirstCompetitor }}</b> starred tweets
               </b-list-group-item>
               <b-list-group-item class="zen-item" style="border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
-                <b>{{ totalRepliesFirstCompetitor }}</b> Tweet replies
+                <b>{{ totalRepliesFirstCompetitor }}</b> tweet replies
               </b-list-group-item>
             </center>
           </b-list-group>
@@ -43,19 +43,19 @@
               </b-card>
               <br>
               <b-list-group-item class="zen-item">
-                <b>{{ totalTweetsSecondCompetitor }}</b> Tweets
+                <b>{{ totalTweetsSecondCompetitor }}</b> tweets
               </b-list-group-item>
               <b-list-group-item class="zen-item">
-                <b>{{ totalTweetQuotesSecondCompetitor }}</b> Quoted retweets
+                <b>{{ totalTweetQuotesSecondCompetitor }}</b> quoted retweets
               </b-list-group-item>
               <b-list-group-item class="zen-item">
-                <b>{{ totalRetweetsSecondCompetitor }}</b> Retweets
+                <b>{{ totalRetweetsSecondCompetitor }}</b> retweets
               </b-list-group-item>
               <b-list-group-item class="zen-item">
-                <b>{{ totalFavoritesSecondCompetitor }}</b> Starred tweets
+                <b>{{ totalFavoritesSecondCompetitor }}</b> starred tweets
               </b-list-group-item>
               <b-list-group-item class="zen-item" style="border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
-                <b>{{ totalTweetRepliesSecondCompetitor }}</b> Tweet replies
+                <b>{{ totalTweetRepliesSecondCompetitor }}</b> tweet replies
               </b-list-group-item>
             </center>
           </b-list-group>

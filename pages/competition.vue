@@ -3,22 +3,27 @@
     <center>
       <div class="mt-5 pt-5">
         <h5 v-if="competitionEnded">
-          Competition Ended
+          Competition Complete
         </h5>
         <h5 v-if="competitionRunning">
           Competition Running
         </h5>
-        <h5 v-else>
+        <h5 v-if="!competitionStarted">
           Competition hasn't started yet
         </h5>
       </div>
     </center>
-    <div v-if="!competitionEnded && competitionStarted">
-      <CompetitionHeader
-        :timer="timeLeft"
-        :first-competitor="FirstCompetitor"
-        :second-competitor="SecondCompetitor"
-      />
+
+    <CompetitionHeader
+      :timer="timeLeft"
+      :first-competitor="FirstCompetitor"
+      :second-competitor="SecondCompetitor"
+      :competition-start-time="competitionStartDate"
+      :competition-started="competitionStarted"
+      :competition-ended="competitionEnded"
+    />
+    <div v-if="!competitionStarted" style="padding-bottom: 400px;" />
+    <div v-if="competitionStarted">
       <b-row style="background: #EFEFEF;">
         <b-container>
           <b-row
@@ -83,8 +88,8 @@ import ENV from '../components/env'
 export default {
   data () {
     return {
-      competitionStartDate: 1611481844, // Monday 25 January 2021 09:37:26
-      competitionEndDate: 1611837446, // Monday 25 January 2021 12:37:26
+      competitionStartDate: 1611743400, // Monday 25 January 2021 09:37:26
+      competitionEndDate: 1611750600, // Monday 25 January 2021 12:37:26
       currentTime: Math.round((new Date()).getTime() / 1000),
       updateInterval: 60000, // 1 min
       winner: null,
@@ -93,9 +98,9 @@ export default {
       errored: false,
       loading: false,
       FirstCompetitor: {
-        asset: 'INJ',
-        company: 'Injective Protocol',
-        color: '#26A5E0',
+        asset: 'NOIA',
+        company: 'Syntropy Network',
+        color: '#050505',
         ZTI: {
           tweets: [],
           tweetQuotes: [],
@@ -118,10 +123,10 @@ export default {
         }
       },
       SecondCompetitor: {
-        asset: 'DAG',
-        company: 'Constellation Network',
-        color: '#1B43B2',
-        mcapDiff: 1, // Times difference in mcap
+        asset: 'PRQ',
+        company: 'Parsiq',
+        color: '#005CC7',
+        mcapDiff: 1.29, // Times difference in mcap
         ZTI: {
           tweets: [],
           tweetQuotes: [],
@@ -165,11 +170,23 @@ export default {
       return this.currentTime > this.competitionStartDate && this.currentTime < this.competitionEndDate
     }
   },
+  watch: {
+    competitionEnded (val) {
+      if (val) {
+        this.startConfettiRain()
+      }
+    },
+    competitionRunning (val) {
+      if (val) {
+        this.stopConfettiRain()
+      }
+    }
+  },
   created () {
     this.LcApiKey = ENV.LcApiKey
-    if (this.competitionStarted && !this.competitionEnded) {
-      this.initCompetition(this.FirstCompetitor, this.SecondCompetitor)
-    }
+    // if (this.competitionStarted && !this.competitionEnded) {
+    this.initCompetition(this.FirstCompetitor, this.SecondCompetitor)
+    // }
     const self = this
     setInterval(function () {
       self.currentTime = Math.round((new Date()).getTime() / 1000)
@@ -177,17 +194,20 @@ export default {
   },
   mounted () {
     setInterval(() => this.getTimer(), 1000)
+    // if (this.currentTime > this.competitionEndDate) {
+    //   this.startConfettiRain()
+    // }
   },
   methods: {
     getTimer () {
-      const date = new Date(this.competitionEndDate - this.currentTime * 1000)
+    //   const date = new Date(this.competitionEndDate - this.currentTime * 1000)
       const days = Math.trunc((this.competitionEndDate - this.currentTime) / 60 / 60 / 24)
       // Hours part from the timestamp
-      const hours = date.getUTCHours()
+      const hours = Math.trunc((this.competitionEndDate - this.currentTime) / 60 / 60) % 24
       // Minutes part from the timestamp
-      const minutes = '0' + date.getUTCMinutes()
+      const minutes = '0' + Math.trunc((this.competitionEndDate - this.currentTime) / 60) % 60
       // Seconds part from the timestamp
-      const seconds = '0' + date.getUTCSeconds()
+      const seconds = '0' + (this.competitionEndDate - this.currentTime) % 60
 
       // Will display time in 10:30:23 format
       this.timeLeft.days = days
@@ -315,6 +335,12 @@ export default {
       competitor.ZSI.score = ZSIScore
       competitor.ZSS.score = competitor.ZTI.score + competitor.ZSI.score
       return competitor
+    },
+    startConfettiRain () {
+      this.$confetti.start()
+    },
+    stopConfettiRain () {
+      this.$confetti.stop()
     }
   }
 }

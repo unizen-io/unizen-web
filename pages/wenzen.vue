@@ -22,7 +22,7 @@
       >
         <b-col class="py-5">
           <p class="zen-text pt-3">
-            <code>#TournamentofAlts</code> is a <b>ZEN Exchange</b> hosted competition where the winner gets a free listing on our CEX module with Binance-shared liquidity and top tier market making support. <br><br>The final round will last for <u>3 days</u> and the Altcoin with the highest <b>ZEN Smart Score™</b> when the timer runs out, will win the free listing.<br><br>
+            <code>#TournamentofAlts</code> is a <b>ZEN Exchange</b> hosted competition where the winner gets a free listing on our CEX module with Binance-shared liquidity and top tier market making support. <br><br>The semi-finals will last for <u>24 hours</u> and the final round will run for <u>48 hours</u>. The Altcoin, in the finals, with the highest <b>ZEN Smart Score™</b> when the timer runs out - will win the free listing.<br><br>
             The respective communities of each finalist can directly influence the outcome of the competition by supporting their favorite project with <i id="popover-target-1">positive sentiment</i> and <i id="popover-target-2">factually driven marketing</i> on <b>Twitter</b>. <br><br>We're leveraging the smart data feeds of our partner <b>LunarCrush</b> to monitor community sentiment over any digital asset on <b>Twitter</b>. There's more information available on each index below their respective charts.
           </p>
           <b-popover target="popover-target-1" triggers="hover" placement="top">
