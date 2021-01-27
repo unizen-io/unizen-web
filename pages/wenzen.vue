@@ -35,13 +35,13 @@
             A person engaged in advertising. The shill attempts to spread buzz by personally endorsing the product in public forums.
           </b-popover>
           <br><br>
-          <NuxtLink to="/competition" class="introduction">
+          <NuxtLink to="/competition" class="introduction d-none d-sm-block">
             Competition
           </NuxtLink>
           <br>
           <div class="w-100" />
         </b-col>
-        <b-col style="padding-left:50px;">
+        <b-col style="padding-left:10px;">
           <b-row>
             <b-col>
               <b-card class="data-descriptor" title="ZSS Score">
@@ -59,6 +59,8 @@
                   The <b>ZEN Sentiment Indicator™</b> (ZSI) score, is an aggregate of <i>"bullish"</i> sentiment around a digital asset, on twitter. It leverages <b>LunarCrush</b> powered deep learning algorithms and language processing to determine the social sentiment.
                 </p>
               </b-card>
+              <br><br><br>
+              <NuxtLink to="/competition" class="introduction d-block d-sm-none" />
             </b-col>
           </b-row>
         </b-col>

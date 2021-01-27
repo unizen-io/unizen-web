@@ -10,12 +10,12 @@
         cols-md="1"
         cols-lg="2"
       >
-        <b-col cols="6">
+        <b-col>
           <div class="chart-container">
             <doughnut-chart :data="barChartData" :styles="myStyles" :options="barChartOptions" />
           </div>
         </b-col>
-        <b-col cols="6">
+        <b-col>
           <div class="accordion" style="width: 100%;" role="tablist">
             <b-card v-for="(row, index) in tableData" :key="row.title" no-body class="mb-1">
               <b-card-header header-tag="header" :style="'background-color: '+barChartData.datasets[0].backgroundColor[index]+' !important;'" class="header-collapse p-1" role="tab">
