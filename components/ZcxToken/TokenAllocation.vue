@@ -77,7 +77,7 @@ export default {
         ]
       },
       myStyles: {
-        height: '450px',
+        height: '400px',
         marginTop: '250px',
         marginBottom: '-150px',
         width: '100%',

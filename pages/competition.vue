@@ -88,8 +88,8 @@ import ENV from '../components/env'
 export default {
   data () {
     return {
-      competitionStartDate: 1611760800, // Monday 25 January 2021 09:37:26
-      competitionEndDate: 1611771600, // Monday 25 January 2021 12:37:26
+      competitionStartDate: 1611759389, // Monday 25 January 2021 09:37:26
+      competitionEndDate: 1611845789, // Monday 25 January 2021 12:37:26
       currentTime: Math.round((new Date()).getTime() / 1000),
       updateInterval: 60000, // 1 min
       winner: null,
@@ -171,11 +171,6 @@ export default {
     }
   },
   watch: {
-    competitionEnded (val) {
-      if (val) {
-        this.startConfettiRain()
-      }
-    },
     competitionRunning (val) {
       if (val) {
         this.stopConfettiRain()
@@ -194,6 +189,9 @@ export default {
   },
   mounted () {
     setInterval(() => this.getTimer(), 1000)
+    if (this.competitionEnded) {
+      this.startConfettiRain()
+    }
     // if (this.currentTime > this.competitionEndDate) {
     //   this.startConfettiRain()
     // }

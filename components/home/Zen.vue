@@ -2,10 +2,10 @@
   <div class="zen">
     <div class="my-5 pb-5 d-block d-sm-none">
       <b-img style="margin-left: -215px;" lazy fluid src="../../assets/img/iMac.png" />
-      <b-card class="text-box">
+      <b-card class="text-box-mobile">
         <b-card-body>
-          <b-row>
-            <b-col cols="1">
+          <b-row cols="1">
+            <b-col>
               <p style="font-size: 5rem;">
                 🦄
               </p>
@@ -141,6 +141,17 @@ p.zen-text-small {
   animation:fadeInUp 3s;
   max-width: 520px;
   min-width: 420px !important;
+}
+
+.text-box-mobile {
+  border-radius: 5px !important;
+  padding: 0 !important;
+  background: rgba(219, 219, 219, 0.185) !important;
+  backdrop-filter: blur(15px);
+  box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 20px 0px !important;
+  -webkit-animation:fadeInUp 3s; /* Safari & Chrome */
+  animation:fadeInUp 3s;
+  max-width: 55%;
 }
 
 </style>

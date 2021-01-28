@@ -7,7 +7,7 @@
       cols-md="1"
       cols-lg="2"
     >
-      <b-col style="padding-left:50px;">
+      <b-col>
         <p class="zen-text">
           ZCX is an exchange-based utility token, created on the Ethereum blockchain as an ERC-20 token.<br><br>
           ZEN Exchange operates on top of the Binance Cloud infrastructure and the functionality of ZCX is analogous to that of BNB on Binance.<br><br>
