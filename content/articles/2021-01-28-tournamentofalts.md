@@ -24,13 +24,11 @@ Respective communities can directly influence the outcome of the competition by 
 
 <!--EndFragment-->
 
-
-
 ![Mock Competition between Quant Network and Hathor Network](/img/1_56yd3ssospyre_ll_vvpkq.gif "Mock Competition between Quant Network and Hathor Network")
 
 <!--StartFragment-->
 
-1. **Tweet Recognition :** LunarCrush recognizes a coin by AssetID. For a post including the ticker ($ZEN) or tag ([@zencexofficial](http://twitter.com/zencexofficial)) but with non-related description (like how $QNT is so bullish) will be counted under ZTI automatically.\
+1. **Tweet Recognition :** LunarCrush recognizes a coin by AssetID. For a post including the ticker ($ZCX) or tag ([@zencexofficial](http://twitter.com/zencexofficial)) but with non-related description (like how $QNT is so bullish) will be counted under ZTI automatically.\
    Tweets with $ticker, [@Tag](http://twitter.com/Tag) , name of coin and related description will be checked for bullishness under ZSI.
 2. **Number of followers is not a criteria**. We are creating our custom indicator because their social engagement score is skewed towards number of followers
 3. **On Bot-rigging:** Even in the previous rounds, we requested proofs but nobody could prove it. Polls were randomised in such a way that nobody could purchase bots in such a short span of time. Imagine paying money to sites that don’t even have SSL certificates lol.
@@ -40,8 +38,6 @@ If someone comes up with “bots are automatically posting bullish tweets to inc
 To further decorate the competition, we would request the community members of semifinalists to use **\#TournamentofAlts hashtag**.
 
 It won’t affect the results but the top rated tweets will end up on LunarCrush dashboard. We will post those curated tweets on **t.me/zensmartfeed**.
-
-
 
 # Frequently Asked Questions
 
