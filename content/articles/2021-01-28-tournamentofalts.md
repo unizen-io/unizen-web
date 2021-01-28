@@ -2,13 +2,15 @@
 title: "#TournamentOfAlts"
 date: 2021-01-28T15:09:45.572Z
 description: Semi-final Round
-image: /img/1_srl8spdasuq-r5p5z8o3hw.jpeg
+image: /img/zen-exchange-semi-finalist.png
 ---
 <!--StartFragment-->
 
-\#TournamentOfAlts Semi-final Round will start from today (time will be notified). **It is a one-day round**. The Altcoin with the **highest ZEN Smart Score™ when the timer runs out, will win**.
+\#TournamentOfAlts Semi-final Round will start from today (time will be notified). It is a **one-day** round. The Altcoin with the **highest** ZEN Smart Score™ when the timer runs out, will win.
 
-Respective communities can directly influence the outcome of the competition by supporting their favorite project with **positive sentiment and factually driven marketing** using smart data feeds of our partner LunarCrush. (*pic credits: Dreadbongo*)
+Respective communities can directly influence the outcome of the competition by supporting their favorite project with positive sentiment and factually driven marketing using smart data feeds of our partner LunarCrush. (*pic credits: Dreadbongo*)
+
+
 
 <!--EndFragment-->
 
@@ -16,10 +18,14 @@ Respective communities can directly influence the outcome of the competition by 
 
 <!--StartFragment-->
 
+
+
 ## **Tournament Details**
 
-**The ZEN Smart Score™(ZSS)**, is a custom dataset of aggregated LunarCrush powered social sentiment data. **It is the combined metric of ZTI and ZSI**.\
-**The ZEN Twitter Indicator™(ZTI)** is a quantitative aggregate of twitter activity over a selected digital asset(*aggregate of number of tweets, quoted retweets, retweets, replies and favorites*)\
+**The ZEN Smart Score™(ZSS)**, is a custom dataset of aggregated LunarCrush powered social sentiment data. **It is the combined metric of ZTI and ZSI**.
+
+**The ZEN Twitter Indicator™(ZTI)** is a quantitative aggregate of twitter activity over a selected digital asset(*aggregate of number of tweets, quoted retweets, retweets, replies and favorites*)
+
 **The ZEN Sentiment Indicator™(ZSI)** score, is an *aggregate of “bullish” sentiment around a digital asset*, on twitter( using LunarCrush powered deep learning algos)
 
 <!--EndFragment-->
@@ -36,6 +42,12 @@ If someone comes up with “bots are automatically posting bullish tweets to inc
 To further decorate the competition, we would request the community members of semifinalists to use **\#TournamentofAlts hashtag**.
 
 It won’t affect the results but the top rated tweets will end up on LunarCrush dashboard. We will post those curated tweets on **t.me/zensmartfeed**.
+
+
+
+Monitor results in real-time over here:[ https://zencex.com/wenzen](https://zencex.com/wenzen)
+
+
 
 ## Frequently Asked Questions
 
