@@ -12,11 +12,11 @@ Respective communities can directly influence the outcome of the competition by 
 
 <!--EndFragment-->
 
-![](/img/1_3kljwbv2evhq2o3w6vyhmw.jpeg)
+![](/img/1_3kljwbv2evhq2o3w6vyhmw.jpeg =500x)
 
 <!--StartFragment-->
 
-# **Tournament Details**
+## **Tournament Details**
 
 **The ZEN Smart Score™(ZSS)**, is a custom dataset of aggregated LunarCrush powered social sentiment data. **It is the combined metric of ZTI and ZSI**.\
 **The ZEN Twitter Indicator™(ZTI)** is a quantitative aggregate of twitter activity over a selected digital asset(*aggregate of number of tweets, quoted retweets, retweets, replies and favorites*)\
@@ -24,7 +24,7 @@ Respective communities can directly influence the outcome of the competition by 
 
 <!--EndFragment-->
 
-![Mock Competition between Quant Network and Hathor Network](/img/1_56yd3ssospyre_ll_vvpkq.gif "Mock Competition between Quant Network and Hathor Network")
+![Mock Competition between Quant Network and Hathor Network](/img/1_56yd3ssospyre_ll_vvpkq.gif =500x)
 
 <!--StartFragment-->
 
@@ -39,15 +39,15 @@ To further decorate the competition, we would request the community members of s
 
 It won’t affect the results but the top rated tweets will end up on LunarCrush dashboard. We will post those curated tweets on **t.me/zensmartfeed**.
 
-# Frequently Asked Questions
+## Frequently Asked Questions
 
-**1.Poll has begun but there is no data/ refresh ?**\
+**1. Poll has begun but there is no data/ refresh ?**\
 It updates hourly.\
-**2.Are there any hidden parameters?**\
+**2. Are there any hidden parameters?**\
 All the metrics are listed on site. The poll is as transparent as possible without compromising LunarCrush’s IPR.\
-**3.”My team is losing, what can i do ?”**\
+**3. ”My team is losing, what can i do ?”**\
 You can increase the ZTI by posting more tweets and ZSI by improving the “bullishness” of the shill.\
-**4.”I checked the community chats, they are not talking about the competition but still in lead, how is that possible?”**\
+**4. ”I checked the community chats, they are not talking about the competition but still in lead, how is that possible?”**\
 Note: this is no longer a competition of one community ( say 18000 members/followers ) vs another ( say 3000).\
 There is only one platform (Twitter) and the overall popularity of that coin on twitter will decide the game. Every twitter user is a participant.\
 **5. My coin has better score of galaxy rank and alt rank but it is still losing, why?**\
