@@ -3,10 +3,10 @@
     <b-container>
       <b-row class="pt-5">
         <b-col sm>
-          <h3 class="binance-text">
+          <h3 class="binance-text px-3">
             ZEN Innovation Powered by:
           </h3>
-          <b-img fluid src="~assets/img/binance/bc-logo.png" />
+          <b-img class="px-3" fluid src="~assets/img/binance/bc-logo.png" />
         </b-col>
         <b-col sm />
       </b-row>

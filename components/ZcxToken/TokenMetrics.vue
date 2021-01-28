@@ -10,7 +10,7 @@
       <b-col style="padding-left:50px;">
         <p class="zen-text">
           ZCX is an exchange-based utility token, created on the Ethereum blockchain as an ERC-20 token.<br><br>
-          ZEN operates on top of the Binance Cloud infrastructure and the functionality of ZCX is analogous to that of BNB on Binance.<br><br>
+          ZEN Exchange operates on top of the Binance Cloud infrastructure and the functionality of ZCX is analogous to that of BNB on Binance.<br><br>
           Listing fees will partly be paid in ZCX and 50% of listing fees collected will be distributed into the following allocations:<br>
           <br>
           <b-list-group flush>
@@ -31,7 +31,7 @@
             </ul> -->
         </p>
       </b-col>
-      <b-col style="padding-left:50px;">
+      <b-col style="padding-left:50px;" class="order-lg-last order-first pb-5">
         <b-row>
           <b-col>
             <small class="text-muted">TICKER</small><br><h2 class="metrics gradient-text">
@@ -57,7 +57,7 @@
           <div class="w-100" />
           <b-col>
             <br><small class="text-muted">CONTRACT ADDRESS</small><br>
-            <h5>
+            <h5 class="address">
               {{ contract }} <a class="copy-icon" @click.stop.prevent="copyContract">❐ </a>
               <a href="https://etherscan.io/token/0xc52c326331e9ce41f04484d3b5e5648158028804" class="copy-icon">⤤</a>
             </h5>
@@ -101,6 +101,10 @@ export default {
 </script>
 
 <style lang="scss">
+
+h5.address {
+  font-size: 1.3rem;
+}
 
 a.copy-icon {
     background: none !important;

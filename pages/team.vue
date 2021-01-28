@@ -13,7 +13,7 @@
                 <div class="parent-cont">
                   <div class="overlay">
                     <div class="text">
-                      <ul class="social-networks bounce mt-4">
+                      <ul style="text-align: center !important;" class="social-networks bounce mt-4">
                         <li v-if="member.telegram !== ''">
                           <a :href="member.telegram" class="icon-telegram">Telegram</a>
                         </li>
@@ -50,9 +50,9 @@
         <h1 class="common-headline">
           Meet the advisors.
         </h1>
-        <b-row v-for="(advisor, index) in advisors" :key="advisor.name" class="mb-5">
-          <b-col v-if="!(index % 2)" cols="3">
-            <b-row>
+        <b-row v-for="(advisor, index) in advisors" :key="advisor.name" cols-lg="12" cols="1" class="mb-5">
+          <b-col v-if="!(index % 2)" xs="1" lg="3">
+            <b-row cols="1">
               <b-col class="block">
                 <b-img-lazy
                   fluid
@@ -64,7 +64,7 @@
                 <div class="parent-cont">
                   <div class="overlay">
                     <div class="text">
-                      <ul class="social-networks bounce mt-4">
+                      <ul style="text-align: center !important;" class="social-networks bounce mt-1">
                         <li v-if="advisor.telegram !== ''">
                           <a :href="advisor.telegram" class="icon-telegram">Telegram</a>
                         </li>
@@ -93,13 +93,13 @@
               </b-col>
             </b-row>
           </b-col>
-          <b-col>
+          <b-col xs="1" col lg="9">
             <b-card>
               <p v-html="advisor.desc" />
             </b-card>
           </b-col>
-          <b-col v-if="(index % 2)" cols="3">
-            <b-row>
+          <b-col v-if="(index % 2)" xs="1" lg="3" class="order-lg-last order-first">
+            <b-row cols="1">
               <b-col class="block">
                 <b-img-lazy
                   fluid
@@ -111,7 +111,7 @@
                 <div class="parent-cont">
                   <div class="overlay">
                     <div class="text">
-                      <ul class="social-networks bounce mt-4">
+                      <ul style="text-align: center !important;" class="social-networks bounce mt-4">
                         <li v-if="advisor.telegram !== ''">
                           <a :href="advisor.telegram" class="icon-telegram">Telegram</a>
                         </li>
@@ -214,6 +214,10 @@ img.team {
 
 p.team {
     text-align: center;
+}
+
+.socials-team {
+  text-align: center !important;
 }
 
 h5.team {
