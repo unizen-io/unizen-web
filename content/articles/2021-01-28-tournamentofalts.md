@@ -12,7 +12,7 @@ Respective communities can directly influence the outcome of the competition by 
 
 <!--EndFragment-->
 
-![](/img/1_3kljwbv2evhq2o3w6vyhmw.jpeg =500x)
+![](/img/1_3kljwbv2evhq2o3w6vyhmw.jpeg)
 
 <!--StartFragment-->
 
@@ -23,8 +23,6 @@ Respective communities can directly influence the outcome of the competition by 
 **The ZEN Sentiment Indicator™(ZSI)** score, is an *aggregate of “bullish” sentiment around a digital asset*, on twitter( using LunarCrush powered deep learning algos)
 
 <!--EndFragment-->
-
-![Mock Competition between Quant Network and Hathor Network](/img/1_56yd3ssospyre_ll_vvpkq.gif =500x)
 
 <!--StartFragment-->
 
