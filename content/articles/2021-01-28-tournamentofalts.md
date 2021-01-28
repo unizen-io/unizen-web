@@ -14,7 +14,7 @@ Respective communities can directly influence the outcome of the competition by 
 
 <!--EndFragment-->
 
-![](/img/1_3kljwbv2evhq2o3w6vyhmw.jpeg)
+
 
 <!--StartFragment-->
 
@@ -45,7 +45,7 @@ It won’t affect the results but the top rated tweets will end up on LunarCrush
 
 
 
-Monitor results in real-time over here:[ https://zencex.com/wenzen](https://zencex.com/wenzen)
+Monitor results in real-time over here: [\#TournamentofAlts](https://zencex.com/wenzen)
 
 
 
