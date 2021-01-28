@@ -20,7 +20,9 @@ export default {
   css: [
     '~assets/scss/colors.scss'
   ],
-
+  generate: {
+    routes: ['/articles/2021-01-28-tournamentofalts', '/articles/2021-01-16-zen-team-participates-in-ama-with-spectre-group', '/articles/2020-12-30-centralized-liquidity-module-is-hosted-on-binance-cloud-infrastructure', '/articles/2020-12-29-zen-exchange', '/articles/2020-12-30-the-genesis-of-zen']
+  },
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     {
