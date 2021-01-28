@@ -15,14 +15,14 @@
         <b-col>
           <center>
             <b><p class="zen-text">
-              2020
+              2021
             </p></b>
           </center>
         </b-col>
         <b-col>
           <center>
             <p class="zen-text">
-              <b>2021</b>
+              <b>2022</b>
             </p>
           </center>
         </b-col>
