@@ -13,6 +13,9 @@
         <b-col>
           <div class="chart-container">
             <doughnut-chart :data="barChartData" :styles="myStyles" :options="barChartOptions" />
+            <div style="margin-top: -200px;" class="small-chart-text mb-5">
+              <center><small>Click a section of the chart more details.</small></center>
+            </div>
           </div>
         </b-col>
         <b-col>
@@ -60,7 +63,7 @@ export default {
       expanded: 0,
       tableData: [{ title: 'Team', content: 'Used for new hires and company expenses. Tokens are locked until May 2021 and vested Monthly for 10 Months.' },
         { title: 'Ecosystem Reserve / Security Insurance', content: 'Tokens allocated to protect the interest of the ZCX token holders in the event of an exchange hack. Reserve tokens will provide liquidity to the DAO upon its future creation. ' },
-        { title: 'Foundation', content: 'Tokens will be utilized for Incubator Grants, Liquidity Provision, Marketing Initiatives, and overall expansion of the Zen Ecosystem.' + '\n\n' + '1st phase: 25,000 $USD equivalent at private sale pricing per month to facilitate high quality listings. This rolls over (month to month if not used). Listing decisions will be done in collaboration with a tier-one exchange. Activation begins 30 days after TGE.' },
+        { title: 'Foundation', content: 'Tokens will be utilized for Incubator Grants, Liquidity Provision, Marketing Initiatives, and overall expansion of the Zen Ecosystem.' },
         { title: 'Partners & Advisors', content: 'Tokens are locked until May 2021 and vested Monthly for 10 Months.' },
         { title: 'Seed', content: '12.5% of purchased tokens will be unlocked upon the TGE (Token Generation Event).' + '\n\n' + '20% shall be unlocked every three months (90 days) thereafter, in arrears, over the remaining three quarters (270 days).' + '\n\n' + ' 27.5% will become unlocked on the last tranche of release cycle (360 days after TGE).' },
         { title: 'Strategic', content: '25% tokens released at TGE and additional 25% per quarter for three quarters (270 days duration).' },

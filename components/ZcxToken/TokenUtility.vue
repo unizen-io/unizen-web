@@ -52,6 +52,12 @@ export default {
 </script>
 
 <style lang="scss">
+// .token-bg {
+//       background-image: url('../../assets/img/bg-token.jpg');
+//     background-repeat: no-repeat;
+//     background-size: cover;
+//     background-position: top 2000px;
+// }
 .utility-card {
     min-height: 17.5rem !important;
 }
