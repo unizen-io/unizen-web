@@ -69,9 +69,9 @@ a.introduction
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
-    color: #fff;
+    color: #fff !important;
     font-size: 16px;
-    text-decoration: none;
+    text-decoration: none !important;
     box-sizing: border-box;
 background-image: linear-gradient(to right, #00f5a4, #00e8ac, #00dcb2, #00ceb4, #00c1b3, #00c1b3, #00c1b3, #00c1b3, #00ceb4, #00dcb2, #00e8ac, #00f5a4);    background-size: 400%;
     cursor: pointer;

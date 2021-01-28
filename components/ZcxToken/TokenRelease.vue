@@ -1,5 +1,5 @@
 <template>
-  <div style="background-color: #EFEFEF;" class="mt-5">
+  <div>
     <b-container>
       <h1 class="common-headline mx-auto">
         Token Release Schedule.

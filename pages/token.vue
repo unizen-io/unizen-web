@@ -4,8 +4,8 @@
       $ZCX Token.
     </h1>
     <TokenMetrics />
-    <TokenAllocation />
     <TokenUtility />
+    <TokenAllocation />
     <TokenRelease />
   </div>
 </template>

@@ -88,8 +88,8 @@ import ENV from '../components/env'
 export default {
   data () {
     return {
-      competitionStartDate: 1611759389, // Monday 25 January 2021 09:37:26
-      competitionEndDate: 1611845789, // Monday 25 January 2021 12:37:26
+      competitionStartDate: 1611925200, // Monday 25 January 2021 09:37:26
+      competitionEndDate: 1612011600, // Monday 25 January 2021 12:37:26
       currentTime: Math.round((new Date()).getTime() / 1000),
       updateInterval: 60000, // 1 min
       winner: null,
@@ -123,9 +123,9 @@ export default {
         }
       },
       SecondCompetitor: {
-        asset: 'DAG',
-        company: 'Constellation Network',
-        color: '#1B43B2',
+        asset: 'NOIA',
+        company: 'Syntropy Network',
+        color: '#161515',
         mcapDiff: 1, // Times difference in mcap
         ZTI: {
           tweets: [],
