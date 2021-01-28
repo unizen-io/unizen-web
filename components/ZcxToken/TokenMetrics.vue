@@ -31,7 +31,7 @@
             </ul> -->
         </p>
       </b-col>
-      <b-col style="padding-left:50px;" class="order-lg-last order-first pb-5">
+      <b-col class="order-lg-last order-first pb-5">
         <b-row>
           <b-col>
             <small class="text-muted">TICKER</small><br><h2 class="metrics gradient-text">

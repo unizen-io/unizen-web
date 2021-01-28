@@ -93,7 +93,7 @@ export default {
             bottom: 0
           }
         },
-        responsive: false,
+        responsive: true,
         maintainAspectRatio: false,
         tooltips: {
           callbacks: {
