@@ -1,22 +1,18 @@
 <template>
-  <div class="zen">
-    <div class="my-5 pb-5 d-block d-sm-none">
-      <b-img style="margin-left: -215px;" lazy fluid src="../../assets/img/iMac.png" />
+  <div>
+    <div class="mt-5 pb-5 d-block d-sm-none">
+      <b-img lazy fluid src="../../assets/img/iMac-mobile.png" />
       <b-card class="text-box-mobile">
-        <b-card-body>
-          <b-row cols="1">
-            <b-col>
-              <p style="font-size: 5rem;">
-                🦄
-              </p>
-            </b-col>
-            <b-col sm>
-              <p class="zen-text">
-                A new class of digital asset exchange that provides global traders and retail investors with access to exciting blockchain projects through the combined functionality of a secure CEX, DEX, AI-driven social sentiment indicators and Binance-level liquidity: all in one seamless user experience.
-              </p>
-            </b-col>
-          </b-row>
-        </b-card-body>
+        <b-row cols="1">
+          <b-col>
+            <p class="zen-text">
+              A new class of digital asset exchange that provides global traders and retail investors
+              with access to exciting blockchain projects through the combined functionality of a secure
+              CEX, DEX, AI-driven social sentiment indicators and Binance-level liquidity: all in one
+              seamless user experience.
+            </p>
+          </b-col>
+        </b-row>
         <b-list-group flush>
           <b-list-group-item class="zen-item">
             ✔️ High regulatory compliance
@@ -30,41 +26,43 @@
         </b-list-group>
       </b-card>
     </div>
-    <b-row class="zen pt-5 macbook mx-auto d-none d-sm-block" aligh-h="center">
-      <b-col sm>
-        <b-card class="text-box mt-5">
-          <b-card-body>
-            <b-row>
-              <b-col cols="4">
-                <p style="font-size: 5rem;">
-                  🦄
-                </p>
-              </b-col>
-              <b-col sm>
-                <p class="zen-text">
-                  A new class of digital asset exchange that provides global traders and retail investors with access to exciting blockchain projects through the combined functionality of a secure CEX, DEX, AI-driven social sentiment indicators and Binance-level liquidity: all in one seamless user experience.
-                </p>
-              </b-col>
-            </b-row>
-          </b-card-body>
-          <b-list-group flush>
-            <b-list-group-item class="zen-item">
-              ✔️ High regulatory compliance
-            </b-list-group-item>
-            <b-list-group-item class="zen-item">
-              ✔️ Fast listing times
-            </b-list-group-item>
-            <b-list-group-item class="zen-item" style="border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
-              ✔️ Highly competitive listing and trading fees
-            </b-list-group-item>
-          </b-list-group>
-        </b-card>
-      </b-col>
-      <b-col class="d-none d-lg-block" />
-      <b-col class="d-none d-lg-block" />
-    </b-row>
+    <div class="zen d-none d-sm-block">
+      <b-row class="zen pt-5 macbook mx-auto" aligh-h="center">
+        <b-col sm>
+          <b-card class="text-box mt-5">
+            <b-card-body>
+              <b-row>
+                <b-col cols="4">
+                  <p style="font-size: 5rem;">
+                    🦄
+                  </p>
+                </b-col>
+                <b-col sm>
+                  <p class="zen-text">
+                    A new class of digital asset exchange that provides global traders and retail investors with access to exciting blockchain projects through the combined functionality of a secure CEX, DEX, AI-driven social sentiment indicators and Binance-level liquidity: all in one seamless user experience.
+                  </p>
+                </b-col>
+              </b-row>
+            </b-card-body>
+            <b-list-group flush>
+              <b-list-group-item class="zen-item">
+                ✔️ High regulatory compliance
+              </b-list-group-item>
+              <b-list-group-item class="zen-item">
+                ✔️ Fast listing times
+              </b-list-group-item>
+              <b-list-group-item class="zen-item" style="border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
+                ✔️ Highly competitive listing and trading fees
+              </b-list-group-item>
+            </b-list-group>
+          </b-card>
+        </b-col>
+        <b-col class="d-none d-lg-block" />
+        <b-col class="d-none d-lg-block" />
+      </b-row>
 
-  <!-- <div class="float-right macbook" /> -->
+      <!-- <div class="float-right macbook" /> -->
+    </div>
   </div>
 </template>
 
@@ -151,7 +149,6 @@ p.zen-text-small {
   box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 20px 0px !important;
   -webkit-animation:fadeInUp 3s; /* Safari & Chrome */
   animation:fadeInUp 3s;
-  max-width: 55%;
 }
 
 </style>
