@@ -38,9 +38,9 @@
             </p>
             <p class="blog" />
           </b-card-text>
-          <div id="footer" class="footer-articles">
+          <template #footer class="footer-articles">
             <img src="~/assets/img/mini_logo.png" style="float: left; margin-bottom: -6px; margin-top: -6px;"><small style="float: right;" class="text-muted">Last updated {{ formatDate(a.date) }}</small>
-          </div>
+          </template>
         </b-card>
       </b-col>
       <!-- </b-card-group> -->

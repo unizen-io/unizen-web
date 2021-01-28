@@ -1,5 +1,5 @@
 <template>
-  <div class="default-template">
+  <div class="default-template no-horizontal-scroll">
     <NavBar />
     <Nuxt />
     <CookieAlert />
@@ -8,4 +8,8 @@
 </template>
 
 <style>
+.no-horizontal-scroll {
+    overflow-x: hidden;
+    width: 100%
+}
 </style>

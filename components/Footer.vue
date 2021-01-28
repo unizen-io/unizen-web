@@ -2,7 +2,12 @@
   <div>
     <b-row class="footer">
       <b-container>
-        <b-row class="py-5">
+        <b-row
+          class="py-5 px-5"
+          cols="2"
+          cols-md="4"
+          cols-sm="4"
+        >
           <b-col>
             <h2 class="footer-text">
               General
@@ -13,8 +18,11 @@
             <NuxtLink to="/team" class="footer-text">
               Team
             </NuxtLink><br>
-            <NuxtLink to="#" class="footer-text footer-disabled">
+            <NuxtLink to="/token" class="footer-text">
               ZCX Token
+            </NuxtLink><br>
+            <NuxtLink to="/wenzen" class="footer-text">
+              Tournament of Altcoins
             </NuxtLink><br>
             <a class="footer-text footer-disabled">CoinMarketCap</a><br>
             <a class="footer-text footer-disabled">CoinGecko</a><br>
@@ -61,7 +69,7 @@
       <div />
     </b-row>
     <b-row style="color: #f5f5f5;" class="bottom text-center pl-5 text-center" align-v="center">
-      © 2020 - 2021 zencex.com. All rights reserved.
+      © 2021 - 2022 zencex.com. All rights reserved.
     </b-row>
   </div>
 </template>
@@ -81,6 +89,7 @@ export default {
 h2.footer-text {
     color: $light !important;
     font-size: 1.4em;
+    margin-top: 20px;
 }
 
 a.footer-text {
@@ -102,7 +111,7 @@ a.footer-text {
   margin: 0 0 15px;
   padding: 0;
   font-size: 0;
-  text-align: center;
+  text-align: left;
 
   li {
     display: inline-block;
@@ -111,7 +120,7 @@ a.footer-text {
   a {
     display: block;
     position: relative;
-    margin: 0 7px;
+    margin: 7px 7px;
     width: 48px;
     height: 48px;
     font-size: 0;
@@ -166,7 +175,7 @@ a.footer-text {
     animation: bounce 1s;
   }
 
-  $networks: linkedin '\eac9' #0077b5, twitter '\ea96' #00b0ed, github '\eab0' #4183c4, instagram '\e604' #3f729b, vimeo '\ea9c' #1ab7ea, telegram '\ea95' #0088cc, twitch '\ea9b' #6441a5, pinterest '\e605' #cc2127;
+  $networks: linkedin '\eac9' #0077b5, cloneicon '\f24d' #000, twitter '\ea96' #00b0ed, github '\eab0' #4183c4, instagram '\e604' #3f729b, vimeo '\ea9c' #1ab7ea, telegram '\ea95' #0088cc, twitch '\ea9b' #6441a5, pinterest '\e605' #cc2127;
 
   @each $network in $networks {
      .icon-#{nth($network, 1)} {

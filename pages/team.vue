@@ -1,8 +1,8 @@
-// <template>
+<template>
   <div class="py-5 my-5">
     <b-row class="pb-5">
       <b-container fluid>
-        <h1 class="team py-5 my-5">
+        <h1 class="common-headline">
           Meet the team.
         </h1>
         <b-row class="mb-5">
@@ -13,7 +13,7 @@
                 <div class="parent-cont">
                   <div class="overlay">
                     <div class="text">
-                      <ul class="social-networks bounce mt-4">
+                      <ul style="text-align: center !important;" class="social-networks bounce mt-4">
                         <li v-if="member.telegram !== ''">
                           <a :href="member.telegram" class="icon-telegram">Telegram</a>
                         </li>
@@ -47,12 +47,12 @@
     </b-row>
     <b-row style="background-color: #EFEFEF;" class="my-5">
       <b-container>
-        <h1 class="team py-5 my-5">
+        <h1 class="common-headline">
           Meet the advisors.
         </h1>
-        <b-row v-for="(advisor, index) in advisors" :key="advisor.name" class="mb-5">
-          <b-col v-if="!(index % 2)" cols="3">
-            <b-row>
+        <b-row v-for="(advisor, index) in advisors" :key="advisor.name" cols-lg="12" cols="1" class="mb-5">
+          <b-col v-if="!(index % 2)" xs="1" lg="3">
+            <b-row cols="1">
               <b-col class="block">
                 <b-img-lazy
                   fluid
@@ -64,7 +64,7 @@
                 <div class="parent-cont">
                   <div class="overlay">
                     <div class="text">
-                      <ul class="social-networks bounce mt-4">
+                      <ul style="text-align: center !important;" class="social-networks bounce mt-1">
                         <li v-if="advisor.telegram !== ''">
                           <a :href="advisor.telegram" class="icon-telegram">Telegram</a>
                         </li>
@@ -93,13 +93,13 @@
               </b-col>
             </b-row>
           </b-col>
-          <b-col>
+          <b-col xs="1" col lg="9">
             <b-card>
               <p v-html="advisor.desc" />
             </b-card>
           </b-col>
-          <b-col v-if="(index % 2)" cols="3">
-            <b-row>
+          <b-col v-if="(index % 2)" xs="1" lg="3" class="order-lg-last order-first">
+            <b-row cols="1">
               <b-col class="block">
                 <b-img-lazy
                   fluid
@@ -111,7 +111,7 @@
                 <div class="parent-cont">
                   <div class="overlay">
                     <div class="text">
-                      <ul class="social-networks bounce mt-4">
+                      <ul style="text-align: center !important;" class="social-networks bounce mt-4">
                         <li v-if="advisor.telegram !== ''">
                           <a :href="advisor.telegram" class="icon-telegram">Telegram</a>
                         </li>
@@ -206,7 +206,7 @@ img.team {
   margin-left: auto;
   margin-right: auto;
   padding: 5px;
-  background-image: linear-gradient(to right, #00afae, #00b6b0, #00bdb1, #00c3b1, #00cab1, #00d0b1, #00d6b0, #00dcaf, #00e2ad, #00e9ab, #00efa8, #00f5a4) !important;
+  background-image: linear-gradient(to right, #00f5a4, #00afae) !important;
   border-radius: 100px;
   color: #122dff;
   display: inline-block;
@@ -216,11 +216,8 @@ p.team {
     text-align: center;
 }
 
-h1.team {
-    font-family: Montserrat Medium !important;
-    color: $dark !important;
-    font-weight: bold;
-    text-align: center;
+.socials-team {
+  text-align: center !important;
 }
 
 h5.team {

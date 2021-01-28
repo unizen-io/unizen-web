@@ -17,14 +17,21 @@ $enable-shadows: false ;
 
 body {
     font-family: D DIN, sans-serif;
-    overflow-x: hidden;
-    overflow: -moz-scrollbars-horizontal;
+    // overflow-x: hidden;
+    // overflow: -moz-scrollbars-horizontal;
   }
 
 h1 {
     font-family: Montserrat Semi-Bold;
     font-size: 2.3em !important;
     color: $primary !important;
+}
+h1.common-headline {
+    text-align: center;
+    // font-size: 4rem !important;
+    padding-top: 4rem !important;
+    padding-bottom: 6rem !important;
+    color: $dark !important;
 }
 @font-face {
     font-family: 'icomoon';
@@ -203,10 +210,9 @@ h1 {
 
 .card-footer
 {
+    border-top: 1px #DFDFDF solid;
     padding: 1.25rem 1.5rem;
-
-    border-top: 1px solid rgba(0, 0, 0, .05); 
-    background-color: #fff;
+    background: none;
 }
 .card-footer:last-child
 {

@@ -41,9 +41,9 @@
               </p>
               <p class="articles" />
             </b-card-text>
-            <div id="footer" class="footer-articles">
+            <template #footer class="footer-articles">
               <img src="~/assets/img/mini_logo.png" style="margin-bottom: -6px; margin-top: -6px;"><small style="float: right;" class="text-muted">Last updated {{ formatDate(a.date) }}</small>
-            </div>
+            </template>
           </b-card>
         </b-col>
       </b-row>
@@ -91,13 +91,10 @@ export default {
 }
 
 .footer-articles {
-    background-color: none !important;
-    border-top: 1px #DFDFDF solid;
     width: 100%;
     padding: 15px;
     bottom: 0;
     left: 0;
-    position: fixed;
 }
 
 h2.articles {
@@ -117,9 +114,4 @@ p.articles {
     font-size: 14px;
 }
 
-#footer-content {
-  float: right;
-      background: rgba(219, 219, 219, 0.185) !important;
-    backdrop-filter: blur(15px) !important;
-}
 </style>

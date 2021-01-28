@@ -9,8 +9,8 @@
       <b-col>
         <b-row>
           <p class="introduction">
-            Most seasoned traders are spending hours everyday to stay in touch with the latest market conditions and current social sentiment. They also typically hop between multiple exchanges.
-            It’s a very time consuming, stressful and sometimes a risky activity, that most traders do as a part-time occupation, which limits their personal time with family and other self-healing activities.
+            Traders are spending hours everyday to stay in touch with the latest market conditions and social sentiment. They also typically hop between multiple exchanges.
+            It’s a very time consuming, stressful and sometimes a risky activity, that most traders do as a part-time occupation, which limits their personal time with family and other self-healing activities. At ZEN we want to make all digital assets available under the same roof.
             <br>
           </p>
         </b-row>
@@ -18,9 +18,9 @@
         <b-row class="mt-5 pt-5">
           <b-col align-self="end">
             <div class="text-align: center;">
-              <a class="introduction">
+              <NuxtLink to="/wenzen" class="introduction">
                 wen zen?
-              </a>
+              </NuxtLink>
             </div>
           </b-col>
         </b-row>
@@ -37,7 +37,7 @@ export default {
 
 <style lang="scss">
 .section {
-    background-image: url('../assets/img/zen-bg.jpg');
+    background-image: url('../../assets/img/zen-bg.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow: 0 0 30px 0 rgba(196, 202, 214, 0.596) !important;
@@ -69,9 +69,9 @@ a.introduction
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
-    color: #fff;
+    color: #fff !important;
     font-size: 16px;
-    text-decoration: none;
+    text-decoration: none !important;
     box-sizing: border-box;
 background-image: linear-gradient(to right, #00f5a4, #00e8ac, #00dcb2, #00ceb4, #00c1b3, #00c1b3, #00c1b3, #00c1b3, #00ceb4, #00dcb2, #00e8ac, #00f5a4);    background-size: 400%;
     cursor: pointer;
