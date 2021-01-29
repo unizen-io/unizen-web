@@ -38,7 +38,7 @@ export default {
 <style lang="scss">
 
 .header {
-    margin-bottom: 25rem;
+    margin-bottom: 18rem;
 }
 
 h2.title {
@@ -73,7 +73,8 @@ h2.sub-title {
 
 #canvas-project {
     position: absolute !important;
-    height: 800px !important;
+    margin-top: -330px;
+    height: 1000px !important;
     width: 100% !important;
     z-index: -1;
 }
@@ -82,6 +83,7 @@ h2.sub-title {
    -webkit-animation:fadeIn 2s; /* Safari & Chrome */
   animation:fadeIn 2s;
 }
+
 .layout-homepage {
     height: auto;
     // overflow-x: hidden;
