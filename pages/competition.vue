@@ -99,7 +99,7 @@ export default {
       loading: false,
       FirstCompetitor: {
         asset: 'PRQ',
-        company: 'Parsic',
+        company: 'Parsiq',
         color: '#005CC7',
         ZTI: {
           tweets: [],

@@ -38,7 +38,7 @@ export default {
 <style lang="scss">
 
 .header {
-    margin-bottom: 25rem;
+    margin-bottom: 18rem;
 }
 
 h2.title {
@@ -73,7 +73,7 @@ h2.sub-title {
 
 #canvas-project {
     position: absolute !important;
-    height: 800px !important;
+    height: 600px !important;
     width: 100% !important;
     z-index: -1;
 }
