@@ -98,6 +98,19 @@
         </b-col>
       </b-row>
     </div>
+    <div v-if="competitionEnded && !competitionResults">
+      <b-row
+        :style="'background-image: linear-gradient(to right,' + firstCompetitor.color + ',' + secondCompetitor.color + ') !important;'
+        "
+        cols="1"
+      >
+        <center>
+          <h1 class="competition-headline-light-winner">
+            <b>AND THE WINNER IS...</b>
+          </h1>
+        </center>
+      </b-row>
+    </div>
     <div v-if="competitionResults">
       <b-row
         :style="'background-image: linear-gradient(to right,' + firstCompetitor.color + ',' + secondCompetitor.color + ') !important;'
