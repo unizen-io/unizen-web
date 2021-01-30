@@ -188,7 +188,7 @@ export default {
   },
   head () {
     return {
-      title: 'ZEN: Smart Exchange Ecosystem - Team and Advisors.',
+      title: 'ZEN: Smart Exchange Ecosystem - Team and Advisors',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
