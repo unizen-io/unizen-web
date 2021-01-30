@@ -18,7 +18,7 @@ export default {
   },
   head () {
     return {
-      title: 'ZEN: Smart Exchange Ecosystem - Blog.',
+      title: 'ZEN: Smart Exchange Ecosystem - Blog',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },

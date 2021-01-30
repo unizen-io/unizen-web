@@ -340,6 +340,16 @@ export default {
     stopConfettiRain () {
       this.$confetti.stop()
     }
+  },
+  head () {
+    return {
+      title: 'ZEN: Smart Exchange Ecosystem - Competition ' + this.FirstCompetitor.asset + ' vs ' + this.SecondCompetitor.asset,
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { hid: 'description', name: 'description', content: 'Listing competition between ' + this.FirstCompetitor.asset + ' and ' + this.SecondCompetitor.asset }
+      ]
+    }
   }
 }
 </script>
