@@ -136,6 +136,14 @@
           </h1>
         </center>
       </b-row>
+      <br><br>
+      <b-col>
+        <center>
+          <small class="text-muted">POWERED BY</small><br>
+          <b-img lazy class=" mb-5 pb-5" src="../../assets/img/partners/lunarcrush-text.png" />
+        </center>
+        <b-col />
+      </b-col>
     </div>
   </div>
 </template>
