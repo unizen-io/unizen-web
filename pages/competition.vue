@@ -26,7 +26,7 @@
       :competition-ended="competitionEnded"
       :competition-results="competitionResults"
     />
-    <div v-if="!competitionStarted" style="padding-bottom: 400px;" />
+    <div v-if="!competitionStarted" style="padding-bottom: 200px;" />
     <div v-if="competitionStarted">
       <b-row style="background: #EFEFEF;">
         <b-container>
