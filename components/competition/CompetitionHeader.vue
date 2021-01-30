@@ -4,7 +4,7 @@
       style="background: #EFEFEF; "
     >
       <b-container>
-        <div v-if="!competitionEnded">
+        <div v-if="!competitionResults">
           <b-row
             class="py-5"
             cols="1"
@@ -34,7 +34,7 @@
             </b-col>
           </b-row>
         </div>
-        <div v-if="competitionEnded && firstCompetitor.ZSS.score > secondCompetitor.ZSS.score">
+        <div v-if="competitionResults && firstCompetitor.ZSS.score > secondCompetitor.ZSS.score">
           <br><br>
           <b><h1 class="competition-headline" :style="'font-family: Montserrat; color: '+firstCompetitor.color+' !important;'">
             {{ firstCompetitor.asset }}
@@ -44,7 +44,7 @@
           </h4>
           <br><br>
         </div>
-        <div v-if="competitionEnded && firstCompetitor.ZSS.score < secondCompetitor.ZSS.score">
+        <div v-if="competitionResults && firstCompetitor.ZSS.score < secondCompetitor.ZSS.score">
           <br><br>
           <h1 class="competition-headline" :style="'font-family: Montserrat; color: '+secondCompetitor.color+' !important;'">
             {{ secondCompetitor.asset }}
@@ -98,7 +98,20 @@
         </b-col>
       </b-row>
     </div>
-    <div v-if="competitionEnded">
+    <div v-if="competitionEnded && !competitionResults">
+      <b-row
+        :style="'background-image: linear-gradient(to right,' + firstCompetitor.color + ',' + secondCompetitor.color + ') !important;'
+        "
+        cols="1"
+      >
+        <center>
+          <h1 class="competition-headline-light-winner">
+            <b>AND THE WINNER IS...</b>
+          </h1>
+        </center>
+      </b-row>
+    </div>
+    <div v-if="competitionResults">
       <b-row
         :style="'background-image: linear-gradient(to right,' + firstCompetitor.color + ',' + secondCompetitor.color + ') !important;'
         "
@@ -135,7 +148,8 @@ export default {
     timer: { type: Object, default: null },
     competitionStartTime: { type: String, default: '' },
     competitionStarted: { type: String, default: '' },
-    competitionEnded: { type: String, default: '' }
+    competitionEnded: { type: String, default: '' },
+    competitionResults: { type: String, default: '' }
   },
   methods: {
     normalizeTimestamp (ts) {

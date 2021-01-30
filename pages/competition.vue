@@ -2,11 +2,14 @@
   <div class="pt-3 mt-5">
     <center>
       <div class="mt-5 pt-5">
-        <h5 v-if="competitionEnded">
+        <h5 v-if="competitionResults">
           Competition Complete
         </h5>
         <h5 v-if="competitionRunning">
           Competition Running
+        </h5>
+        <h5 v-if="competitionEnded && !competitionResults">
+          ☕ Calculating Final Results (Shouldn't take more than 10 minutes)...
         </h5>
         <h5 v-if="!competitionStarted">
           Competition hasn't started yet
@@ -21,6 +24,7 @@
       :competition-start-time="competitionStartDate"
       :competition-started="competitionStarted"
       :competition-ended="competitionEnded"
+      :competition-results="competitionResults"
     />
     <div v-if="!competitionStarted" style="padding-bottom: 400px;" />
     <div v-if="competitionStarted">
@@ -88,8 +92,8 @@ import ENV from '../components/env'
 export default {
   data () {
     return {
-      competitionStartDate: 1611925200, // Monday 25 January 2021 09:37:26
-      competitionEndDate: 1612011600, // Monday 25 January 2021 12:37:26
+      competitionStartDate: 1612036800, // Monday 25 January 2021 09:37:26
+      competitionEndDate: 1612123200, // Monday 25 January 2021 12:37:26
       currentTime: Math.round((new Date()).getTime() / 1000),
       updateInterval: 60000, // 1 min
       winner: null,
@@ -98,9 +102,9 @@ export default {
       errored: false,
       loading: false,
       FirstCompetitor: {
-        asset: 'PRQ',
-        company: 'Parsiq',
-        color: '#005CC7',
+        asset: 'INJ',
+        company: 'Injective Protocol',
+        color: '#29B4F6',
         ZTI: {
           tweets: [],
           tweetQuotes: [],
@@ -123,9 +127,9 @@ export default {
         }
       },
       SecondCompetitor: {
-        asset: 'NOIA',
-        company: 'Syntropy Network',
-        color: '#161515',
+        asset: 'DAG',
+        company: 'Constellation Network',
+        color: '#1B43B2',
         mcapDiff: 1, // Times difference in mcap
         ZTI: {
           tweets: [],
@@ -163,6 +167,9 @@ export default {
     competitionEnded () {
       return this.currentTime > this.competitionEndDate
     },
+    competitionResults () {
+      return this.currentTime > this.competitionEndDate + 480
+    },
     competitionStarted () {
       return this.currentTime > this.competitionStartDate
     },
@@ -189,7 +196,7 @@ export default {
   },
   mounted () {
     setInterval(() => this.getTimer(), 1000)
-    if (this.competitionEnded) {
+    if (this.competitionResults) {
       this.startConfettiRain()
     }
     // if (this.currentTime > this.competitionEndDate) {
