@@ -8,7 +8,7 @@
       <div id="line" class="chart-container">
         <line-chart :styles="myStyles" :options="barChartOptions" />
       </div>
-      <b-row cols="12">
+      <!-- <b-row cols="12">
         <b-col class="one-year-box" />
         <b-col class="one-year-box" />
         <div class="w-100" />
@@ -26,7 +26,7 @@
             </p>
           </center>
         </b-col>
-      </b-row>
+      </b-row> -->
       <br><br><br>
     </b-container>
   </div>
@@ -99,6 +99,7 @@ export default {
                 beginAtZero: true,
                 maxTicksLimit: 20,
                 fixedStepSize: 0,
+                suggestedMax: 1000000000,
                 padding: 20
               },
               gridLines: {
