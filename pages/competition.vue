@@ -130,7 +130,7 @@ export default {
         asset: 'DAG',
         company: 'Constellation Network',
         color: '#1B43B2',
-        mcapDiff: 1, // Times difference in mcap
+        mcapDiff: 1.2, // Times difference in mcap
         ZTI: {
           tweets: [],
           tweetQuotes: [],
