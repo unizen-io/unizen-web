@@ -92,8 +92,8 @@ import ENV from '../components/env'
 export default {
   data () {
     return {
-      competitionStartDate: 1612036800, // Monday 25 January 2021 09:37:26
-      competitionEndDate: 1612123200, // Monday 25 January 2021 12:37:26
+      competitionStartDate: 1612378800, // Monday 25 January 2021 09:37:26
+      competitionEndDate: 1612551600, // Monday 25 January 2021 12:37:26
       currentTime: Math.round((new Date()).getTime() / 1000),
       updateInterval: 60000, // 1 min
       winner: null,
@@ -102,9 +102,9 @@ export default {
       errored: false,
       loading: false,
       FirstCompetitor: {
-        asset: 'INJ',
-        company: 'Injective Protocol',
-        color: '#29B4F6',
+        asset: 'NOIA',
+        company: 'Syntropy Network',
+        color: '#171616',
         ZTI: {
           tweets: [],
           tweetQuotes: [],
@@ -130,7 +130,7 @@ export default {
         asset: 'DAG',
         company: 'Constellation Network',
         color: '#1B43B2',
-        mcapDiff: 1, // Times difference in mcap
+        mcapDiff: 1.2, // Times difference in mcap
         ZTI: {
           tweets: [],
           tweetQuotes: [],
