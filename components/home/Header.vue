@@ -8,7 +8,7 @@
         <article class="slideshow">
           <div class="item">
             <h2 class="title gradient-text">
-              ZEN
+              unizen
             </h2>
             <h2 class="sub-title">
               Smart Exchange Ecosystem
