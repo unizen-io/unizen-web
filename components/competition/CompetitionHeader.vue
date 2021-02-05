@@ -154,10 +154,10 @@ export default {
     firstCompetitor: { type: Object, default: null },
     secondCompetitor: { type: Object, default: null },
     timer: { type: Object, default: null },
-    competitionStartTime: { type: String, default: '' },
-    competitionStarted: { type: String, default: '' },
-    competitionEnded: { type: String, default: '' },
-    competitionResults: { type: String, default: '' }
+    competitionStartTime: { type: Number, default: 0 },
+    competitionStarted: { type: Boolean, default: false },
+    competitionEnded: { type: Boolean, default: true },
+    competitionResults: { type: Boolean, default: false }
   },
   methods: {
     normalizeTimestamp (ts) {

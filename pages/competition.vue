@@ -16,7 +16,6 @@
         </h5>
       </div>
     </center>
-
     <CompetitionHeader
       :timer="timeLeft"
       :first-competitor="FirstCompetitor"
@@ -237,7 +236,7 @@ export default {
     },
     async getHistoricalZtiData (competitor) {
       this.loading = true
-      const url = 'https://api.lunarcrush.com/v2?data=assets&key=' + this.LcApiKey + '&symbol=' + competitor.asset + '&start=' + this.competitionStartDate + '&end=' + this.competitionEndDate + 'time_series_indicators=tweets,tweet_quotes,tweet_retweets,tweet_replies,tweet_favorites'
+      const url = 'https://api.lunarcrush.com/v2?data=assets&key=' + this.LcApiKey + '&symbol=' + competitor.asset + '&start=' + this.competitionStartDate + '&end=' + this.competitionEndDate + '&data_points=48time_series_indicators=tweets,tweet_quotes,tweet_retweets,tweet_replies,tweet_favorites'
       await this.$axios.$get(url, { progress: false }).then((response) => {
         response.data[0].timeSeries.forEach((value) => {
           competitor.ZTI.tweets.push(value.tweets)
@@ -258,7 +257,7 @@ export default {
     },
     async getZtiData (competitor) {
       this.loading = true
-      const url = 'https://api.lunarcrush.com/v2?data=assets&key=' + this.LcApiKey + '&symbol=' + competitor.asset + '&start=' + this.competitionStartDate + '&end=' + this.competitionEndDate + 'time_series_indicators=tweets,tweet_quotes,tweet_retweets,tweet_replies,tweet_favorites'
+      const url = 'https://api.lunarcrush.com/v2?data=assets&key=' + this.LcApiKey + '&symbol=' + competitor.asset + '&start=' + this.competitionStartDate + '&end=' + this.competitionEndDate + '&data_points=48time_series_indicators=tweets,tweet_quotes,tweet_retweets,tweet_replies,tweet_favorites'
       await this.$axios.$get(url, { progress: false }).then((response) => {
         const timeSeries = response.data[0].timeSeries
         const timeSeriesLastObject = timeSeries[timeSeries.length - 1]
@@ -284,7 +283,7 @@ export default {
     },
     async getHistoricalZsiData (competitor) {
       this.loading = true
-      const url = 'https://api.lunarcrush.com/v2?data=assets&key=' + this.LcApiKey + '&symbol=' + competitor.asset + '&start=' + this.competitionStartDate + '&end=' + this.competitionEndDate + 'time_series_indicators=tweet_sentiment4,tweet_sentiment5,social_contributors'
+      const url = 'https://api.lunarcrush.com/v2?data=assets&key=' + this.LcApiKey + '&symbol=' + competitor.asset + '&start=' + this.competitionStartDate + '&end=' + this.competitionEndDate + '&data_points=48time_series_indicators=tweet_sentiment4,tweet_sentiment5,social_contributors'
       await this.$axios.$get(url, { progress: false }).then((response) => {
         response.data[0].timeSeries.forEach((value) => {
           competitor.ZSI.sentiment4.push(value.tweet_sentiment4)
@@ -303,7 +302,7 @@ export default {
     },
     async getZsiData (competitor) {
       this.loading = true
-      const url = 'https://api.lunarcrush.com/v2?data=assets&key=' + this.LcApiKey + '&symbol=' + competitor.asset + '&start=' + this.competitionStartDate + '&end=' + this.competitionEndDate + 'time_series_indicators=tweet_sentiment4,tweet_sentiment5,social_contributors'
+      const url = 'https://api.lunarcrush.com/v2?data=assets&key=' + this.LcApiKey + '&symbol=' + competitor.asset + '&start=' + this.competitionStartDate + '&end=' + this.competitionEndDate + '&data_points=48time_series_indicators=tweet_sentiment4,tweet_sentiment5,social_contributors'
       await this.$axios.$get(url, { progress: false }).then((response) => {
         const timeSeries = response.data[0].timeSeries
         const timeSeriesLastObject = timeSeries[timeSeries.length - 1]
