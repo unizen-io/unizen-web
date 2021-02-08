@@ -18,11 +18,11 @@ export default {
   },
   head () {
     return {
-      title: 'ZEN: Smart Exchange Ecosystem - Blog',
+      title: 'Unizen: Smart Exchange Ecosystem - Blog',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'Latest news and updates from ZEN Exchange.' }
+        { hid: 'description', name: 'description', content: 'Latest news and updates from Unizen Exchange.' }
       ]
     }
   }

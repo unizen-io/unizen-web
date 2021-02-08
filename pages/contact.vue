@@ -9,7 +9,7 @@
         <b-col />
         <b-col>
           <b-card>
-            We would love to talk to you about any business inquiry or partner proposal. If this relates to support for any of our exchange modules, please reach out to support@zencex.com.
+            We would love to talk to you about any business inquiry or partner proposal. If this relates to support for any of our exchange modules, please reach out to support@unizen.io.
           </b-card>
           <br>
           <b-form
@@ -108,7 +108,7 @@ export default {
   },
   head () {
     return {
-      title: 'ZEN: Smart Exchange Ecosystem - Contact Us.',
+      title: 'unizen: Smart Exchange Ecosystem - Contact Us.',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },

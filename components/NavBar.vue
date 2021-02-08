@@ -8,8 +8,8 @@
       :class="{ 'navbar--hidden': !showNavbar }"
     >
       <b-navbar-brand to="/">
-        <img src="~/assets/img/mini_logo.png" class="d-inline-block align-top mr-1" alt="Logo">
-        <span class="logo-text gradient-text"><b>ZEN</b>EXCHANGE</span>
+        <img src="~/assets/img/mini_logo.png" class="d-inline-block align-top mt-1 mr-1" alt="Logo">
+        <span class="logo-text">uni<b>zen</b></span>
       </b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse" />
@@ -78,8 +78,10 @@ export default {
 <style lang="scss" scoped>
 
 .logo-text {
-    color: $primary !important;
-    text-shadow: 0px 2px 27px rgba(0, 245, 163, 0.397);
+    color: $dark !important;
+    font-size: 1.5rem;
+    font-family: D Din;
+    // text-shadow: 0px 2px 27px rgba(0, 245, 163, 0.397);
 }
 
 .navbar-modified {

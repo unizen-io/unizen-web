@@ -4,7 +4,7 @@
       <b-row class="pt-5">
         <b-col sm>
           <h3 class="binance-text px-3">
-            ZEN Innovation Powered by:
+            Unizen Innovation Powered by:
           </h3>
           <b-img class="px-3" fluid src="~assets/img/binance/bc-logo.png" />
         </b-col>
@@ -14,7 +14,7 @@
         <b-col />
         <b-col cols="8">
           <p class="binance-text">
-            ZEN Exchange's centralized liquidity and platform is powered by Binance infrastructure, security and liquidity to enable a <a href="#" class="binance">ZEN state of mind</a> for traders.
+            Unizen Exchange's centralized liquidity and platform is powered by Binance infrastructure, security and liquidity to enable a <a href="#" class="binance">Unizen state of mind</a> for traders.
           </p>
         </b-col>
         <b-col />

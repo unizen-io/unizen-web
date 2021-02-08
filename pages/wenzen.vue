@@ -22,7 +22,7 @@
       >
         <b-col class="pt-3">
           <p class="zen-text">
-            At <b>ZEN Exchange</b>, we want to make <u>all</u> digital assets available for our users in an easy-to-use, secure and highly compliant manner. In order to get the latest and greatest at the top of the queue, we've spear headed an initiative called <code>#TournamentofAlts</code>. <br><br>This is a <b>ZEN Exchange</b> hosted competition where the winner gets a free listing on our CEX module with Binance-shared liquidity and top tier market making support. <br><br>The semi-finals will last for <u>24 hours</u> and the final round will run for <u>48 hours</u>. The Altcoin, in the finals, with the highest <b>ZEN Smart Score™</b> when the timer runs out - will win the free listing.<br><br>
+            At <b>Unizen</b>, we want to make <u>all</u> digital assets available for our users in an easy-to-use, secure and highly compliant manner. In order to get the latest and greatest at the top of the queue, we've spear headed an initiative called <code>#TournamentofAlts</code>. <br><br>This is a <b>Unizen</b> hosted competition where the winner gets a free listing on our CEX module with Binance-shared liquidity and top tier market making support. <br><br>The semi-finals will last for <u>24 hours</u> and the final round will run for <u>48 hours</u>. The Altcoin, in the finals, with the highest <b>UNIZEN Smart Score™</b> when the timer runs out - will win the free listing.<br><br>
             The respective communities of each finalist can directly influence the outcome of the competition by supporting their favorite project with <i id="popover-target-1">positive sentiment</i> and <i id="popover-target-2">factually driven marketing</i> on <b>Twitter</b>. <br><br>We're leveraging the smart data feeds of our partner <b>LunarCrush</b> to monitor community sentiment over any digital asset on <b>Twitter</b>.
           </p>
           <b-popover target="popover-target-1" triggers="hover" placement="top">
@@ -46,17 +46,17 @@
             <b-col>
               <b-card class="data-descriptor" title="ZSS Score">
                 <p>
-                  The <b>ZEN Smart Score™</b> (ZSS), is a custom dataset of aggregated LunarCrush powered social sentiment data. It is the combined metric of <b>ZTI</b> and <b>ZSI</b>. It is also the <u>sole determinator</u> of the competition.
+                  The <b>UNIZEN Smart Score™</b> (ZSS), is a custom dataset of aggregated LunarCrush powered social sentiment data. It is the combined metric of <b>ZTI</b> and <b>ZSI</b>. It is also the <u>sole determinator</u> of the competition.
                 </p>
               </b-card>
               <b-card class="data-descriptor" title="ZTI Score">
                 <p>
-                  The <b>ZEN Twitter Indicator™</b> (ZTI) is an aggregate of twitter activity over a selected digital asset. More specifically, it's an aggregate of <code>number of tweets</code>, <code>quoted retweets</code>, <code>retweets</code>, <code>replies</code> and <code>favorites</code>.
+                  The <b>UNIZEN Twitter Indicator™</b> (ZTI) is an aggregate of twitter activity over a selected digital asset. More specifically, it's an aggregate of <code>number of tweets</code>, <code>quoted retweets</code>, <code>retweets</code>, <code>replies</code> and <code>favorites</code>.
                 </p>
               </b-card>
               <b-card class="data-descriptor" title="ZSI Score">
                 <p>
-                  The <b>ZEN Sentiment Indicator™</b> (ZSI) score, is an aggregate of <i>"bullish"</i> sentiment around a digital asset, on twitter. It leverages <b>LunarCrush</b> powered deep learning algorithms and language processing to determine the social sentiment.
+                  The <b>UNIZEN Sentiment Indicator™</b> (ZSI) score, is an aggregate of <i>"bullish"</i> sentiment around a digital asset, on twitter. It leverages <b>LunarCrush</b> powered deep learning algorithms and language processing to determine the social sentiment.
                 </p>
               </b-card>
               <br><br><br>
@@ -73,7 +73,7 @@
 export default {
   head () {
     return {
-      title: 'ZEN: Smart Exchange Ecosystem - Wen Zen',
+      title: 'unizen: Smart Exchange Ecosystem - Wen Zen',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
