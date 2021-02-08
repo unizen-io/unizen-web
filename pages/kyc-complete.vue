@@ -34,11 +34,11 @@
               Your KYC application has been submitted for review by the Fractal Team. Please check your email for further steps.
               <br><br>
               Warmest regards,<br>
-              The Zen Team
+              The Unizen Team
             </h5>
             <br>
             <b-button variant="secondary" size="lg" to="/">
-              Return to ZEN
+              Return to Unizen
             </b-button><br><br>
           </b-card>
         </b-col>

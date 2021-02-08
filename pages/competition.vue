@@ -350,7 +350,7 @@ export default {
   },
   head () {
     return {
-      title: 'ZEN: Smart Exchange Ecosystem - Competition ' + this.FirstCompetitor.asset + ' vs ' + this.SecondCompetitor.asset,
+      title: 'unizen: Smart Exchange Ecosystem - Competition ' + this.FirstCompetitor.asset + ' vs ' + this.SecondCompetitor.asset,
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },

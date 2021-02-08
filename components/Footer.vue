@@ -50,7 +50,7 @@
             <a class="footer-text footer-disabled">
               API Doc</a><br>
             <a class="footer-disabled footer-text">SDK</a><br>
-            <a href="https://github.com/ZencexOfficial" class="footer-text">GitHub</a><br>
+            <a href="https://github.com/unizen-io" class="footer-text">GitHub</a><br>
             <a class="footer-disabled footer-text">Litepaper</a>
           </b-col>
           <b-col>
@@ -58,10 +58,10 @@
               Social
             </h2>
             <ul class="social-networks bounce">
-              <li><a href="https://t.me/zencexofficial" class="icon-telegram">Telegram</a></li>
-              <li><a href="https://www.linkedin.com/company/zencexofficial" class="icon-linkedin">LinkedIn</a></li>
-              <li><a href="https://twitter.com/ZencexOfficial" class="icon-twitter">Twitter</a></li>
-              <li><a href="https://github.com/ZencexOfficial" class="icon-github">GitHub</a></li>
+              <li><a href="https://t.me/unizen_io" class="icon-telegram">Telegram</a></li>
+              <li><a href="https://www.linkedin.com/company/unizen_io" class="icon-linkedin">LinkedIn</a></li>
+              <li><a href="https://twitter.com/unizen_io" class="icon-twitter">Twitter</a></li>
+              <li><a href="https://github.com/unizen-io" class="icon-github">GitHub</a></li>
             </ul>
           </b-col>
         </b-row>
@@ -69,7 +69,7 @@
       <div />
     </b-row>
     <b-row style="color: #f5f5f5;" class="bottom text-center pl-5 text-center" align-v="center">
-      © 2021 - 2022 zencex.com. All rights reserved.
+      © 2021 - 2022 unizen.io. All rights reserved.
     </b-row>
   </div>
 </template>

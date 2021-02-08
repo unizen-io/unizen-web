@@ -1,7 +1,7 @@
 <template>
   <b-container class="py-5 my-5">
     <h1 class="blog py-5 mt-5">
-      ZEN Blog.
+      Blog.
     </h1>
     <b-row
       class="mx-auto"
