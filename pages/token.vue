@@ -14,7 +14,7 @@
 export default {
   head () {
     return {
-      title: 'ZEN: Smart Exchange Ecosystem - ZCX Token',
+      title: 'unizen: Smart Exchange Ecosystem - ZCX Token',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },

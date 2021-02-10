@@ -7,9 +7,10 @@
       <div class="layout layout-homepage">
         <article class="slideshow">
           <div class="item">
-            <h2 class="title gradient-text">
-              ZEN
-            </h2>
+            <!-- <h2 class="title gradient-text">
+              <b>unizen</b>
+            </h2> -->
+            <b-img v-bind="mainProps" center fluid src="~assets/img/website_header.png" />
             <h2 class="sub-title">
               Smart Exchange Ecosystem
             </h2>
@@ -23,7 +24,11 @@
 <script>
 import waves from '../../static/waves3'
 export default {
-
+  data () {
+    return {
+      mainProps: {}
+    }
+  },
   mounted () {
     if (this.$route.name === 'index') {
       waves.methods.initAnimation()
@@ -42,13 +47,13 @@ export default {
 }
 
 h2.title {
-    font-size: 6em;
+    font-size: 8em;
     text-align: center;
-    font-family: Montserrat;
-    text-shadow: 0px 2px 27px rgba(0, 245, 163, 0.397);
+    font-family: Arista Alt;
+    text-shadow: 0px 2px 27px #00f5a365;
 }
 h2.sub-title {
-    margin-top: -1rem;
+    margin-top: -0.5rem;
     text-align: center;
     color: $dark;
 }

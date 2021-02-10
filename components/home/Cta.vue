@@ -3,14 +3,14 @@
     <b-row>
       <b-col>
         <h1 class="introduction py-5">
-          Providing a ZEN state of mind for traders
+          Providing a zen state of mind for traders
         </h1>
       </b-col>
       <b-col>
         <b-row>
           <p class="introduction">
             Traders are spending hours everyday to stay in touch with the latest market conditions and social sentiment. They also typically hop between multiple exchanges.
-            It’s a very time consuming, stressful and sometimes a risky activity, that most traders do as a part-time occupation, which limits their personal time with family and other self-healing activities. At ZEN we want to make all digital assets available under the same roof.
+            It’s a very time consuming, stressful and sometimes a risky activity, that most traders do as a part-time occupation, which limits their personal time with family and other self-healing activities. At unizen we want to make all digital assets available under the same roof.
             <br>
           </p>
         </b-row>
