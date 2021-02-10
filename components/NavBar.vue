@@ -10,7 +10,7 @@
       <b-navbar-brand to="/">
         <img src="~/assets/img/mini_logo.png" fluid class="d-inline-block align-top" alt="Logo">
 
-        <b-img v-bind="mainProps" fluid class="d-inline-block align-top mt-2" src="~assets/img/navbar_logo_text.png" />
+        <b-img v-bind="mainProps" fluid class="d-inline-block align-top mt-2" src="~assets/img/navbar_logo_text_large.png" />
       </b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse" />
@@ -49,7 +49,8 @@ export default {
   data () {
     return {
       showNavbar: true,
-      lastScrollPosition: 0
+      lastScrollPosition: 0,
+      mainProps: { width: 110 }
     }
   },
   mounted () {
