@@ -59,7 +59,7 @@
             </h2>
             <ul class="social-networks bounce">
               <li><a href="https://t.me/unizen_io" class="icon-telegram">Telegram</a></li>
-              <li><a href="https://www.linkedin.com/company/unizen_io" class="icon-linkedin">LinkedIn</a></li>
+              <li><a href="https://www.linkedin.com/company/unizen-io" class="icon-linkedin">LinkedIn</a></li>
               <li><a href="https://twitter.com/unizen_io" class="icon-twitter">Twitter</a></li>
               <li><a href="https://github.com/unizen-io" class="icon-github">GitHub</a></li>
             </ul>
