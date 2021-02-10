@@ -8,8 +8,9 @@
       :class="{ 'navbar--hidden': !showNavbar }"
     >
       <b-navbar-brand to="/">
-        <img src="~/assets/img/mini_logo.png" class="d-inline-block align-top mt-1 mr-1" alt="Logo">
-        <span class="logo-text">uni<b>zen</b></span>
+        <img src="~/assets/img/mini_logo.png" class="d-inline-block align-top" alt="Logo">
+
+        <b-img v-bind="mainProps" class="d-inline-block align-top mt-2" src="~assets/img/navbar_logo_text.png" />
       </b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse" />
@@ -79,8 +80,8 @@ export default {
 
 .logo-text {
     color: $dark !important;
-    font-size: 1.5rem;
-    font-family: D Din;
+    font-size: 1.8rem;
+    font-family: Arista;
     // text-shadow: 0px 2px 27px rgba(0, 245, 163, 0.397);
 }
 
