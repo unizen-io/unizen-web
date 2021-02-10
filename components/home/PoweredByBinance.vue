@@ -14,7 +14,7 @@
         <b-col />
         <b-col cols="8">
           <p class="binance-text">
-            Unizen Exchange's centralized liquidity and platform is powered by Binance infrastructure, security and liquidity to enable a <a href="#" class="binance">Unizen state of mind</a> for traders.
+            Unizen Exchange's centralized liquidity and platform is powered by Binance infrastructure, security and liquidity to enable a <a href="#" class="binance">ZEN state of mind</a> for traders.
           </p>
         </b-col>
         <b-col />

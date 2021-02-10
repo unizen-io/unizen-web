@@ -10,7 +10,9 @@
             <!-- <h2 class="title gradient-text">
               <b>unizen</b>
             </h2> -->
-            <b-img v-bind="mainProps" center fluid src="~assets/img/website_header.png" />
+
+            <b-img-lazy center class="d-block d-md-none" fluid src="~assets/img/green_logo_text.png" />
+            <center><img class="d-md-block d-none" src="~assets/img/website_header.png"></center>
             <h2 class="sub-title">
               Smart Exchange Ecosystem
             </h2>
