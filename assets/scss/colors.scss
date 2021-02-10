@@ -42,6 +42,23 @@ h1.common-headline {
   }
 
   @font-face {
+    font-family: 'Arista';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('~assets/fonts/Arista2.0.ttf') format('truetype');
+  }
+
+  @font-face {
+    font-family: 'Arista Alt';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('~assets/fonts/Arista2.0Alternate.ttf') format('truetype');
+  }
+
+
+  @font-face {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 800;
