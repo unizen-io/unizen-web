@@ -33,6 +33,15 @@ h1.common-headline {
     padding-bottom: 6rem !important;
     color: $dark !important;
 }
+
+@font-face {
+    font-family: 'FontAwesome';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url('~assets/fonts/fa-brands-400.ttf') format('truetype');
+}
+
 @font-face {
     font-family: 'icomoon';
     font-style: normal;
