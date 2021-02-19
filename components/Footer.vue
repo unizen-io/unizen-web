@@ -62,6 +62,7 @@
               <li><a href="https://www.linkedin.com/company/unizen-io" class="icon-linkedin">LinkedIn</a></li>
               <li><a href="https://twitter.com/unizen_io" class="icon-twitter">Twitter</a></li>
               <li><a href="https://github.com/unizen-io" class="icon-github">GitHub</a></li>
+              <li><a href="https://unizen-io.medium.com/" class="icon-medium">Medium</a></li>
             </ul>
           </b-col>
         </b-row>
@@ -175,7 +176,7 @@ a.footer-text {
     animation: bounce 1s;
   }
 
-  $networks: linkedin '\eac9' #0077b5, cloneicon '\f24d' #000, twitter '\ea96' #00b0ed, github '\eab0' #4183c4, instagram '\e604' #3f729b, vimeo '\ea9c' #1ab7ea, telegram '\ea95' #0088cc, twitch '\ea9b' #6441a5, pinterest '\e605' #cc2127;
+  $networks: linkedin '\eac9' #0077b5, cloneicon '\f24d' #000, twitter '\ea96' #00b0ed, github '\eab0' #4183c4, instagram '\e604' #3f729b, vimeo '\ea9c' #1ab7ea, telegram '\ea95' #0088cc, twitch '\ea9b' #6441a5, pinterest '\e605' #cc2127, medium '\f23a' #ffbd17;
 
   @each $network in $networks {
      .icon-#{nth($network, 1)} {
@@ -186,6 +187,13 @@ a.footer-text {
       &:hover:before, &:focus:before {
         background: nth($network, 3);
       }
+    }
+  }
+
+  .icon-medium {
+    &:after {
+      font-family: 'FontAwesome' !important;
+      font-weight: 400 !important;
     }
   }
 }
