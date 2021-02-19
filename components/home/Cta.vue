@@ -10,7 +10,7 @@
         <b-row>
           <p class="introduction">
             Traders are spending hours everyday to stay in touch with the latest market conditions and social sentiment. They also typically hop between multiple exchanges.
-            It’s a very time consuming, stressful and sometimes a risky activity, that most traders do as a part-time occupation, which limits their personal time with family and other self-healing activities. At unizen we want to make all digital assets available under the same roof.
+            It’s a very time consuming, stressful and sometimes a risky activity, that most traders do as a part-time occupation, which limits their personal time with family and other self-healing activities. At Unizen we want to make all digital assets available under the same roof.
             <br>
           </p>
         </b-row>

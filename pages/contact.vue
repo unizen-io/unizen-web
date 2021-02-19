@@ -109,7 +109,7 @@ export default {
   },
   head () {
     return {
-      title: 'unizen: Smart Exchange Ecosystem - Contact Us.',
+      title: 'Unizen: Smart Exchange Ecosystem - Contact Us.',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },

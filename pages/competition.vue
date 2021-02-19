@@ -349,7 +349,7 @@ export default {
   },
   head () {
     return {
-      title: 'unizen: Smart Exchange Ecosystem - Competition ' + this.FirstCompetitor.asset + ' vs ' + this.SecondCompetitor.asset,
+      title: 'Unizen: Smart Exchange Ecosystem - Competition ' + this.FirstCompetitor.asset + ' vs ' + this.SecondCompetitor.asset,
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },

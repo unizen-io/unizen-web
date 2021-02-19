@@ -69,7 +69,7 @@
       <div />
     </b-row>
     <b-row style="color: #f5f5f5;" class="bottom text-center pl-5 text-center" align-v="center">
-      © 2021 - 2022 unizen.io. All rights reserved.
+      © 2021 - 2022 Unizen.io. All rights reserved.
     </b-row>
   </div>
 </template>
