@@ -147,6 +147,8 @@
 </template>
 
 <script>
+import createSEOTags from '../components/Utility/SEO'
+
 export default {
   data () {
     return {
@@ -187,14 +189,10 @@ export default {
     }
   },
   head () {
-    return {
+    return createSEOTags({
       title: 'Unizen: Smart Exchange Ecosystem - Team and Advisors',
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'The ZEN Team and Advisors. Greg Horowitt, Dr. Ian Sobieski, Eric Su, Brandon Dallman, Martin Granström, Sean Noga, Tom Sweeney, Alex Man' }
-      ]
-    }
+      description: 'The ZEN Team and Advisors. Greg Horowitt, Dr. Ian Sobieski, Eric Su, Brandon Dallman, Martin Granström, Sean Noga, Tom Sweeney, Alex Man'
+    })
   }
 }
 </script>
