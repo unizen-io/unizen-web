@@ -16,9 +16,10 @@
             action="/thanks/"
             name="contactus"
             method="POST"
-            netlify-honeypot="bot-field"
+            data-netlify-honeypot="bot-field"
             data-netlify="true"
           >
+            <input type="hidden" name="form-name" value="contactus">
             <b-form-input
               id="input-1"
               v-model="name"
@@ -34,7 +35,7 @@
               id="input-2"
               v-model="email"
               placeholder="What's your e-mail?"
-              type="email"
+              type="radio"
               name="email"
               size="lg"
               :state="emailState"
@@ -108,7 +109,7 @@ export default {
   },
   head () {
     return {
-      title: 'unizen: Smart Exchange Ecosystem - Contact Us.',
+      title: 'Unizen: Smart Exchange Ecosystem - Contact Us.',
       meta: [
         { charset: 'utf-8' },
         { name: 'viewport', content: 'width=device-width, initial-scale=1' },
