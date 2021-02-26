@@ -17,7 +17,7 @@
 </template>
 
 <script>
-
+import createSEOTags from '../components/Utility/SEO'
 export default {
 
   async fetch () {
@@ -31,16 +31,13 @@ export default {
   },
 
   head () {
-    return {
-      title: 'Unizen: Smart Exchange Ecosystem',
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'Unizen is the easy, fast and secure way to buy any available digital asset' }
-      ],
-      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
-      ]
-    }
+    return createSEOTags({
+      title: 'Unizen: Smart Exchange Ecosystem 123',
+      description: 'Unizen is the easy, fast and secure way to buy any available digital asset'
+    },
+    {
+      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }]
+    })
   }
 }
 </script>

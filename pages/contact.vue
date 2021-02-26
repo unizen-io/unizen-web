@@ -64,6 +64,8 @@
 </template>
 
 <script>
+import createSEOTags from '../components/Utility/SEO'
+
 export default {
   data () {
     return {
@@ -108,14 +110,11 @@ export default {
 
   },
   head () {
-    return {
+    return createSEOTags({
       title: 'Unizen: Smart Exchange Ecosystem - Contact Us.',
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'For business and partnerships inquiries.' }
-      ]
-    }
+      description: 'For business and partnerships inquiries.',
+      slug: 'contact'
+    })
   }
 }
 </script>

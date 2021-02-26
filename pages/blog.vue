@@ -7,6 +7,8 @@
 </template>
 
 <script>
+import createSEOTags from '../components/Utility/SEO'
+
 export default {
   async fetch () {
     this.articles = await this.$content('articles').fetch()
@@ -17,14 +19,11 @@ export default {
     }
   },
   head () {
-    return {
+    return createSEOTags({
       title: 'Unizen: Smart Exchange Ecosystem - Blog',
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'Latest news and updates from Unizen Exchange.' }
-      ]
-    }
+      description: 'Latest news and updates from Unizen Exchange.',
+      slug: 'blog'
+    })
   }
 }
 </script>
