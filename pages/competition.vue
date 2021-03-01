@@ -87,6 +87,7 @@
 
 <script>
 import ENV from '../components/env'
+import createSEOTags from '../components/Utility/SEO'
 
 export default {
   data () {
@@ -348,14 +349,11 @@ export default {
     }
   },
   head () {
-    return {
-      title: 'Unizen: Smart Exchange Ecosystem - Competition ' + this.FirstCompetitor.asset + ' vs ' + this.SecondCompetitor.asset,
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'Listing competition between ' + this.FirstCompetitor.asset + ' and ' + this.SecondCompetitor.asset }
-      ]
-    }
+    return createSEOTags({
+      title: `Unizen: Smart Exchange Ecosystem - Competition ${this.FirstCompetitor.asset} vs ${this.SecondCompetitor.asset}`,
+      description: `Listing competition between ${this.FirstCompetitor.asset} and ${this.SecondCompetitor.asset}`,
+      slug: 'competition'
+    })
   }
 }
 </script>
