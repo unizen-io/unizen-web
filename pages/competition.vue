@@ -86,8 +86,8 @@
 </template>
 
 <script>
-import ENV from '../components/env'
-import createSEOTags from '../components/Utility/SEO'
+import createSEOTags from '@/components/Utility/SEO'
+import ENV from '@/components/env'
 
 export default {
   data () {

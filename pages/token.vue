@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import createSEOTags from '../components/Utility/SEO'
+import createSEOTags from '@/components/Utility/SEO'
 
 export default {
   head () {
