@@ -1,9 +1,11 @@
 import createSEOTags from './components/Utility/SEO';
 
 export default {
+  // ray test touch <
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
-  ssr: false,
-  target: 'static',
+  // ssr: false,
+  // target: 'static',
+  // ray test touch >
 
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: createSEOTags({
