@@ -54,7 +54,11 @@ export default {
         icons: ['faLightbulb']
       }
       ]
-    }]
+    }],
+    // ray test touch <
+    '@nuxtjs/moment',
+    '@nuxtjs/style-resources'
+    // ray test touch >
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -68,9 +72,11 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
-    '@nuxt/content',
-    '@nuxtjs/moment',
-    '@nuxtjs/style-resources'
+    '@nuxt/content'
+    // ray test touch <
+    // '@nuxtjs/moment',
+    // '@nuxtjs/style-resources'
+    // ray test touch >
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
