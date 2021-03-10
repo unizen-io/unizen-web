@@ -6,8 +6,11 @@
       "use": "@nuxtjs/vercel-builder",
       "config": {
         "serverFiles": [
-          "components/Utility/SEO.js"
-        ]
+          "components/Utility/SEO.js",
+          ".nuxt/content/**",
+          "content/**"
+        ],
+        "internalServer": true
       }
     }
   ]
