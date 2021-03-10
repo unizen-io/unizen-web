@@ -23,7 +23,7 @@
     "core-js": "^3.6.5",
     "hooper": "^0.3.4",
     "moment": "^2.29.1",
-    "nuxt": "^2.14.6",
+    "nuxt": "^2.15.3",
     "nuxt-socket-io": "^1.1.13",
     "three": "^0.123.0",
     "vue-chartjs": "^3.5.1",
