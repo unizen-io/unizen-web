@@ -1,11 +1,9 @@
 <template>
   <div class="default-template no-horizontal-scroll">
-    <!-- ray test touch < -->
-    <!-- <NavBar /> -->
-    <nuxt />
-    <!-- <CookieAlert /> -->
-    <!-- <Footer /> -->
-    <!-- ray test touch > -->
+    <NavBar />
+    <Nuxt />
+    <CookieAlert />
+    <Footer />
   </div>
 </template>
 

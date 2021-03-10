@@ -1,8 +1,7 @@
 <template>
   <main id="main">
     <div>
-      <!-- ray test touch < -->
-      <!-- <Header />
+      <Header />
       <Intro />
       <Zen />
       <PoweredByBinance />
@@ -10,10 +9,7 @@
       <TopArticles
         :articles="articles"
       />
-      <PartnerCarousel /> -->
-      Hi!
-      <!-- ray test touch > -->
-
+      <PartnerCarousel />
       <!-- <b-overlay :show="show" opacity="1" z-index="100000" no-wrap /> -->
     </div>
   </main>

@@ -1,12 +1,6 @@
 import createSEOTags from './components/Utility/SEO';
 
 export default {
-  // ray test touch <
-  // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
-  // ssr: false,
-  // target: 'static',
-  // ray test touch >
-
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: createSEOTags({
     title: 'Unizen: Smart Exchange Ecosystem - Simple and Secure Cryptocurrency exchange with Enormous Liquidity',
@@ -55,10 +49,8 @@ export default {
       }
       ]
     }],
-    // ray test touch <
     '@nuxtjs/moment',
     '@nuxtjs/style-resources'
-    // ray test touch >
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -73,10 +65,6 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content'
-    // ray test touch <
-    // '@nuxtjs/moment',
-    // '@nuxtjs/style-resources'
-    // ray test touch >
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
