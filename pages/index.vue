@@ -6,9 +6,7 @@
       <Zen />
       <PoweredByBinance />
       <Cta />
-      <TopArticles
-        :articles="articles"
-      />
+      <TopArticles :articles="articles" />
       <PartnerCarousel />
       <!-- <b-overlay :show="show" opacity="1" z-index="100000" no-wrap /> -->
     </div>
@@ -16,8 +14,24 @@
 </template>
 
 <script>
-import createSEOTags from '../components/Utility/SEO'
+import Header from '@/components/home/Header'
+import Intro from '@/components/home/Intro'
+import Zen from '@/components/home/Zen'
+import PoweredByBinance from '@/components/home/PoweredByBinance'
+import Cta from '@/components/home/Cta'
+import TopArticles from '@/components/home/TopArticles'
+import PartnerCarousel from '@/components/home/PartnerCarousel'
+import createSEOTags from '@/components/Utility/SEO'
 export default {
+  components: {
+    Header,
+    Intro,
+    Zen,
+    PoweredByBinance,
+    Cta,
+    TopArticles,
+    PartnerCarousel
+  },
 
   async fetch () {
     this.articles = await this.$content('articles').fetch()

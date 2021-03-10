@@ -28,6 +28,7 @@
 </template>
 
 <script>
+// TODO: error prone (`The client-side rendered virtual DOM tree is not matching server-rendered content.`)
 import { bootstrap } from 'vue-gtag'
 
 export default {

@@ -9,7 +9,7 @@
 
 <style>
 .no-horizontal-scroll {
-    overflow-x: hidden;
-    width: 100%
+  overflow-x: hidden;
+  width: 100%;
 }
 </style>
