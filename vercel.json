@@ -3,7 +3,12 @@
   "builds": [
     {
       "src": "nuxt.config.js",
-      "use": "@nuxtjs/vercel-builder"
+      "use": "@nuxtjs/vercel-builder",
+      "config": {
+        "serverFiles": [
+          "components/Utility/SEO.js"
+        ]
+      }
     }
   ]
 }
