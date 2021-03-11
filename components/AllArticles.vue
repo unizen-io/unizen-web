@@ -91,44 +91,44 @@ export default {
 <style lang="scss">
 
 .article-card {
-    min-height: 30rem !important;
-    // max-width: 25rem;
-    // min-width: 25rem !important;
+  min-height: 30rem !important;
+  // max-width: 25rem;
+  // min-width: 25rem !important;
 }
 
 .footer-articles {
-    background-color: none !important;
-    border-top: 1px #DFDFDF solid;
-    width: 100%;
-    padding: 15px;
-    bottom: 0;
-    left: 0;
-    position: fixed;
+  background-color: none !important;
+  border-top: 1px #DFDFDF solid;
+  width: 100%;
+  padding: 15px;
+  bottom: 0;
+  left: 0;
+  position: fixed;
 }
 
 h2.blog {
-    font-family: Montserrat Medium !important;
-    color: $dark !important;
-    font-size: 20px;
-    text-align: left;
+  font-family: Montserrat Medium !important;
+  color: $dark !important;
+  font-size: 20px;
+  text-align: left;
 }
 
 h1.blog {
-    font-family: Montserrat Medium !important;
-    color: $dark !important;
-    font-weight: bold;
-    text-align: center;
+  font-family: Montserrat Medium !important;
+  color: $dark !important;
+  font-weight: bold;
+  text-align: center;
 }
 
 p.blog {
-    font-family: Montserrat Medium;
-    font-size: 14px;
-    text-align: left;
+  font-family: Montserrat Medium;
+  font-size: 14px;
+  text-align: left;
 }
 
 #footer-content {
   float: right;
-      background: rgba(219, 219, 219, 0.185) !important;
-    backdrop-filter: blur(15px) !important;
+  background: rgba(219, 219, 219, 0.185) !important;
+  backdrop-filter: blur(15px) !important;
 }
 </style>

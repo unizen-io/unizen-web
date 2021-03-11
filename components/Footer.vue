@@ -83,29 +83,29 @@ export default {
 
 <style lang="scss">
 .footer-disabled {
-   opacity: 0.4;
-   pointer-events: none;
+  opacity: 0.4;
+  pointer-events: none;
 }
 
 h2.footer-text {
-    color: $light !important;
-    font-size: 1.4em;
-    margin-top: 20px;
+  color: $light !important;
+  font-size: 1.4em;
+  margin-top: 20px;
 }
 
 a.footer-text {
-    color: $primary !important;
-    cursor: pointer;
+  color: $primary !important;
+  cursor: pointer;
 }
 
 .bottom {
-    background-color: #29404e;
-    height: 4rem !important;
+  background-color: #29404e;
+  height: 4rem !important;
 }
 
 .footer {
-    min-height: 18rem;
-    background-color: $dark;
+  min-height: 18rem;
+  background-color: $dark;
 }
 
 .social-networks {
@@ -179,9 +179,9 @@ a.footer-text {
   $networks: linkedin '\eac9' #0077b5, cloneicon '\f24d' #000, twitter '\ea96' #00b0ed, github '\eab0' #4183c4, instagram '\e604' #3f729b, vimeo '\ea9c' #1ab7ea, telegram '\ea95' #0088cc, twitch '\ea9b' #6441a5, pinterest '\e605' #cc2127, medium '\f23a' #ffbd17;
 
   @each $network in $networks {
-     .icon-#{nth($network, 1)} {
-       &:after {
-         content: '#{nth($network, 2)}';
+    .icon-#{nth($network, 1)} {
+      &:after {
+        content: '#{nth($network, 2)}';
       }
 
       &:hover:before, &:focus:before {
@@ -218,5 +218,4 @@ a.footer-text {
     transform: translate3d(0,-2px,0);
   }
 }
-
 </style>

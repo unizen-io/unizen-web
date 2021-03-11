@@ -59,6 +59,6 @@ export default {
 //     background-position: top 2000px;
 // }
 .utility-card {
-    min-height: 17.5rem !important;
+  min-height: 17.5rem !important;
 }
 </style>

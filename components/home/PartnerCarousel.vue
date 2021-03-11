@@ -63,23 +63,22 @@ export default {
 </script>
 
 <style lang='scss'>
-
 .partners {
   background-image: linear-gradient(to right, #00afae, #00b6b0, #00bdb1, #00c3b1, #00cab1, #00d0b1, #00d6b0, #00dcaf, #00e2ad, #00e9ab, #00efa8, #00f5a4) !important;
 }
 
 h1.partners-text {
-    color: $light !important;
-    text-align: left;
-    font-family: Montserrat;
-    font-size: 3.4em !important;
-    padding: 30px;
+  color: $light !important;
+  text-align: left;
+  font-family: Montserrat;
+  font-size: 3.4em !important;
+  padding: 30px;
 }
 
 p.partners-text {
-    font-size: 1.2em !important;
-    padding: 30px;
-    color: $light;
+  font-size: 1.2em !important;
+  padding: 30px;
+  color: $light;
 }
 
 .hooper-slide {
@@ -100,7 +99,7 @@ p.partners-text {
 }
 
 *:focus {
-    outline: none !important;
-    border: none;
+  outline: none !important;
+  border: none;
 }
 </style>

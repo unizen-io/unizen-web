@@ -43,21 +43,20 @@ export default {
 </script>
 
 <style lang="scss">
-
 .header {
-    margin-bottom: 18rem;
+  margin-bottom: 18rem;
 }
 
 h2.title {
-    font-size: 8em;
-    text-align: center;
-    font-family: Arista Alt;
-    text-shadow: 0px 2px 27px #00f5a365;
+  font-size: 8em;
+  text-align: center;
+  font-family: Arista Alt;
+  text-shadow: 0px 2px 27px #00f5a365;
 }
 h2.sub-title {
-    margin-top: -0.5rem;
-    text-align: center;
-    color: $dark;
+  margin-top: -0.5rem;
+  text-align: center;
+  color: $dark;
 }
 
 .gradient-text {
@@ -70,6 +69,7 @@ h2.sub-title {
   background-size: 100%;
   background-repeat: repeat;
 
+  // TODO: autoprefixer automatically set-up by Nuxt
   /* Use the text as a mask for the background. */
   /* This will show the gradient as a text color rather than element bg. */
   -webkit-background-clip: text;
@@ -79,38 +79,38 @@ h2.sub-title {
 }
 
 #canvas-project {
-    position: absolute !important;
-    margin-top: -330px;
-    height: 1000px !important;
-    width: 100% !important;
-    z-index: -1;
+  position: absolute !important;
+  margin-top: -330px;
+  height: 1000px !important;
+  width: 100% !important;
+  z-index: -1;
 }
 #homeView {
-    width: auto;
-   -webkit-animation:fadeIn 2s; /* Safari & Chrome */
+  width: auto;
+  -webkit-animation:fadeIn 2s; /* Safari & Chrome */
   animation:fadeIn 2s;
 }
 
 .layout-homepage {
-    height: auto;
-    // overflow-x: hidden;
-    // overflow-y: hidden;
-    -webkit-perspective: 500px;
-    -moz-perspective: 500px;
-    perspective: 500px;
-    width: 100%;
+  height: auto;
+  // overflow-x: hidden;
+  // overflow-y: hidden;
+  -webkit-perspective: 500px;
+  -moz-perspective: 500px;
+  perspective: 500px;
+  width: 100%;
 }
 .layout-homepage .slideshow {
-    height: auto;
+  height: auto;
 }
 .layout-homepage .slideshow .item {
-margin-top: 14rem;
+  margin-top: 14rem;
 }
 .visual {
-    display: block;
-    margin: 0 auto;
-    width: 145px;
-    height: 72px;
+  display: block;
+  margin: 0 auto;
+  width: 145px;
+  height: 72px;
 }
 
 @-webkit-keyframes fadeIn{

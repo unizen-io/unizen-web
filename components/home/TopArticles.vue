@@ -87,31 +87,30 @@ export default {
 <style lang="scss">
 
 .blog-card {
-    min-height: 35rem;
+  min-height: 35rem;
 }
 
 .footer-articles {
-    width: 100%;
-    padding: 15px;
-    bottom: 0;
-    left: 0;
+  width: 100%;
+  padding: 15px;
+  bottom: 0;
+  left: 0;
 }
 
 h2.articles {
-    font-family: Montserrat Medium !important;
-    color: $dark !important;
-    font-size: 20px;
+  font-family: Montserrat Medium !important;
+  color: $dark !important;
+  font-size: 20px;
 }
 
 h1.articles {
-    font-family: Montserrat Medium !important;
-    color: $dark !important;
-    font-weight: bold;
+  font-family: Montserrat Medium !important;
+  color: $dark !important;
+  font-weight: bold;
 }
 
 p.articles {
-    font-family: Montserrat Medium;
-    font-size: 14px;
+  font-family: Montserrat Medium;
+  font-size: 14px;
 }
-
 </style>

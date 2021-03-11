@@ -76,11 +76,11 @@ export default {
 
 <style lang="scss">
 .binance {
-    background: #EFEFEF;
+  background: #EFEFEF;
 }
 
 .binance-card {
-    min-height: 26rem !important;
+  min-height: 26rem !important;
 }
 
 a.binance {
@@ -104,70 +104,70 @@ a.binance:after {
 }
 
 h3.binance-text {
-    color: $dark !important;
-    text-align: left;
-    font-family: 'D DIN';
-    font-size: 1em !important;
-    padding: 0px;
+  color: $dark !important;
+  text-align: left;
+  font-family: 'D DIN';
+  font-size: 1em !important;
+  padding: 0px;
 }
 
 p.binance-text {
-    font-size: 1.2em !important;
-    padding: 0px;
-    color: $dark;
-    text-align: center;
+  font-size: 1.2em !important;
+  padding: 0px;
+  color: $dark;
+  text-align: center;
 }
 
 p.binance-subtitle {
-    font-size: 1.3em !important;
-    padding-top: 30px;
-    color: $dark;
-    text-align: center;
+  font-size: 1.3em !important;
+  padding-top: 30px;
+  color: $dark;
+  text-align: center;
 }
 
 p.binance-text-small {
-    font-size: 1em !important;
-    color: $dark;
-    text-align: center;
+  font-size: 1em !important;
+  color: $dark;
+  text-align: center;
 }
 
 p.binance-subtitle-small {
-    font-size: 0.9em !important;
-    margin-top: -20px;
-    color: $dark;
-    text-align: center;
+  font-size: 0.9em !important;
+  margin-top: -20px;
+  color: $dark;
+  text-align: center;
 }
 
 .liquidity {
-    background-image: url('@/assets/img/binance/liquidity.png');
-    background-size: cover;
-    height: 150px;
-    width: 150px;
-    text-align: center;
-    top: 0;
-    left: 0;
-    margin: auto;
+  background-image: url('@/assets/img/binance/liquidity.png');
+  background-size: cover;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  top: 0;
+  left: 0;
+  margin: auto;
 }
 
 .performance {
-    background-image: url('@/assets/img/binance/performance.png');
-    background-size: cover;
-    height: 150px;
-    width: 150px;
-    text-align: center;
-    top: 0;
-    left: 0;
-    margin: auto;
+  background-image: url('@/assets/img/binance/performance.png');
+  background-size: cover;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  top: 0;
+  left: 0;
+  margin: auto;
 }
 
 .security {
-    background-image: url('@/assets/img/binance/security.png');
-    background-size: cover;
-    height: 150px;
-    width: 150px;
-    text-align: center;
-    top: 0;
-    left: 0;
-    margin: auto;
+  background-image: url('@/assets/img/binance/security.png');
+  background-size: cover;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  top: 0;
+  left: 0;
+  margin: auto;
 }
 </style>

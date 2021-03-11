@@ -79,26 +79,25 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
 .logo-text {
-    color: $dark !important;
-    font-size: 1.8rem;
-    font-family: Arista;
-    // text-shadow: 0px 2px 27px rgba(0, 245, 163, 0.397);
+  color: $dark !important;
+  font-size: 1.8rem;
+  font-family: Arista;
+  // text-shadow: 0px 2px 27px rgba(0, 245, 163, 0.397);
 }
 
 .navbar-modified {
-    background: rgba(219, 219, 219, 0.185) !important;
-    backdrop-filter: blur(15px);
+  background: rgba(219, 219, 219, 0.185) !important;
+  backdrop-filter: blur(15px);
 
-    // background: rgba(219, 219, 219, 0.185) !important;
-    // backdrop-filter: blur(15px) !important;
-    // box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 20px 0px !important;
-    box-shadow: 0 0 30px 0 rgba(196, 202, 214, 0.5) !important;
-    min-height: 5rem;
-    z-index: 99999 !important;
-    transform: translate3d(0, 0, 0);
-    transition: 0.3s all ease-out;
+  // background: rgba(219, 219, 219, 0.185) !important;
+  // backdrop-filter: blur(15px) !important;
+  // box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 20px 0px !important;
+  box-shadow: 0 0 30px 0 rgba(196, 202, 214, 0.5) !important;
+  min-height: 5rem;
+  z-index: 99999 !important;
+  transform: translate3d(0, 0, 0);
+  transition: 0.3s all ease-out;
 }
 
 .navbar.navbar--hidden {
@@ -117,9 +116,10 @@ export default {
   -webkit-transition:.5s;
   /* ...and now for the proper property */
   transition:.5s;
-} a:hover {
-    color: $primary !important;
-    text-shadow: 0px 2px 27px rgba(0, 245, 163, 0.397);
 }
 
+a:hover {
+  color: $primary !important;
+  text-shadow: 0px 2px 27px rgba(0, 245, 163, 0.397);
+}
 </style>

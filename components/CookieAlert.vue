@@ -69,17 +69,17 @@ export default {
 
 <style lang="scss" scoped>
 .cookie-alert {
-    background: rgba(219, 219, 219, 0.185) !important;
-    padding: 10px;
-    backdrop-filter: blur(15px);
+  background: rgba(219, 219, 219, 0.185) !important;
+  padding: 10px;
+  backdrop-filter: blur(15px);
 
-    // background: rgba(219, 219, 219, 0.185) !important;
-    // backdrop-filter: blur(15px) !important;
-    // box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 20px 0px !important;
-    box-shadow: 0 0 30px 0 rgba(196, 202, 214, 0.5) !important;
-    min-height: 3rem;
-    z-index: 99999 !important;
-    transform: translate3d(0, 0, 0);
-    transition: 0.3s all ease-out;
+  // background: rgba(219, 219, 219, 0.185) !important;
+  // backdrop-filter: blur(15px) !important;
+  // box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 20px 0px !important;
+  box-shadow: 0 0 30px 0 rgba(196, 202, 214, 0.5) !important;
+  min-height: 3rem;
+  z-index: 99999 !important;
+  transform: translate3d(0, 0, 0);
+  transition: 0.3s all ease-out;
 }
 </style>

@@ -74,9 +74,9 @@ export default {
 
 <style lang="scss">
 .zen {
-    // background: rgb(250, 250, 250);
-    height: 1080px;
-    margin-right: -430px;
+  // background: rgb(250, 250, 250);
+  height: 1080px;
+  margin-right: -430px;
 }
 
 .zen-item {
@@ -99,35 +99,35 @@ a.zen:after {
 }
 
 h3.zen-text {
-    color: $dark !important;
-    text-align: left;
-    font-family: 'D DIN';
-    font-size: 1.4em !important;
-    padding: 30px;
+  color: $dark !important;
+  text-align: left;
+  font-family: 'D DIN';
+  font-size: 1.4em !important;
+  padding: 30px;
 }
 
 p.zen-text {
-    font-size: 1.2em !important;
-    color: $dark;
+  font-size: 1.2em !important;
+  color: $dark;
 }
 
 p.zen-subtitle {
-    font-size: 1.2em !important;
-    color: $dark;
-    text-align: center;
+  font-size: 1.2em !important;
+  color: $dark;
+  text-align: center;
 }
 
 p.zen-text-small {
-    font-size: 1em !important;
-    padding: 0px 30px 30px 30px;
-    color: $dark;
-    text-align: center;
+  font-size: 1em !important;
+  padding: 0px 30px 30px 30px;
+  color: $dark;
+  text-align: center;
 }
 
 .macbook {
-    background-image: url('@/assets/img/iMac.png');
-    background-size: cover;
-    max-width: 1920px;
+  background-image: url('@/assets/img/iMac.png');
+  background-size: cover;
+  max-width: 1920px;
 }
 
 .text-box {
@@ -150,5 +150,4 @@ p.zen-text-small {
   -webkit-animation:fadeInUp 3s; /* Safari & Chrome */
   animation:fadeInUp 3s;
 }
-
 </style>

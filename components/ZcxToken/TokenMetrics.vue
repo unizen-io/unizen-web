@@ -71,7 +71,6 @@
 
 <script>
 export default {
-
   data () {
     return {
       contract: '0xc52c326331e9ce41f04484d3b5e5648158028804'
@@ -96,30 +95,28 @@ export default {
       window.getSelection().removeAllRanges()
     }
   }
-
 }
 </script>
 
 <style lang="scss">
-
 h5.address {
   font-size: 1.3rem;
 }
 
 a.copy-icon {
-    background: none !important;
-    text-decoration: none;
-    color: #8B9298;
-    font-size: 18px;
+  background: none !important;
+  text-decoration: none;
+  color: #8B9298;
+  font-size: 18px;
 }
 
 a.copy-icon:hover {
-    cursor: pointer;
-    color: $primary !important;
-    text-decoration: none;
+  cursor: pointer;
+  color: $primary !important;
+  text-decoration: none;
 }
 
 h2.metrics {
-    font-weight: bold;
+  font-weight: bold;
 }
 </style>

@@ -85,11 +85,11 @@ export default {
 
 <style lang="scss" scoped>
 h1.common-headline {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 .data-descriptor {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 </style>

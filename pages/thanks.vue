@@ -13,17 +13,11 @@
   </div>
 </template>
 
-<script>
-export default {
-
-}
-</script>
-
 <style lang="scss">
 h2.thanks {
-    font-family: Montserrat Medium !important;
-    color: $dark !important;
-    font-size: 20px;
-    text-align: center;
+  font-family: Montserrat Medium !important;
+  color: $dark !important;
+  font-size: 20px;
+  text-align: center;
 }
 </style>

@@ -63,20 +63,13 @@
   </b-container>
 </template>
 
-<script>
-export default {
-
-}
-</script>
-
 <style lang="scss">
-
 .card1 {
-      background: rgba(219, 219, 219, 0.185) !important;
+  background: rgba(219, 219, 219, 0.185) !important;
   backdrop-filter: blur(15px);
   box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 20px 0px !important;
-   -webkit-animation:fadeInUp 3s; /* Safari & Chrome */
-    animation:fadeInUp 3s;
+  -webkit-animation:fadeInUp 3s; /* Safari & Chrome */
+  animation:fadeInUp 3s;
 }
 
 // .card2 {
@@ -109,5 +102,4 @@ export default {
     -webkit-transform: translateY(0);
   }
 }
-
 </style>

@@ -57,17 +57,17 @@ export default {
 <style lang="scss">
 
 .bg-img {
-    background-image: url(@/assets/img/kyc.jpg);
-    background-position: center center;
-    background-repeat:  no-repeat;
-    background-attachment: fixed;
-    background-size:  cover;
-    height: 100% !important;
+  background-image: url(@/assets/img/kyc.jpg);
+  background-position: center center;
+  background-repeat:  no-repeat;
+  background-attachment: fixed;
+  background-size:  cover;
+  height: 100% !important;
 }
 
 .kyc {
-    text-align: center;
-    min-width: 350px !important;
+  text-align: center;
+  min-width: 350px !important;
 }
 
 svg {
@@ -130,5 +130,4 @@ svg {
     stroke-dashoffset: 900;
   }
 }
-
 </style>

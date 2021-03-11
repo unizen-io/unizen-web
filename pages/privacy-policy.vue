@@ -35,24 +35,23 @@ export default {
 
 <style lang="scss" scoped>
 p.privacy {
-    font-family: Montserrat Medium;
-    font-size: 16px;
-    text-align: left;
+  font-family: Montserrat Medium;
+  font-size: 16px;
+  text-align: left;
 }
 
 h1.privacy {
-    font-family: Montserrat Medium !important;
-    color: $dark !important;
-    font-weight: bold;
-    text-align: center;
-
+  font-family: Montserrat Medium !important;
+  color: $dark !important;
+  font-weight: bold;
+  text-align: center;
 }
 
 h2.privacy {
-    font-family: Montserrat Medium !important;
-    color: $dark !important;
-    font-size: 20px;
-    text-align: center;
-    margin-bottom: 6rem;
+  font-family: Montserrat Medium !important;
+  color: $dark !important;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 6rem;
 }
 </style>
