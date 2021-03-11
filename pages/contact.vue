@@ -35,7 +35,6 @@
               id="input-2"
               v-model="email"
               placeholder="What's your e-mail?"
-              type="radio"
               name="email"
               size="lg"
               :state="emailState"
@@ -73,9 +72,9 @@ export default {
       email: '',
       text: '',
       reg: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/
-
     }
   },
+
   computed: {
     nameState () {
       if (this.name.length >= 4) {
@@ -84,6 +83,7 @@ export default {
         return null
       }
     },
+
     textState () {
       if (this.text.length >= 10) {
         return true
@@ -98,6 +98,7 @@ export default {
       }
       return 'Please enter something.'
     },
+
     emailState () {
       if (/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/.test(this.email)) {
         return true
@@ -106,9 +107,7 @@ export default {
       }
     }
   },
-  methods: {
 
-  },
   head () {
     return createSEOTags({
       title: 'Unizen: Smart Exchange Ecosystem - Contact Us.',
