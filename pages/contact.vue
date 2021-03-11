@@ -13,13 +13,10 @@
           </b-card>
           <br>
           <b-form
-            action="/thanks/"
+            v-if="!status"
             name="contactus"
-            method="POST"
-            data-netlify-honeypot="bot-field"
-            data-netlify="true"
+            @submit="sendForm"
           >
-            <input type="hidden" name="form-name" value="contactus">
             <b-form-input
               id="input-1"
               v-model="name"
@@ -39,18 +36,21 @@
               size="lg"
               :state="emailState"
               trim
+              required
             />
             <br>
             <b-form-textarea
               id="textarea-no-resize"
-              v-model="text"
+              v-model="message"
               placeholder="Enter a message..."
               rows="12"
               size="lg"
-              :state="textState"
+              :state="messageState"
               name="message"
+              required
             />
             <br>
+            <!-- TODO: should add loading UX to the button -->
             <b-button variant="outline-primary" size="lg" class="contact" type="submit">
               Send
             </b-button>
@@ -59,20 +59,32 @@
         <b-col />
       </b-container>
     </b-row>
+    <h1
+      v-if="status === 'success'"
+      style="text-align: center"
+    >
+      Thank you, we got your submission!
+    </h1>
+    <h1
+      v-if="status === 'error'"
+      style="text-align: center"
+    >
+      Oops, something went wrong. Please try again.
+    </h1>
   </div>
 </template>
 
 <script>
-// ray test touch <
-// ray test touch >
 import createSEOTags from '@/components/Utility/SEO'
+import { CONTACT_US_FORM_SUBMISSION_ENDPOINT } from '@/config'
 
 export default {
   data () {
     return {
+      status: null,
       name: '',
       email: '',
-      text: '',
+      message: '',
       reg: /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/
     }
   },
@@ -86,8 +98,8 @@ export default {
       }
     },
 
-    textState () {
-      if (this.text.length >= 10) {
+    messageState () {
+      if (this.message.length >= 10) {
         return true
       } else {
         return null
@@ -107,6 +119,36 @@ export default {
       } else {
         return null
       }
+    }
+  },
+
+  methods: {
+    sendForm (event) {
+      event.preventDefault()
+      // TODO: could use ohmyfetch package
+      fetch(CONTACT_US_FORM_SUBMISSION_ENDPOINT, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          Accept: 'application/json'
+        },
+        body: JSON.stringify({
+          name: this.name,
+          email: this.email,
+          message: this.message
+        })
+      })
+        .then(response => response.json())
+        .then((response) => {
+          if (response.code === 200) {
+            this.status = 'success'
+          } else {
+            // Formcarry error
+            this.status = 'error'
+          }
+        })
+        // network error
+        .catch(() => (this.status = 'error'))
     }
   },
 
