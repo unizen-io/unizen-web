@@ -38,7 +38,7 @@ export default {
     return {
       status: null,
       email: null,
-      message: null,
+      message: null
     }
   },
   methods: {
@@ -49,9 +49,9 @@ export default {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          Accept: 'application/json',
+          Accept: 'application/json'
         },
-        body: JSON.stringify({ email: this.email, message: this.message }),
+        body: JSON.stringify({ email: this.email, message: this.message })
       })
         .then(response => response.json())
         .then((response) => {
