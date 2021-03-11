@@ -11,9 +11,20 @@
 </template>
 
 <script>
+import TokenAllocation from '@/components/ZcxToken/TokenAllocation'
+import TokenMetrics from '@/components/ZcxToken/TokenMetrics'
+import TokenRelease from '@/components/ZcxToken/TokenRelease'
+import TokenUtility from '@/components/ZcxToken/TokenUtility'
 import createSEOTags from '@/components/Utility/SEO'
 
 export default {
+  components: {
+    TokenAllocation,
+    TokenMetrics,
+    TokenRelease,
+    TokenUtility
+  },
+
   head () {
     return createSEOTags({
       title: 'Unizen: Smart Exchange Ecosystem - ZCX Token',
