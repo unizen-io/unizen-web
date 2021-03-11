@@ -49,9 +49,11 @@ export default {
       title: 'Unizen: Smart Exchange Ecosystem 123',
       description: 'Unizen is the easy, fast and secure way to buy any available digital asset'
     },
+    // ray test touch <
     {
       script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }]
     })
+    // ray test touch >
   }
 }
 </script>
