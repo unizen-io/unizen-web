@@ -22,6 +22,7 @@ import Cta from '@/components/home/Cta'
 import TopArticles from '@/components/home/TopArticles'
 import PartnerCarousel from '@/components/home/PartnerCarousel'
 import createSEOTags from '@/components/Utility/SEO'
+
 export default {
   components: {
     Header,

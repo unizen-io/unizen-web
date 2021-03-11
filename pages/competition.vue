@@ -86,10 +86,25 @@
 </template>
 
 <script>
+import CompetitionHeader from '@/components/competition/CompetitionHeader'
+import MetricsChart from '@/components/competition/MetricsChart'
+import ZsiMetrics from '@/components/competition/ZsiMetrics'
+import ZssChart from '@/components/competition/ZssChart'
+import ZssMetrics from '@/components/competition/ZssMetrics'
+import ZtiMetrics from '@/components/competition/ZtiMetrics'
 import createSEOTags from '@/components/Utility/SEO'
 import ENV from '@/components/env'
 
 export default {
+  components: {
+    CompetitionHeader,
+    MetricsChart,
+    ZsiMetrics,
+    ZssChart,
+    ZssMetrics,
+    ZtiMetrics
+  },
+
   data () {
     return {
       competitionStartDate: 1612378800, // Monday 25 January 2021 09:37:26
@@ -360,34 +375,33 @@ export default {
 
 <style lang="scss">
 h1.competition-headline {
-    text-align: center;
-    color: $dark !important;
-    font-size: 7rem !important;
+  text-align: center;
+  color: $dark !important;
+  font-size: 7rem !important;
 }
 
 h1.competition-headline-light {
-    font-family: D DIN;
-    text-align: center;
-    margin-bottom: -25px;
-    margin-top: 25px;
-    color: $light !important;
-    font-size: 4rem !important;
+  font-family: D DIN;
+  text-align: center;
+  margin-bottom: -25px;
+  margin-top: 25px;
+  color: $light !important;
+  font-size: 4rem !important;
 }
 
 p.competition-text {
-    text-align: center;
-    font-size: 1.2em !important;
-    padding: 30px;
-    color: $light;
+  text-align: center;
+  font-size: 1.2em !important;
+  padding: 30px;
+  color: $light;
 }
 
 .small-chart-text {
-    margin-top: -230px !important;
-    margin-bottom: 80px;
+  margin-top: -230px !important;
+  margin-bottom: 80px;
 }
 
 h4.competition-sub {
-    text-align: center;
+  text-align: center;
 }
-
 </style>
