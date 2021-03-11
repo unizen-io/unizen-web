@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="mt-5 pb-5 d-block d-sm-none">
-      <b-img lazy fluid src="../../assets/img/iMac-mobile.png" />
+      <b-img lazy fluid src="@/assets/img/iMac-mobile.png" />
       <b-card class="text-box-mobile">
         <b-row cols="1">
           <b-col>
@@ -125,7 +125,7 @@ p.zen-text-small {
 }
 
 .macbook {
-    background-image: url('../../assets/img/iMac.png');
+    background-image: url('@/assets/img/iMac.png');
     background-size: cover;
     max-width: 1920px;
 }

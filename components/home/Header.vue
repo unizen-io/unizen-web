@@ -24,7 +24,7 @@
 </template>
 
 <script>
-import waves from '../../static/waves3'
+import waves from '@/static/waves3'
 export default {
   data () {
     return {

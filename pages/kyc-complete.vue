@@ -57,7 +57,7 @@ export default {
 <style lang="scss">
 
 .bg-img {
-    background-image: url(../assets/img/kyc.jpg);
+    background-image: url(@/assets/img/kyc.jpg);
     background-position: center center;
     background-repeat:  no-repeat;
     background-attachment: fixed;
