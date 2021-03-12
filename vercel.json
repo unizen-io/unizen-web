@@ -8,10 +8,12 @@
         "serverFiles": [
           "components/Utility/SEO.js",
           ".nuxt/content/**",
-          "content/**"
+          "content/**",
+          "admin/**"
         ],
         "internalServer": true
       }
     }
-  ]
+  ],
+  "trailingSlash": true
 }

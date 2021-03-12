@@ -1,6 +1,12 @@
 backend:
   name: git-gateway
-  branch: master
+  # ray test touch <
+  # TODO: could define URLs as config constants
+  # branch: master
+  branch: develop
+  identity_url: 'https://zencex-dev-branch.netlify.app/.netlify/identity'
+  gateway_url: 'https://zencex-dev-branch.netlify.app/.netlify/git'
+  # ray test touch >
 
 logo_url: assets/img/logo.png
 

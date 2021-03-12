@@ -51,7 +51,14 @@ export default {
     },
     // ray test touch <
     {
-      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }]
+      /**
+       * TODO: should add async and defer properly.
+       * - Could define URLs as config constants
+       */
+      script: [
+        { src: 'https://identity.netlify.com/v1/netlify-identity.js' },
+        { src: '/scripts/netlify-identity.js' }
+      ]
     })
     // ray test touch >
   }
