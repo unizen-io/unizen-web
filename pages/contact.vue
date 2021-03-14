@@ -125,7 +125,7 @@ export default {
   methods: {
     sendForm (event) {
       event.preventDefault()
-      // TODO: could use ohmyfetch package
+      // TODO: could use `ohmyfetch` package
       fetch(CONTACT_US_FORM_SUBMISSION_ENDPOINT, {
         method: 'POST',
         headers: {

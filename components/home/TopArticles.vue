@@ -52,24 +52,13 @@
 
 <script>
 export default {
-  filters: {
-    // ray test touch <
-    // TODO: duplicated and unused
-    truncate (text, length, suffix) {
-      if (text.length > length) {
-        return text.substring(0, length) + suffix
-      } else {
-        return text
-      }
-    }
-    // ray test touch >
-  },
   props: {
     articles: {
       type: Array,
       default: () => []
     }
   },
+
   computed: {
     sortedArticles () {
       return this.articles.slice().sort(function (a, b) {
@@ -77,7 +66,9 @@ export default {
       })
     }
   },
+
   methods: {
+    // TODO: duplicated
     formatDate (date) {
       const ts = this.$moment(date)
       return ts.fromNow()

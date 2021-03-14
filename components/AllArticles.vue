@@ -37,7 +37,7 @@
               </h2>
             </a>
             <p class="blog">
-              {{ article.content | truncate(200, '...') }}
+              {{ article.content | extractTextFromHTMLString | truncate(200, '...') }}
             </p>
             <p class="blog" />
           </b-card-text>
@@ -45,6 +45,7 @@
             #footer
             class="footer-articles"
           >
+            <!-- TODO: should create an independent component -->
             <img
               src="~/assets/img/mini_logo.png"
               style="float: left; margin-bottom: -6px; margin-top: -6px;"
@@ -64,19 +65,14 @@
 </template>
 
 <script>
+import truncate from '@/utils/helpers/truncate'
+import extractTextFromHTMLString from '@/utils/helpers/extractTextFromHTMLString'
+
 export default {
-  // ray test touch <
-  // TODO: unused for now
   filters: {
-    truncate (text, length, suffix) {
-      if (text.length > length) {
-        return text.substring(0, length) + suffix
-      } else {
-        return text
-      }
-    }
+    truncate,
+    extractTextFromHTMLString
   },
-  // ray test touch >
 
   props: {
     articles: {
@@ -90,29 +86,15 @@ export default {
       return this.articles.slice().sort(function (a, b) {
         return new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
       })
-    },
-    // ray test touch <
-    // TODO: unused for now
-    threePerRow () {
-      return this.articles.reduce((c, n, i) => {
-        if (i % 3 === 0) {
-          c.push([])
-        }
-        c[c.length - 1].push(n)
-        return c
-      }, [])
     }
-    // ray test touch >
   },
 
   methods: {
-    // ray test touch <
+    // TODO: should use date-fns
     formatDate (date) {
-      // TODO: should use date-fns
       const ts = this.$moment(date)
       return ts.fromNow()
     }
-    // ray test touch >
   }
 }
 </script>
@@ -124,11 +106,9 @@ export default {
   // min-width: 25rem !important;
 }
 
-// ray test touch <
 .article-card > img {
   object-fit: cover;
 }
-// ray test touch >
 
 .footer-articles {
   background-color: none !important;
