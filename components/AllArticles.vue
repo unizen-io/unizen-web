@@ -10,36 +10,51 @@
       cols-md="2"
       cols-lg="3"
     >
-      <br>
-
-      <!-- <b-card-group class="mx-auto mb-5 mt-4" deck> -->
-      <!-- <NuxtLink :to="`articles/${slug}`">
-      {{ title }}
-    </NuxtLink> -->
-      <b-col v-for="a in sortedArticles.slice(0, 8)" :key="a.slug" sm>
+      <b-col
+        v-for="article in sortedArticles"
+        :key="article.title"
+        sm
+      >
         <b-card
-          :img-src="a.image"
+          :img-src="article.thumbnail"
           img-alt="Image not found"
+          img-style=""
           img-top
           tag="article"
           style=""
           class="mb-5 article-card"
         >
           <b-card-text>
-            <router-link
-              :to="`articles/${a.slug}`"
+            <!-- TODO: should create an independent component -->
+            <a
+              :href="article.link"
+              target="_blank"
+              rel="noopener"
+              :aria-label="`Link to ${article.title}`"
             >
               <h2 class="blog">
-                {{ a.title }}
+                {{ article.title }}
               </h2>
-            </router-link>
+            </a>
             <p class="blog">
-              {{ a.description }}
+              {{ article.content | truncate(200, '...') }}
             </p>
             <p class="blog" />
           </b-card-text>
-          <template #footer class="footer-articles">
-            <img src="~/assets/img/mini_logo.png" style="float: left; margin-bottom: -6px; margin-top: -6px;"><small style="float: right;" class="text-muted">Last updated {{ formatDate(a.date) }}</small>
+          <template
+            #footer
+            class="footer-articles"
+          >
+            <img
+              src="~/assets/img/mini_logo.png"
+              style="float: left; margin-bottom: -6px; margin-top: -6px;"
+            >
+            <small
+              style="float: right;"
+              class="text-muted"
+            >
+              Last updated {{ formatDate(article.publishedDate) }}
+            </small>
           </template>
         </b-card>
       </b-col>
@@ -50,6 +65,8 @@
 
 <script>
 export default {
+  // ray test touch <
+  // TODO: unused for now
   filters: {
     truncate (text, length, suffix) {
       if (text.length > length) {
@@ -59,42 +76,59 @@ export default {
       }
     }
   },
+  // ray test touch >
+
   props: {
     articles: {
       type: Array,
       default: () => []
     }
   },
+
   computed: {
     sortedArticles () {
       return this.articles.slice().sort(function (a, b) {
-        return new Date(b.date) - new Date(a.date)
+        return new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
       })
     },
+    // ray test touch <
+    // TODO: unused for now
     threePerRow () {
       return this.articles.reduce((c, n, i) => {
-        if (i % 3 === 0) { c.push([]) }
+        if (i % 3 === 0) {
+          c.push([])
+        }
         c[c.length - 1].push(n)
         return c
       }, [])
     }
+    // ray test touch >
   },
+
   methods: {
+    // ray test touch <
     formatDate (date) {
+      // TODO: should use date-fns
       const ts = this.$moment(date)
       return ts.fromNow()
     }
+    // ray test touch >
   }
 }
 </script>
 
 <style lang="scss">
-
 .article-card {
   min-height: 30rem !important;
   // max-width: 25rem;
   // min-width: 25rem !important;
 }
+
+// ray test touch <
+.article-card > img {
+  object-fit: cover;
+}
+// ray test touch >
 
 .footer-articles {
   background-color: none !important;

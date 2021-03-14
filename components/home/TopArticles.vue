@@ -17,10 +17,9 @@
           class="mb-5"
         >
           <!-- <NuxtLink :to="`articles/${slug}`">
-      {{ title }}
-    </NuxtLink> -->
+            {{ title }}
+          </NuxtLink> -->
           <b-card
-
             :img-src="a.image"
             img-alt="Image not found"
             img-top
@@ -54,6 +53,8 @@
 <script>
 export default {
   filters: {
+    // ray test touch <
+    // TODO: duplicated and unused
     truncate (text, length, suffix) {
       if (text.length > length) {
         return text.substring(0, length) + suffix
@@ -61,6 +62,7 @@ export default {
         return text
       }
     }
+    // ray test touch >
   },
   props: {
     articles: {
@@ -71,7 +73,7 @@ export default {
   computed: {
     sortedArticles () {
       return this.articles.slice().sort(function (a, b) {
-        return new Date(b.date) - new Date(a.date)
+        return new Date(b.date).getTime() - new Date(a.date).getTime()
       })
     }
   },

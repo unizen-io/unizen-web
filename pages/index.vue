@@ -35,7 +35,10 @@ export default {
   },
 
   async fetch () {
+    // ray test touch <
+    // TODO: should handle
     this.articles = await this.$content('articles').fetch()
+    // ray test touch >
   },
   data () {
     return {
