@@ -49,19 +49,7 @@ export default {
     return createSEOTags({
       title: 'Unizen: Smart Exchange Ecosystem 123',
       description: 'Unizen is the easy, fast and secure way to buy any available digital asset'
-    },
-    // ray test touch <
-    {
-      /**
-       * TODO: should add async and defer properly.
-       * - Could define URLs as config constants
-       */
-      script: [
-        { src: 'https://identity.netlify.com/v1/netlify-identity.js' },
-        { src: '/scripts/netlify-identity.js' }
-      ]
     })
-    // ray test touch >
   }
 }
 </script>
