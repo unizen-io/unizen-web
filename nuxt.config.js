@@ -1,4 +1,4 @@
-import createSEOTags from './components/Utility/SEO';
+import createSEOTags from './utils/helpers/seo'
 
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
@@ -8,7 +8,7 @@ export default {
     viewport: 'width=device-width, initial-scale=1',
     charset: 'utf-8'
   }),
-  
+
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     '~assets/scss/colors.scss'

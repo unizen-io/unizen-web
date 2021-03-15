@@ -21,7 +21,7 @@ import PoweredByBinance from '@/components/home/PoweredByBinance'
 import Cta from '@/components/home/Cta'
 import TopArticles from '@/components/home/TopArticles'
 import PartnerCarousel from '@/components/home/PartnerCarousel'
-import createSEOTags from '@/components/Utility/SEO'
+import createSEOTags from '@/utils/helpers/seo'
 
 export default {
   components: {

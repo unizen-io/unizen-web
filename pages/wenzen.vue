@@ -70,7 +70,7 @@
 </template>
 
 <script>
-import createSEOTags from '@/components/Utility/SEO'
+import createSEOTags from '@/utils/helpers/seo'
 
 export default {
   head () {

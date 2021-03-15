@@ -92,7 +92,7 @@ import ZsiMetrics from '@/components/competition/ZsiMetrics'
 import ZssChart from '@/components/competition/ZssChart'
 import ZssMetrics from '@/components/competition/ZssMetrics'
 import ZtiMetrics from '@/components/competition/ZtiMetrics'
-import createSEOTags from '@/components/Utility/SEO'
+import createSEOTags from '@/utils/helpers/seo'
 import ENV from '@/components/env'
 
 export default {
