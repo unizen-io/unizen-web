@@ -41,21 +41,16 @@
             </p>
             <p class="blog" />
           </b-card-text>
-          <template
-            #footer
-            class="footer-articles"
-          >
-            <!-- TODO: should create an independent component -->
-            <img
-              src="~/assets/img/mini_logo.png"
-              style="float: left; margin-bottom: -6px; margin-top: -6px;"
-            >
-            <small
-              style="float: right;"
-              class="text-muted"
-            >
-              Last updated {{ formatDate(article.publishedDate) }}
-            </small>
+          <template #footer>
+            <div class="footer-articles">
+              <MiniLogo
+                width="30"
+                height="30"
+              />
+              <small class="text-muted">
+                Last updated {{ formatDate(article.publishedDate) }}
+              </small>
+            </div>
           </template>
         </b-card>
       </b-col>
@@ -65,10 +60,15 @@
 </template>
 
 <script>
+import MiniLogo from '@/assets/img/icons/mini-logo.svg?inline'
 import truncate from '@/utils/helpers/truncate'
 import extractTextFromHTMLString from '@/utils/helpers/extractTextFromHTMLString'
 
 export default {
+  components: {
+    MiniLogo
+  },
+
   filters: {
     truncate,
     extractTextFromHTMLString
@@ -102,22 +102,10 @@ export default {
 <style lang="scss">
 .article-card {
   min-height: 30rem !important;
-  // max-width: 25rem;
-  // min-width: 25rem !important;
 }
 
 .article-card > img {
   object-fit: cover;
-}
-
-.footer-articles {
-  background-color: none !important;
-  border-top: 1px #DFDFDF solid;
-  width: 100%;
-  padding: 15px;
-  bottom: 0;
-  left: 0;
-  position: fixed;
 }
 
 h2.blog {
@@ -140,9 +128,9 @@ p.blog {
   text-align: left;
 }
 
-#footer-content {
-  float: right;
-  background: rgba(219, 219, 219, 0.185) !important;
-  backdrop-filter: blur(15px) !important;
+.footer-articles {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 </style>

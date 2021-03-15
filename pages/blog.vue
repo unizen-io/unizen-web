@@ -27,7 +27,7 @@ export default {
     // TODO: could use `ohmyfetch` package
     await this.$axios.$get(
       `${RSS_TO_JSON_ENDPOINT}?rss_url=${MEDIUM_FEED_URL}`,
-      // TODO: should double check
+      // TODO: should double-check
       { progress: false }
     ).then((data) => {
       const res = data.items // This is an array with the content. No feed, no info about author etc..

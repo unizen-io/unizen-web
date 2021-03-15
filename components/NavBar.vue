@@ -8,8 +8,10 @@
       :class="{ 'navbar--hidden': !showNavbar }"
     >
       <b-navbar-brand to="/">
-        <img src="~/assets/img/mini_logo.png" fluid class="d-inline-block align-top" alt="Logo">
-
+        <MiniLogo
+          width="30"
+          height="30"
+        />
         <b-img v-bind="mainProps" fluid class="d-sm-inline-block d-md-none align-top mt-2" src="~assets/img/navbar_logo_text_large.png" />
         <b-img fluid class="d-md-inline-block d-sm-none d-none align-top mt-2" src="~assets/img/navbar_logo_text.png" />
       </b-navbar-brand>
@@ -46,7 +48,13 @@
 </template>
 
 <script>
+import MiniLogo from '@/assets/img/icons/mini-logo.svg?inline'
+
 export default {
+  components: {
+    MiniLogo
+  },
+
   data () {
     return {
       showNavbar: true,

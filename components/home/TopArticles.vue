@@ -40,8 +40,19 @@
               </p>
               <p class="articles" />
             </b-card-text>
-            <template #footer class="footer-articles">
-              <img src="~/assets/img/mini_logo.png" style="margin-bottom: -6px; margin-top: -6px;"><small style="float: right;" class="text-muted">Last updated {{ formatDate(a.date) }}</small>
+            <template #footer>
+              <div class="footer-articles">
+                <MiniLogo
+                  width="30"
+                  height="30"
+                />
+                <small
+                  style="float: right;"
+                  class="text-muted"
+                >
+                  Last updated {{ formatDate(a.date) }}
+                </small>
+              </div>
             </template>
           </b-card>
         </b-col>
@@ -51,7 +62,13 @@
 </template>
 
 <script>
+import MiniLogo from '@/assets/img/icons/mini-logo.svg?inline'
+
 export default {
+  components: {
+    MiniLogo
+  },
+
   props: {
     articles: {
       type: Array,
@@ -78,16 +95,8 @@ export default {
 </script>
 
 <style lang="scss">
-
 .blog-card {
   min-height: 35rem;
-}
-
-.footer-articles {
-  width: 100%;
-  padding: 15px;
-  bottom: 0;
-  left: 0;
 }
 
 h2.articles {

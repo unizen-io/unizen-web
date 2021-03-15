@@ -52,7 +52,8 @@ export default {
       ]
     }],
     '@nuxtjs/moment',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/style-resources',
+    '@nuxtjs/svg'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
