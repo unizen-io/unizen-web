@@ -75,7 +75,7 @@
 </template>
 
 <script>
-import createSEOTags from '@/utils/helpers/seo'
+import { createSEOTags } from '@/utils/helpers/seo'
 import { CONTACT_US_FORM_SUBMISSION_ENDPOINT } from '@/config'
 
 export default {

@@ -15,7 +15,7 @@ import TokenAllocation from '@/components/ZcxToken/TokenAllocation'
 import TokenMetrics from '@/components/ZcxToken/TokenMetrics'
 import TokenRelease from '@/components/ZcxToken/TokenRelease'
 import TokenUtility from '@/components/ZcxToken/TokenUtility'
-import createSEOTags from '@/utils/helpers/seo'
+import { createSEOTags } from '@/utils/helpers/seo'
 
 export default {
   components: {

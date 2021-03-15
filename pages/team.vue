@@ -147,7 +147,7 @@
 </template>
 
 <script>
-import createSEOTags from '@/utils/helpers/seo'
+import { createSEOTags } from '@/utils/helpers/seo'
 
 export default {
   data () {

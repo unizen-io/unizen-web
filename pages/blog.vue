@@ -8,7 +8,7 @@
 
 <script>
 import AllArticles from '@/components/AllArticles'
-import createSEOTags from '@/utils/helpers/seo'
+import { createSEOTags } from '@/utils/helpers/seo'
 import {
   RSS_TO_JSON_ENDPOINT,
   MEDIUM_FEED_URL

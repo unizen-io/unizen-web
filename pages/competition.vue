@@ -92,7 +92,7 @@ import ZsiMetrics from '@/components/competition/ZsiMetrics'
 import ZssChart from '@/components/competition/ZssChart'
 import ZssMetrics from '@/components/competition/ZssMetrics'
 import ZtiMetrics from '@/components/competition/ZtiMetrics'
-import createSEOTags from '@/utils/helpers/seo'
+import { createSEOTags } from '@/utils/helpers/seo'
 import { LC_API_KEY } from '@/config'
 
 export default {

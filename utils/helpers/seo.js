@@ -7,7 +7,7 @@
  * @return {Object} Merged object of base tags and generated meta tags object
  *
  */
-export default (data, baseTags) => {
+const createSEOTags = (data, baseTags) => {
   const _seoTags = {
     // default page title
     title: data.title,
@@ -36,4 +36,8 @@ export default (data, baseTags) => {
 
   // return the combined array of header data
   return { ...baseTags || {}, ..._seoTags }
+}
+
+export {
+  createSEOTags
 }
