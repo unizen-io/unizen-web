@@ -93,7 +93,7 @@ import ZssChart from '@/components/competition/ZssChart'
 import ZssMetrics from '@/components/competition/ZssMetrics'
 import ZtiMetrics from '@/components/competition/ZtiMetrics'
 import createSEOTags from '@/utils/helpers/seo'
-import ENV from '@/components/env'
+import { LC_API_KEY } from '@/config'
 
 export default {
   components: {
@@ -200,7 +200,7 @@ export default {
     }
   },
   created () {
-    this.LcApiKey = ENV.LcApiKey
+    this.LcApiKey = LC_API_KEY
     // if (this.competitionStarted && !this.competitionEnded) {
     this.initCompetition(this.FirstCompetitor, this.SecondCompetitor)
     // }
