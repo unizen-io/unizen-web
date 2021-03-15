@@ -13,18 +13,20 @@ export default {
   css: [
     '~assets/scss/colors.scss'
   ],
-  generate: {
-    routes: ['/articles/2021-01-28-tournamentofalts', '/articles/2021-01-16-zen-team-participates-in-ama-with-spectre-group', '/articles/2020-12-30-centralized-liquidity-module-is-hosted-on-binance-cloud-infrastructure', '/articles/2020-12-29-zen-exchange', '/articles/2020-12-30-the-genesis-of-zen']
-  },
+
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     {
       src: './plugins/GoogleAnalytics.js',
       mode: 'client'
     },
-    { src: '~/plugins/vue-confetti.js', mode: 'client' }
+    {
+      src: '~/plugins/vue-confetti.js',
+      mode: 'client'
+    }
   ],
 
+  // TODO: could be better with explicit component registration
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
 
@@ -62,9 +64,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
-    // https://go.nuxtjs.dev/content
-    '@nuxt/content'
+    '@nuxtjs/pwa'
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -79,13 +79,9 @@ export default {
     hostname: 'https://unizen.io',
     gzip: true,
     exclude: [
-      '/secret',
-      '/admin/**'
+      '/secret'
     ]
   },
-
-  // Content module configuration (https://go.nuxtjs.dev/config-content)
-  content: {},
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {

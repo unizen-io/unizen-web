@@ -34,10 +34,7 @@ export default {
     PartnerCarousel
   },
 
-  async fetch () {
-    // TODO: should handle
-    this.articles = await this.$content('articles').fetch()
-  },
+  async fetch () {},
   data () {
     return {
       show: true,

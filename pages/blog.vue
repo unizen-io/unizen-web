@@ -24,7 +24,6 @@ export default {
     /**
      * TODO: should consider loading UX and error handling
      */
-    // this.articles = await this.$content('articles').fetch()
     // TODO: could use `ohmyfetch` package
     await this.$axios.$get(
       `${RSS_TO_JSON_ENDPOINT}?rss_url=${MEDIUM_FEED_URL}`,
