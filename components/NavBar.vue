@@ -7,7 +7,10 @@
       class="navbar-modified"
       :class="{ 'navbar--hidden': !showNavbar }"
     >
-      <b-navbar-brand to="/">
+      <b-navbar-brand
+        class="flex"
+        to="/"
+      >
         <MiniLogo
           width="30"
           height="30"
@@ -15,7 +18,6 @@
         <b-img v-bind="mainProps" fluid class="d-sm-inline-block d-md-none align-top mt-2" src="~assets/img/navbar_logo_text_large.png" />
         <b-img fluid class="d-md-inline-block d-sm-none d-none align-top mt-2" src="~assets/img/navbar_logo_text.png" />
       </b-navbar-brand>
-
       <b-navbar-toggle target="nav-collapse" />
 
       <b-collapse id="nav-collapse" is-nav>

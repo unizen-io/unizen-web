@@ -8,8 +8,10 @@
 // MEMO: opt in to use tailwindcss
 // @import "print";
 // @import "root";
+// @import "navbar";
 // TODO: should block and open tailwindcss normalization `@tailwind base`
 // @import "reboot";
+// @import "nav";
 @import "functions";
 @import "variables";
 @import "mixins";
@@ -25,8 +27,6 @@
 @import "button-group";
 @import "input-group";
 @import "custom-forms";
-@import "nav";
-@import "navbar";
 @import "card";
 @import "breadcrumb";
 @import "pagination";
