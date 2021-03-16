@@ -54,7 +54,7 @@
 <script>
 import MiniLogo from '@/assets/img/icons/mini-logo.svg?inline'
 import truncate from '@/utils/helpers/truncate'
-import extractTextFromHTMLString from '@/utils/helpers/extractTextFromHTMLString'
+import extractTextFromHTMLString from '@/utils/helpers/extract-text-from-html-string'
 
 export default {
   components: {
