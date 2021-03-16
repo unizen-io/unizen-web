@@ -1,118 +1,53 @@
 <template>
   <b-container>
     <div class="py-5 mt-5">
-      <h1 class="articles">
+      <h1 class='mb-4'>
         Latest blog articles.
-      </h1><br>
-      <b-row
-        class="mt-1"
-        cols="1"
-        cols-sm="1"
-        cols-md="2"
-        cols-lg="3"
-      >
-        <b-col
-          v-for="a in sortedArticles.slice(0, 3)"
-          :key="a.slug"
-          class="mb-5"
-        >
-          <!-- <NuxtLink :to="`articles/${slug}`">
-            {{ title }}
-          </NuxtLink> -->
-          <b-card
-            :img-src="a.image"
-            img-alt="Image not found"
-            img-top
-            tag="article"
-            style=""
-            class="mb-3 blog-card"
-          >
-            <b-card-text>
-              <router-link
-                :to="`articles/${a.slug}`"
-              >
-                <h2 class="articles">
-                  {{ a.title }}
-                </h2>
-              </router-link>
-              <p class="articles">
-                {{ a.description }}
-              </p>
-              <p class="articles" />
-            </b-card-text>
-            <template #footer>
-              <div class="footer-articles">
-                <MiniLogo
-                  width="30"
-                  height="30"
-                />
-                <small
-                  style="float: right;"
-                  class="text-muted"
-                >
-                  Last updated {{ formatDate(a.date) }}
-                </small>
-              </div>
-            </template>
-          </b-card>
-        </b-col>
-      </b-row>
+      </h1>
+      <Articles :articles="articles.slice(0, 3)" />
     </div>
   </b-container>
 </template>
 
 <script>
-import MiniLogo from '@/assets/img/icons/mini-logo.svg?inline'
+import Articles from '@/components/Articles'
+import {
+  RSS_TO_JSON_ENDPOINT,
+  MEDIUM_FEED_URL
+} from '@/config/medium'
+import transformMediumArticles from '@/utils/helpers/transform-medium-articles'
 
 export default {
   components: {
-    MiniLogo
+    Articles
   },
 
-  props: {
-    articles: {
-      type: Array,
-      default: () => []
-    }
+  async fetch () {
+    /**
+     * TODO: should consider loading UX and error handling
+     */
+    // TODO: could use `ohmyfetch` package
+    await this.$axios.$get(
+      `${RSS_TO_JSON_ENDPOINT}?rss_url=${MEDIUM_FEED_URL}`,
+      // TODO: should double-check
+      { progress: false }
+    ).then((data) => {
+      this.articles = transformMediumArticles(data)
+    })
   },
 
-  computed: {
-    sortedArticles () {
-      return this.articles.slice().sort(function (a, b) {
-        return new Date(b.date).getTime() - new Date(a.date).getTime()
-      })
-    }
-  },
-
-  methods: {
-    // TODO: duplicated
-    formatDate (date) {
-      const ts = this.$moment(date)
-      return ts.fromNow()
+  data () {
+    return {
+      articles: []
     }
   }
 }
 </script>
 
-<style lang="scss">
-.blog-card {
-  min-height: 35rem;
-}
-
-h2.articles {
-  font-family: Montserrat Medium !important;
-  color: $dark !important;
-  font-size: 20px;
-}
-
-h1.articles {
+<style lang="scss" scoped>
+h1 {
   font-family: Montserrat Medium !important;
   color: $dark !important;
   font-weight: bold;
-}
-
-p.articles {
-  font-family: Montserrat Medium;
-  font-size: 14px;
 }
 </style>

@@ -23,7 +23,7 @@
           <b-nav-item class="ml-auto" to="/">
             HOME
           </b-nav-item>
-          <b-nav-item class="ml-auto" to="/blog" exact>
+          <b-nav-item class="ml-auto" to="/blog">
             BLOG
           </b-nav-item>
           <b-nav-item class="ml-auto" href="#" disabled>
@@ -35,7 +35,7 @@
           <b-nav-item class="ml-auto" href="#" disabled>
             FLEXIBLE STAKING
           </b-nav-item>
-          <b-nav-item class="ml-auto" href="/team">
+          <b-nav-item class="ml-auto" to="/team">
             TEAM
           </b-nav-item>
           <b-nav-item class="ml-auto" to="/contact">

@@ -7,10 +7,6 @@
       <div class="layout layout-homepage">
         <article class="slideshow">
           <div class="item">
-            <!-- <h2 class="title gradient-text">
-              <b>unizen</b>
-            </h2> -->
-
             <b-img-lazy center class="d-block d-md-none" fluid src="~assets/img/green_logo_text.png" />
             <center><img class="d-md-block d-none" src="~assets/img/website_header.png"></center>
             <h2 class="sub-title">
@@ -31,6 +27,7 @@ export default {
       mainProps: {}
     }
   },
+
   mounted () {
     if (this.$route.name === 'index') {
       waves.methods.initAnimation()

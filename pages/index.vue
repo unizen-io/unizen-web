@@ -6,9 +6,8 @@
       <Zen />
       <PoweredByBinance />
       <Cta />
-      <TopArticles :articles="articles" />
+      <TopArticles />
       <PartnerCarousel />
-      <!-- <b-overlay :show="show" opacity="1" z-index="100000" no-wrap /> -->
     </div>
   </main>
 </template>
@@ -32,14 +31,6 @@ export default {
     Cta,
     TopArticles,
     PartnerCarousel
-  },
-
-  async fetch () {},
-  data () {
-    return {
-      show: true,
-      articles: []
-    }
   },
 
   head () {
