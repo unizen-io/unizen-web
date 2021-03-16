@@ -6,7 +6,7 @@
       <b-container>
         <div v-if="!competitionResults">
           <b-row
-            class="py-5"
+            class="py-12"
             cols="1"
             cols-md="3"
             cols-sm="1"
@@ -140,7 +140,7 @@
       <b-col>
         <center>
           <small class="text-muted">POWERED BY</small><br>
-          <b-img lazy class=" mb-5 pb-5" src="@/assets/img/partners/lunarcrush-text.png" />
+          <b-img lazy class=" mb-12 pb-12" src="@/assets/img/partners/lunarcrush-text.png" />
         </center>
         <b-col />
       </b-col>

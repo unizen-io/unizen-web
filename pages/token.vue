@@ -1,6 +1,6 @@
 <template>
-  <div class="mt-5 pt-5">
-    <h1 class="common-headline mx-auto mt-4">
+  <div class="mt-12 pt-12">
+    <h1 class="common-headline mx-auto mt-6">
       $ZCX Token.
     </h1>
     <TokenMetrics />

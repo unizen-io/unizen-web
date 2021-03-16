@@ -16,7 +16,7 @@
         img-alt="Image not found"
         img-top
         tag="article"
-        class="mb-5 article-card"
+        class="mb-12 article-card"
       >
         <b-card-text>
           <!-- TODO: should create an independent component -->
@@ -26,14 +26,13 @@
             rel="noopener"
             :aria-label="`Link to ${article.title}`"
           >
-            <h2 class="article">
+            <h2 class="article mb-2">
               {{ article.title }}
             </h2>
           </a>
-          <p class="article">
+          <p class="article mb-4">
             {{ article.content | extractTextFromHTMLString | truncate(200, '...') }}
           </p>
-          <p class="article" />
         </b-card-text>
         <template #footer>
           <div class="article-card-footer-inner">

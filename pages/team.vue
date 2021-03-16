@@ -1,11 +1,11 @@
 <template>
-  <div class="py-5 my-5">
-    <b-row class="pb-5">
+  <div class="py-12 my-12">
+    <b-row class="pb-12">
       <b-container fluid>
         <h1 class="common-headline">
           Meet the team.
         </h1>
-        <b-row class="mb-5">
+        <b-row class="mb-12">
           <b-col v-for="member in team" :key="member.name">
             <b-row>
               <b-col class="block">
@@ -13,12 +13,12 @@
                 <div class="parent-cont">
                   <div class="overlay">
                     <div class="text">
-                      <ul style="text-align: center !important;" class="social-networks bounce mt-4">
+                      <ul style="text-align: center !important;" class="social-networks bounce mt-6">
                         <li v-if="member.telegram !== ''">
                           <a :href="member.telegram" class="icon-telegram">Telegram</a>
                         </li>
                         <li v-if="member.linkedin !== ''">
-                          <a :href="member.linkedin" class="mb-3 icon-linkedin">LinkedIn</a>
+                          <a :href="member.linkedin" class="mb-4 icon-linkedin">LinkedIn</a>
                         </li>
                         <li v-if="member.twitter !== ''">
                           <a :href="member.twitter" class="icon-twitter">Twitter</a>
@@ -45,12 +45,12 @@
         </b-row>
       </b-container>
     </b-row>
-    <b-row style="background-color: #EFEFEF;" class="my-5">
+    <b-row style="background-color: #EFEFEF;" class="my-12">
       <b-container>
         <h1 class="common-headline">
           Meet the advisors.
         </h1>
-        <b-row v-for="(advisor, index) in advisors" :key="advisor.name" cols-lg="12" cols="1" class="mb-5">
+        <b-row v-for="(advisor, index) in advisors" :key="advisor.name" cols-lg="12" cols="1" class="mb-12">
           <b-col v-if="!(index % 2)" xs="1" lg="3">
             <b-row cols="1">
               <b-col class="block">
@@ -69,7 +69,7 @@
                           <a :href="advisor.telegram" class="icon-telegram">Telegram</a>
                         </li>
                         <li v-if="advisor.linkedin !== ''">
-                          <a :href="advisor.linkedin" class="mb-3 icon-linkedin">LinkedIn</a>
+                          <a :href="advisor.linkedin" class="mb-4 icon-linkedin">LinkedIn</a>
                         </li>
                         <li v-if="advisor.twitter !== ''">
                           <a :href="advisor.twitter" class="icon-twitter">Twitter</a>
@@ -111,12 +111,12 @@
                 <div class="parent-cont">
                   <div class="overlay">
                     <div class="text">
-                      <ul style="text-align: center !important;" class="social-networks bounce mt-4">
+                      <ul style="text-align: center !important;" class="social-networks bounce mt-6">
                         <li v-if="advisor.telegram !== ''">
                           <a :href="advisor.telegram" class="icon-telegram">Telegram</a>
                         </li>
                         <li v-if="advisor.linkedin !== ''">
-                          <a :href="advisor.linkedin" class="mb-3 icon-linkedin">LinkedIn</a>
+                          <a :href="advisor.linkedin" class="mb-4 icon-linkedin">LinkedIn</a>
                         </li>
                         <li v-if="advisor.twitter !== ''">
                           <a :href="advisor.twitter" class="icon-twitter">Twitter</a>

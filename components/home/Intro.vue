@@ -1,6 +1,6 @@
 <template>
   <b-container>
-    <div class="pt-5">
+    <div class="pt-12">
       <b-row>
         <div>
           <div>

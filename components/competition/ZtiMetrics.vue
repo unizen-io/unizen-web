@@ -1,8 +1,8 @@
 <template>
   <div>
     <b-container>
-      <b-row class="my-2 mt-5">
-        <b-col class="mb-5">
+      <b-row class="my-2 mt-12">
+        <b-col class="mb-12">
           <b-list-group flush>
             <center>
               <b-card text-variant="white" :style="'background: '+firstCompetitor.color+' !important;'">

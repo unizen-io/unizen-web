@@ -3,7 +3,7 @@
     <b-row class="footer">
       <b-container>
         <b-row
-          class="py-5 px-5"
+          class="py-12 px-12"
           cols="2"
           cols-md="4"
           cols-sm="4"
@@ -69,7 +69,7 @@
       </b-container>
       <div />
     </b-row>
-    <b-row style="color: #f5f5f5;" class="bottom text-center pl-5 text-center" align-v="center">
+    <b-row style="color: #f5f5f5;" class="bottom text-center pl-12 text-center" align-v="center">
       © 2021 - 2022 Unizen.io. All rights reserved.
     </b-row>
   </div>

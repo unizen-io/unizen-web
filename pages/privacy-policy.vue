@@ -1,6 +1,6 @@
 <template>
-  <div class="mt-5 pt-5">
-    <b-container style="margin-bottom: 3rem;" class="py-5 mt-5">
+  <div class="mt-12 pt-12">
+    <b-container style="margin-bottom: 3rem;" class="py-12 mt-12">
       <h1 class="privacy">
         Privacy Policy
       </h1>

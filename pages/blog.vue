@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="main">
-      <b-container class="py-5 my-5">
-        <h1 class="py-5 mt-5">
+      <b-container class="py-12 my-12">
+        <h1 class="py-12 mt-12">
           Blog.
         </h1>
         <Articles :articles="articles" />

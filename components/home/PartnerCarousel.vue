@@ -2,7 +2,7 @@
   <b-row class="partners">
     <b-col>
       <b-container>
-        <b-row class="pt-5">
+        <b-row class="pt-12">
           <b-col>
             <h1 class="partners-text">
               Our strategic partners.

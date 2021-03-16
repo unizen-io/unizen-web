@@ -2,7 +2,7 @@
   <div>
     <b-container>
       <b-row class="mb-2">
-        <b-col class="mb-5">
+        <b-col class="mb-12">
           <b-list-group flush>
             <center>
               <b-card text-variant="white" :style="'background: '+firstCompetitor.color+' !important;'">

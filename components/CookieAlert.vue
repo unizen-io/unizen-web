@@ -5,7 +5,7 @@
     fixed="bottom"
     class="cookie-alert"
   >
-    <b-col class="pt-3" cols="8">
+    <b-col class="pt-4" cols="8">
       <p>
         🍪 Can I use cookies for analytics? Read
         <NuxtLink class="text-link" to="/privacy-policy">

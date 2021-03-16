@@ -2,7 +2,7 @@
   <b-container class="section">
     <b-row>
       <b-col>
-        <h1 class="introduction py-5">
+        <h1 class="introduction py-12">
           Providing a zen state of mind for traders
         </h1>
       </b-col>
@@ -14,8 +14,8 @@
             <br>
           </p>
         </b-row>
-        <b-row class="mt-5 pt-5" />
-        <b-row class="mt-5 pt-5">
+        <b-row class="mt-12 pt-12" />
+        <b-row class="mt-12 pt-12">
           <b-col align-self="end">
             <div class="text-align: center;">
               <NuxtLink to="/wenzen" class="introduction">

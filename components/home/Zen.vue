@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="mt-5 pb-5 d-block d-sm-none">
+    <div class="mt-12 pb-12 d-block d-sm-none">
       <b-img lazy fluid src="@/assets/img/iMac-mobile.png" />
       <b-card class="text-box-mobile">
         <b-row cols="1">
@@ -27,9 +27,9 @@
       </b-card>
     </div>
     <div class="zen d-none d-sm-block">
-      <b-row class="zen pt-5 macbook mx-auto" aligh-h="center">
+      <b-row class="zen pt-12 macbook mx-auto" aligh-h="center">
         <b-col sm>
-          <b-card class="text-box mt-5">
+          <b-card class="text-box mt-12">
             <b-card-body>
               <b-row>
                 <b-col cols="4">

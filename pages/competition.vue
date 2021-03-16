@@ -1,7 +1,7 @@
 <template>
-  <div class="pt-3 mt-5">
+  <div class="pt-4 mt-12">
     <center>
-      <div class="mt-5 pt-5">
+      <div class="mt-12 pt-12">
         <h5 v-if="competitionResults">
           Competition Complete
         </h5>
@@ -30,7 +30,7 @@
       <b-row style="background: #EFEFEF;">
         <b-container>
           <b-row
-            class="mt-5"
+            class="mt-12"
             cols="1"
             cols-md="2"
             cols-sm="1"

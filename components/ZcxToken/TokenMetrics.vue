@@ -1,7 +1,7 @@
 <template>
   <b-container>
     <b-row
-      class="pb-5"
+      class="pb-12"
       cols="1"
       cols-sm="1"
       cols-md="1"
@@ -31,7 +31,7 @@
             </ul> -->
         </p>
       </b-col>
-      <b-col style="padding: 30px !important;" class="order-lg-last order-first pb-5">
+      <b-col style="padding: 30px !important;" class="order-lg-last order-first pb-12">
         <b-row>
           <b-col>
             <small class="text-muted">TICKER</small><br><h2 class="metrics gradient-text">

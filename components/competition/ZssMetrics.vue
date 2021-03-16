@@ -1,5 +1,5 @@
 <template>
-  <div class="mb-5">
+  <div class="mb-12">
     <b-container>
       <b-card text-variant="white" :style="'background-image: linear-gradient(to right,' + firstCompetitor.color + ',' + secondCompetitor.color + ') !important;'">
         <center>

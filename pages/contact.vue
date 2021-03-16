@@ -1,8 +1,8 @@
 <template>
   <div class="main">
     <b-row>
-      <b-container class="py-5 my-5">
-        <h1 class="blog py-5 mt-5">
+      <b-container class="py-12 my-12">
+        <h1 class="blog py-12 mt-12 text-center">
           Contact.
         </h1>
         <br>
@@ -169,5 +169,10 @@ export default {
 }
 .contact {
   width: 100% !important;
+}
+h1.blog {
+  font-family: Montserrat Medium!important;
+  color: #2f4858!important;
+  font-weight: 700;
 }
 </style>

@@ -1,9 +1,9 @@
 <template>
   <!-- TODO: not used for now -->
-  <div class="main pt-5 mt-5">
-    <b-row class="pt-5 mt-5">
-      <b-container class="pt-5 mt-5">
-        <h1 v-align="center" class="blog pt-5 mt-5">
+  <div class="main pt-12 mt-12">
+    <b-row class="pt-12 mt-12">
+      <b-container class="pt-12 mt-12">
+        <h1 v-align="center" class="blog pt-12 mt-12">
           THANKS!
         </h1>
         <h2 class="thanks">

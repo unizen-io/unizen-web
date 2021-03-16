@@ -13,7 +13,7 @@
           cols-lg="2"
         >
           <b-col v-for="card in utility" :key="card.title" sm>
-            <b-card class="mb-4 utility-card">
+            <b-card class="mb-6 utility-card">
               <b-row>
                 <b-col cols="3" style="text-align: center;">
                   <p style="font-size: 5rem;">

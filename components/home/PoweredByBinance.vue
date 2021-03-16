@@ -1,16 +1,16 @@
 <template>
-  <b-row class="binance py-5 mb-5">
+  <b-row class="binance py-12 mb-12">
     <b-container>
-      <b-row class="pt-5">
+      <b-row class="pt-12">
         <b-col sm>
-          <h3 class="binance-text px-3">
+          <h3 class="binance-text px-4">
             Unizen Innovation Powered by:
           </h3>
-          <b-img class="px-3" fluid src="~assets/img/binance/bc-logo.png" />
+          <b-img class="px-4" fluid src="~assets/img/binance/bc-logo.png" />
         </b-col>
         <b-col sm />
       </b-row>
-      <b-row class="pt-5">
+      <b-row class="pt-12">
         <b-col />
         <b-col cols="8">
           <p class="binance-text">
@@ -19,14 +19,14 @@
         </b-col>
         <b-col />
       </b-row>
-      <b-row class="pb-5 pt-2">
+      <b-row class="pb-12 pt-2">
         <b-col sm>
-          <b-card class="binance-card mt-3">
+          <b-card class="binance-card mt-4">
             <div class="performance text-center" />
-            <p class="binance-subtitle">
+            <p class="binance-subtitle mb-4">
               <b>Performance</b>
             </p>
-            <p class="binance-subtitle-small">
+            <p class="binance-subtitle-small mb-4">
               Runs smooth when it matters the most
             </p>
             <p class="binance-text-small">
@@ -35,12 +35,12 @@
           </b-card>
         </b-col>
         <b-col class="center" sm>
-          <b-card class="binance-card mt-3">
+          <b-card class="binance-card mt-4">
             <div class="liquidity" />
-            <p class="binance-subtitle">
+            <p class="binance-subtitle mb-4">
               <b>High Liquidity</b>
             </p>
-            <p class="binance-subtitle-small">
+            <p class="binance-subtitle-small mb-4">
               Absorb orders with large transaction volume
             </p>
             <p class="binance-text-small">
@@ -50,12 +50,12 @@
         </b-col>
 
         <b-col sm>
-          <b-card class="binance-card mt-3">
+          <b-card class="binance-card mt-4">
             <div class="security" />
-            <p class="binance-subtitle">
+            <p class="binance-subtitle mb-4">
               <b>Binance Security</b>
             </p>
-            <p class="binance-subtitle-small">
+            <p class="binance-subtitle-small mb-4">
               Reliable custody & trading
             </p>
             <p class="binance-text-small">
