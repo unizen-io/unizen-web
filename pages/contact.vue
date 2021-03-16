@@ -1,21 +1,22 @@
 <template>
   <div class="main">
     <b-row>
-      <b-container class="py-12 my-12">
+      <b-container class="pt-12 my-12">
         <h1 class="blog py-12 mt-12 text-center">
           Contact.
         </h1>
-        <br>
-        <b-col />
-        <b-col>
+        <ErrorMessage
+          v-if="status === STATUSES.REJECTED"
+          :error-message="error.message"
+        />
+        <b-col v-else>
           <b-card>
             We would love to talk to you about any business inquiry or partner proposal. If this relates to support for any of our exchange modules, please reach out to support@unizen.io.
           </b-card>
           <br>
           <b-form
-            v-if="!status"
             name="contactus"
-            @submit="sendForm"
+            @submit.prevent="sendForm"
           >
             <b-form-input
               id="input-1"
@@ -50,38 +51,43 @@
               required
             />
             <br>
-            <!-- TODO: should add loading UX to the button -->
-            <b-button variant="outline-primary" size="lg" class="contact" type="submit">
-              Send
+            <b-button
+              :disabled="status === STATUSES.PENDING"
+              variant="outline-primary"
+              size="lg"
+              class="contact"
+              type="submit"
+            >
+              {{ status === STATUSES.PENDING ? "Submitting..." : "Send" }}
             </b-button>
           </b-form>
         </b-col>
-        <b-col />
       </b-container>
     </b-row>
     <h1
-      v-if="status === 'success'"
-      style="text-align: center"
+      v-if="status === STATUSES.RESOLVED"
+      class="text-center py-12 px-6"
     >
       Thank you, we got your submission!
-    </h1>
-    <h1
-      v-if="status === 'error'"
-      style="text-align: center"
-    >
-      Oops, something went wrong. Please try again.
     </h1>
   </div>
 </template>
 
 <script>
+import ErrorMessage from '@/components/ErrorMessage'
 import { createSEOTags } from '@/utils/helpers/seo'
 import { CONTACT_US_FORM_SUBMISSION_ENDPOINT } from '@/config'
+import STATUSES from '@/utils/constants/statuses'
 
 export default {
+  components: {
+    ErrorMessage
+  },
+
   data () {
     return {
-      status: null,
+      status: STATUSES.IDLE,
+      error: null,
       name: '',
       email: '',
       message: '',
@@ -122,33 +128,36 @@ export default {
     }
   },
 
+  created () {
+    this.STATUSES = STATUSES
+  },
+
   methods: {
-    sendForm (event) {
-      event.preventDefault()
-      // TODO: could use `ohmyfetch` package
-      fetch(CONTACT_US_FORM_SUBMISSION_ENDPOINT, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          Accept: 'application/json'
-        },
-        body: JSON.stringify({
-          name: this.name,
-          email: this.email,
-          message: this.message
+    async sendForm () {
+      try {
+        this.status = STATUSES.PENDING
+        // TODO: could use `ohmyfetch` package
+        const response = await fetch(CONTACT_US_FORM_SUBMISSION_ENDPOINT, {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+            Accept: 'application/json'
+          },
+          body: JSON.stringify({
+            name: this.name,
+            email: this.email,
+            message: this.message
+          })
         })
-      })
-        .then(response => response.json())
-        .then((response) => {
-          if (response.code === 200) {
-            this.status = 'success'
-          } else {
-            // Formcarry error
-            this.status = 'error'
-          }
-        })
-        // network error
-        .catch(() => (this.status = 'error'))
+        const jsonResponse = await response.json()
+        if (jsonResponse.code !== 200) {
+          throw new Error(`Something went wrong by ${jsonResponse.code}!`)
+        }
+        this.status = STATUSES.RESOLVED
+      } catch (error) {
+        this.status = STATUSES.REJECTED
+        this.error = error
+      }
     }
   },
 
@@ -167,9 +176,11 @@ export default {
   background-image: linear-gradient(to bottom, #f5f5f5, #f4f4f4, #f2f3f2, #f1f1f1, #f0f0f0);
   min-height: 1000px;
 }
+
 .contact {
   width: 100% !important;
 }
+
 h1.blog {
   font-family: Montserrat Medium!important;
   color: #2f4858!important;
