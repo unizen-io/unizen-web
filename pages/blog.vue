@@ -8,7 +8,7 @@
         <LoadingMessage v-if="status === STATUSES.IDLE || status === STATUSES.PENDING" />
         <ErrorMessage
           v-if="status === STATUSES.REJECTED"
-          :errorMessage="error.message"
+          :error-message="error.message"
         />
         <Articles
           v-if="status === STATUSES.RESOLVED"
@@ -39,9 +39,9 @@ export default {
   },
 
   async fetch () {
-    // TODO: could use `ohmyfetch` package
-    this.status = STATUSES.PENDING
     try {
+      this.status = STATUSES.PENDING
+      // TODO: could use `ohmyfetch` package
       const data = await this.$axios.$get(
         `${RSS_TO_JSON_ENDPOINT}?rss_url=${MEDIUM_FEED_URL}`,
         // TODO: should double-check
