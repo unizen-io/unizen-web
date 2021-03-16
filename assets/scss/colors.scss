@@ -12,7 +12,8 @@ $enable-shadows: false ;
 
 //bootstrap & bootstrap-vue should be added after
 //so that they inherit the custom SCSS variables
-@import '~bootstrap/scss/bootstrap.scss';
+// @import '~bootstrap/scss/bootstrap.scss';
+@import '~assets/css/bootstrap-4.6.0/scss/bootstrap.scss';
 @import '~bootstrap-vue/src/index.scss';
 
 body {
