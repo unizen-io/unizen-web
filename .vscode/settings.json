@@ -5,6 +5,9 @@
     "fortawesome",
     "nuxt",
     "nuxtjs",
+    "scrollbars",
+    "tailwindcss",
+    "truetype",
     "unizen"
   ]
 }
