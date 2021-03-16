@@ -42,7 +42,7 @@
               height="30"
             />
             <small class="text-muted">
-              Last updated {{ formatDate(article.publishedDate) }}
+              Last updated {{ formatDate(article.publishedDate) }} ago
             </small>
           </div>
         </template>
@@ -52,6 +52,8 @@
 </template>
 
 <script>
+import formatDistanceToNow from 'date-fns/formatDistanceToNow'
+
 import MiniLogo from '@/assets/img/icons/mini-logo.svg?inline'
 import truncate from '@/utils/helpers/truncate'
 import extractTextFromHTMLString from '@/utils/helpers/extract-text-from-html-string'
@@ -74,10 +76,8 @@ export default {
   },
 
   methods: {
-    // TODO: should use date-fns
     formatDate (date) {
-      const ts = this.$moment(date)
-      return ts.fromNow()
+      return formatDistanceToNow(new Date(date))
     }
   }
 }

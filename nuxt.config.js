@@ -51,7 +51,6 @@ export default {
       }
       ]
     }],
-    '@nuxtjs/moment',
     '@nuxtjs/style-resources',
     '@nuxtjs/svg'
   ],
