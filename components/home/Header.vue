@@ -1,7 +1,15 @@
 <template>
-  <div id="header" class="header">
+  <div
+    id="header"
+    ref="header"
+    class="header"
+  >
     <div style="position: fixed;">
-      <div id="canvas-project" static="true" />
+      <div
+        id="canvas-project"
+        ref="canvasProject"
+        static="true"
+      />
     </div>
     <div id="homeView" class="current-state ajaxhidden" style="visibility: inherit;">
       <div class="layout layout-homepage">
@@ -21,6 +29,7 @@
 
 <script>
 import waves from '@/static/waves3'
+
 export default {
   data () {
     return {
@@ -30,7 +39,11 @@ export default {
 
   mounted () {
     if (this.$route.name === 'index') {
-      waves.methods.initAnimation()
+      // MEMO: https://forum.vuejs.org/t/document-getelementbyid-in-shadow-dom-custom-web-element/59957
+      const canvasProject = this.$refs.canvasProject
+      const header = this.$refs.header
+      header.appendChild(canvasProject)
+      waves.methods.initAnimation(canvasProject)
       waves.methods.animate()
     } else {
       waves.methods.stopAnimation()

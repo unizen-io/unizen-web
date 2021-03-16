@@ -31,6 +31,7 @@ let particles; let count = 0
 
 // const mouseX = 0; const mouseY = 0
 
+// TODO: error prone (`WARNING: Too many active WebGL contexts. Oldest context will be lost.`)
 export default {
   methods: {
     onWindowResize () {
@@ -40,9 +41,8 @@ export default {
       renderer.setSize(container.clientWidth, container.clientHeight)
     },
 
-    initAnimation () {
-      container = document.getElementById('canvas-project')
-      document.getElementById('header').appendChild(container)
+    initAnimation (canvasProject) {
+      container = canvasProject
 
       camera = new THREE.PerspectiveCamera(120, container.clientWidth / container.clientHeight, 1, 10000)
       camera.position.y = 550 // changes how far back you can see i.e the particles towards horizon
