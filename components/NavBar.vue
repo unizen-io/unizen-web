@@ -29,13 +29,13 @@
             BLOG
           </b-nav-item>
           <b-nav-item class="ml-auto" href="#" disabled>
-            TRADE
+            <span class="text-gray-400">TRADE</span>
           </b-nav-item>
           <b-nav-item class="ml-auto" href="#" disabled>
-            ZENX LABS
+            <span class="text-gray-400">ZENX LABS</span>
           </b-nav-item>
           <b-nav-item class="ml-auto" href="#" disabled>
-            FLEXIBLE STAKING
+            <span class="text-gray-400">FLEXIBLE STAKING</span>
           </b-nav-item>
           <b-nav-item class="ml-auto" to="/team">
             TEAM
