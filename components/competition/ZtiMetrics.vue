@@ -7,7 +7,9 @@
             <center>
               <b-card text-variant="white" :style="'background: '+firstCompetitor.color+' !important;'">
                 <center>
-                  <h2><b>{{ firstCompetitor.ZTI.score }}</b></h2>
+                  <h2 class="text-3xl">
+                    <b>{{ firstCompetitor.ZTI.score }}</b>
+                  </h2>
                   <div class="w100" />
                   ZTI SCORE
                 </center>
@@ -36,7 +38,9 @@
             <center>
               <b-card text-variant="white" :style="'background: '+secondCompetitor.color+' !important;'">
                 <center>
-                  <h2><b>{{ roundNumber(secondCompetitor.ZTI.score / secondCompetitor.mcapDiff) }}</b></h2>
+                  <h2 class="text-3xl">
+                    <b>{{ roundNumber(secondCompetitor.ZTI.score / secondCompetitor.mcapDiff) }}</b>
+                  </h2>
                   <div class="w100" />
                   ZTI SCORE
                 </center>

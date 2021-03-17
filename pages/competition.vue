@@ -2,16 +2,16 @@
   <div class="pt-4 mt-12">
     <center>
       <div class="mt-12 pt-12">
-        <h5 v-if="competitionResults">
+        <h5 class="text-xl" v-if="competitionResults">
           Competition Complete
         </h5>
-        <h5 v-if="competitionRunning">
+        <h5 class="text-xl" v-if="competitionRunning">
           Competition Running
         </h5>
-        <h5 v-if="competitionEnded && !competitionResults">
+        <h5 class="text-xl" v-if="competitionEnded && !competitionResults">
           ☕ Calculating Final Results (Shouldn't take more than 10 minutes)...
         </h5>
-        <h5 v-if="!competitionStarted">
+        <h5 class="text-xl" v-if="!competitionStarted">
           Competition hasn't started yet
         </h5>
       </div>

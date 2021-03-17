@@ -33,7 +33,7 @@
               </b-col>
               <div class="w-100" />
               <b-col>
-                <h5 class="team">
+                <h5 class="text-xl team">
                   {{ member.name }}
                 </h5>
                 <p class="team">
@@ -84,7 +84,7 @@
               </b-col>
               <div class="w-100" />
               <b-col>
-                <h5 class="team">
+                <h5 class="text-xl team">
                   {{ advisor.name }}
                 </h5>
                 <p class="team">
@@ -131,7 +131,7 @@
               </b-col>
               <div class="w-100" />
               <b-col>
-                <h5 class="team">
+                <h5 class="text-xl team">
                   {{ advisor.name }}
                 </h5>
                 <p class="team">

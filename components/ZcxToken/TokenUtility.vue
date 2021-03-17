@@ -25,7 +25,9 @@
                   </p>
                 </b-col>
                 <b-col>
-                  <h3><b>{{ card.title }}</b></h3>
+                  <h3 class="text-3xl">
+                    <b>{{ card.title }}</b>
+                  </h3>
                   <p v-html="card.content" />
                 </b-col>
               </b-row>
