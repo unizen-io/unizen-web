@@ -18,9 +18,9 @@
         <b-row class="mt-12 pt-12">
           <b-col align-self="end">
             <div class="text-align: center;">
-              <NuxtLink to="/wenzen" class="introduction">
+              <nuxt-link to="/wenzen" class="introduction">
                 wen zen?
-              </NuxtLink>
+              </nuxt-link>
             </div>
           </b-col>
         </b-row>

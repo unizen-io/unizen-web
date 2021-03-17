@@ -35,9 +35,9 @@
             A person engaged in advertising. The shill attempts to spread buzz by personally endorsing the product in public forums.
           </b-popover>
           <br><br>
-          <NuxtLink to="/competition" class="introduction d-none d-sm-block">
+          <nuxt-link to="/competition" class="introduction d-none d-sm-block">
             Competition
-          </NuxtLink>
+          </nuxt-link>
           <br>
           <div class="w-100" />
         </b-col>

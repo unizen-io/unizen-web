@@ -6,13 +6,15 @@
     class="cookie-alert"
   >
     <b-col class="pt-4" cols="8">
+      <!-- ray test touch < -->
       <p>
         🍪 Can I use cookies for analytics? Read
-        <NuxtLink class="text-link" to="/privacy-policy">
+        <nuxt-link class="text-link" to="/privacy-policy">
           the privacy policy
-        </NuxtLink>
+        </nuxt-link>
         for more information.
       </p>
+      <!-- ray test touch > -->
     </b-col>
     <b-col>
       <b-button style="float: right;" variant="outline-primary" size="md" @click="accept">

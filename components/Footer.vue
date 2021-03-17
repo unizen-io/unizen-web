@@ -12,23 +12,23 @@
             <h2 class="footer-text">
               General
             </h2>
-            <NuxtLink to="/blog" class="footer-text">
+            <nuxt-link to="/blog" class="footer-text">
               Blog
-            </NuxtLink><br>
-            <NuxtLink to="/team" class="footer-text">
+            </nuxt-link><br>
+            <nuxt-link to="/team" class="footer-text">
               Team
-            </NuxtLink><br>
-            <NuxtLink to="/token" class="footer-text">
+            </nuxt-link><br>
+            <nuxt-link to="/token" class="footer-text">
               ZCX Token
-            </NuxtLink><br>
-            <NuxtLink to="/wenzen" class="footer-text">
+            </nuxt-link><br>
+            <nuxt-link to="/wenzen" class="footer-text">
               Tournament of Altcoins
-            </NuxtLink><br>
+            </nuxt-link><br>
             <a class="footer-text footer-disabled">CoinMarketCap</a><br>
             <a class="footer-text footer-disabled">CoinGecko</a><br>
-            <NuxtLink to="/contact" class="footer-text">
+            <nuxt-link to="/contact" class="footer-text">
               Contact Us
-            </NuxtLink>
+            </nuxt-link>
           </b-col>
           <b-col>
             <h2 class="footer-text">
@@ -36,12 +36,12 @@
             </h2>
             <a class="footer-text footer-disabled">
               Listing Application</a><br>
-            <NuxtLink to="/contact" class="footer-text">
+            <nuxt-link to="/contact" class="footer-text">
               Business Contact
-            </NuxtLink><br>
-            <NuxtLink to="/contact" class="footer-text">
+            </nuxt-link><br>
+            <nuxt-link to="/contact" class="footer-text">
               Partnership Inquiry
-            </NuxtLink>
+            </nuxt-link>
           </b-col>
           <b-col>
             <h2 class="footer-text">
