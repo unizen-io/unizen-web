@@ -14,5 +14,6 @@ module.exports = {
     extend: {}
   },
   plugins: [],
+  // TODO: should remove after completely dropping bootstrap
   important: true
 }
