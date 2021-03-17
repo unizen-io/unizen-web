@@ -1,7 +1,7 @@
 <template>
   <div class="no-horizontal-scroll">
     <NavBar />
-    <Nuxt />
+    <nuxt />
     <CookieAlert />
     <Footer />
   </div>
