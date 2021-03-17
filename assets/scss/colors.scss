@@ -10,16 +10,17 @@ $dark:          #2F4858 ;
 $enable-shadows: false ;
 // $enable-gradients: true ;
 
-//bootstrap & bootstrap-vue should be added after 
-//so that they inherit the custom SCSS variables
-@import '~bootstrap/scss/bootstrap.scss';
+// bootstrap & bootstrap-vue should be added after
+// so that they inherit the custom SCSS variables
+// @import '~bootstrap/scss/bootstrap.scss';
+@import '~assets/css/bootstrap-4.6.0/scss/bootstrap.scss';
 @import '~bootstrap-vue/src/index.scss';
 
 body {
     font-family: D DIN, sans-serif;
     // overflow-x: hidden;
     // overflow: -moz-scrollbars-horizontal;
-  }
+}
 
 h1 {
     font-family: Montserrat Semi-Bold;
@@ -48,108 +49,107 @@ h1.common-headline {
     font-weight: 400;
     font-display: swap;
     src: url('~assets/fonts/IcoMoon-Free.ttf') format('truetype');
-  }
+}
 
-  @font-face {
+@font-face {
     font-family: 'Arista';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
     src: url('~assets/fonts/Arista2.0.ttf') format('truetype');
-  }
+}
 
-  @font-face {
+@font-face {
     font-family: 'Arista Alt';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
     src: url('~assets/fonts/Arista2.0Alternate.ttf') format('truetype');
-  }
+}
 
 
-  @font-face {
+@font-face {
     font-family: 'Montserrat';
     font-style: normal;
     font-weight: 800;
     font-display: swap;
     src: url('~assets/fonts/Montserrat-ExtraBold.ttf') format('truetype');
-  }
+}
 
-  @font-face {
+@font-face {
     font-family: 'Montserrat Semi-Bold';
     font-style: normal;
     font-weight: 600;
     font-display: swap;
     src: url('~assets/fonts/Montserrat-SemiBold.ttf') format('truetype');
-  }
+}
 
-  @font-face {
+@font-face {
     font-family: 'Montserrat Medium';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
     src: url('~assets/fonts/Montserrat-Medium.ttf') format('truetype');
-  }
+}
 
 
-  @font-face {
+@font-face {
     font-family: 'Montserrat Light';
     font-style: normal;
     font-weight: 100;
     font-display: swap;
     src: url('~assets/fonts/Montserrat-Light.ttf') format('truetype');
-  }
+}
 
-  @font-face {
+@font-face {
     font-family: 'Lato Regular';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
     src: url('~assets/fonts/Lato-Regular.ttf') format('truetype');
-  }
+}
 
-  @font-face {
+@font-face {
     font-family: 'Lato Bold';
     font-style: normal;
     font-weight: 600;
     font-display: swap;
     src: url('~assets/fonts/Lato-Bold.ttf') format('truetype');
-  }
+}
 
 
 
-  @font-face {
+@font-face {
     font-family: 'D DIN';
     font-style: normal;
     font-weight: 400;
     font-display: swap;
     src: url('~assets/fonts/D-DIN.otf') format('truetype');
-  }
+}
 
-  @font-face {
+@font-face {
     font-family: 'D DIN';
     font-style: normal;
     font-weight: 700;
     font-display: swap;
     src: url('~assets/fonts/D-DIN-Bold.otf') format('truetype');
-  }
+}
 
 // Header animation
-  .waves {
-      position: absolute !important;
-  }
+.waves {
+    position: absolute !important;
+}
 
-  .parent-waves {
+.parent-waves {
     position: relative !important;
 }
 
-  canvas {
-      position: absolute !important;
-      margin-top: -15rem;
-  }
+canvas {
+    position: absolute !important;
+    margin-top: -15rem;
+}
 
-  .card
-{
+.card {
     position: relative;
 
     display: flex;
@@ -167,86 +167,71 @@ h1.common-headline {
     background-color: #fff;
     background-clip: border-box;
 }
-.card > hr
-{
+.card > hr {
     margin-right: 0;
     margin-left: 0;
 }
-.card > .list-group:first-child .list-group-item:first-child
-{
+.card > .list-group:first-child .list-group-item:first-child {
     border-top-left-radius: .375rem;
     border-top-right-radius: .375rem;
 }
-.card > .list-group:last-child .list-group-item:last-child
-{
+.card > .list-group:last-child .list-group-item:last-child {
     border-bottom-right-radius: .375rem;
     border-bottom-left-radius: .375rem;
 }
 
-.card-body
-{
+.card-body {
     min-height: 1px;
     padding: 1.5rem; 
 
     flex: 1 1 auto;
 }
 
-.card-title
-{
+.card-title {
     margin-bottom: 1.25rem;
 }
 
-.card-subtitle
-{
+.card-subtitle {
     margin-top: -.625rem;
     margin-bottom: 0;
 }
 
-.card-text:last-child
-{
+.card-text:last-child {
     margin-bottom: 0;
 }
 
-.card-link:hover
-{
+.card-link:hover {
     text-decoration: none;
 }
 
-.card-link + .card-link
-{
+.card-link + .card-link {
     margin-left: 1.5rem;
 }
 
-.card-header
-{
+.card-header {
     margin-bottom: 0;
     padding: 1.25rem 1.5rem;
 
     border-bottom: 1px solid rgba(0, 0, 0, .05); 
     background-color: #fff;
 }
-.card-header:first-child
-{
+.card-header:first-child {
     border-radius: calc(.375rem - 1px) calc(.375rem - 1px) 0 0;
 }
-.card-header + .list-group .list-group-item:first-child
-{
+.card-header + .list-group .list-group-item:first-child {
     border-top: 0;
 }
 
-.card-footer
-{
+.card-footer {
     border-top: 1px #DFDFDF solid;
     padding: 1.25rem 1.5rem;
     background: none;
 }
-.card-footer:last-child
-{
+.card-footer:last-child {
     border-radius: 0 0 calc(.375rem - 1px) calc(.375rem - 1px);
 }
 
-.card-header-tabs
-{
+.card-header-tabs {
     margin-right: -.75rem;
     margin-bottom: -1.25rem;
     margin-left: -.75rem;
@@ -254,54 +239,46 @@ h1.common-headline {
     border-bottom: 0;
 }
 
-.card-header-pills
-{
+.card-header-pills {
     margin-right: -.75rem;
     margin-left: -.75rem;
 }
 
-.card-img-overlay
-{
+.card-img-overlay {
     position: absolute;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-
     padding: 1.25rem;
 }
 
 .card-img,
 .card-img-top,
-.card-img-bottom
-{
+.card-img-bottom {
     width: 100%; 
 
     flex-shrink: 0;
 }
 
 .card-img,
-.card-img-top
-{
+.card-img-top {
     border-top-left-radius: calc(.375rem - 1px);
     border-top-right-radius: calc(.375rem - 1px);
     height: 200px;
 }
 
 .card-img,
-.card-img-bottom
-{
+.card-img-bottom {
     border-bottom-right-radius: calc(.375rem - 1px);
     border-bottom-left-radius: calc(.375rem - 1px);
 }
 
-.card-deck .card
-{
+.card-deck .card {
     margin-bottom: 15px;
 }
 
-@media (min-width: 576px)
-{
+@media (min-width: 576px) {
     .card-deck
     {
         display: flex;
@@ -321,13 +298,11 @@ h1.common-headline {
     }
 }
 
-.card-group > .card
-{
+.card-group > .card {
     margin-bottom: 15px;
 }
 
-@media (min-width: 576px)
-{
+@media (min-width: 576px) {
     .card-group
     {
         display: flex;
@@ -378,14 +353,12 @@ h1.common-headline {
     }
 }
 
-.card-columns .card
-{
+.card-columns .card {
     display: flex;
     margin-bottom: 1.25rem;
 }
 
-@media (min-width: 576px)
-{
+@media (min-width: 576px) {
     .card-columns
     {
         column-count: 3;
@@ -401,23 +374,19 @@ h1.common-headline {
     }
 }
 
-.accordion > .card
-{
+.accordion > .card {
     overflow: hidden;
 }
-.accordion > .card:not(:last-of-type)
-{
+.accordion > .card:not(:last-of-type) {
     border-bottom: 0;
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
 }
-.accordion > .card:not(:first-of-type)
-{
+.accordion > .card:not(:first-of-type) {
     border-top-left-radius: 0;
     border-top-right-radius: 0;
 }
-.accordion > .card > .card-header
-{
+.accordion > .card > .card-header {
     margin-bottom: -1px; 
 
     border-radius: 0;

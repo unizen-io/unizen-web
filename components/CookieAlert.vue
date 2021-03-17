@@ -3,31 +3,34 @@
     v-if="isOpen"
     toggleable="lg"
     fixed="bottom"
-    class="cookie-alert"
+    class="cookie-alert p-2.5 h-20 flex items-center"
   >
-    <b-col class="pt-3" cols="8">
-      <p>
-        🍪 Can I use cookies for analytics? Read
-        <NuxtLink class="text-link" to="/privacy-policy">
-          the privacy policy
-        </NuxtLink>
-        for more information.
-      </p>
-    </b-col>
-    <b-col>
-      <b-button style="float: right;" variant="outline-primary" size="md" @click="accept">
-        Yes, sure
-      </b-button>
-    </b-col>
-    <b-col cols="1">
-      <div style="float: right;" class="button md:ml-2" @click="deny">
-        &times;
-      </div>
-    </b-col>
+    <p>
+      🍪 Can I use cookies for analytics? Read
+      <nuxt-link class="text-link" to="/privacy-policy">
+        the privacy policy
+      </nuxt-link>
+      for more information.
+    </p>
+    <div class="flex-grow" />
+    <b-button
+      variant="outline-primary"
+      size="md"
+      @click="accept"
+    >
+      Yes, sure
+    </b-button>
+    <button
+      class="button ml-16 mr-6"
+      @click="deny"
+    >
+      &times;
+    </button>
   </b-navbar>
 </template>
 
 <script>
+// TODO: error prone (`The client-side rendered virtual DOM tree is not matching server-rendered content.`)
 import { bootstrap } from 'vue-gtag'
 
 export default {
@@ -68,17 +71,11 @@ export default {
 
 <style lang="scss" scoped>
 .cookie-alert {
-    background: rgba(219, 219, 219, 0.185) !important;
-    padding: 10px;
-    backdrop-filter: blur(15px);
-
-    // background: rgba(219, 219, 219, 0.185) !important;
-    // backdrop-filter: blur(15px) !important;
-    // box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 20px 0px !important;
-    box-shadow: 0 0 30px 0 rgba(196, 202, 214, 0.5) !important;
-    min-height: 3rem;
-    z-index: 99999 !important;
-    transform: translate3d(0, 0, 0);
-    transition: 0.3s all ease-out;
+  background: rgba(219, 219, 219, 0.185) !important;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 30px 0 rgba(196, 202, 214, 0.5) !important;
+  z-index: 99999 !important;
+  transform: translate3d(0, 0, 0);
+  transition: 0.3s all ease-out;
 }
 </style>

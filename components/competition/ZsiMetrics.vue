@@ -2,12 +2,14 @@
   <div>
     <b-container>
       <b-row class="mb-2">
-        <b-col class="mb-5">
+        <b-col class="mb-12">
           <b-list-group flush>
             <center>
               <b-card text-variant="white" :style="'background: '+firstCompetitor.color+' !important;'">
                 <center>
-                  <h2><b>{{ firstCompetitor.ZSI.score }}</b></h2>
+                  <h2 class="text-3xl">
+                    <b>{{ firstCompetitor.ZSI.score }}</b>
+                  </h2>
                   <div class="w100" />
                   ZSI SCORE
                 </center>
@@ -30,7 +32,9 @@
             <center>
               <b-card text-variant="white" :style="'background: '+secondCompetitor.color+' !important;'">
                 <center>
-                  <h2><b>{{ roundNumber(secondCompetitor.ZSI.score / secondCompetitor.mcapDiff) }}</b></h2>
+                  <h2 class="text-3xl">
+                    <b>{{ roundNumber(secondCompetitor.ZSI.score / secondCompetitor.mcapDiff) }}</b>
+                  </h2>
                   <div class="w100" />
                   ZSI SCORE
                 </center>
@@ -110,7 +114,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

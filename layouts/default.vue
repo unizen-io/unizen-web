@@ -1,7 +1,7 @@
 <template>
-  <div class="default-template no-horizontal-scroll">
+  <div class="no-horizontal-scroll">
     <NavBar />
-    <Nuxt />
+    <nuxt />
     <CookieAlert />
     <Footer />
   </div>
@@ -9,7 +9,8 @@
 
 <style>
 .no-horizontal-scroll {
-    overflow-x: hidden;
-    width: 100%
+  /* TODO: hack for now */
+  overflow-x: hidden;
+  width: 100%;
 }
 </style>

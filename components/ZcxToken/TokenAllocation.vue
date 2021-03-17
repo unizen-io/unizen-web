@@ -1,6 +1,6 @@
 <template>
-  <div style="background-color: #EFEFEF;" class="mt-5">
-    <b-container class="mb-5 pb-5">
+  <div style="background-color: #EFEFEF;" class="mt-12">
+    <b-container class="mb-12 pb-12">
       <h1 class="common-headline mx-auto">
         Token Sale & Allocation.
       </h1>
@@ -13,7 +13,7 @@
         <b-col>
           <div class="chart-container">
             <doughnut-chart :data="barChartData" :styles="myStyles" :options="barChartOptions" />
-            <div style="margin-top: -200px;" class="small-chart-text mb-5">
+            <div style="margin-top: -200px;" class="small-chart-text mb-12">
               <center><small>Click a section of the chart more details.</small></center>
             </div>
           </div>
@@ -145,26 +145,26 @@ export default {
   }
 }
 .header-collapse {
-      /* Create the gradient. */
-//   background-image: linear-gradient(to right bottom, #00afae, #00b6b0, #00bdb1, #00c3b1, #00cab1, #00d0b1, #00d6b0, #00dcaf, #00e2ad, #00e9ab, #00efa8, #00f5a4);
+  /* Create the gradient. */
+  // background-image: linear-gradient(to right bottom, #00afae, #00b6b0, #00bdb1, #00c3b1, #00cab1, #00d0b1, #00d6b0, #00dcaf, #00e2ad, #00e9ab, #00efa8, #00f5a4);
   /* Set the background size and repeat properties. */
   background-size: 100%;
   background-repeat: repeat;
 }
 
 .allo-btn {
-    background: none !important;
-    border: none !important;
-    font-weight: bold !important;
-    color: $dark !important;
+  background: none !important;
+  border: none !important;
+  font-weight: bold !important;
+  color: $dark !important;
 }
 .allo-btn:after {
-    background: none !important;
-    border: none !important;
+  background: none !important;
+  border: none !important;
 }
 .allo-btn:hover {
-    background: none !important;
-    border: none !important;
-    opacity: 0.8;
+  background: none !important;
+  border: none !important;
+  opacity: 0.8;
 }
 </style>
