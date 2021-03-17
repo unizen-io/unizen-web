@@ -45,9 +45,11 @@ export default {
       header.appendChild(canvasProject)
       waves.methods.initAnimation(canvasProject)
       waves.methods.animate()
-    } else {
-      waves.methods.stopAnimation()
     }
+  },
+
+  beforeDestroy () {
+    waves.methods.stopAnimation()
   }
 }
 </script>
