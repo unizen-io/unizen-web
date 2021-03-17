@@ -31,7 +31,7 @@
             </ul> -->
         </p>
       </b-col>
-      <b-col class="order-first p-7">
+      <b-col class="order-first lg:order-last p-7">
         <b-row>
           <b-col>
             <small class="text-muted">TICKER</small>

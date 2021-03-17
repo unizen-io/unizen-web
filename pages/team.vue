@@ -98,7 +98,7 @@
               <p v-html="advisor.desc" />
             </b-card>
           </b-col>
-          <b-col v-if="(index % 2)" xs="1" lg="3" class="order-lg-last order-first">
+          <b-col v-if="(index % 2)" xs="1" lg="3" class="order-first lg:order-last">
             <b-row cols="1">
               <b-col class="block">
                 <b-img-lazy
