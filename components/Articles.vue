@@ -36,7 +36,7 @@
         </b-card-text>
         <template #footer>
           <div class="article-card-footer-inner">
-            <MiniLogo
+            <MiniLogoIcon
               width="30"
               height="30"
             />
@@ -53,13 +53,13 @@
 <script>
 import formatDistanceToNow from 'date-fns/formatDistanceToNow'
 
-import MiniLogo from '@/assets/img/icons/mini-logo.svg?inline'
+import MiniLogoIcon from '@/assets/img/icons/mini-logo.svg?inline'
 import truncate from '@/utils/helpers/truncate'
 import extractTextFromHTMLString from '@/utils/helpers/extract-text-from-html-string'
 
 export default {
   components: {
-    MiniLogo
+    MiniLogoIcon
   },
 
   filters: {
