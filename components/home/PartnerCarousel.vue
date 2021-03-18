@@ -16,28 +16,33 @@
         </b-row>
       </b-container>
       <div class="text-center">
-        <hooper :settings="cardsHooper">
-          <slide>
+        <Hooper :settings="cardsHooper">
+          <Slide>
             <b-img fluid src="~assets/img/partners/blockunify.png" />
-          </slide>
-          <slide>
+          </Slide>
+          <Slide>
             <b-img fluid src="~assets/img/partners/jun.png" />
-          </slide>
-          <slide>
+          </Slide>
+          <Slide>
             <b-img fluid src="~assets/img/partners/lunarcrush-text.png" />
-          </slide>
-          <slide>
+          </Slide>
+          <Slide>
             <b-img fluid src="~assets/img/partners/betrust-text.png" />
-          </slide>
-          <hooper-navigation slot="hooper-addons" />
-        </hooper>
+          </Slide>
+          <HooperNavigation slot="hooper-addons" />
+        </Hooper>
       </div>
     </b-col>
   </b-row>
 </template>
 
 <script>
-import { Hooper, Slide, Navigation as HooperNavigation } from 'hooper'
+// TODO: double-check better carousels
+import {
+  Hooper,
+  Slide,
+  Navigation as HooperNavigation
+} from 'hooper'
 import 'hooper/dist/hooper.css'
 
 export default {
@@ -46,6 +51,7 @@ export default {
     Slide,
     HooperNavigation
   },
+
   data () {
     return {
       cardsHooper: {
