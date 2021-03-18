@@ -55,8 +55,13 @@
         <h1 class="common-headline">
           Meet the advisors.
         </h1>
-        <b-row v-for="(advisor, index) in advisors" :key="advisor.name" cols-lg="12" cols="1" class="mb-12">
-          <b-col v-if="!(index % 2)" xs="1" lg="3">
+        <b-row
+          v-for="(advisor, index) in advisors"
+          :key="advisor.name"
+          cols-lg="12"
+          cols="1"
+          class="mb-12">
+          <b-col xs="1" lg="3" :class="{ 'order-first lg:order-last': (index % 2) }">
             <div class="overlay-container">
               <nuxt-picture
                 class="team"
@@ -97,43 +102,6 @@
             <b-card>
               <p v-html="advisor.desc" />
             </b-card>
-          </b-col>
-          <b-col v-if="(index % 2)" xs="1" lg="3" class="order-first lg:order-last">
-            <div class="overlay-container">
-              <nuxt-picture
-                class="team"
-                width="187"
-                height="187"
-                :src="advisor.img"
-                :alt="advisor.name"
-              />
-              <div class="overlay mt-8 rounded">
-                <div class="text">
-                  <ul style="text-align: center !important;" class="social-networks bounce mt-6">
-                    <li v-if="advisor.telegram !== ''">
-                      <a :href="advisor.telegram" class="icon-telegram">Telegram</a>
-                    </li>
-                    <li v-if="advisor.linkedin !== ''">
-                      <a :href="advisor.linkedin" class="mb-4 icon-linkedin">LinkedIn</a>
-                    </li>
-                    <li v-if="advisor.twitter !== ''">
-                      <a :href="advisor.twitter" class="icon-twitter">Twitter</a>
-                    </li>
-                    <li v-if="advisor.github !== ''">
-                      <a :href="advisor.github" class="icon-github">GitHub</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-            <div>
-              <h5 class="text-xl team">
-                {{ advisor.name }}
-              </h5>
-              <p class="team mb-4">
-                {{ advisor.role }}
-              </p>
-            </div>
           </b-col>
         </b-row>
       </b-container>
