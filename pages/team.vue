@@ -1,7 +1,7 @@
 <template>
   <div class="py-12 my-12">
-    <b-row class="pb-12">
-      <b-container fluid>
+    <div class="pb-12">
+      <div class="container mx-auto px-8">
         <h1 class="common-headline">
           Meet the team.
         </h1>
@@ -20,8 +20,8 @@
                 :alt="member.name"
               />
               <div class="overlay mt-8 rounded">
-                <div class="text">
-                  <ul style="text-align: center !important;" class="social-networks bounce mt-6">
+                <div class="pt-4 text">
+                  <ul class="text-center social-networks bounce mt-1">
                     <li v-if="member.telegram !== ''">
                       <a :href="member.telegram" class="icon-telegram">Telegram</a>
                     </li>
@@ -39,29 +39,34 @@
               </div>
             </div>
             <div>
-              <h5 class="text-xl team">
+              <h5 class="text-xl text-center pt-4 team">
                 {{ member.name }}
               </h5>
-              <p class="team">
+              <p class="text-center">
                 {{ member.role }}
               </p>
             </div>
           </div>
         </div>
-      </b-container>
-    </b-row>
-    <b-row style="background-color: #EFEFEF;" class="my-12">
-      <b-container>
+      </div>
+    </div>
+    <div
+      style="background-color: #EFEFEF;"
+      class="my-12"
+    >
+      <div class="container mx-auto px-8">
         <h1 class="common-headline">
           Meet the advisors.
         </h1>
-        <b-row
+        <div
           v-for="(advisor, index) in advisors"
           :key="advisor.name"
-          cols-lg="12"
-          cols="1"
-          class="mb-12">
-          <b-col xs="1" lg="3" :class="{ 'order-first lg:order-last': (index % 2) }">
+          class="mb-12 flex flex-wrap"
+        >
+          <div
+            class="w-full lg:w-3/12"
+            :class="{ 'order-first lg:order-last': (index % 2) }"
+          >
             <div class="overlay-container">
               <nuxt-picture
                 class="team"
@@ -71,8 +76,8 @@
                 :alt="advisor.name"
               />
               <div class="overlay mt-8 rounded">
-                <div class="text">
-                  <ul style="text-align: center !important;" class="social-networks bounce mt-1">
+                <div class="pt-4 text">
+                  <ul class="text-center social-networks bounce mt-1">
                     <li v-if="advisor.telegram !== ''">
                       <a :href="advisor.telegram" class="icon-telegram">Telegram</a>
                     </li>
@@ -90,22 +95,22 @@
               </div>
             </div>
             <div>
-              <h5 class="text-xl team">
+              <h5 class="text-xl text-center pt-4 team">
                 {{ advisor.name }}
               </h5>
-              <p class="team mb-4">
+              <p class="text-center mb-4">
                 {{ advisor.role }}
               </p>
             </div>
-          </b-col>
-          <b-col xs="1" col lg="9">
+          </div>
+          <div class="w-full lg:w-9/12">
             <b-card>
               <p v-html="advisor.desc" />
             </b-card>
-          </b-col>
-        </b-row>
-      </b-container>
-    </b-row>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -221,28 +226,16 @@ picture.team > img {
   border-radius: 50%;
 }
 
-p.team {
-  text-align: center;
-}
-
-.socials-team {
-  text-align: center !important;
-}
-
 h5.team {
   font-family: Montserrat Medium !important;
   color: $dark !important;
   font-weight: bold;
-  text-align: center !important;
-  padding-top: 15px;
 }
 
 .text {
   font-family: Montserrat Medium !important;
   color: $dark !important;
   font-weight: bold;
-  text-align: center !important;
-  padding-top: 15px;
 }
 
 .overlay-container {
@@ -262,12 +255,5 @@ h5.team {
   top: 0;
   left: 0;
   transition: opacity 1s ease;
-}
-
-.even {
-  float: left;
-}
-.odd {
-  float: right;
 }
 </style>
