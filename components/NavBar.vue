@@ -114,12 +114,12 @@ export default {
   font-size: 0.9em;
   font-weight: bold;
   color: $dark;
-  -o-transition:.5s;
-  -ms-transition:.5s;
-  -moz-transition:.5s;
-  -webkit-transition:.5s;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
   /* ...and now for the proper property */
-  transition:.5s;
+  transition: .5s;
 }
 
 a:hover {
