@@ -125,7 +125,9 @@ export default {
       team: [
         {
           name: 'Brandon Dallman',
-          img: 'team/brandon.png',
+          // ray test touch <
+          img: '/assets/img/team/brandon.png',
+          // ray test touch >
           role: 'Chief Marketing Officer',
           linkedin: 'https://www.linkedin.com/in/brandon-dallmann-54b78212',
           twitter: 'https://twitter.com/cryptfaux',
