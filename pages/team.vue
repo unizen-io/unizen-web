@@ -123,7 +123,6 @@ export default {
     return {
       // TODO: could avoid managing `team` and `advisors` in the data as it does not have to be reactive
       team: [
-
         {
           name: 'Brandon Dallman',
           img: 'team/brandon.png',
@@ -160,12 +159,6 @@ export default {
           github: '',
           telegram: 'https://t.me/tomsweeney'
         }
-
-        { name: 'Brandon Dallman', img: require('../assets/img/team/brandon.png'), role: 'Chief Marketing Officer', linkedin: 'https://www.linkedin.com/in/brandon-dallmann-54b78212', twitter: 'https://twitter.com/cryptfaux', github: '', telegram: 'https://t.me/cryptfaux' },
-        { name: 'Martin Granström', img: require('../assets/img/team/martin.png'), role: 'Chief Technical Officer', linkedin: 'https://www.linkedin.com/in/martingranstrom/', twitter: '', github: 'https://github.com/grvlle', telegram: 'https://t.me/grvlle' },
-        { name: 'Sean Noga', img: require('../assets/img/team/sean.png'), role: 'Chief Executive Officer', linkedin: 'https://www.linkedin.com/in/sean-noga-142b923', twitter: 'https://twitter.com/jun_capital', github: '', telegram: 'https://t.me/NamasteCryptocurrency' },
-        { name: 'Tom Sweeney', img: require('../assets/img/team/tom.png'), role: 'Chief Operating Officer', linkedin: 'https://www.linkedin.com/in/tomwsweeney/', twitter: 'https://twitter.com/jun_capital', github: '', telegram: 'https://t.me/tomsweeney' }
-
       ],
       advisors: [
         {
