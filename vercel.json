@@ -6,7 +6,6 @@
       "use": "@nuxtjs/vercel-builder",
       "config": {
         "serverFiles": [
-          "utils/helpers/seo.js",
           "api/ipx.js"
         ]
       }
