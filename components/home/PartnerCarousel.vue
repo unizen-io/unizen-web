@@ -24,7 +24,7 @@
             <b-img fluid src="~assets/img/partners/jun.png" />
           </Slide>
           <Slide>
-            <b-img fluid src="~assets/img/partners/lunarcrush-text.png" />
+            <b-img fluid src="~assets/img/partners/lunarcrush.png" />
           </Slide>
           <Slide>
             <b-img fluid src="~assets/img/partners/betrust-text.png" />

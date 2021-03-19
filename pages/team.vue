@@ -69,6 +69,7 @@
           >
             <div class="overlay-container">
               <nuxt-picture
+                loading="lazy"
                 class="team"
                 width="187"
                 height="187"
