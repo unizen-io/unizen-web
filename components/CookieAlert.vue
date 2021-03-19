@@ -3,7 +3,7 @@
     v-if="isOpen"
     toggleable="lg"
     fixed="bottom"
-    class="cookie-alert p-2.5 h-20 flex items-center"
+    class="cookie-alert p-2.5 h-20 flex items-center flex-nowrap"
   >
     <p>
       🍪 Can I use cookies for analytics? Read

@@ -140,7 +140,7 @@
       <b-col>
         <center>
           <small class="text-muted">POWERED BY</small><br>
-          <b-img lazy class=" mb-12 pb-12" src="@/assets/img/partners/lunarcrush-text.png" />
+          <b-img lazy class=" mb-12 pb-12" src="@/assets/img/partners/lunarcrush.png" />
         </center>
         <b-col />
       </b-col>

@@ -6,7 +6,15 @@
           <h3 class="binance-text px-4">
             Unizen Innovation Powered by:
           </h3>
-          <b-img class="px-4" fluid src="~assets/img/binance/bc-logo.png" />
+          <nuxt-img
+            class="px-4"
+            loading="lazy"
+            format="webp"
+            width="490"
+            height="60"
+            src="binance/binance-cloud.png"
+            alt="Binance Cloud"
+          />
         </b-col>
         <b-col sm />
       </b-row>

@@ -1,7 +1,7 @@
 <template>
   <b-container>
     <div class="py-12 mt-12">
-      <h1 class='mb-6'>
+      <h1 class="mb-6">
         Latest blog articles.
       </h1>
       <LoadingMessage v-if="status === STATUSES.IDLE || status === STATUSES.PENDING" />
