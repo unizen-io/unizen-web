@@ -16,28 +16,61 @@
         </b-row>
       </b-container>
       <div class="text-center">
-        <hooper :settings="cardsHooper">
-          <slide>
-            <b-img fluid src="~assets/img/partners/blockunify.png" />
-          </slide>
-          <slide>
-            <b-img fluid src="~assets/img/partners/jun.png" />
-          </slide>
-          <slide>
-            <b-img fluid src="~assets/img/partners/lunarcrush-text.png" />
-          </slide>
-          <slide>
-            <b-img fluid src="~assets/img/partners/betrust-text.png" />
-          </slide>
-          <hooper-navigation slot="hooper-addons" />
-        </hooper>
+        <Hooper :settings="cardsHooper">
+          <Slide>
+            <nuxt-img
+              loading="lazy"
+              format="webp"
+              width="337"
+              height="70"
+              src="partners/blockunify.png"
+              alt="Blockunify"
+            />
+          </Slide>
+          <Slide>
+            <nuxt-img
+              loading="lazy"
+              format="webp"
+              width="261"
+              height="70"
+              src="partners/jun.png"
+              alt="Jun"
+            />
+          </Slide>
+          <Slide>
+            <nuxt-img
+              loading="lazy"
+              format="webp"
+              width="240"
+              height="70"
+              src="partners/lunarcrush.png"
+              alt="Lunarcrush"
+            />
+          </Slide>
+          <Slide>
+            <nuxt-img
+              loading="lazy"
+              format="webp"
+              width="300"
+              height="70"
+              src="partners/betrust.png"
+              alt="Betrust"
+            />
+          </Slide>
+          <HooperNavigation slot="hooper-addons" />
+        </Hooper>
       </div>
     </b-col>
   </b-row>
 </template>
 
 <script>
-import { Hooper, Slide, Navigation as HooperNavigation } from 'hooper'
+// TODO: double-check better carousels
+import {
+  Hooper,
+  Slide,
+  Navigation as HooperNavigation
+} from 'hooper'
 import 'hooper/dist/hooper.css'
 
 export default {
@@ -46,6 +79,7 @@ export default {
     Slide,
     HooperNavigation
   },
+
   data () {
     return {
       cardsHooper: {

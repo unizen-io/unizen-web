@@ -7,12 +7,18 @@
         </h1>
         <div class="w-100" />
         <br><center>
-          <small class="text-muted">POWERED BY</small><br>
-          <b-img lazy class=" mb-12 pb-12" src="@/assets/img/partners/lunarcrush-text.png" />
+          <small class="text-muted">POWERED BY</small>
+          <nuxt-img
+            class="mb-12 pb-12"
+            format="webp"
+            width="240"
+            height="70"
+            src="partners/lunarcrush.png"
+            alt="lunarcrush"
+          />
         </center>
       </b-col>
     </b-row>
-
     <b-container>
       <b-row
         class="mb-12"
@@ -60,7 +66,7 @@
                 </p>
               </b-card>
               <br><br><br>
-              <NuxtLink to="/competition" class="introduction d-block d-sm-none" />
+              <nuxt-link to="/competition" class="introduction d-block d-sm-none" />
             </b-col>
           </b-row>
         </b-col>

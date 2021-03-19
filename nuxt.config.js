@@ -53,7 +53,8 @@ export default {
     }],
     '@nuxtjs/style-resources',
     '@nuxtjs/svg',
-    '@nuxtjs/tailwindcss'
+    '@nuxtjs/tailwindcss',
+    '@nuxt/image'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -101,5 +102,20 @@ export default {
     icons: {
       solid: ['faHome']
     }
+  },
+
+  image: {
+    screens: {
+      xm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      '2xl': 1536
+    }
+  },
+
+  serverMiddleware: {
+    '/': '~/api/swr.js',
+    '/_ipx': '~/api/ipx.js'
   }
 }
