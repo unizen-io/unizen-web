@@ -1,6 +1,6 @@
 <template>
-  <div class="mt-5 pt-5">
-    <h1 class="common-headline mx-auto mt-4">
+  <div class="mt-12 pt-12">
+    <h1 class="common-headline mx-auto mt-6">
       $ZCX Token.
     </h1>
     <TokenMetrics />
@@ -11,20 +11,26 @@
 </template>
 
 <script>
+import TokenAllocation from '@/components/ZcxToken/TokenAllocation'
+import TokenMetrics from '@/components/ZcxToken/TokenMetrics'
+import TokenRelease from '@/components/ZcxToken/TokenRelease'
+import TokenUtility from '@/components/ZcxToken/TokenUtility'
+import { createSEOTags } from '@/utils/helpers/seo'
+
 export default {
+  components: {
+    TokenAllocation,
+    TokenMetrics,
+    TokenRelease,
+    TokenUtility
+  },
+
   head () {
-    return {
-      title: 'unizen: Smart Exchange Ecosystem - ZCX Token',
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'The ZCX token, utility, tokenomics, release schedule, contract address' }
-      ]
-    }
+    return createSEOTags({
+      title: 'Unizen: Smart Exchange Ecosystem - ZCX Token',
+      description: 'The ZCX token, utility, tokenomics, release schedule, contract address',
+      slug: 'token'
+    })
   }
 }
 </script>
-
-<style lang="scss">
-
-</style>

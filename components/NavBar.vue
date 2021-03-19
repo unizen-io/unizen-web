@@ -7,13 +7,21 @@
       class="navbar-modified"
       :class="{ 'navbar--hidden': !showNavbar }"
     >
-      <b-navbar-brand to="/">
-        <img src="~/assets/img/mini_logo.png" fluid class="d-inline-block align-top" alt="Logo">
-
-        <b-img v-bind="mainProps" fluid class="d-sm-inline-block d-md-none align-top mt-2" src="~assets/img/navbar_logo_text_large.png" />
-        <b-img fluid class="d-md-inline-block d-sm-none d-none align-top mt-2" src="~assets/img/navbar_logo_text.png" />
-      </b-navbar-brand>
-
+      <nuxt-link
+        class="flex items-center py-1 mr-4 text-xl"
+        to="/"
+      >
+        <MiniLogoIcon
+          width="30"
+          height="30"
+        />
+        <!-- TODO: should use an SVG format -->
+        <img
+          width="120"
+          height="19"
+          src="~assets/img/navbar_logo_text.png"
+        >
+      </nuxt-link>
       <b-navbar-toggle target="nav-collapse" />
 
       <b-collapse id="nav-collapse" is-nav>
@@ -21,19 +29,19 @@
           <b-nav-item class="ml-auto" to="/">
             HOME
           </b-nav-item>
-          <b-nav-item class="ml-auto" to="/blog" exact>
+          <b-nav-item class="ml-auto" to="/blog">
             BLOG
           </b-nav-item>
           <b-nav-item class="ml-auto" href="#" disabled>
-            TRADE
+            <span class="text-gray-400">TRADE</span>
           </b-nav-item>
           <b-nav-item class="ml-auto" href="#" disabled>
-            ZENX LABS
+            <span class="text-gray-400">ZENX LABS</span>
           </b-nav-item>
           <b-nav-item class="ml-auto" href="#" disabled>
-            FLEXIBLE STAKING
+            <span class="text-gray-400">FLEXIBLE STAKING</span>
           </b-nav-item>
-          <b-nav-item class="ml-auto" href="/team">
+          <b-nav-item class="ml-auto" to="/team">
             TEAM
           </b-nav-item>
           <b-nav-item class="ml-auto" to="/contact">
@@ -46,12 +54,19 @@
 </template>
 
 <script>
+import MiniLogoIcon from '@/assets/img/icons/mini-logo.svg?inline'
+// import TextLogoIcon from '@/assets/img/icons/green-text-logo.svg?inline'
+
 export default {
+  components: {
+    MiniLogoIcon
+    // TextLogoIcon
+  },
+
   data () {
     return {
       showNavbar: true,
-      lastScrollPosition: 0,
-      mainProps: { width: 110 }
+      lastScrollPosition: 0
     }
   },
   mounted () {
@@ -79,26 +94,14 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
-.logo-text {
-    color: $dark !important;
-    font-size: 1.8rem;
-    font-family: Arista;
-    // text-shadow: 0px 2px 27px rgba(0, 245, 163, 0.397);
-}
-
 .navbar-modified {
-    background: rgba(219, 219, 219, 0.185) !important;
-    backdrop-filter: blur(15px);
-
-    // background: rgba(219, 219, 219, 0.185) !important;
-    // backdrop-filter: blur(15px) !important;
-    // box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 20px 0px !important;
-    box-shadow: 0 0 30px 0 rgba(196, 202, 214, 0.5) !important;
-    min-height: 5rem;
-    z-index: 99999 !important;
-    transform: translate3d(0, 0, 0);
-    transition: 0.3s all ease-out;
+  background: rgba(219, 219, 219, 0.185) !important;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 30px 0 rgba(196, 202, 214, 0.5) !important;
+  min-height: 5rem;
+  z-index: 99999 !important;
+  transform: translate3d(0, 0, 0);
+  transition: 0.3s all ease-out;
 }
 
 .navbar.navbar--hidden {
@@ -111,15 +114,16 @@ export default {
   font-size: 0.9em;
   font-weight: bold;
   color: $dark;
-  -o-transition:.5s;
-  -ms-transition:.5s;
-  -moz-transition:.5s;
-  -webkit-transition:.5s;
+  -o-transition: .5s;
+  -ms-transition: .5s;
+  -moz-transition: .5s;
+  -webkit-transition: .5s;
   /* ...and now for the proper property */
-  transition:.5s;
-} a:hover {
-    color: $primary !important;
-    text-shadow: 0px 2px 27px rgba(0, 245, 163, 0.397);
+  transition: .5s;
 }
 
+a:hover {
+  color: $primary !important;
+  text-shadow: 0px 2px 27px rgba(0, 245, 163, 0.397);
+}
 </style>

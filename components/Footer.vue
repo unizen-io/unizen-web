@@ -3,7 +3,7 @@
     <b-row class="footer">
       <b-container>
         <b-row
-          class="py-5 px-5"
+          class="py-12 px-12"
           cols="2"
           cols-md="4"
           cols-sm="4"
@@ -12,23 +12,23 @@
             <h2 class="footer-text">
               General
             </h2>
-            <NuxtLink to="/blog" class="footer-text">
+            <nuxt-link to="/blog" class="footer-text">
               Blog
-            </NuxtLink><br>
-            <NuxtLink to="/team" class="footer-text">
+            </nuxt-link><br>
+            <nuxt-link to="/team" class="footer-text">
               Team
-            </NuxtLink><br>
-            <NuxtLink to="/token" class="footer-text">
+            </nuxt-link><br>
+            <nuxt-link to="/token" class="footer-text">
               ZCX Token
-            </NuxtLink><br>
-            <NuxtLink to="/wenzen" class="footer-text">
+            </nuxt-link><br>
+            <nuxt-link to="/wenzen" class="footer-text">
               Tournament of Altcoins
-            </NuxtLink><br>
+            </nuxt-link><br>
             <a class="footer-text footer-disabled">CoinMarketCap</a><br>
             <a class="footer-text footer-disabled">CoinGecko</a><br>
-            <NuxtLink to="/contact" class="footer-text">
+            <nuxt-link to="/contact" class="footer-text">
               Contact Us
-            </NuxtLink>
+            </nuxt-link>
           </b-col>
           <b-col>
             <h2 class="footer-text">
@@ -36,12 +36,12 @@
             </h2>
             <a class="footer-text footer-disabled">
               Listing Application</a><br>
-            <NuxtLink to="/contact" class="footer-text">
+            <nuxt-link to="/contact" class="footer-text">
               Business Contact
-            </NuxtLink><br>
-            <NuxtLink to="/contact" class="footer-text">
+            </nuxt-link><br>
+            <nuxt-link to="/contact" class="footer-text">
               Partnership Inquiry
-            </NuxtLink>
+            </nuxt-link>
           </b-col>
           <b-col>
             <h2 class="footer-text">
@@ -62,14 +62,15 @@
               <li><a href="https://www.linkedin.com/company/unizen-io" class="icon-linkedin">LinkedIn</a></li>
               <li><a href="https://twitter.com/unizen_io" class="icon-twitter">Twitter</a></li>
               <li><a href="https://github.com/unizen-io" class="icon-github">GitHub</a></li>
+              <li><a href="https://unizen-io.medium.com/" class="icon-medium">Medium</a></li>
             </ul>
           </b-col>
         </b-row>
       </b-container>
       <div />
     </b-row>
-    <b-row style="color: #f5f5f5;" class="bottom text-center pl-5 text-center" align-v="center">
-      © 2021 - 2022 unizen.io. All rights reserved.
+    <b-row style="color: #f5f5f5;" class="bottom text-center pl-12 text-center" align-v="center">
+      © 2021 - 2022 Unizen.io. All rights reserved.
     </b-row>
   </div>
 </template>
@@ -82,29 +83,29 @@ export default {
 
 <style lang="scss">
 .footer-disabled {
-   opacity: 0.4;
-   pointer-events: none;
+  opacity: 0.4;
+  pointer-events: none;
 }
 
 h2.footer-text {
-    color: $light !important;
-    font-size: 1.4em;
-    margin-top: 20px;
+  color: $light !important;
+  font-size: 1.4em;
+  margin-top: 20px;
 }
 
 a.footer-text {
-    color: $primary !important;
-    cursor: pointer;
+  color: $primary !important;
+  cursor: pointer;
 }
 
 .bottom {
-    background-color: #29404e;
-    height: 4rem !important;
+  background-color: #29404e;
+  height: 4rem !important;
 }
 
 .footer {
-    min-height: 18rem;
-    background-color: $dark;
+  min-height: 18rem;
+  background-color: $dark;
 }
 
 .social-networks {
@@ -175,17 +176,24 @@ a.footer-text {
     animation: bounce 1s;
   }
 
-  $networks: linkedin '\eac9' #0077b5, cloneicon '\f24d' #000, twitter '\ea96' #00b0ed, github '\eab0' #4183c4, instagram '\e604' #3f729b, vimeo '\ea9c' #1ab7ea, telegram '\ea95' #0088cc, twitch '\ea9b' #6441a5, pinterest '\e605' #cc2127;
+  $networks: linkedin '\eac9' #0077b5, cloneicon '\f24d' #000, twitter '\ea96' #00b0ed, github '\eab0' #4183c4, instagram '\e604' #3f729b, vimeo '\ea9c' #1ab7ea, telegram '\ea95' #0088cc, twitch '\ea9b' #6441a5, pinterest '\e605' #cc2127, medium '\f23a' #ffbd17;
 
   @each $network in $networks {
-     .icon-#{nth($network, 1)} {
-       &:after {
-         content: '#{nth($network, 2)}';
+    .icon-#{nth($network, 1)} {
+      &:after {
+        content: '#{nth($network, 2)}';
       }
 
       &:hover:before, &:focus:before {
         background: nth($network, 3);
       }
+    }
+  }
+
+  .icon-medium {
+    &:after {
+      font-family: 'FontAwesome' !important;
+      font-weight: 400 !important;
     }
   }
 }
@@ -210,5 +218,4 @@ a.footer-text {
     transform: translate3d(0,-2px,0);
   }
 }
-
 </style>

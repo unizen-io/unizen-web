@@ -27,10 +27,10 @@
               />
             </svg>
             <br>
-            <h3 class="success">
+            <h3 class="text-3xl success">
               Thank you!
             </h3>
-            <h5>
+            <h5 class="text-xl">
               Your KYC application has been submitted for review by the Fractal Team. Please check your email for further steps.
               <br><br>
               Warmest regards,<br>
@@ -57,17 +57,17 @@ export default {
 <style lang="scss">
 
 .bg-img {
-    background-image: url(../assets/img/kyc.jpg);
-    background-position: center center;
-    background-repeat:  no-repeat;
-    background-attachment: fixed;
-    background-size:  cover;
-    height: 100% !important;
+  background-image: url(@/assets/img/kyc.jpg);
+  background-position: center center;
+  background-repeat:  no-repeat;
+  background-attachment: fixed;
+  background-size:  cover;
+  height: 100% !important;
 }
 
 .kyc {
-    text-align: center;
-    min-width: 350px !important;
+  text-align: center;
+  min-width: 350px !important;
 }
 
 svg {
@@ -130,5 +130,4 @@ svg {
     stroke-dashoffset: 900;
   }
 }
-
 </style>

@@ -1,37 +1,32 @@
-export default {
-  // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
-  ssr: false,
-  target: 'static',
+import { createSEOTags } from './utils/helpers/seo'
 
+export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
-  head: {
-    title: 'unizen: Smart Exchange Ecosystem - Simple and Secure Cryptocurrency exchange with Enormous Liquidity',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: 'A new class of digital asset exchange that provides global traders and retail investors with access to exciting blockchain projects through the combined functionality of a secure CEX, DEX, AI-driven social sentiment indicators and Binance-level liquidity: all in one seamless user experience. Buy Bitcoin, Ethereum, Polkadot or any other Altcoin with a Zen State of Mind' }
-    ],
-    link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
-    ]
-  },
+  head: createSEOTags({
+    title: 'Unizen: Smart Exchange Ecosystem - Simple and Secure Cryptocurrency exchange with Enormous Liquidity',
+    description: 'A new class of digital asset exchange that provides global traders and retail investors with access to exciting blockchain projects through the combined functionality of a secure CEX, DEX, AI-driven social sentiment indicators and Binance-level liquidity: all in one seamless user experience. Buy Bitcoin, Ethereum, Polkadot or any other Altcoin with a Zen State of Mind',
+    viewport: 'width=device-width, initial-scale=1',
+    charset: 'utf-8'
+  }),
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
     '~assets/scss/colors.scss'
   ],
-  generate: {
-    routes: ['/articles/2021-01-28-tournamentofalts', '/articles/2021-01-16-zen-team-participates-in-ama-with-spectre-group', '/articles/2020-12-30-centralized-liquidity-module-is-hosted-on-binance-cloud-infrastructure', '/articles/2020-12-29-zen-exchange', '/articles/2020-12-30-the-genesis-of-zen']
-  },
+
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     {
       src: './plugins/GoogleAnalytics.js',
       mode: 'client'
     },
-    { src: '~/plugins/vue-confetti.js', mode: 'client' }
+    {
+      src: '~/plugins/vue-confetti.js',
+      mode: 'client'
+    }
   ],
 
+  // TODO: could be better with explicit component registration
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
 
@@ -55,7 +50,11 @@ export default {
         icons: ['faLightbulb']
       }
       ]
-    }]
+    }],
+    '@nuxtjs/style-resources',
+    '@nuxtjs/svg',
+    '@nuxtjs/tailwindcss',
+    '@nuxt/image'
   ],
 
   // Modules (https://go.nuxtjs.dev/config-modules)
@@ -67,11 +66,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa',
-    // https://go.nuxtjs.dev/content
-    '@nuxt/content',
-    '@nuxtjs/moment',
-    '@nuxtjs/style-resources'
+    '@nuxtjs/pwa'
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -86,16 +81,13 @@ export default {
     hostname: 'https://unizen.io',
     gzip: true,
     exclude: [
-      '/secret',
-      '/admin/**'
+      '/secret'
     ]
   },
 
-  // Content module configuration (https://go.nuxtjs.dev/config-content)
-  content: {},
-
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
+    analyze: true
   },
 
   styleResources: {
@@ -110,5 +102,20 @@ export default {
     icons: {
       solid: ['faHome']
     }
+  },
+
+  image: {
+    screens: {
+      xm: 640,
+      md: 768,
+      lg: 1024,
+      xl: 1280,
+      '2xl': 1536
+    }
+  },
+
+  serverMiddleware: {
+    '/': '~/api/swr.js',
+    '/_ipx': '~/api/ipx.js'
   }
 }

@@ -1,16 +1,24 @@
 <template>
-  <b-row class="binance py-5 mb-5">
+  <b-row class="binance py-12 mb-12">
     <b-container>
-      <b-row class="pt-5">
+      <b-row class="pt-12">
         <b-col sm>
-          <h3 class="binance-text px-3">
+          <h3 class="binance-text px-4">
             Unizen Innovation Powered by:
           </h3>
-          <b-img class="px-3" fluid src="~assets/img/binance/bc-logo.png" />
+          <nuxt-img
+            class="px-4"
+            loading="lazy"
+            format="webp"
+            width="490"
+            height="60"
+            src="binance/binance-cloud.png"
+            alt="Binance Cloud"
+          />
         </b-col>
         <b-col sm />
       </b-row>
-      <b-row class="pt-5">
+      <b-row class="pt-12">
         <b-col />
         <b-col cols="8">
           <p class="binance-text">
@@ -19,14 +27,14 @@
         </b-col>
         <b-col />
       </b-row>
-      <b-row class="pb-5 pt-2">
+      <b-row class="pb-12 pt-2">
         <b-col sm>
-          <b-card class="binance-card mt-3">
+          <b-card class="binance-card mt-4">
             <div class="performance text-center" />
-            <p class="binance-subtitle">
+            <p class="binance-subtitle mb-4">
               <b>Performance</b>
             </p>
-            <p class="binance-subtitle-small">
+            <p class="binance-subtitle-small mb-4">
               Runs smooth when it matters the most
             </p>
             <p class="binance-text-small">
@@ -35,12 +43,12 @@
           </b-card>
         </b-col>
         <b-col class="center" sm>
-          <b-card class="binance-card mt-3">
+          <b-card class="binance-card mt-4">
             <div class="liquidity" />
-            <p class="binance-subtitle">
+            <p class="binance-subtitle mb-4">
               <b>High Liquidity</b>
             </p>
-            <p class="binance-subtitle-small">
+            <p class="binance-subtitle-small mb-4">
               Absorb orders with large transaction volume
             </p>
             <p class="binance-text-small">
@@ -50,12 +58,12 @@
         </b-col>
 
         <b-col sm>
-          <b-card class="binance-card mt-3">
+          <b-card class="binance-card mt-4">
             <div class="security" />
-            <p class="binance-subtitle">
+            <p class="binance-subtitle mb-4">
               <b>Binance Security</b>
             </p>
-            <p class="binance-subtitle-small">
+            <p class="binance-subtitle-small mb-4">
               Reliable custody & trading
             </p>
             <p class="binance-text-small">
@@ -76,11 +84,11 @@ export default {
 
 <style lang="scss">
 .binance {
-    background: #EFEFEF;
+  background: #EFEFEF;
 }
 
 .binance-card {
-    min-height: 26rem !important;
+  min-height: 26rem !important;
 }
 
 a.binance {
@@ -104,70 +112,70 @@ a.binance:after {
 }
 
 h3.binance-text {
-    color: $dark !important;
-    text-align: left;
-    font-family: 'D DIN';
-    font-size: 1em !important;
-    padding: 0px;
+  color: $dark !important;
+  text-align: left;
+  font-family: 'D DIN';
+  font-size: 1em !important;
+  padding: 0px;
 }
 
 p.binance-text {
-    font-size: 1.2em !important;
-    padding: 0px;
-    color: $dark;
-    text-align: center;
+  font-size: 1.2em !important;
+  padding: 0px;
+  color: $dark;
+  text-align: center;
 }
 
 p.binance-subtitle {
-    font-size: 1.3em !important;
-    padding-top: 30px;
-    color: $dark;
-    text-align: center;
+  font-size: 1.3em !important;
+  padding-top: 30px;
+  color: $dark;
+  text-align: center;
 }
 
 p.binance-text-small {
-    font-size: 1em !important;
-    color: $dark;
-    text-align: center;
+  font-size: 1em !important;
+  color: $dark;
+  text-align: center;
 }
 
 p.binance-subtitle-small {
-    font-size: 0.9em !important;
-    margin-top: -20px;
-    color: $dark;
-    text-align: center;
+  font-size: 0.9em !important;
+  margin-top: -20px;
+  color: $dark;
+  text-align: center;
 }
 
 .liquidity {
-    background-image: url('../../assets/img/binance/liquidity.png');
-    background-size: cover;
-    height: 150px;
-    width: 150px;
-    text-align: center;
-    top: 0;
-    left: 0;
-    margin: auto;
+  background-image: url('@/assets/img/binance/liquidity.png');
+  background-size: cover;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  top: 0;
+  left: 0;
+  margin: auto;
 }
 
 .performance {
-    background-image: url('../../assets/img/binance/performance.png');
-    background-size: cover;
-    height: 150px;
-    width: 150px;
-    text-align: center;
-    top: 0;
-    left: 0;
-    margin: auto;
+  background-image: url('@/assets/img/binance/performance.png');
+  background-size: cover;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  top: 0;
+  left: 0;
+  margin: auto;
 }
 
 .security {
-    background-image: url('../../assets/img/binance/security.png');
-    background-size: cover;
-    height: 150px;
-    width: 150px;
-    text-align: center;
-    top: 0;
-    left: 0;
-    margin: auto;
+  background-image: url('@/assets/img/binance/security.png');
+  background-size: cover;
+  height: 150px;
+  width: 150px;
+  text-align: center;
+  top: 0;
+  left: 0;
+  margin: auto;
 }
 </style>

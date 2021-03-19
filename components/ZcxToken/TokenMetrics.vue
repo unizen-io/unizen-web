@@ -1,13 +1,13 @@
 <template>
   <b-container>
     <b-row
-      class="pb-5"
+      class="pb-12"
       cols="1"
       cols-sm="1"
       cols-md="1"
       cols-lg="2"
     >
-      <b-col style="padding: 30px !important;">
+      <b-col class="p-7">
         <p class="zen-text">
           ZCX is an exchange-based utility token, created on the Ethereum blockchain as an ERC-20 token.<br><br>
           Unizen Exchange operates on top of Binance Cloud’s trading and security infrastructure. The functionality of ZCX is analogous to that of BNB on Binance.<br><br>
@@ -31,33 +31,41 @@
             </ul> -->
         </p>
       </b-col>
-      <b-col style="padding: 30px !important;" class="order-lg-last order-first pb-5">
+      <b-col class="order-first lg:order-last p-7">
         <b-row>
           <b-col>
-            <small class="text-muted">TICKER</small><br><h2 class="metrics gradient-text">
+            <small class="text-muted">TICKER</small>
+            <br>
+            <h2 class="text-3xl font-bold gradient-text">
               ZCX
             </h2>
           </b-col>
           <b-col>
-            <small class="text-muted">TOKEN TYPE</small><br><h2 class="metrics gradient-text">
+            <small class="text-muted">TOKEN TYPE</small>
+            <br>
+            <h2 class="text-3xl font-bold gradient-text">
               ERC-20
             </h2>
           </b-col>
           <div class="w-100" />
           <b-col>
-            <small class="text-muted">CIRCULATING SUPPLY</small><br><h2 class="metrics gradient-text">
+            <small class="text-muted">CIRCULATING SUPPLY</small>
+            <br>
+            <h2 class="text-3xl font-bold gradient-text">
               33.75m
             </h2>
           </b-col>
           <b-col>
-            <small class="text-muted">TOTAL SUPPLY</small><br><h2 class="metrics gradient-text">
+            <small class="text-muted">TOTAL SUPPLY</small>
+            <br>
+            <h2 class="text-3xl font-bold gradient-text">
               1b
             </h2>
           </b-col>
           <div class="w-100" />
           <b-col>
             <br><small class="text-muted">CONTRACT ADDRESS</small><br>
-            <h5 class="address">
+            <h5 class="text-xl">
               {{ contract }} <a class="copy-icon" @click.stop.prevent="copyContract">❐ </a>
               <a href="https://etherscan.io/token/0xc52c326331e9ce41f04484d3b5e5648158028804" class="copy-icon">⤤</a>
             </h5>
@@ -71,7 +79,6 @@
 
 <script>
 export default {
-
   data () {
     return {
       contract: '0xc52c326331e9ce41f04484d3b5e5648158028804'
@@ -96,30 +103,39 @@ export default {
       window.getSelection().removeAllRanges()
     }
   }
-
 }
 </script>
 
 <style lang="scss">
-
-h5.address {
-  font-size: 1.3rem;
-}
-
 a.copy-icon {
-    background: none !important;
-    text-decoration: none;
-    color: #8B9298;
-    font-size: 18px;
+  background: none !important;
+  text-decoration: none;
+  color: #8B9298;
+  font-size: 18px;
 }
 
 a.copy-icon:hover {
-    cursor: pointer;
-    color: $primary !important;
-    text-decoration: none;
+  cursor: pointer;
+  color: $primary !important;
+  text-decoration: none;
 }
 
-h2.metrics {
-    font-weight: bold;
+.gradient-text {
+  /* Fallback: Set a background color. */
+  background-color: $primary;
+
+  /* Create the gradient. */
+  background-image: linear-gradient(to right bottom, #00afae, #00b6b0, #00bdb1, #00c3b1, #00cab1, #00d0b1, #00d6b0, #00dcaf, #00e2ad, #00e9ab, #00efa8, #00f5a4);
+  /* Set the background size and repeat properties. */
+  background-size: 100%;
+  background-repeat: repeat;
+
+  // TODO: autoprefixer automatically set-up by Nuxt
+  /* Use the text as a mask for the background. */
+  /* This will show the gradient as a text color rather than element bg. */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-background-clip: text;
+  -moz-text-fill-color: transparent;
 }
 </style>

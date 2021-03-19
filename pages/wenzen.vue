@@ -1,26 +1,32 @@
 <template>
-  <div class="py-5 my-5">
+  <div class="py-12 my-12">
     <b-row>
       <b-col>
-        <h1 class="common-headline mx-auto mt-4">
+        <h1 class="common-headline mx-auto mt-6">
           The Tournament of Altcoins.
         </h1>
         <div class="w-100" />
         <br><center>
-          <small class="text-muted">POWERED BY</small><br>
-          <b-img lazy class=" mb-5 pb-5" src="../assets/img/partners/lunarcrush-text.png" />
+          <small class="text-muted">POWERED BY</small>
+          <nuxt-img
+            class="mb-12 pb-12"
+            format="webp"
+            width="240"
+            height="70"
+            src="partners/lunarcrush.png"
+            alt="lunarcrush"
+          />
         </center>
       </b-col>
     </b-row>
-
     <b-container>
       <b-row
-        class="mb-5"
+        class="mb-12"
         cols="1"
         cols-md="2"
         cols-sm="1"
       >
-        <b-col class="pt-3">
+        <b-col class="pt-4">
           <p class="zen-text">
             At <b>Unizen</b>, we want to make <u>all</u> digital assets available for our users in an easy-to-use, secure and highly compliant manner. In order to get the latest and greatest at the top of the queue, we've spear headed an initiative called <code>#TournamentofAlts</code>. <br><br>This is a <b>Unizen</b> hosted competition where the winner gets a free listing on our CEX module with Binance-shared liquidity and top tier market making support. <br><br>The semi-finals will last for <u>24 hours</u> and the final round will run for <u>48 hours</u>. The Altcoin, in the finals, with the highest <b>UNIZEN Smart Score™</b> when the timer runs out - will win the free listing.<br><br>
             The respective communities of each finalist can directly influence the outcome of the competition by supporting their favorite project with <i id="popover-target-1">positive sentiment</i> and <i id="popover-target-2">factually driven marketing</i> on <b>Twitter</b>. <br><br>We're leveraging the smart data feeds of our partner <b>LunarCrush</b> to monitor community sentiment over any digital asset on <b>Twitter</b>.
@@ -35,9 +41,9 @@
             A person engaged in advertising. The shill attempts to spread buzz by personally endorsing the product in public forums.
           </b-popover>
           <br><br>
-          <NuxtLink to="/competition" class="introduction d-none d-sm-block">
+          <nuxt-link to="/competition" class="introduction d-none d-sm-block">
             Competition
-          </NuxtLink>
+          </nuxt-link>
           <br>
           <div class="w-100" />
         </b-col>
@@ -60,7 +66,7 @@
                 </p>
               </b-card>
               <br><br><br>
-              <NuxtLink to="/competition" class="introduction d-block d-sm-none" />
+              <nuxt-link to="/competition" class="introduction d-block d-sm-none" />
             </b-col>
           </b-row>
         </b-col>
@@ -70,27 +76,26 @@
 </template>
 
 <script>
+import { createSEOTags } from '@/utils/helpers/seo'
+
 export default {
   head () {
-    return {
-      title: 'unizen: Smart Exchange Ecosystem - Wen Zen',
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'Listing competition rules and unique social sentiment indexes' }
-      ]
-    }
+    return createSEOTags({
+      title: 'Unizen: Smart Exchange Ecosystem - Wen Zen',
+      decsription: 'Listing competition rules and unique social sentiment indexes',
+      slug: 'wenzen'
+    })
   }
 }
 </script>
 
 <style lang="scss" scoped>
 h1.common-headline {
-    margin-bottom: 0 !important;
-    padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
 }
 
 .data-descriptor {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 </style>

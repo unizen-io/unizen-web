@@ -1,9 +1,9 @@
 <template>
-  <div class="mb-5">
+  <div class="mb-12">
     <b-container>
       <b-card text-variant="white" :style="'background-image: linear-gradient(to right,' + firstCompetitor.color + ',' + secondCompetitor.color + ') !important;'">
         <center>
-          <h3>
+          <h3 class="text-3xl">
             <b-row>
               <b-col>
                 <b>{{ firstCompetitor.ZSS.score }}</b>
@@ -35,7 +35,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss" scoped>
-
-</style>

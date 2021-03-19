@@ -1,17 +1,29 @@
 <template>
-  <div class="pt-3 mt-5">
+  <div class="pt-4 mt-12">
     <center>
-      <div class="mt-5 pt-5">
-        <h5 v-if="competitionResults">
+      <div class="mt-12 pt-12">
+        <h5
+          v-if="competitionResults"
+          class="text-xl"
+        >
           Competition Complete
         </h5>
-        <h5 v-if="competitionRunning">
+        <h5
+          v-if="competitionRunning"
+          class="text-xl"
+        >
           Competition Running
         </h5>
-        <h5 v-if="competitionEnded && !competitionResults">
+        <h5
+          v-if="competitionEnded && !competitionResults"
+          class="text-xl"
+        >
           ☕ Calculating Final Results (Shouldn't take more than 10 minutes)...
         </h5>
-        <h5 v-if="!competitionStarted">
+        <h5
+          v-if="!competitionStarted"
+          class="text-xl"
+        >
           Competition hasn't started yet
         </h5>
       </div>
@@ -30,7 +42,7 @@
       <b-row style="background: #EFEFEF;">
         <b-container>
           <b-row
-            class="mt-5"
+            class="mt-12"
             cols="1"
             cols-md="2"
             cols-sm="1"
@@ -86,9 +98,25 @@
 </template>
 
 <script>
-import ENV from '../components/env'
+import CompetitionHeader from '@/components/competition/CompetitionHeader'
+import MetricsChart from '@/components/competition/MetricsChart'
+import ZsiMetrics from '@/components/competition/ZsiMetrics'
+import ZssChart from '@/components/competition/ZssChart'
+import ZssMetrics from '@/components/competition/ZssMetrics'
+import ZtiMetrics from '@/components/competition/ZtiMetrics'
+import { createSEOTags } from '@/utils/helpers/seo'
+import { LC_API_KEY } from '@/config'
 
 export default {
+  components: {
+    CompetitionHeader,
+    MetricsChart,
+    ZsiMetrics,
+    ZssChart,
+    ZssMetrics,
+    ZtiMetrics
+  },
+
   data () {
     return {
       competitionStartDate: 1612378800, // Monday 25 January 2021 09:37:26
@@ -184,7 +212,7 @@ export default {
     }
   },
   created () {
-    this.LcApiKey = ENV.LcApiKey
+    this.LcApiKey = LC_API_KEY
     // if (this.competitionStarted && !this.competitionEnded) {
     this.initCompetition(this.FirstCompetitor, this.SecondCompetitor)
     // }
@@ -348,48 +376,44 @@ export default {
     }
   },
   head () {
-    return {
-      title: 'unizen: Smart Exchange Ecosystem - Competition ' + this.FirstCompetitor.asset + ' vs ' + this.SecondCompetitor.asset,
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'Listing competition between ' + this.FirstCompetitor.asset + ' and ' + this.SecondCompetitor.asset }
-      ]
-    }
+    return createSEOTags({
+      title: `Unizen: Smart Exchange Ecosystem - Competition ${this.FirstCompetitor.asset} vs ${this.SecondCompetitor.asset}`,
+      description: `Listing competition between ${this.FirstCompetitor.asset} and ${this.SecondCompetitor.asset}`,
+      slug: 'competition'
+    })
   }
 }
 </script>
 
 <style lang="scss">
 h1.competition-headline {
-    text-align: center;
-    color: $dark !important;
-    font-size: 7rem !important;
+  text-align: center;
+  color: $dark !important;
+  font-size: 7rem !important;
 }
 
 h1.competition-headline-light {
-    font-family: D DIN;
-    text-align: center;
-    margin-bottom: -25px;
-    margin-top: 25px;
-    color: $light !important;
-    font-size: 4rem !important;
+  font-family: D DIN;
+  text-align: center;
+  margin-bottom: -25px;
+  margin-top: 25px;
+  color: $light !important;
+  font-size: 4rem !important;
 }
 
 p.competition-text {
-    text-align: center;
-    font-size: 1.2em !important;
-    padding: 30px;
-    color: $light;
+  text-align: center;
+  font-size: 1.2em !important;
+  padding: 30px;
+  color: $light;
 }
 
 .small-chart-text {
-    margin-top: -230px !important;
-    margin-bottom: 80px;
+  margin-top: -230px !important;
+  margin-bottom: 80px;
 }
 
 h4.competition-sub {
-    text-align: center;
+  text-align: center;
 }
-
 </style>

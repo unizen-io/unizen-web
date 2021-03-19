@@ -1,7 +1,13 @@
 <template>
   <div>
-    <div class="mt-5 pb-5 d-block d-sm-none">
-      <b-img lazy fluid src="../../assets/img/iMac-mobile.png" />
+    <div class="mt-12 pb-12 d-block d-sm-none">
+      <nuxt-picture
+        loading="lazy"
+        width="1130"
+        height="1080"
+        src="iMac-potrait.png"
+        alt="iMac"
+      />
       <b-card class="text-box-mobile">
         <b-row cols="1">
           <b-col>
@@ -27,9 +33,20 @@
       </b-card>
     </div>
     <div class="zen d-none d-sm-block">
-      <b-row class="zen pt-5 macbook mx-auto" aligh-h="center">
+      <b-row
+        style="max-width: 1920px;"
+        class="zen pt-12 mx-auto relative"
+        aligh-h="center">
+        <nuxt-picture
+          loading="lazy"
+          class="macbook"
+          width="1920"
+          height="1080"
+          src="iMac-landscape.png"
+          alt="iMac"
+        />
         <b-col sm>
-          <b-card class="text-box mt-5">
+          <b-card class="text-box mt-12">
             <b-card-body>
               <b-row>
                 <b-col cols="4">
@@ -60,8 +77,6 @@
         <b-col class="d-none d-lg-block" />
         <b-col class="d-none d-lg-block" />
       </b-row>
-
-      <!-- <div class="float-right macbook" /> -->
     </div>
   </div>
 </template>
@@ -74,9 +89,8 @@ export default {
 
 <style lang="scss">
 .zen {
-    // background: rgb(250, 250, 250);
-    height: 1080px;
-    margin-right: -430px;
+  height: 1080px;
+  margin-right: -430px;
 }
 
 .zen-item {
@@ -99,35 +113,36 @@ a.zen:after {
 }
 
 h3.zen-text {
-    color: $dark !important;
-    text-align: left;
-    font-family: 'D DIN';
-    font-size: 1.4em !important;
-    padding: 30px;
+  color: $dark !important;
+  text-align: left;
+  font-family: 'D DIN';
+  font-size: 1.4em !important;
+  padding: 30px;
 }
 
 p.zen-text {
-    font-size: 1.2em !important;
-    color: $dark;
+  font-size: 1.2em !important;
+  color: $dark;
 }
 
 p.zen-subtitle {
-    font-size: 1.2em !important;
-    color: $dark;
-    text-align: center;
+  font-size: 1.2em !important;
+  color: $dark;
+  text-align: center;
 }
 
 p.zen-text-small {
-    font-size: 1em !important;
-    padding: 0px 30px 30px 30px;
-    color: $dark;
-    text-align: center;
+  font-size: 1em !important;
+  padding: 0px 30px 30px 30px;
+  color: $dark;
+  text-align: center;
 }
 
-.macbook {
-    background-image: url('../../assets/img/iMac.png');
-    background-size: cover;
-    max-width: 1920px;
+.macbook > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right:0;
 }
 
 .text-box {
@@ -150,5 +165,4 @@ p.zen-text-small {
   -webkit-animation:fadeInUp 3s; /* Safari & Chrome */
   animation:fadeInUp 3s;
 }
-
 </style>

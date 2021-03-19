@@ -6,41 +6,38 @@
       <Zen />
       <PoweredByBinance />
       <Cta />
-      <TopArticles
-        :articles="articles"
-      />
+      <TopArticles />
       <PartnerCarousel />
-
-      <!-- <b-overlay :show="show" opacity="1" z-index="100000" no-wrap /> -->
     </div>
   </main>
 </template>
 
 <script>
+import Header from '@/components/home/Header'
+import Intro from '@/components/home/Intro'
+import Zen from '@/components/home/Zen'
+import PoweredByBinance from '@/components/home/PoweredByBinance'
+import Cta from '@/components/home/Cta'
+import TopArticles from '@/components/home/TopArticles'
+import PartnerCarousel from '@/components/home/PartnerCarousel'
+import { createSEOTags } from '@/utils/helpers/seo'
 
 export default {
-
-  async fetch () {
-    this.articles = await this.$content('articles').fetch()
-  },
-  data () {
-    return {
-      show: true,
-      articles: []
-    }
+  components: {
+    Header,
+    Intro,
+    Zen,
+    PoweredByBinance,
+    Cta,
+    TopArticles,
+    PartnerCarousel
   },
 
   head () {
-    return {
-      title: 'unizen: Smart Exchange Ecosystem',
-      meta: [
-        { charset: 'utf-8' },
-        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-        { hid: 'description', name: 'description', content: 'Unizen is the easy, fast and secure way to buy any available digital asset' }
-      ],
-      script: [{ src: 'https://identity.netlify.com/v1/netlify-identity-widget.js' }
-      ]
-    }
+    return createSEOTags({
+      title: 'Unizen: Smart Exchange Ecosystem 123',
+      description: 'Unizen is the easy, fast and secure way to buy any available digital asset'
+    })
   }
 }
 </script>
@@ -55,5 +52,4 @@ main {
   left: 0;
   top: 0;
 }
-
 </style>
