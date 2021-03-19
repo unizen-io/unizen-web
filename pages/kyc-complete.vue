@@ -55,7 +55,6 @@ export default {
 </script>
 
 <style lang="scss">
-
 .bg-img {
   background-image: url(@/assets/img/kyc.jpg);
   background-position: center center;
