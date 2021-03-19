@@ -18,16 +18,44 @@
       <div class="text-center">
         <Hooper :settings="cardsHooper">
           <Slide>
-            <b-img fluid src="~assets/img/partners/blockunify.png" />
+            <nuxt-img
+              loading="lazy"
+              format="webp"
+              width="337"
+              height="70"
+              src="partners/blockunify.png"
+              alt="Blockunify"
+            />
           </Slide>
           <Slide>
-            <b-img fluid src="~assets/img/partners/jun.png" />
+            <nuxt-img
+              loading="lazy"
+              format="webp"
+              width="261"
+              height="70"
+              src="partners/jun.png"
+              alt="Jun"
+            />
           </Slide>
           <Slide>
-            <b-img fluid src="~assets/img/partners/lunarcrush.png" />
+            <nuxt-img
+              loading="lazy"
+              format="webp"
+              width="240"
+              height="70"
+              src="partners/lunarcrush.png"
+              alt="Lunarcrush"
+            />
           </Slide>
           <Slide>
-            <b-img fluid src="~assets/img/partners/betrust-text.png" />
+            <nuxt-img
+              loading="lazy"
+              format="webp"
+              width="300"
+              height="70"
+              src="partners/betrust.png"
+              alt="Betrust"
+            />
           </Slide>
           <HooperNavigation slot="hooper-addons" />
         </Hooper>
