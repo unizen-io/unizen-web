@@ -117,9 +117,7 @@ export default {
   },
 
   serverMiddleware: {
-    // ray test touch <
-    // '/': '~/api/swr.js',
-    // ray test touch >
+    '/': '~/api/swr.js',
     '/_ipx': '~/api/ipx.js'
   }
 }
