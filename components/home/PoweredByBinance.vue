@@ -12,7 +12,7 @@
             format="webp"
             width="490"
             height="60"
-            src="binance/binance-cloud.png"
+            src="/img/binance/binance-cloud.png"
             alt="Binance Cloud"
           />
         </b-col>
@@ -147,7 +147,7 @@ p.binance-subtitle-small {
 }
 
 .liquidity {
-  background-image: url('@/assets/img/binance/liquidity.png');
+  background-image: url('/img/binance/liquidity.png');
   background-size: cover;
   height: 150px;
   width: 150px;
@@ -158,7 +158,7 @@ p.binance-subtitle-small {
 }
 
 .performance {
-  background-image: url('@/assets/img/binance/performance.png');
+  background-image: url('/img/binance/performance.png');
   background-size: cover;
   height: 150px;
   width: 150px;
@@ -169,7 +169,7 @@ p.binance-subtitle-small {
 }
 
 .security {
-  background-image: url('@/assets/img/binance/security.png');
+  background-image: url('/img/binance/security.png');
   background-size: cover;
   height: 150px;
   width: 150px;

@@ -13,7 +13,7 @@
             format="webp"
             width="240"
             height="70"
-            src="partners/lunarcrush.png"
+            src="/img/partners/lunarcrush.png"
             alt="lunarcrush"
           />
         </center>

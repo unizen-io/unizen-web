@@ -115,7 +115,6 @@ export default {
   },
 
   serverMiddleware: {
-    '/': '~/api/swr.js',
-    '/_ipx': '~/api/ipx.js'
+    '/': '~/api/swr.js'
   }
 }
