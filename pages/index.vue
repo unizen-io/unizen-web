@@ -35,7 +35,7 @@ export default {
 
   head () {
     return createSEOTags({
-      title: 'Unizen: Smart Exchange Ecosystem 123',
+      title: 'Unizen: Smart Exchange Ecosystem',
       description: 'Unizen is the easy, fast and secure way to buy any available digital asset'
     })
   }
