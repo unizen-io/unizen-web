@@ -44,7 +44,7 @@ export default {
     initAnimation (canvasProject) {
       container = canvasProject
 
-      camera = new THREE.PerspectiveCamera(120, container.clientWidth / container.clientHeight, 1, 10000)
+      camera = new THREE.PerspectiveCamera(120, container.clientWidth / container.clientHeight, 1, 5000)
       camera.position.y = 550 // changes how far back you can see i.e the particles towards horizon
       camera.position.z = 300 // This is how close or far the particles are seen
 
@@ -94,7 +94,7 @@ export default {
 
       //
 
-      renderer = new THREE.WebGLRenderer({ antialias: true })
+      renderer = new THREE.WebGLRenderer({ antialias: false, powerPreference: 'low-power' })
       renderer.setPixelRatio(window.devicePixelRatio)
       renderer.setSize(container.clientWidth, container.clientHeight)
       renderer.setClearColor(0xF5F5F5, 1)
@@ -109,7 +109,6 @@ export default {
 
     animate () {
       requestAnimationFrame(this.animate.bind(this))
-
       this.render()
     },
 
@@ -125,10 +124,11 @@ export default {
       const positions = particles.geometry.attributes.position.array
       const scales = particles.geometry.attributes.scale.array
 
-      let i = 0; let j = 0
+      let i = 0; let j = 0; let ix = AMOUNTX
 
-      for (let ix = 0; ix < AMOUNTX; ix++) {
-        for (let iy = 0; iy < AMOUNTY; iy++) {
+      while (ix--) {
+        let iy = AMOUNTY
+        while (iy--) {
           positions[i + 1] = (Math.sin((ix + count) * 0.20) * 50) + (Math.sin((iy + count) * 0.2) * 20)
 
           scales[j] = (Math.sin((ix + count) * 0.3) + 2) * 4 + (Math.sin((iy + count) * 0.5) + 2) * 4
