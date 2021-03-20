@@ -105,9 +105,6 @@ export default {
   },
 
   image: {
-    // ray test touch <
-    // provider: 'ipx',
-    // ray test touch >
     screens: {
       xm: 640,
       md: 768,
@@ -115,15 +112,9 @@ export default {
       xl: 1280,
       '2xl': 1536
     }
-    // ray test touch <
-    // ipx: {}
-    // ray test touch >
   },
 
   serverMiddleware: {
     '/': '~/api/swr.js'
-    // ray test touch <
-    // '/_ipx': '~/api/ipx.js'
-    // ray test touch >
   }
 }

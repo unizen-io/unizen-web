@@ -126,7 +126,7 @@ export default {
         {
           name: 'Brandon Dallman',
           // ray test touch <
-          img: '/assets/img/team/brandon.png',
+          img: '/img/team/brandon.png',
           // ray test touch >
           role: 'Chief Marketing Officer',
           linkedin: 'https://www.linkedin.com/in/brandon-dallmann-54b78212',
@@ -136,7 +136,7 @@ export default {
         },
         {
           name: 'Martin Granström',
-          img: 'team/martin.png',
+          img: '/img/team/martin.png',
           role: 'Chief Technical Officer',
           linkedin: 'https://www.linkedin.com/in/martingranstrom/',
           twitter: '',
@@ -145,7 +145,7 @@ export default {
         },
         {
           name: 'Sean Noga',
-          img: 'team/sean.png',
+          img: '/img/team/sean.png',
           role: 'Chief Executive Officer',
           linkedin: 'https://www.linkedin.com/in/sean-noga-142b923',
           twitter: 'https://twitter.com/jun_capital',
@@ -154,7 +154,7 @@ export default {
         },
         {
           name: 'Tom Sweeney',
-          img: 'team/tom.png',
+          img: '/img/team/tom.png',
           role: 'Chief Operating Officer',
           linkedin: 'https://www.linkedin.com/in/tomwsweeney/',
           twitter: 'https://twitter.com/jun_capital',
@@ -165,7 +165,7 @@ export default {
       advisors: [
         {
           name: 'Dr. Ian Sobieski',
-          img: 'advisors/ian.png',
+          img: '/img/advisors/ian.png',
           role: 'Chairman & Founder, Band of Angels',
           linkedin: 'https://www.linkedin.com/in/ian-sobieski-a84157/',
           twitter: '',
@@ -181,7 +181,7 @@ export default {
         },
         {
           name: 'Greg Horowitt',
-          img: 'advisors/greg.png',
+          img: '/img/advisors/greg.png',
           role: 'Partner, Jun Capital Management',
           linkedin: 'https://www.linkedin.com/in/horowitt/',
           twitter: 'https://twitter.com/ghorowitt',
@@ -199,7 +199,7 @@ export default {
         },
         {
           name: 'Eric Su',
-          img: 'advisors/eric.png',
+          img: '/img/advisors/eric.png',
           role: 'CEO of Exnetwork Capital',
           linkedin: 'https://www.linkedin.com/in/ericsu/',
           twitter: 'https://twitter.com/ericzoo',
