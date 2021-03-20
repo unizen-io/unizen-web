@@ -31,7 +31,8 @@ const createSEOTags = (data, baseTags) => {
       { hid: 'twitter:url', property: 'twitter:url', content: `https://unizen.io/${(data.url || ' ')}` },
       { hid: 'twitter:title', name: 'twitter:title', content: data.title },
       { hid: 'twitter:description', name: 'twitter:description', content: data.description }
-    ]
+    ],
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
   }
 
   // return the combined array of header data
