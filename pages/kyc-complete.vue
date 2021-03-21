@@ -1,10 +1,18 @@
 <template>
-  <div class="bg-img">
+  <div class="kyc">
+    <nuxt-picture
+      class="kyc-background"
+      loading="lazy"
+      width="2400"
+      height="1594"
+      src="/img/kyc.jpg"
+      alt="KYC"
+    />
     <b-container>
       <b-row class="vh-100 text-center" align-v="center">
         <b-col sm />
         <b-col sm>
-          <b-card class="kyc">
+          <b-card class="kyc-card">
             <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
               <circle
                 class="path circle"
@@ -55,18 +63,19 @@ export default {
 </script>
 
 <style lang="scss">
-.bg-img {
-  // ray test touch <
-  background-image: url(@/assets/img/kyc.jpg);
-  // ray test touch >
-  background-position: center center;
-  background-repeat:  no-repeat;
-  background-attachment: fixed;
-  background-size:  cover;
-  height: 100% !important;
+.kyc {
+  position: relative;
 }
 
-.kyc {
+.kyc-background > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.kyc-card {
   text-align: center;
   min-width: 350px !important;
 }

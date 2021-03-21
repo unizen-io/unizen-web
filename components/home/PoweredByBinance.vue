@@ -30,7 +30,14 @@
       <b-row class="pb-12 pt-2">
         <b-col sm>
           <b-card class="binance-card mt-4">
-            <div class="performance text-center" />
+            <nuxt-img
+              class="m-auto w-40 h-40"
+              loading="lazy"
+              width="276"
+              height="276"
+              src="/img/binance/performance.png"
+              alt="Binance performance"
+            />
             <p class="binance-subtitle mb-4">
               <b>Performance</b>
             </p>
@@ -44,7 +51,14 @@
         </b-col>
         <b-col class="center" sm>
           <b-card class="binance-card mt-4">
-            <div class="liquidity" />
+            <nuxt-img
+              class="m-auto w-40 h-40"
+              loading="lazy"
+              width="276"
+              height="276"
+              src="/img/binance/liquidity.png"
+              alt="Binance liquidity"
+            />
             <p class="binance-subtitle mb-4">
               <b>High Liquidity</b>
             </p>
@@ -56,10 +70,16 @@
             </p>
           </b-card>
         </b-col>
-
         <b-col sm>
           <b-card class="binance-card mt-4">
-            <div class="security" />
+            <nuxt-img
+              class="m-auto w-40 h-40"
+              loading="lazy"
+              width="276"
+              height="276"
+              src="/img/binance/security.png"
+              alt="Binance security"
+            />
             <p class="binance-subtitle mb-4">
               <b>Binance Security</b>
             </p>
@@ -75,12 +95,6 @@
     </b-container>
   </b-row>
 </template>
-
-<script>
-export default {
-
-}
-</script>
 
 <style lang="scss">
 .binance {
@@ -144,44 +158,5 @@ p.binance-subtitle-small {
   margin-top: -20px;
   color: $dark;
   text-align: center;
-}
-
-.liquidity {
-  // ray test touch <
-  background-image: url('/img/binance/liquidity.png');
-  // ray test touch >
-  background-size: cover;
-  height: 150px;
-  width: 150px;
-  text-align: center;
-  top: 0;
-  left: 0;
-  margin: auto;
-}
-
-.performance {
-  // ray test touch <
-  background-image: url('/img/binance/performance.png');
-  // ray test touch >
-  background-size: cover;
-  height: 150px;
-  width: 150px;
-  text-align: center;
-  top: 0;
-  left: 0;
-  margin: auto;
-}
-
-.security {
-  // ray test touch <
-  background-image: url('/img/binance/security.png');
-  // ray test touch >
-  background-size: cover;
-  height: 150px;
-  width: 150px;
-  text-align: center;
-  top: 0;
-  left: 0;
-  margin: auto;
 }
 </style>
