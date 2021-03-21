@@ -30,7 +30,8 @@ const createSEOTags = (data, baseTags) => {
       { hid: 'twitter:title', name: 'twitter:title', content: data.title },
       { hid: 'twitter:description', name: 'twitter:description', content: data.description },
       // additional meta tags for icon themes
-      { hid: 'msapplication-TileColor', name: 'msapplication-TileColor', content: '00aba9' }
+      { hid: 'msapplication-TileColor', name: 'msapplication-TileColor', content: '#00aba9' },
+      { hid: 'theme-color', name: 'theme-color', content: '#ffffff' }
     ],
     link: [
       // icons for favicon, pwa etc.
