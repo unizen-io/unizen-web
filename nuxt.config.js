@@ -71,20 +71,6 @@ export default {
   //   dev: false
   // },
 
-  pwa: {
-    icon: {
-      sizes: [
-        64,
-        192,
-        512
-      ]
-    },
-    meta: {
-      theme_color: '#ffffff'
-    },
-    manifest: false
-  },
-
   sitemap: {
     hostname: 'https://unizen.io',
     gzip: true,
