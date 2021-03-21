@@ -138,6 +138,7 @@ p.zen-text-small {
   top: 0;
   left: 0;
   right:0;
+  object-fit: cover;
 }
 
 .text-box {

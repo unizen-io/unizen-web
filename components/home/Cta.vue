@@ -50,6 +50,7 @@
   right: 0;
   height: 100%;
   border-radius: 4px;
+  object-fit: cover;
 }
 
 h1.introduction {
