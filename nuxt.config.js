@@ -80,7 +80,9 @@ export default {
   pwa: {
     icon: {
       sizes: [
-        64,192,512
+        64,
+        192,
+        512
       ]
     },
     meta: {
