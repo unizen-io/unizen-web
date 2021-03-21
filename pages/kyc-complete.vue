@@ -56,7 +56,9 @@ export default {
 
 <style lang="scss">
 .bg-img {
+  // ray test touch <
   background-image: url(@/assets/img/kyc.jpg);
+  // ray test touch >
   background-position: center center;
   background-repeat:  no-repeat;
   background-attachment: fixed;

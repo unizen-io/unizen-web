@@ -147,7 +147,9 @@ p.binance-subtitle-small {
 }
 
 .liquidity {
+  // ray test touch <
   background-image: url('/img/binance/liquidity.png');
+  // ray test touch >
   background-size: cover;
   height: 150px;
   width: 150px;
@@ -158,7 +160,9 @@ p.binance-subtitle-small {
 }
 
 .performance {
+  // ray test touch <
   background-image: url('/img/binance/performance.png');
+  // ray test touch >
   background-size: cover;
   height: 150px;
   width: 150px;
@@ -169,7 +173,9 @@ p.binance-subtitle-small {
 }
 
 .security {
+  // ray test touch <
   background-image: url('/img/binance/security.png');
+  // ray test touch >
   background-size: cover;
   height: 150px;
   width: 150px;

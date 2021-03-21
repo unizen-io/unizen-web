@@ -1,5 +1,13 @@
 <template>
-  <b-container class="section">
+  <div class="section container mx-auto shadow-md">
+    <nuxt-picture
+      class="zen-background"
+      loading="lazy"
+      width="1920"
+      height="1281"
+      src="/img/zen-background.jpg"
+      alt="Zen background"
+    />
     <b-row>
       <b-col>
         <h1 class="introduction py-12">
@@ -26,23 +34,22 @@
         </b-row>
       </b-col>
     </b-row>
-  </b-container>
+  </div>
 </template>
-
-<script>
-export default {
-
-}
-</script>
 
 <style lang="scss">
 .section {
-  background-image: url('@/assets/img/zen-bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  box-shadow: 0 0 30px 0 rgba(196, 202, 214, 0.596) !important;
+  position: relative;
   min-height: 50vh;
-  border-radius: 5px;
+}
+
+.zen-background > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  border-radius: 4px;
 }
 
 h1.introduction {
