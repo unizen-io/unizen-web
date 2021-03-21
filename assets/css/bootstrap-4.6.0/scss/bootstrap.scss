@@ -5,20 +5,16 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 
-// MEMO: opt in to use tailwindcss
-// @import "print";
-// @import "root";
-// @import "navbar";
-// TODO: should block and open tailwindcss normalization `@tailwind base`
-// @import "reboot";
-// @import "nav";
-// @import "grid";
-// @import "type";
 @import "functions";
 @import "variables";
 @import "mixins";
+// MEMO: opt in to use tailwindcss
+// @import "root";
+// @import "reboot"; // TODO: should block and open tailwindcss normalization `@tailwind base`
+// @import "type";
 @import "images";
 @import "code";
+@import "grid";
 @import "tables";
 @import "forms";
 @import "buttons";
@@ -27,6 +23,9 @@
 @import "button-group";
 @import "input-group";
 @import "custom-forms";
+// MEMO: opt in to use tailwindcss
+// @import "nav";
+@import "navbar";
 @import "card";
 @import "breadcrumb";
 @import "pagination";
@@ -44,3 +43,5 @@
 @import "carousel";
 @import "spinners";
 @import "utilities";
+// MEMO: opt in to use tailwindcss
+// @import "print";
