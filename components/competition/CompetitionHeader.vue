@@ -142,7 +142,6 @@
           <small class="text-muted">POWERED BY</small><br>
           <nuxt-img
             class="mb-12 pb-12"
-            loading="lazy"
             format="webp"
             width="240"
             height="70"
