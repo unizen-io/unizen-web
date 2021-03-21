@@ -13,8 +13,6 @@ const createSEOTags = (data, baseTags) => {
     title: data.title,
     // meta tags
     meta: [
-      { charset: data.charset || 'utf-8' },
-      { name: 'viewport', content: data.viewport || 'width=device-width, initial-scale=1' },
       // default meta tag description
       { hid: 'description', name: 'description', content: data.description },
       // open graph tags (used by reddit, facebook, etc.)
@@ -30,7 +28,18 @@ const createSEOTags = (data, baseTags) => {
       { hid: 'twitter:domain', property: 'twitter:domain', content: 'unizen.io' },
       { hid: 'twitter:url', property: 'twitter:url', content: `https://unizen.io/${(data.url || ' ')}` },
       { hid: 'twitter:title', name: 'twitter:title', content: data.title },
-      { hid: 'twitter:description', name: 'twitter:description', content: data.description }
+      { hid: 'twitter:description', name: 'twitter:description', content: data.description },
+      // additional meta tags for icon themes
+      { hid: 'msapplication-TileColor', name: 'msapplication-TileColor', content: '#00aba9' },
+      { hid: 'theme-color', name: 'theme-color', content: '#ffffff' }
+    ],
+    link: [
+      // icons for favicon, pwa etc.
+      { hid: 'apple-touch-icon', rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+      { hid: 'icon32', rel: 'icon', type: 'image/png', sizes: '32x32', href: '/icon-32x32.png' },
+      { hid: 'icon16', rel: 'icon', type: 'image/png', sizes: '16x16', href: '/icon-16x16.png' },
+      { hid: 'manifest', rel: 'manifest', href: '/site.webmanifest' },
+      { hid: 'mask-icon', rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbbab5' }
     ]
   }
 
