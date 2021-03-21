@@ -39,8 +39,8 @@
         aligh-h="center"
       >
         <nuxt-picture
-          loading="lazy"
           class="macbook"
+          loading="lazy"
           width="1920"
           height="1080"
           src="/img/iMac-landscape.png"
@@ -81,12 +81,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-
-}
-</script>
 
 <style lang="scss">
 .zen {
@@ -144,6 +138,7 @@ p.zen-text-small {
   top: 0;
   left: 0;
   right:0;
+  object-fit: cover;
 }
 
 .text-box {
