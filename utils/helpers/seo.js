@@ -34,7 +34,7 @@ const createSEOTags = (data, baseTags) => {
     ],
     link: [
       // icons for favicon, pwa etc.
-      { hid: 'apple-touch-icon',rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
+      { hid: 'apple-touch-icon', rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
       { hid: 'icon32', rel: 'icon', type: 'image/png', sizes: '32x32', href: '/icon-32x32.png' },
       { hid: 'icon16', rel: 'icon', type: 'image/png', sizes: '16x16', href: '/icon-16x16.png' },
       { hid: 'manifest', rel: 'manifest', href: '/site.webmanifest' },
