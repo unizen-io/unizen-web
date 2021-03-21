@@ -8,15 +8,20 @@
       <div
         id="canvas-project"
         ref="canvasProject"
-        static="true"
       />
     </div>
     <div id="homeView" class="current-state ajaxhidden" style="visibility: inherit;">
       <div class="layout layout-homepage">
         <article class="slideshow">
           <div class="item">
-            <b-img-lazy center class="d-block d-md-none" fluid src="~assets/img/green_logo_text.png" />
-            <center><img class="d-md-block d-none" src="~assets/img/website_header.png"></center>
+            <nuxt-img
+              class="mx-auto md:max-w-lg"
+              format="webp"
+              width="1263"
+              height="197"
+              src="/img/green-text-logo-large.png"
+              alt="Unizen"
+            />
             <h2 class="sub-title text-3xl">
               Smart Exchange Ecosystem
             </h2>

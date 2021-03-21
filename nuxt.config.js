@@ -30,9 +30,7 @@ export default {
   // Auto import components (https://go.nuxtjs.dev/config-components)
   components: true,
 
-  // Modules for dev and build (recommended) (https://go.nuxtjs.dev/config-modules)
   buildModules: [
-    // https://go.nuxtjs.dev/eslint
     ['@nuxtjs/dotenv', { filename: '.env' }],
     '@nuxtjs/eslint-module',
     ['@nuxtjs/fontawesome', {
@@ -54,19 +52,15 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/svg',
     '@nuxtjs/tailwindcss',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@nuxtjs/pwa',
+    '@nuxtjs/google-analytics'
   ],
 
-  // Modules (https://go.nuxtjs.dev/config-modules)
   modules: [
-    // https://go.nuxtjs.dev/bootstrap
     '@nuxtjs/sitemap',
-    '@nuxtjs/google-analytics',
     'bootstrap-vue/nuxt',
-    // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios',
-    // https://go.nuxtjs.dev/pwa
-    '@nuxtjs/pwa'
+    '@nuxtjs/axios'
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -115,7 +109,6 @@ export default {
   },
 
   serverMiddleware: {
-    '/': '~/api/swr.js',
-    '/_ipx': '~/api/ipx.js'
+    '/': '~/api/swr.js'
   }
 }

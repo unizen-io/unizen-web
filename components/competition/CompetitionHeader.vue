@@ -140,7 +140,14 @@
       <b-col>
         <center>
           <small class="text-muted">POWERED BY</small><br>
-          <b-img lazy class=" mb-12 pb-12" src="@/assets/img/partners/lunarcrush.png" />
+          <nuxt-img
+            class="mb-12 pb-12"
+            format="webp"
+            width="240"
+            height="70"
+            src="/img/partners/lunarcrush.png"
+            alt="Lunarcrush"
+          />
         </center>
         <b-col />
       </b-col>

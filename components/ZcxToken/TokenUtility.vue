@@ -45,22 +45,22 @@ export default {
         {
           title: 'Exchange Governance',
           content: 'Empower a decentralized community to make key decisions in the Unizen Exchange, including but not limited to:<br><br><ul> <li>Listing votes for pre-identified candidates</li> <li>Augmenting the roadmap itself</li> <li>Customizing Unizen\'s UI</li></ul>',
-          img: 'features/icon3.png'
+          img: '/img/features/icon3.png'
         },
         {
           title: 'Reduced Trading Fees',
           content: 'Trading fee\'s will automatically be deducted from your ZCX holdings if you hold ZCX in the UNIZEN:CEX module\'s wallet. <br><br>This will lend itself to great trading discounts on the platform.',
-          img: 'features/icon2.png'
+          img: '/img/features/icon2.png'
         },
         {
           title: 'Dynamic Multi-Asset Staking',
           content: 'ZCX holders have the ability to stake their tokens to earn more ZCX. <br><br>The Unizen team also hosts and maintains an ever-growing pool of nodes from various projects in the space. A percentage of node rewards from that pool will also be distributed to ZCX stakers.',
-          img: 'features/icon4.png'
+          img: '/img/features/icon4.png'
         },
         {
           title: 'Direct Access to ZenX Labs Portfolio',
           content: 'Staking ZCX will also earn stakers tickets, which allows entrance to invest in early rounds of ZenX projects, along with Unizen hosted IEO\'s in the future.',
-          img: 'features/icon1.png'
+          img: '/img/features/icon1.png'
         }
       ]
     }

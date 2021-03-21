@@ -16,11 +16,12 @@
           height="30"
         />
         <!-- TODO: should use an SVG format -->
-        <img
+        <nuxt-img
+          format="webp"
           width="120"
           height="19"
-          src="~assets/img/navbar_logo_text.png"
-        >
+          src="/img/text-logo-large.png"
+        />
       </nuxt-link>
       <b-navbar-toggle target="nav-collapse" />
 

@@ -12,8 +12,9 @@
             class="p-4 w-80"
           >
             <div class="overlay-container text-center">
-              <nuxt-picture
-                class="team"
+              <nuxt-img
+                class="team mx-auto p-1 rounded-full"
+                format="webp"
                 width="187"
                 height="187"
                 :src="member.img"
@@ -68,9 +69,10 @@
             :class="{ 'order-first lg:order-last': (index % 2) }"
           >
             <div class="overlay-container">
-              <nuxt-picture
+              <nuxt-img
+                class="team mx-auto p-1 rounded-full"
+                format="webp"
                 loading="lazy"
-                class="team"
                 width="187"
                 height="187"
                 :src="advisor.img"
@@ -125,7 +127,7 @@ export default {
       team: [
         {
           name: 'Brandon Dallman',
-          img: 'team/brandon.png',
+          img: '/img/team/brandon.png',
           role: 'Chief Marketing Officer',
           linkedin: 'https://www.linkedin.com/in/brandon-dallmann-54b78212',
           twitter: 'https://twitter.com/cryptfaux',
@@ -134,7 +136,7 @@ export default {
         },
         {
           name: 'Martin Granström',
-          img: 'team/martin.png',
+          img: '/img/team/martin.png',
           role: 'Chief Technical Officer',
           linkedin: 'https://www.linkedin.com/in/martingranstrom/',
           twitter: '',
@@ -143,7 +145,7 @@ export default {
         },
         {
           name: 'Sean Noga',
-          img: 'team/sean.png',
+          img: '/img/team/sean.png',
           role: 'Chief Executive Officer',
           linkedin: 'https://www.linkedin.com/in/sean-noga-142b923',
           twitter: 'https://twitter.com/jun_capital',
@@ -152,7 +154,7 @@ export default {
         },
         {
           name: 'Tom Sweeney',
-          img: 'team/tom.png',
+          img: '/img/team/tom.png',
           role: 'Chief Operating Officer',
           linkedin: 'https://www.linkedin.com/in/tomwsweeney/',
           twitter: 'https://twitter.com/jun_capital',
@@ -163,7 +165,7 @@ export default {
       advisors: [
         {
           name: 'Dr. Ian Sobieski',
-          img: 'advisors/ian.png',
+          img: '/img/advisors/ian.png',
           role: 'Chairman & Founder, Band of Angels',
           linkedin: 'https://www.linkedin.com/in/ian-sobieski-a84157/',
           twitter: '',
@@ -179,7 +181,7 @@ export default {
         },
         {
           name: 'Greg Horowitt',
-          img: 'advisors/greg.png',
+          img: '/img/advisors/greg.png',
           role: 'Partner, Jun Capital Management',
           linkedin: 'https://www.linkedin.com/in/horowitt/',
           twitter: 'https://twitter.com/ghorowitt',
@@ -197,7 +199,7 @@ export default {
         },
         {
           name: 'Eric Su',
-          img: 'advisors/eric.png',
+          img: '/img/advisors/eric.png',
           role: 'CEO of Exnetwork Capital',
           linkedin: 'https://www.linkedin.com/in/ericsu/',
           twitter: 'https://twitter.com/ericzoo',
@@ -220,11 +222,8 @@ export default {
 </script>
 
 <style lang="scss">
-picture.team > img {
-  margin: 0 auto;
-  padding: 4px;
-  background-image: linear-gradient(to right, #00f5a4, #00afae) !important;
-  border-radius: 50%;
+img.team {
+  background-image: linear-gradient(to right, #00f5a4, #00afae);
 }
 
 h5.team {

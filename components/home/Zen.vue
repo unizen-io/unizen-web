@@ -5,7 +5,7 @@
         loading="lazy"
         width="1130"
         height="1080"
-        src="iMac-potrait.png"
+        src="/img/iMac-potrait.png"
         alt="iMac"
       />
       <b-card class="text-box-mobile">
@@ -36,13 +36,14 @@
       <b-row
         style="max-width: 1920px;"
         class="zen pt-12 mx-auto relative"
-        aligh-h="center">
+        aligh-h="center"
+      >
         <nuxt-picture
-          loading="lazy"
           class="macbook"
+          loading="lazy"
           width="1920"
           height="1080"
-          src="iMac-landscape.png"
+          src="/img/iMac-landscape.png"
           alt="iMac"
         />
         <b-col sm>
@@ -80,12 +81,6 @@
     </div>
   </div>
 </template>
-
-<script>
-export default {
-
-}
-</script>
 
 <style lang="scss">
 .zen {
@@ -143,6 +138,7 @@ p.zen-text-small {
   top: 0;
   left: 0;
   right:0;
+  object-fit: cover;
 }
 
 .text-box {
