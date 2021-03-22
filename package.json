@@ -12,7 +12,7 @@
     "analyze-bundle": "yarn nuxt build --analyze"
   },
   "dependencies": {
-    "@fortawesome/free-regular-svg-icons": "^5.15.1",
+    "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/sitemap": "^2.4.0",
     "bootstrap-vue": "^2.17.3"
