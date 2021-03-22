@@ -1,7 +1,6 @@
 <template>
   <div>
-    <!-- ray test touch < -->
-    <div class="footer">
+    <div class="footer-primary">
       <div class="container mx-auto flex flex-wrap py-12 px-12">
         <div class="px-3 w-1/2 md:w-1/4">
           <h2 class="footer-text">
@@ -64,11 +63,10 @@
     </div>
     <div
       style="color: #f5f5f5;"
-      class="bottom-bar text-center h-16 px-12 flex items-center"
+      class="footer-secondary text-center h-16 px-12 flex items-center"
     >
       © 2021 - 2022 Unizen.io. All rights reserved.
     </div>
-    <!-- ray test touch > -->
   </div>
 </template>
 
@@ -89,11 +87,11 @@ a.footer-text {
   cursor: pointer;
 }
 
-.bottom-bar {
+.footer-secondary {
   background-color: #29404e;
 }
 
-.footer {
+.footer-primary {
   background-color: $dark;
   min-height: 18rem;
 }
