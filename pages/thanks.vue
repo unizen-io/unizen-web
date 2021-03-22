@@ -4,19 +4,18 @@
     class="min-h-screen"
   >
     <div class="container mx-auto px-8 pt-48">
-      <h1 class="blog text-center mt-24 mb-2">
+      <h1
+        style="color: #2f4858 !important; font-family: Montserrat Medium !important;"
+        class="contact font-bold text-center mt-24 mb-2"
+      >
         THANKS!
       </h1>
-      <h2 class="thanks text-center text-xl">
+      <h2
+        style="color: #2f4858 !important; font-family: Montserrat Medium !important;"
+        class="text-center text-xl"
+      >
         Your contact request has been submitted.
       </h2>
     </div>
   </div>
 </template>
-
-<style lang="scss" scoped>
-h2.thanks {
-  font-family: Montserrat Medium !important;
-  color: $dark !important;
-}
-</style>
