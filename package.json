@@ -42,7 +42,7 @@
     "nuxt": "^2.15.3",
     "nuxt-socket-io": "^1.1.13",
     "postcss": "7",
-    "sass-loader": "^10.1.0",
+    "sass-loader": "^11.0.1",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "three": "^0.123.0",
     "vue-chartjs": "^3.5.1",
