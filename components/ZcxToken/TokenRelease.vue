@@ -4,8 +4,11 @@
       <h1 class="common-headline mx-auto">
         Token Release Schedule.
       </h1>
-      <div id="line" class="chart-container">
-        <line-chart :styles="myStyles" :options="barChartOptions" />
+      <div id="line">
+        <line-chart
+          :styles="myStyles"
+          :options="barChartOptions"
+        />
       </div>
       <br><br><br>
     </div>
@@ -119,15 +122,7 @@ export default {
   margin-top: -40px;
   margin-bottom: 20px;
 }
-.chart-container {
-  flex-grow: 1;
-  min-height: 0;
 
-  > div {
-    position: relative;
-    height: 100%;
-  }
-}
 .header-collapse {
   /* Create the gradient. */
   // background-image: linear-gradient(to right bottom, #00afae, #00b6b0, #00bdb1, #00c3b1, #00cab1, #00d0b1, #00d6b0, #00dcaf, #00e2ad, #00e9ab, #00efa8, #00f5a4);

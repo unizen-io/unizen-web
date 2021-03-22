@@ -4,42 +4,55 @@
       <h1 class="common-headline mx-auto">
         Token Sale & Allocation.
       </h1>
-      <b-row
-        cols="1"
-        cols-sm="1"
-        cols-md="1"
-        cols-lg="2"
-      >
-        <b-col>
-          <div class="chart-container">
-            <doughnut-chart :data="barChartData" :styles="myStyles" :options="barChartOptions" />
-            <div
-              style="margin-top: -230px; margin-bottom: 80px;"
-              class="mb-12"
+      <div class="flex flex-wrap">
+        <div class="px-4 w-full lg:w-1/2">
+          <doughnut-chart :data="barChartData" :styles="myStyles" :options="barChartOptions" />
+          <div
+            style="margin-top: -230px; margin-bottom: 80px;"
+            class="mb-12 text-center"
+          >
+            <small>Click a section of the chart more details.</small>
+          </div>
+        </div>
+        <div
+          class="accordion px-4 w-full lg:w-1/2"
+          role="tablist"
+        >
+          <b-card
+            v-for="(row, index) in tableData"
+            :key="row.title"
+            no-body
+            class="mb-1"
+          >
+            <b-card-header
+              header-tag="header"
+              :style="'background-color: '+barChartData.datasets[0].backgroundColor[index]+' !important;'"
+              class="header-collapse p-1"
+              role="tab"
             >
-              <center><small>Click a section of the chart more details.</small></center>
-            </div>
-          </div>
-        </b-col>
-        <b-col>
-          <div class="accordion" style="width: 100%;" role="tablist">
-            <b-card v-for="(row, index) in tableData" :key="row.title" no-body class="mb-1">
-              <b-card-header header-tag="header" :style="'background-color: '+barChartData.datasets[0].backgroundColor[index]+' !important;'" class="header-collapse p-1" role="tab">
-                <b-button block class="allo-btn" @click="expanded=index">
-                  {{ row.title }}
-                </b-button>
-              </b-card-header>
-              <b-collapse :id="'accordionG'+index" role="tabpanel" :visible="index == expanded">
-                <b-card-body>
-                  <b-card-text style="white-space: pre-line;">
-                    {{ row.content }}
-                  </b-card-text>
-                </b-card-body>
-              </b-collapse>
-            </b-card>
-          </div>
-        </b-col>
-      </b-row>
+              <b-button
+                block
+                style="background: none !important; border: none !important; color: #2F4858 !important;"
+                class="font-bold hover:opacity-80"
+                @click="expanded=index"
+              >
+                {{ row.title }}
+              </b-button>
+            </b-card-header>
+            <b-collapse
+              :id="'accordionG' + index"
+              role="tabpanel"
+              :visible="index == expanded"
+            >
+              <b-card-body>
+                <b-card-text style="white-space: pre-line;">
+                  {{ row.content }}
+                </b-card-text>
+              </b-card-body>
+            </b-collapse>
+          </b-card>
+        </div>
+      </div>
     </div>
   </div>
 </template>
@@ -138,36 +151,11 @@ export default {
 }
 </script>
 <style lang="scss">
-.chart-container {
-  flex-grow: 1;
-  min-height: 0;
-
-  > div {
-    position: relative;
-    height: 100%;
-  }
-}
 .header-collapse {
   /* Create the gradient. */
   // background-image: linear-gradient(to right bottom, #00afae, #00b6b0, #00bdb1, #00c3b1, #00cab1, #00d0b1, #00d6b0, #00dcaf, #00e2ad, #00e9ab, #00efa8, #00f5a4);
   /* Set the background size and repeat properties. */
   background-size: 100%;
   background-repeat: repeat;
-}
-
-.allo-btn {
-  background: none !important;
-  border: none !important;
-  font-weight: bold !important;
-  color: $dark !important;
-}
-.allo-btn:after {
-  background: none !important;
-  border: none !important;
-}
-.allo-btn:hover {
-  background: none !important;
-  border: none !important;
-  opacity: 0.8;
 }
 </style>
