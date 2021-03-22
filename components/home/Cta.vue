@@ -67,8 +67,7 @@ p.introduction {
   color: $light;
 }
 
-a.introduction
-{
+a.introduction {
   height: 60px;
   width: 300px;
   border-radius: 5px;
@@ -84,15 +83,11 @@ a.introduction
   background-image: linear-gradient(to right, #00f5a4, #00e8ac, #00dcb2, #00ceb4, #00c1b3, #00c1b3, #00c1b3, #00c1b3, #00ceb4, #00dcb2, #00e8ac, #00f5a4);    background-size: 400%;
   cursor: pointer;
 }
-
-a.introduction:hover
-{
+a.introduction:hover {
   animation: animate 8s linear infinite;
   text-decoration: none;
 }
-
-@keyframes animate
-{
+@keyframes animate {
   0%
   {
     background-position: 0%;
@@ -102,9 +97,7 @@ a.introduction:hover
     background-position: 400%;
   }
 }
-
-a.introduction:before
-{
+a.introduction:before {
   content: '';
   position: absolute;
   top: -5px;
@@ -118,9 +111,7 @@ a.introduction:before
   opacity: 0;
   transition: 1s;
 }
-
-a.introduction:hover:before
-{
+a.introduction:hover:before {
   filter: blur(20px);
   opacity: 1;
   animation: animate 8s linear infinite;

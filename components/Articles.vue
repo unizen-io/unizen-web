@@ -1,5 +1,4 @@
 <template>
-  <!-- ray test touch < -->
   <div class="flex flex-wrap container mx-auto">
     <div
       v-for="article in articles"
@@ -30,12 +29,12 @@
           </p>
         </b-card-text>
         <template #footer>
-          <div class="article-card-footer-inner">
+          <div class="flex justify-between items-center">
             <MiniLogoIcon
               width="30"
               height="30"
             />
-            <small class="text-muted">
+            <small style="color: #6c757d;">
               Last updated {{ formatDate(article.publishedDate) }} ago
             </small>
           </div>
@@ -43,7 +42,6 @@
       </b-card>
     </div>
   </div>
-  <!-- ray test touch > -->
 </template>
 
 <script>
@@ -98,11 +96,5 @@ p.article {
   font-family: Montserrat Medium;
   font-size: 14px;
   text-align: left;
-}
-
-.article-card-footer-inner {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
 </style>

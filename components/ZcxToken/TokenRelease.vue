@@ -7,25 +7,6 @@
       <div id="line" class="chart-container">
         <line-chart :styles="myStyles" :options="barChartOptions" />
       </div>
-      <!-- <b-row cols="12">
-        <b-col class="one-year-box" />
-        <b-col class="one-year-box" />
-        <div class="w-100" />
-        <b-col>
-          <center>
-            <b><p class="zen-text">
-              2021
-            </p></b>
-          </center>
-        </b-col>
-        <b-col>
-          <center>
-            <p class="zen-text">
-              <b>2022</b>
-            </p>
-          </center>
-        </b-col>
-      </b-row> -->
       <br><br><br>
     </b-container>
   </div>

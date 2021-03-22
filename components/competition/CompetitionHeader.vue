@@ -139,7 +139,7 @@
       <br><br>
       <b-col>
         <center>
-          <small class="text-muted">POWERED BY</small><br>
+          <small style="color: #6c757d;">POWERED BY</small><br>
           <nuxt-img
             class="mb-12 pb-12"
             format="webp"

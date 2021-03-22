@@ -11,7 +11,10 @@
       <b-card class="text-box-mobile">
         <b-row cols="1">
           <b-col>
-            <p class="zen-text">
+            <p
+              style="color: #2F4858;"
+              class="text-lg"
+            >
               A new class of digital asset exchange that provides global traders and retail investors
               with access to exciting blockchain projects through the combined functionality of a secure
               CEX, DEX, AI-driven social sentiment indicators and Binance-level liquidity: all in one
@@ -56,7 +59,10 @@
                   </p>
                 </b-col>
                 <b-col sm>
-                  <p class="zen-text">
+                  <p
+                    style="color: #2F4858;"
+                    class="text-lg"
+                  >
                     A new class of digital asset exchange that provides global traders and retail investors with access to exciting blockchain projects through the combined functionality of a secure CEX, DEX, AI-driven social sentiment indicators and Binance-level liquidity: all in one seamless user experience.
                   </p>
                 </b-col>
@@ -105,19 +111,6 @@ a.zen:after {
   caption-side: bottom;
   position: relative;
   margin-top:-0.15em;
-}
-
-h3.zen-text {
-  color: $dark !important;
-  text-align: left;
-  font-family: 'D DIN';
-  font-size: 1.4em !important;
-  padding: 30px;
-}
-
-p.zen-text {
-  font-size: 1.2em !important;
-  color: $dark;
 }
 
 p.zen-subtitle {
