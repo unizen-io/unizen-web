@@ -39,47 +39,49 @@
     />
     <div v-if="!competitionStarted" style="padding-bottom: 200px;" />
     <div v-if="competitionStarted">
-      <b-row style="background: #EFEFEF;">
-        <div class="container mx-auto px-8">
-          <b-row
-            class="mt-12"
-            cols="1"
-            cols-md="2"
-            cols-sm="1"
-          >
-            <b-col>
-              <ZssChart
-                :competitor-asset="FirstCompetitor.asset"
-                :challenger-asset="SecondCompetitor.asset"
-                :competitor-color="FirstCompetitor.color"
-                :challenger-color="SecondCompetitor.color"
-                :competitor-zss-data="FirstCompetitor.ZSS.score"
-                :challenger-zss-data="SecondCompetitor.ZSS.score"
-                :challenger-mcap-diff="SecondCompetitor.mcapDiff"
-              />
-              <div class="small-chart-text">
-                <center><small>*Chart data updates every full hour</small></center>
-              </div>
-            </b-col>
-            <b-col>
-              <MetricsChart
-                :competitor-asset="FirstCompetitor.asset"
-                :challenger-asset="SecondCompetitor.asset"
-                :competitor-color="FirstCompetitor.color"
-                :challenger-color="SecondCompetitor.color"
-                :competitor-zti-data="FirstCompetitor.ZTI"
-                :challenger-zti-data="SecondCompetitor.ZTI"
-                :competitor-zsi-data="FirstCompetitor.ZSI"
-                :challenger-zsi-data="SecondCompetitor.ZSI"
-                :challenger-mcap-diff="SecondCompetitor.mcapDiff"
-              />
-              <div class="small-chart-text">
-                <center><small>*Chart data updates every full hour</small></center>
-              </div>
-            </b-col>
-          </b-row>
+      <div
+        style="background: #EFEFEF;"
+        class="container mx-auto px-8"
+      >
+        <div class="mt-12 flex flex-wrap">
+          <div class="px-4 w-full md:w-1/2">
+            <ZssChart
+              :competitor-asset="FirstCompetitor.asset"
+              :challenger-asset="SecondCompetitor.asset"
+              :competitor-color="FirstCompetitor.color"
+              :challenger-color="SecondCompetitor.color"
+              :competitor-zss-data="FirstCompetitor.ZSS.score"
+              :challenger-zss-data="SecondCompetitor.ZSS.score"
+              :challenger-mcap-diff="SecondCompetitor.mcapDiff"
+            />
+            <div
+              style="margin-top: -230px; margin-bottom: 80px;"
+              class="text-center"
+            >
+              <small>*Chart data updates every full hour</small>
+            </div>
+          </div>
+          <div class="px-4 w-full md:w-1/2">
+            <MetricsChart
+              :competitor-asset="FirstCompetitor.asset"
+              :challenger-asset="SecondCompetitor.asset"
+              :competitor-color="FirstCompetitor.color"
+              :challenger-color="SecondCompetitor.color"
+              :competitor-zti-data="FirstCompetitor.ZTI"
+              :challenger-zti-data="SecondCompetitor.ZTI"
+              :competitor-zsi-data="FirstCompetitor.ZSI"
+              :challenger-zsi-data="SecondCompetitor.ZSI"
+              :challenger-mcap-diff="SecondCompetitor.mcapDiff"
+            />
+            <div
+              style="margin-top: -230px; margin-bottom: 80px;"
+              class="text-center"
+            >
+              <small>*Chart data updates every full hour</small>
+            </div>
+          </div>
         </div>
-      </b-row>
+      </div>
       <ZtiMetrics
         :first-competitor="FirstCompetitor"
         :second-competitor="SecondCompetitor"
@@ -409,11 +411,6 @@ p.competition-text {
   font-size: 1.2em !important;
   padding: 30px;
   color: $light;
-}
-
-.small-chart-text {
-  margin-top: -230px !important;
-  margin-bottom: 80px;
 }
 
 h4.competition-sub {

@@ -13,7 +13,10 @@
         <b-col>
           <div class="chart-container">
             <doughnut-chart :data="barChartData" :styles="myStyles" :options="barChartOptions" />
-            <div style="margin-top: -200px;" class="small-chart-text mb-12">
+            <div
+              style="margin-top: -230px; margin-bottom: 80px;"
+              class="mb-12"
+            >
               <center><small>Click a section of the chart more details.</small></center>
             </div>
           </div>
