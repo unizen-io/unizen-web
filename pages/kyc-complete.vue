@@ -9,7 +9,7 @@
       alt="KYC"
     />
     <b-container>
-      <b-row class="vh-100 text-center" align-v="center">
+      <b-row class="vh-100 text-center flex items-center">
         <b-col sm />
         <b-col sm>
           <b-card class="kyc-card">

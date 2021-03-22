@@ -1,15 +1,10 @@
 <template>
-  <b-row
-    class="mx-auto"
-    cols="1"
-    cols-sm="1"
-    cols-md="2"
-    cols-lg="3"
-  >
-    <b-col
+  <!-- ray test touch < -->
+  <div class="flex flex-wrap container mx-auto">
+    <div
       v-for="article in articles"
       :key="article.title"
-      sm
+      class="w-full md:w-1/2 lg:w-1/3 px-3"
     >
       <b-card
         :img-src="article.thumbnail"
@@ -46,8 +41,9 @@
           </div>
         </template>
       </b-card>
-    </b-col>
-  </b-row>
+    </div>
+  </div>
+  <!-- ray test touch > -->
 </template>
 
 <script>
