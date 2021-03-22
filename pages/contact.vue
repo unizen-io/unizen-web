@@ -76,7 +76,10 @@
 <script>
 import ErrorMessage from '@/components/ErrorMessage'
 import { createSEOTags } from '@/utils/helpers/seo'
-import { CONTACT_US_FORM_SUBMISSION_ENDPOINT } from '@/config'
+import {
+  CONTACT_US_FORM_SUBMISSION_ENDPOINT,
+  LC_API_KEY
+} from '@/config'
 import STATUSES from '@/utils/constants/statuses'
 
 export default {
@@ -134,6 +137,10 @@ export default {
 
   methods: {
     async sendForm () {
+      // ray test touch <
+      console.log('ray : ***** CONTACT_US_FORM_SUBMISSION_ENDPOINT => ', CONTACT_US_FORM_SUBMISSION_ENDPOINT)
+      console.log('ray : ***** LC_API_KEY => ', LC_API_KEY)
+      // ray test touch >
       try {
         this.status = STATUSES.PENDING
         // TODO: could use `ohmyfetch` package
