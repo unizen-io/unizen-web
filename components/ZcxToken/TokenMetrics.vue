@@ -1,5 +1,5 @@
 <template>
-  <b-container>
+  <div class="container mx-auto px-8">
     <b-row
       class="pb-12"
       cols="1"
@@ -77,7 +77,7 @@
         </b-row>
       </b-col>
     </b-row>
-  </b-container>
+  </div>
 </template>
 
 <script>

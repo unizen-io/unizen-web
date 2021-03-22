@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-container>
+    <div class="container mx-auto px-8">
       <h1 class="common-headline mx-auto">
         Token Release Schedule.
       </h1>
@@ -8,7 +8,7 @@
         <line-chart :styles="myStyles" :options="barChartOptions" />
       </div>
       <br><br><br>
-    </b-container>
+    </div>
   </div>
 </template>
 

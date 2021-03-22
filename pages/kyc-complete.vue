@@ -8,7 +8,8 @@
       src="/img/kyc.jpg"
       alt="KYC"
     />
-    <b-container>
+    <!-- ray test touch < -->
+    <div class="container mx-auto px-8">
       <b-row class="vh-100 text-center flex items-center">
         <b-col sm />
         <b-col sm>
@@ -52,7 +53,8 @@
         </b-col>
         <b-col sm />
       </b-row>
-    </b-container>
+    </div>
+    <!-- ray test touch > -->
   </div>
 </template>
 

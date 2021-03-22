@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <b-row>
-      <b-container class="pt-12 my-12">
+      <div class="container mx-auto px-8 pt-12 my-12">
         <h1 class="blog py-12 mt-12 text-center">
           Contact.
         </h1>
@@ -62,7 +62,7 @@
             </b-button>
           </b-form>
         </b-col>
-      </b-container>
+      </div>
     </b-row>
     <h1
       v-if="status === STATUSES.RESOLVED"

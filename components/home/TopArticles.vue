@@ -1,5 +1,5 @@
 <template>
-  <b-container>
+  <div class="container mx-auto px-8">
     <div class="py-12 mt-12">
       <h1 class="mb-6">
         Latest blog articles.
@@ -14,7 +14,7 @@
         :articles="articles.slice(0, 3)"
       />
     </div>
-  </b-container>
+  </div>
 </template>
 
 <script>

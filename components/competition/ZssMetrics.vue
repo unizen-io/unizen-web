@@ -1,6 +1,6 @@
 <template>
   <div class="mb-12">
-    <b-container>
+    <div class="container mx-auto px-8">
       <b-card text-variant="white" :style="'background-image: linear-gradient(to right,' + firstCompetitor.color + ',' + secondCompetitor.color + ') !important;'">
         <center>
           <h3 class="text-3xl">
@@ -18,7 +18,7 @@
           </h3>
         </center>
       </b-card>
-    </b-container>
+    </div>
   </div>
 </template>
 

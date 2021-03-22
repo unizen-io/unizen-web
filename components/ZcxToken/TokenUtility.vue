@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-row>
-      <b-container>
+      <div class="container mx-auto px-8">
         <b-row
           class="mx-auto"
           cols="1"
@@ -32,7 +32,7 @@
             </b-card>
           </b-col>
         </b-row>
-      </b-container>
+      </div>
     </b-row>
   </div>
 </template>

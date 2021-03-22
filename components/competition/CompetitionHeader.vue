@@ -3,7 +3,7 @@
     <b-row
       style="background: #EFEFEF; "
     >
-      <b-container>
+      <div class="container mx-auto px-8">
         <div v-if="!competitionResults">
           <b-row
             class="py-12"
@@ -54,7 +54,7 @@
           </h4>
           <br><br>
         </div>
-      </b-container>
+      </div>
     </b-row>
     <div v-if="!competitionEnded && competitionStarted">
       <b-row

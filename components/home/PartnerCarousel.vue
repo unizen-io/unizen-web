@@ -1,7 +1,7 @@
 <template>
   <b-row class="partners">
     <b-col>
-      <b-container>
+      <div class="container mx-auto px-8">
         <b-row class="pt-12">
           <b-col>
             <h1 class="partners-text">
@@ -14,7 +14,7 @@
             </p>
           </b-col>
         </b-row>
-      </b-container>
+      </div>
       <div class="text-center">
         <Hooper :settings="cardsHooper">
           <Slide>

@@ -1,5 +1,5 @@
 <template>
-  <b-container>
+  <div class="container mx-auto px-8">
     <div class="pt-12">
       <b-row>
         <div>
@@ -60,7 +60,7 @@
         </div>
       </b-row>
     </div>
-  </b-container>
+  </div>
 </template>
 
 <style lang="scss">

@@ -1,6 +1,6 @@
 <template>
   <b-row class="binance py-12 mb-12">
-    <b-container>
+    <div class="container mx-auto px-8">
       <b-row class="pt-12">
         <b-col sm>
           <h3 class="binance-text px-4">
@@ -92,7 +92,7 @@
           </b-card>
         </b-col>
       </b-row>
-    </b-container>
+    </div>
   </b-row>
 </template>
 

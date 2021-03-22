@@ -40,7 +40,7 @@
     <div v-if="!competitionStarted" style="padding-bottom: 200px;" />
     <div v-if="competitionStarted">
       <b-row style="background: #EFEFEF;">
-        <b-container>
+        <div class="container mx-auto px-8">
           <b-row
             class="mt-12"
             cols="1"
@@ -78,7 +78,7 @@
               </div>
             </b-col>
           </b-row>
-        </b-container>
+        </div>
       </b-row>
       <ZtiMetrics
         :first-competitor="FirstCompetitor"

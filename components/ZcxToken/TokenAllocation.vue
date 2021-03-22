@@ -1,6 +1,6 @@
 <template>
   <div style="background-color: #EFEFEF;" class="mt-12">
-    <b-container class="mb-12 pb-12">
+    <div class="container mx-auto px-8 mb-12 pb-12">
       <h1 class="common-headline mx-auto">
         Token Sale & Allocation.
       </h1>
@@ -37,7 +37,7 @@
           </div>
         </b-col>
       </b-row>
-    </b-container>
+    </div>
   </div>
 </template>
 

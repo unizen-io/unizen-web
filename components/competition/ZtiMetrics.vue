@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-container>
+    <div class="container mx-auto px-8">
       <b-row class="my-2 mt-12">
         <b-col class="mb-12">
           <b-list-group flush>
@@ -65,7 +65,7 @@
           </b-list-group>
         </b-col>
       </b-row>
-    </b-container>
+    </div>
   </div>
 </template>
 
