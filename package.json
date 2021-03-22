@@ -15,17 +15,7 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.1",
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/sitemap": "^2.4.0",
-    "bootstrap-vue": "^2.17.3",
-    "chart.js": "^2.9.4",
-    "core-js": "^3.6.5",
-    "date-fns": "^2.19.0",
-    "hooper": "^0.3.4",
-    "nuxt": "^2.15.3",
-    "nuxt-socket-io": "^1.1.13",
-    "three": "^0.123.0",
-    "vue-chartjs": "^3.5.1",
-    "vue-confetti": "^2.2.1",
-    "vue-gtag": "^1.10.0"
+    "bootstrap-vue": "^2.17.3"
   },
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.15.1",
@@ -43,11 +33,20 @@
     "@tailwindcss/postcss7-compat": "^2.0.3",
     "autoprefixer": "9",
     "babel-eslint": "^10.1.0",
+    "chart.js": "^2.9.4",
+    "date-fns": "^2.19.0",
     "eslint": "^7.10.0",
     "eslint-plugin-nuxt": "^1.0.0",
+    "hooper": "^0.3.4",
     "node-sass": "^5.0.0",
+    "nuxt": "^2.15.3",
+    "nuxt-socket-io": "^1.1.13",
     "postcss": "7",
     "sass-loader": "^10.1.0",
-    "tailwindcss": "npm:@tailwindcss/postcss7-compat"
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
+    "three": "^0.123.0",
+    "vue-chartjs": "^3.5.1",
+    "vue-confetti": "^2.2.1",
+    "vue-gtag": "^1.10.0"
   }
 }
