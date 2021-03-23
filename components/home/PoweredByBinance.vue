@@ -1,7 +1,7 @@
 <template>
   <div style="background: #EFEFEF;">
-    <div class="py-12 mb-12 container mx-auto">
-      <div class="pt-12">
+    <div class="py-12 mb-12 container mx-auto px-4">
+      <div class="mt-12">
         <h3
           style="color: #2F4858; font-family: 'D DIN';"
           class="font-base px-4"
@@ -18,7 +18,7 @@
           alt="Binance Cloud"
         />
       </div>
-      <div class="pt-12">
+      <div class="mt-12">
         <p
           style="color: #2F4858;"
           class="text-center text-xl w-8/12 mx-auto"
@@ -26,11 +26,10 @@
           Unizen Exchange's centralized liquidity and platform is powered by Binance infrastructure, security and liquidity to enable a <a href="#" style="color: #2F4858;" class="binance no-underline">ZEN state of mind</a> for traders.
         </p>
       </div>
-      <div class="pb-12 pt-2 flex flex-wrap">
-        <div class="flex-grow px-4 w-full sm:w-1/2 md:w-1/3">
+      <div class="mb-12 mt-6 sm:flex sm:flex-wrap">
+        <div class="flex-grow px-4 sm:w-1/2 md:w-1/3">
           <b-card
             style="min-height: 26rem;"
-            class="mt-4"
           >
             <nuxt-img
               class="m-auto w-40 h-40"
@@ -60,8 +59,10 @@
             </p>
           </b-card>
         </div>
-        <div class="flex-grow px-4 w-full sm:w-1/2 md:w-1/3">
-          <b-card class="binance-card mt-4">
+        <div class="flex-grow px-4 sm:w-1/2 md:w-1/3">
+          <b-card
+            style="min-height: 26rem;"
+          >
             <nuxt-img
               class="m-auto w-40 h-40"
               loading="lazy"
@@ -90,8 +91,10 @@
             </p>
           </b-card>
         </div>
-        <div class="flex-grow px-4 w-full sm:w-1/2 md:w-1/3">
-          <b-card class="binance-card mt-4">
+        <div class="flex-grow px-4 sm:w-1/2 md:w-1/3">
+          <b-card
+            style="min-height: 26rem;"
+          >
             <nuxt-img
               class="m-auto w-40 h-40"
               loading="lazy"

@@ -1,8 +1,14 @@
 <template>
-  <div class="container mx-auto px-8">
-    <div class="pt-12">
-      <b-card-group deck>
-        <b-card class="card card1">
+  <div class="container mx-auto px-4">
+    <b-card-group
+      deck
+      class="sm:flex sm:flex-wrap pt-12 mx-0"
+    >
+      <div class="p-4 md:w-1/2 xl:w-1/3">
+        <b-card
+          style="min-height: 264px;"
+          class="intro-card mx-0 card1"
+        >
           <div
             style="color: rgb(47, 72, 88);"
             class="flex"
@@ -20,7 +26,12 @@
             </div>
           </div>
         </b-card>
-        <b-card class="card card2">
+      </div>
+      <div class="p-4 md:w-1/2 xl:w-1/3">
+        <b-card
+          style="min-height: 264px;"
+          class="intro-card mx-0 card2"
+        >
           <div
             style="color: rgb(47, 72, 88);"
             class="flex"
@@ -38,7 +49,12 @@
             </div>
           </div>
         </b-card>
-        <b-card class="card card3">
+      </div>
+      <div class="p-4 md:w-1/2 xl:w-1/3">
+        <b-card
+          style="min-height: 264px;"
+          class="intro-card mx-0 card3"
+        >
           <div
             style="color: rgb(47, 72, 88);"
             class="flex"
@@ -59,13 +75,13 @@
             </div>
           </div>
         </b-card>
-      </b-card-group>
-    </div>
+      </div>
+    </b-card-group>
   </div>
 </template>
 
 <style lang="scss">
-.card {
+.intro-card {
   background: rgba(219, 219, 219, 0.185) !important;
   backdrop-filter: blur(15px);
   box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 20px 0px !important;
