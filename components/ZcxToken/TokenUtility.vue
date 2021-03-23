@@ -54,7 +54,7 @@ export default {
         },
         {
           title: 'Dynamic Multi-Asset Staking',
-          content: 'ZCX holders have the ability to stake their tokens to earn more ZCX. <br><br>The Unizen team also hosts and maintains an ever-growing pool of nodes from various projects in the space. A percentage of node rewards from that pool will also be distributed to ZCX stakers.',
+          content: 'ZCX holders have the ability to stake their tokens to earn a variety of other token assets. <br><br>The Unizen team also hosts and maintains an ever-growing pool of nodes from various projects in the space. A percentage of node rewards from that pool will also be distributed to ZCX stakers.',
           img: '/img/features/icon4.png'
         },
         {
