@@ -71,7 +71,8 @@
           </b-card>
           <nuxt-link
             to="/competition"
-            class="competition-link sm:hidden w-72 h-14 rounded grid place-items-center text-base text-white no-underline mx-auto">
+            class="competition-link sm:hidden w-72 h-14 rounded grid place-items-center text-base text-white no-underline mx-auto"
+          >
             Competition
           </nuxt-link>
         </div>
