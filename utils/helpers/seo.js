@@ -1,7 +1,7 @@
 /**
  * Creates SEO related meta tags for the header
  *
- * @param {Object} data The object holding all relevant SEO information for the current page (title,description,image,url,viewport)
+ * @param {Object} data The object holding all relevant SEO information for the current page (title,description,image,slug,viewport)
  * @param {Object} baseTags Optional object holding additional default meta tags for the current page
  *
  * @return {Object} Merged object of base tags and generated meta tags object
@@ -21,12 +21,12 @@ const createSEOTags = (data, baseTags) => {
       { hid: 'og:title', property: 'og:title', content: data.title },
       { hid: 'og:description', property: 'og:description', content: data.description },
       { hid: 'og:image', property: 'og:image', content: data.image || '' }, // TODO: set default image
-      { hid: 'og:url', property: 'og:url', content: `https://unizen.io/${(data.url || '')}` },
+      { hid: 'og:url', property: 'og:url', content: `https://unizen.io/${(data.slug || '')}` },
       // custom twitter tags (twitter cards)
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary' },
       { hid: 'twitter:side', name: 'twitter:site', content: '@unizen_io' },
       { hid: 'twitter:domain', property: 'twitter:domain', content: 'unizen.io' },
-      { hid: 'twitter:url', property: 'twitter:url', content: `https://unizen.io/${(data.url || ' ')}` },
+      { hid: 'twitter:url', property: 'twitter:url', content: `https://unizen.io/${(data.slug || ' ')}` },
       { hid: 'twitter:title', name: 'twitter:title', content: data.title },
       { hid: 'twitter:description', name: 'twitter:description', content: data.description },
       // additional meta tags for icon themes
