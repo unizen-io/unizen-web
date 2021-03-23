@@ -8,8 +8,8 @@
           <b-row
             class="py-12"
             cols="1"
-            cols-md="3"
             cols-sm="1"
+            cols-md="3"
           >
             <b-col>
               <b><h1 class="competition-headline" :style="'font-family: Montserrat; color: '+firstCompetitor.color+' !important;'">
@@ -61,8 +61,8 @@
         :style="'background-image: linear-gradient(to right,' + firstCompetitor.color + ',' + secondCompetitor.color + ') !important;'
         "
         cols="2"
-        cols-md="4"
         cols-sm="2"
+        cols-md="4"
       >
         <b-col>
           <h1 class="competition-headline-light">
@@ -100,8 +100,7 @@
     </div>
     <div v-if="competitionEnded && !competitionResults">
       <b-row
-        :style="'background-image: linear-gradient(to right,' + firstCompetitor.color + ',' + secondCompetitor.color + ') !important;'
-        "
+        :style="'background-image: linear-gradient(to right,' + firstCompetitor.color + ',' + secondCompetitor.color + ') !important;'"
         cols="1"
       >
         <center>
@@ -113,8 +112,7 @@
     </div>
     <div v-if="competitionResults">
       <b-row
-        :style="'background-image: linear-gradient(to right,' + firstCompetitor.color + ',' + secondCompetitor.color + ') !important;'
-        "
+        :style="'background-image: linear-gradient(to right,' + firstCompetitor.color + ',' + secondCompetitor.color + ') !important;'"
         cols="1"
       >
         <center>
@@ -126,8 +124,7 @@
     </div>
     <div v-if="!competitionStarted">
       <b-row
-        :style="'background-image: linear-gradient(to right,' + firstCompetitor.color + ',' + secondCompetitor.color + ') !important;'
-        "
+        :style="'background-image: linear-gradient(to right,' + firstCompetitor.color + ',' + secondCompetitor.color + ') !important;'"
         cols="1"
       >
         <center>

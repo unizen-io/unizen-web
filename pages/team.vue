@@ -3,7 +3,7 @@
     <div class="pb-12">
       <div class="container mx-auto px-8">
         <h1 class="common-headline">
-          Meet the team.
+          Meet the executive team.
         </h1>
         <div class="flex flex-wrap justify-center mb-12">
           <div
