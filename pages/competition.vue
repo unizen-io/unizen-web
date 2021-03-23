@@ -37,8 +37,7 @@
       :competition-ended="competitionEnded"
       :competition-results="competitionResults"
     />
-    <div v-if="!competitionStarted" style="padding-bottom: 200px;" />
-    <div v-if="competitionStarted">
+    <div v-if="competitionStarted" class="space-y-12">
       <div
         style="background: #EFEFEF;"
         class="container mx-auto px-8"
@@ -95,6 +94,7 @@
         :second-competitor="SecondCompetitor"
       />
     </div>
+    <div v-else style="padding-bottom: 200px;" />
     <br><br><br>
   </div>
 </template>

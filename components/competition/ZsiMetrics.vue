@@ -1,58 +1,56 @@
 <template>
-  <div>
-    <div class="container mx-auto px-8">
-      <b-row class="mb-2">
-        <b-col class="mb-12">
-          <b-list-group flush>
-            <center>
-              <b-card text-variant="white" :style="'background: '+firstCompetitor.color+' !important;'">
-                <center>
-                  <h2 class="text-3xl">
-                    <b>{{ firstCompetitor.ZSI.score }}</b>
-                  </h2>
-                  <div class="w100" />
-                  ZSI SCORE
-                </center>
-              </b-card>
-              <br>
-              <b-list-group-item class="zen-item">
-                <b>{{ socialContributorsFirstCompetitor }}</b> unique accounts tweeting
-              </b-list-group-item>
-              <b-list-group-item class="zen-item">
-                <b>{{ sentiment4FirstCompetitor }}</b> "bullish" tweets
-              </b-list-group-item>
-              <b-list-group-item class="zen-item">
-                <b>{{ sentiment5FirstCompetitor }}</b> very "bullish" tweets
-              </b-list-group-item>
-            </center>
-          </b-list-group>
-        </b-col>
-        <b-col>
-          <b-list-group flush>
-            <center>
-              <b-card text-variant="white" :style="'background: '+secondCompetitor.color+' !important;'">
-                <center>
-                  <h2 class="text-3xl">
-                    <b>{{ roundNumber(secondCompetitor.ZSI.score / secondCompetitor.mcapDiff) }}</b>
-                  </h2>
-                  <div class="w100" />
-                  ZSI SCORE
-                </center>
-              </b-card>
-              <br>
-              <b-list-group-item class="zen-item">
-                <b>{{ socialContributorsSecondCompetitor }}</b> unique accounts tweeting
-              </b-list-group-item>
-              <b-list-group-item class="zen-item">
-                <b>{{ sentiment4SecondCompetitor }}</b> "bullish" tweets
-              </b-list-group-item>
-              <b-list-group-item class="zen-item">
-                <b>{{ sentiment5SecondCompetitor }}</b> very "bullish" tweets
-              </b-list-group-item>
-            </center>
-          </b-list-group>
-        </b-col>
-      </b-row>
+  <div class="container mx-auto px-8">
+    <div class="flex space-x-8">
+      <div class="flex-1">
+        <b-list-group flush>
+          <center>
+            <b-card text-variant="white" :style="'background: '+firstCompetitor.color+' !important;'">
+              <center>
+                <h2 class="text-3xl">
+                  <b>{{ firstCompetitor.ZSI.score }}</b>
+                </h2>
+                <div class="w100" />
+                ZSI SCORE
+              </center>
+            </b-card>
+            <br>
+            <b-list-group-item class="zen-item">
+              <b>{{ socialContributorsFirstCompetitor }}</b> unique accounts tweeting
+            </b-list-group-item>
+            <b-list-group-item class="zen-item">
+              <b>{{ sentiment4FirstCompetitor }}</b> "bullish" tweets
+            </b-list-group-item>
+            <b-list-group-item class="zen-item">
+              <b>{{ sentiment5FirstCompetitor }}</b> very "bullish" tweets
+            </b-list-group-item>
+          </center>
+        </b-list-group>
+      </div>
+      <div class="flex-1">
+        <b-list-group flush>
+          <center>
+            <b-card text-variant="white" :style="'background: '+secondCompetitor.color+' !important;'">
+              <center>
+                <h2 class="text-3xl">
+                  <b>{{ roundNumber(secondCompetitor.ZSI.score / secondCompetitor.mcapDiff) }}</b>
+                </h2>
+                <div class="w100" />
+                ZSI SCORE
+              </center>
+            </b-card>
+            <br>
+            <b-list-group-item class="zen-item">
+              <b>{{ socialContributorsSecondCompetitor }}</b> unique accounts tweeting
+            </b-list-group-item>
+            <b-list-group-item class="zen-item">
+              <b>{{ sentiment4SecondCompetitor }}</b> "bullish" tweets
+            </b-list-group-item>
+            <b-list-group-item class="zen-item">
+              <b>{{ sentiment5SecondCompetitor }}</b> very "bullish" tweets
+            </b-list-group-item>
+          </center>
+        </b-list-group>
+      </div>
     </div>
   </div>
 </template>
