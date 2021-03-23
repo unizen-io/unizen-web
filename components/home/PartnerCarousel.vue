@@ -1,67 +1,71 @@
 <template>
-  <b-row class="partners">
-    <b-col>
-      <div class="container mx-auto px-8">
-        <b-row class="pt-12">
-          <b-col>
-            <h1 class="partners-text">
-              Our strategic partners.
-            </h1><br>
-          </b-col>
-          <b-col>
-            <p class="partners-text">
-              Unizen has aligned with key partners to provide best-in-class exchange, advisory and project support services. From enriched data feeds, to government compliance and incubation of new projects. All of this has been enabled by close collaborations with top-industry leaders in their respective domain.
-            </p>
-          </b-col>
-        </b-row>
+  <div class="partners">
+    <div class="container mx-auto px-20">
+      <div class="pt-12 flex flex-wrap">
+        <div class="px-4 w-full md:w-1/2">
+          <h1
+            style="color: #f5f5f5 !important; font-family: Montserrat;"
+            class="text-6xl p-7"
+          >
+            Our strategic partners.
+          </h1><br>
+        </div>
+        <div class="px-4 w-full md:w-1/2">
+          <p
+            style="color: #f5f5f5;"
+            class="text-xl p-7"
+          >
+            Unizen has aligned with key partners to provide best-in-class exchange, advisory and project support services. From enriched data feeds, to government compliance and incubation of new projects. All of this has been enabled by close collaborations with top-industry leaders in their respective domain.
+          </p>
+        </div>
       </div>
-      <div class="text-center">
-        <Hooper :settings="cardsHooper">
-          <Slide>
-            <nuxt-img
-              loading="lazy"
-              format="webp"
-              width="337"
-              height="70"
-              src="/img/partners/blockunify.png"
-              alt="Blockunify"
-            />
-          </Slide>
-          <Slide>
-            <nuxt-img
-              loading="lazy"
-              format="webp"
-              width="261"
-              height="70"
-              src="/img/partners/jun.png"
-              alt="Jun"
-            />
-          </Slide>
-          <Slide>
-            <nuxt-img
-              loading="lazy"
-              format="webp"
-              width="240"
-              height="70"
-              src="/img/partners/lunarcrush.png"
-              alt="Lunarcrush"
-            />
-          </Slide>
-          <Slide>
-            <nuxt-img
-              loading="lazy"
-              format="webp"
-              width="300"
-              height="70"
-              src="/img/partners/betrust.png"
-              alt="Betrust"
-            />
-          </Slide>
-          <HooperNavigation slot="hooper-addons" />
-        </Hooper>
-      </div>
-    </b-col>
-  </b-row>
+    </div>
+    <div class="text-center">
+      <Hooper :settings="cardsHooper">
+        <Slide>
+          <nuxt-img
+            loading="lazy"
+            format="webp"
+            width="337"
+            height="70"
+            src="/img/partners/blockunify.png"
+            alt="Blockunify"
+          />
+        </Slide>
+        <Slide>
+          <nuxt-img
+            loading="lazy"
+            format="webp"
+            width="261"
+            height="70"
+            src="/img/partners/jun.png"
+            alt="Jun"
+          />
+        </Slide>
+        <Slide>
+          <nuxt-img
+            loading="lazy"
+            format="webp"
+            width="240"
+            height="70"
+            src="/img/partners/lunarcrush.png"
+            alt="Lunarcrush"
+          />
+        </Slide>
+        <Slide>
+          <nuxt-img
+            loading="lazy"
+            format="webp"
+            width="300"
+            height="70"
+            src="/img/partners/betrust.png"
+            alt="Betrust"
+          />
+        </Slide>
+        <HooperNavigation slot="hooper-addons" />
+      </Hooper>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -93,26 +97,11 @@ export default {
     }
   }
 }
-
 </script>
 
 <style lang='scss'>
 .partners {
   background-image: linear-gradient(to right, #00afae, #00b6b0, #00bdb1, #00c3b1, #00cab1, #00d0b1, #00d6b0, #00dcaf, #00e2ad, #00e9ab, #00efa8, #00f5a4) !important;
-}
-
-h1.partners-text {
-  color: $light !important;
-  text-align: left;
-  font-family: Montserrat;
-  font-size: 3.4em !important;
-  padding: 30px;
-}
-
-p.partners-text {
-  font-size: 1.2em !important;
-  padding: 30px;
-  color: $light;
 }
 
 .hooper-slide {
