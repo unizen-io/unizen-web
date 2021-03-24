@@ -2,7 +2,7 @@
   <div class="container mx-auto px-4">
     <b-card-group
       deck
-      class="sm:flex sm:flex-wrap pt-12 mx-0"
+      class="sm:flex sm:flex-wrap mx-0"
     >
       <div class="p-4 md:w-1/2 xl:w-1/3">
         <b-card class="intro-card card1 mx-0 mb-0 h-full">

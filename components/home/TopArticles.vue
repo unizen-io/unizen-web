@@ -1,5 +1,5 @@
 <template>
-  <div class="container mx-auto mt-24 mb-12 px-4">
+  <div class="container mx-auto px-4">
     <h1 class="mb-6 px-4">
       Latest blog articles.
     </h1>

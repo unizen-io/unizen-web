@@ -1,6 +1,6 @@
 <template>
   <div style="background: #EFEFEF;">
-    <div class="py-12 mb-12 container mx-auto px-4">
+    <div class="py-12 container mx-auto px-4">
       <div class="mt-12">
         <h3
           style="color: #2F4858; font-family: 'D DIN';"

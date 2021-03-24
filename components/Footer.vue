@@ -1,8 +1,8 @@
 <template>
   <div>
     <div class="footer-primary">
-      <div class="container mx-auto flex flex-wrap py-12 px-12">
-        <div class="px-3 w-1/2 md:w-1/4">
+      <div class="container mx-auto flex flex-wrap py-12 px-4">
+        <div class="px-4 w-1/2 md:w-1/4">
           <h2 class="footer-text">
             General
           </h2>
@@ -24,7 +24,7 @@
             Contact Us
           </nuxt-link>
         </div>
-        <div class="px-3 w-1/2 md:w-1/4">
+        <div class="px-4 w-1/2 md:w-1/4">
           <h2 class="footer-text">
             Business
           </h2>
@@ -37,7 +37,7 @@
             Partnership Inquiry
           </nuxt-link>
         </div>
-        <div class="px-3 w-1/2 md:w-1/4">
+        <div class="px-4 w-1/2 md:w-1/4">
           <h2 class="footer-text">
             Technology
           </h2>
@@ -47,7 +47,7 @@
           <a href="https://github.com/unizen-io" class="footer-text">GitHub</a><br>
           <a class="footer-disabled footer-text">Litepaper</a>
         </div>
-        <div class="px-3 w-1/2 md:w-1/4">
+        <div class="px-4 w-1/2 md:w-1/4">
           <h2 class="footer-text">
             Social
           </h2>

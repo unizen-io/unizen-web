@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="mt-12 pb-12 sm:hidden">
+    <div class="sm:hidden">
       <nuxt-picture
         loading="lazy"
         width="1130"
@@ -34,7 +34,7 @@
     <div class="zen hidden sm:block">
       <div
         style="max-width: 1920px;"
-        class="zen pt-12 mx-auto relative"
+        class="zen mx-auto relative"
       >
         <nuxt-picture
           class="macbook"
