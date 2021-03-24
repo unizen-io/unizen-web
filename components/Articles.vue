@@ -1,16 +1,16 @@
 <template>
-  <div class="flex flex-wrap container mx-auto">
+  <div class="md:flex md:flex-wrap">
     <div
       v-for="article in articles"
       :key="article.title"
-      class="w-full md:w-1/2 lg:w-1/3 px-3"
+      class="md:w-1/2 lg:w-1/3 p-4"
     >
       <b-card
         :img-src="article.thumbnail"
         img-alt="Image not found"
         img-top
         tag="article"
-        class="mb-12 article-card"
+        class="article-card h-full"
       >
         <b-card-text>
           <!-- TODO: should create an independent component -->
@@ -20,11 +20,17 @@
             rel="noopener"
             :aria-label="`Link to ${article.title}`"
           >
-            <h2 class="article mb-2">
+            <h2
+              style="color: #2F4858 !important; font-family: Montserrat Medium !important;"
+              class="text-xl mb-2"
+            >
               {{ article.title }}
             </h2>
           </a>
-          <p class="article mb-4">
+          <p
+            style="font-family: Montserrat Medium;"
+            class="text-sm mb-4"
+          >
             {{ article.content | extractTextFromHTMLString | truncate(200, '...') }}
           </p>
         </b-card-text>
@@ -83,18 +89,5 @@ export default {
 
 .article-card > img {
   object-fit: cover;
-}
-
-h2.article {
-  font-family: Montserrat Medium !important;
-  color: $dark !important;
-  font-size: 20px;
-  text-align: left;
-}
-
-p.article {
-  font-family: Montserrat Medium;
-  font-size: 14px;
-  text-align: left;
 }
 </style>

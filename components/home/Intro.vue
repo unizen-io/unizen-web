@@ -7,7 +7,7 @@
       <div class="p-4 md:w-1/2 xl:w-1/3">
         <b-card
           style="min-height: 264px;"
-          class="intro-card mx-0 card1"
+          class="intro-card mx-0 mb-0 card1"
         >
           <div
             style="color: rgb(47, 72, 88);"
@@ -30,7 +30,7 @@
       <div class="p-4 md:w-1/2 xl:w-1/3">
         <b-card
           style="min-height: 264px;"
-          class="intro-card mx-0 card2"
+          class="intro-card mx-0 mb-0 card2"
         >
           <div
             style="color: rgb(47, 72, 88);"
@@ -53,7 +53,7 @@
       <div class="p-4 md:w-1/2 xl:w-1/3">
         <b-card
           style="min-height: 264px;"
-          class="intro-card mx-0 card3"
+          class="intro-card mx-0 mb-0 card3"
         >
           <div
             style="color: rgb(47, 72, 88);"

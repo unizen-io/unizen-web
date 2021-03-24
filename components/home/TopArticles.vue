@@ -1,19 +1,17 @@
 <template>
-  <div class="container mx-auto px-8">
-    <div class="py-12 mt-12">
-      <h1 class="mb-6">
-        Latest blog articles.
-      </h1>
-      <LoadingMessage v-if="status === STATUSES.IDLE || status === STATUSES.PENDING" />
-      <ErrorMessage
-        v-if="status === STATUSES.REJECTED"
-        :error-message="error.message"
-      />
-      <Articles
-        v-if="status === STATUSES.RESOLVED"
-        :articles="articles.slice(0, 3)"
-      />
-    </div>
+  <div class="container mx-auto mt-24 mb-12 px-4">
+    <h1 class="mb-6 px-4">
+      Latest blog articles.
+    </h1>
+    <LoadingMessage v-if="status === STATUSES.IDLE || status === STATUSES.PENDING" />
+    <ErrorMessage
+      v-if="status === STATUSES.REJECTED"
+      :error-message="error.message"
+    />
+    <Articles
+      v-if="status === STATUSES.RESOLVED"
+      :articles="articles.slice(0, 3)"
+    />
   </div>
 </template>
 

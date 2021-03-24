@@ -27,7 +27,7 @@
         </p>
       </div>
       <div class="mb-12 mt-6 sm:flex sm:flex-wrap">
-        <div class="flex-grow px-4 sm:w-1/2 md:w-1/3">
+        <div class="flex-grow p-4 sm:w-1/2 md:w-1/3">
           <b-card
             style="min-height: 26rem;"
           >
@@ -59,7 +59,7 @@
             </p>
           </b-card>
         </div>
-        <div class="flex-grow px-4 sm:w-1/2 md:w-1/3">
+        <div class="flex-grow p-4 sm:w-1/2 md:w-1/3">
           <b-card
             style="min-height: 26rem;"
           >
@@ -91,7 +91,7 @@
             </p>
           </b-card>
         </div>
-        <div class="flex-grow px-4 sm:w-1/2 md:w-1/3">
+        <div class="flex-grow p-4 sm:w-1/2 md:w-1/3">
           <b-card
             style="min-height: 26rem;"
           >
