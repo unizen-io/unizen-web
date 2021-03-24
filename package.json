@@ -44,7 +44,7 @@
     "postcss": "7",
     "sass-loader": "^10.1.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
-    "three": "^0.123.0",
+    "three": "^0.125.0",
     "vue-chartjs": "^3.5.1",
     "vue-confetti": "^2.2.1",
     "vue-gtag": "^1.10.0"
