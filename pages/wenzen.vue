@@ -109,12 +109,10 @@ a.competition-link:hover {
   text-decoration: none;
 }
 @keyframes animate {
-  0%
-  {
+  0% {
     background-position: 0%;
   }
-  100%
-  {
+  100% {
     background-position: 400%;
   }
 }

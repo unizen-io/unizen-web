@@ -50,7 +50,7 @@
   height: 100%;
   border-radius: 4px;
   object-fit: cover;
-  z-index: -1;
+  z-index: -2;
 }
 
 // TODO: should avoid duplicating
@@ -63,12 +63,10 @@ a.wenzen-link:hover {
   text-decoration: none;
 }
 @keyframes animate {
-  0%
-  {
+  0% {
     background-position: 0%;
   }
-  100%
-  {
+  100% {
     background-position: 400%;
   }
 }
