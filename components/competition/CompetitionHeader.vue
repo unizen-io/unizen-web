@@ -1,153 +1,167 @@
 <template>
   <div>
-    <b-row
-      style="background: #EFEFEF; "
-    >
-      <div class="container mx-auto px-8">
-        <div v-if="!competitionResults">
-          <b-row
-            class="py-12"
-            cols="1"
-            cols-sm="1"
-            cols-md="3"
-          >
-            <b-col>
-              <b><h1 class="competition-headline" :style="'font-family: Montserrat; color: '+firstCompetitor.color+' !important;'">
-                {{ firstCompetitor.asset }}
-              </h1></b>
-              <h4 class="competition-sub">
-                ({{ firstCompetitor.company }})
-              </h4>
-            </b-col>
-            <b-col>
-              <h1 class="competition-headline">
-                vs.
-              </h1>
-            </b-col>
-            <b-col>
-              <h1 class="competition-headline" :style="'font-family: Montserrat; color: '+secondCompetitor.color+' !important;'">
-                {{ secondCompetitor.asset }}
-              </h1>
-              <h4 class="competition-sub">
-                ({{ secondCompetitor.company }})
-              </h4>
-            </b-col>
-          </b-row>
-        </div>
-        <div v-if="competitionResults && firstCompetitor.ZSS.score > secondCompetitor.ZSS.score">
-          <br><br>
-          <b><h1 class="competition-headline" :style="'font-family: Montserrat; color: '+firstCompetitor.color+' !important;'">
-            {{ firstCompetitor.asset }}
-          </h1></b>
-          <h4 class="competition-sub">
-            ({{ firstCompetitor.company }})
-          </h4>
-          <br><br>
-        </div>
-        <div v-if="competitionResults && firstCompetitor.ZSS.score < secondCompetitor.ZSS.score">
-          <br><br>
-          <h1 class="competition-headline" :style="'font-family: Montserrat; color: '+secondCompetitor.color+' !important;'">
-            {{ secondCompetitor.asset }}
-          </h1>
-          <h4 class="competition-sub">
-            ({{ secondCompetitor.company }})
-          </h4>
-          <br><br>
+    <div style="background: #EFEFEF;">
+      <div
+        v-if="!competitionResults"
+        class="container mx-auto px-8"
+      >
+        <div class="py-12 md:flex">
+          <div class="px-4 md:w-1/3">
+            <h1 class="text-center text-8xl" :style="'font-family: Montserrat; color: ' + firstCompetitor.color + ' !important;'">
+              {{ firstCompetitor.asset }}
+            </h1>
+            <h4 class="text-center">
+              ({{ firstCompetitor.company }})
+            </h4>
+          </div>
+          <div class="px-4 md:w-1/3">
+            <h1
+              style="color: #2F4858 !important;"
+              class="text-center text-8xl"
+            >
+              vs.
+            </h1>
+          </div>
+          <div class="px-4 md:w-1/3">
+            <h1 class="text-center text-8xl" :style="'font-family: Montserrat; color: ' + secondCompetitor.color + ' !important;'">
+              {{ secondCompetitor.asset }}
+            </h1>
+            <h4 class="text-center">
+              ({{ secondCompetitor.company }})
+            </h4>
+          </div>
         </div>
       </div>
-    </b-row>
+      <div v-if="competitionResults && firstCompetitor.ZSS.score > secondCompetitor.ZSS.score">
+        <br><br>
+        <b><h1 class="text-center text-8xl" :style="'font-family: Montserrat; color: ' + firstCompetitor.color + ' !important;'">
+          {{ firstCompetitor.asset }}
+        </h1></b>
+        <h4 class="text-center">
+          ({{ firstCompetitor.company }})
+        </h4>
+        <br><br>
+      </div>
+      <div v-if="competitionResults && firstCompetitor.ZSS.score < secondCompetitor.ZSS.score">
+        <br><br>
+        <h1 class="text-center text-8xl" :style="'font-family: Montserrat; color: ' + secondCompetitor.color + ' !important;'">
+          {{ secondCompetitor.asset }}
+        </h1>
+        <h4 class="text-center">
+          ({{ secondCompetitor.company }})
+        </h4>
+        <br><br>
+      </div>
+    </div>
     <div v-if="!competitionEnded && competitionStarted">
-      <b-row
-        :style="'background-image: linear-gradient(to right,' + firstCompetitor.color + ',' + secondCompetitor.color + ') !important;'
-        "
-        cols="2"
-        cols-sm="2"
-        cols-md="4"
+      <div
+        :style="'background-image: linear-gradient(to right,' + firstCompetitor.color + ',' + secondCompetitor.color + ') !important;'"
+        class="flex flex-wrap"
       >
-        <b-col>
-          <h1 class="competition-headline-light">
+        <div class="px-4 w-1/2 md:w-1/4">
+          <h1
+            style="font-family: D DIN; color: #f5f5f5 !important;"
+            class="text-center text-6xl p-7"
+          >
             {{ timer.days }}
           </h1>
-          <p class="competition-text">
+          <p
+            style="color: #f5f5f5;"
+            class="text-center text-xl p-7"
+          >
             DAYS
           </p>
-        </b-col>
-        <b-col>
-          <h1 class="competition-headline-light">
+        </div>
+        <div class="px-4 w-1/2 md:w-1/4">
+          <h1
+            style="font-family: D DIN; color: #f5f5f5 !important;"
+            class="text-center text-6xl p-7"
+          >
             {{ timer.hours }}
           </h1>
-          <p class="competition-text">
+          <p
+            style="color: #f5f5f5;"
+            class="text-center text-xl p-7"
+          >
             HOURS
           </p>
-        </b-col>
-        <b-col>
-          <h1 class="competition-headline-light">
+        </div>
+        <div class="px-4 w-1/2 md:w-1/4">
+          <h1
+            style="font-family: D DIN; color: #f5f5f5 !important;"
+            class="text-center text-6xl p-7"
+          >
             {{ timer.minutes }}
           </h1>
-          <p class="competition-text">
+          <p
+            style="color: #f5f5f5;"
+            class="text-center text-xl p-7"
+          >
             MINUTES
           </p>
-        </b-col>
-        <b-col>
-          <h1 class="competition-headline-light">
+        </div>
+        <div class="px-4 w-1/2 md:w-1/4">
+          <h1
+            style="font-family: D DIN; color: #f5f5f5 !important;"
+            class="text-center text-6xl p-7"
+          >
             {{ timer.seconds }}
           </h1>
-          <p class="competition-text">
+          <p
+            style="color: #f5f5f5;"
+            class="text-center text-xl p-7"
+          >
             SECONDS
           </p>
-        </b-col>
-      </b-row>
+        </div>
+      </div>
     </div>
-    <div v-if="competitionEnded && !competitionResults">
-      <b-row
-        :style="'background-image: linear-gradient(to right,' + firstCompetitor.color + ',' + secondCompetitor.color + ') !important;'"
-        cols="1"
+    <div
+      v-if="competitionEnded && !competitionResults"
+      :style="'background-image: linear-gradient(to right,' + firstCompetitor.color + ',' + secondCompetitor.color + ') !important;'"
+      class="py-7 mb-6"
+    >
+      <h1
+        style="font-family: D DIN; color: #f5f5f5 !important;"
+        class="text-center text-6xl"
       >
-        <center>
-          <h1 class="competition-headline-light-winner">
-            <b>AND THE WINNER IS...</b>
-          </h1>
-        </center>
-      </b-row>
+        <strong>AND THE WINNER IS...</strong>
+      </h1>
     </div>
-    <div v-if="competitionResults">
-      <b-row
-        :style="'background-image: linear-gradient(to right,' + firstCompetitor.color + ',' + secondCompetitor.color + ') !important;'"
-        cols="1"
+    <div
+      v-if="competitionResults"
+      :style="'background-image: linear-gradient(to right,' + firstCompetitor.color + ',' + secondCompetitor.color + ') !important;'"
+      class="py-7 mb-6"
+    >
+      <h1
+        style="font-family: D DIN; color: #f5f5f5 !important;"
+        class="text-center text-6xl"
       >
-        <center>
-          <h1 class="competition-headline-light-winner">
-            <b>WINNER</b>
-          </h1>
-        </center>
-      </b-row>
+        <strong>WINNER</strong>
+      </h1>
     </div>
-    <div v-if="!competitionStarted">
-      <b-row
-        :style="'background-image: linear-gradient(to right,' + firstCompetitor.color + ',' + secondCompetitor.color + ') !important;'"
-        cols="1"
+    <div
+      v-if="!competitionStarted"
+      :style="'background-image: linear-gradient(to right,' + firstCompetitor.color + ',' + secondCompetitor.color + ') !important;'"
+      class="py-7 mb-6"
+    >
+      <h1
+        style="font-family: D DIN; color: #f5f5f5 !important;"
+        class="text-center text-6xl"
       >
-        <center>
-          <h1 class="competition-headline-light-winner">
-            {{ normalizeTimestamp(competitionStartTime) }}
-          </h1>
-        </center>
-      </b-row>
-      <br><br>
-      <b-col>
-        <center>
-          <small style="color: #6c757d;">POWERED BY</small><br>
-          <nuxt-img
-            class="mb-12 pb-12"
-            format="webp"
-            width="240"
-            height="70"
-            src="/img/partners/lunarcrush.png"
-            alt="Lunarcrush"
-          />
-        </center>
-        <b-col />
-      </b-col>
+        {{ normalizeTimestamp(competitionStartTime) }}
+      </h1>
+      <div class="flex flex-col items-center mt-12">
+        <small style="color: #6c757d;">POWERED BY</small><br>
+        <nuxt-img
+          class="mb-12 pb-12"
+          format="webp"
+          width="240"
+          height="70"
+          src="/img/partners/lunarcrush.png"
+          alt="Lunarcrush"
+        />
+      </div>
     </div>
   </div>
 </template>
@@ -173,14 +187,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-h1.competition-headline-light-winner {
-  font-family: D DIN;
-  text-align: center;
-  margin-bottom: 25px;
-  margin-top: 25px;
-  color: $light !important;
-  font-size: 4rem !important;
-}
-</style>

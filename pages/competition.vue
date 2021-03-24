@@ -389,31 +389,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-h1.competition-headline {
-  text-align: center;
-  color: $dark !important;
-  font-size: 7rem !important;
-}
-
-h1.competition-headline-light {
-  font-family: D DIN;
-  text-align: center;
-  margin-bottom: -25px;
-  margin-top: 25px;
-  color: $light !important;
-  font-size: 4rem !important;
-}
-
-p.competition-text {
-  text-align: center;
-  font-size: 1.2em !important;
-  padding: 30px;
-  color: $light;
-}
-
-h4.competition-sub {
-  text-align: center;
-}
-</style>
