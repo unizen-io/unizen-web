@@ -1,9 +1,9 @@
 <template>
-  <div
-    style="min-height: 24rem;"
-    class="container px-8 mx-auto"
-  >
-    <div class="relative shadow-md flex">
+  <div class="container px-8 mx-auto">
+    <div
+      style="min-height: 42rem;"
+      class="relative shadow-md flex"
+    >
       <div class="md:flex md:flex-wrap py-12">
         <div class="md:w-1/2">
           <h1

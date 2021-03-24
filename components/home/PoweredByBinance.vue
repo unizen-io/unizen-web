@@ -28,9 +28,7 @@
       </div>
       <div class="mb-12 mt-6 sm:flex sm:flex-wrap">
         <div class="flex-grow p-4 sm:w-1/2 md:w-1/3">
-          <b-card
-            style="min-height: 26rem;"
-          >
+          <b-card class="h-full">
             <nuxt-img
               class="m-auto w-40 h-40"
               loading="lazy"
@@ -60,9 +58,7 @@
           </b-card>
         </div>
         <div class="flex-grow p-4 sm:w-1/2 md:w-1/3">
-          <b-card
-            style="min-height: 26rem;"
-          >
+          <b-card class="h-full">
             <nuxt-img
               class="m-auto w-40 h-40"
               loading="lazy"
@@ -92,9 +88,7 @@
           </b-card>
         </div>
         <div class="flex-grow p-4 sm:w-1/2 md:w-1/3">
-          <b-card
-            style="min-height: 26rem;"
-          >
+          <b-card class="h-full">
             <nuxt-img
               class="m-auto w-40 h-40"
               loading="lazy"

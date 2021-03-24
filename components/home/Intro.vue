@@ -5,10 +5,7 @@
       class="sm:flex sm:flex-wrap pt-12 mx-0"
     >
       <div class="p-4 md:w-1/2 xl:w-1/3">
-        <b-card
-          style="min-height: 264px;"
-          class="intro-card mx-0 mb-0 card1"
-        >
+        <b-card class="intro-card card1 mx-0 mb-0 h-full">
           <div
             style="color: rgb(47, 72, 88);"
             class="flex"
@@ -28,10 +25,7 @@
         </b-card>
       </div>
       <div class="p-4 md:w-1/2 xl:w-1/3">
-        <b-card
-          style="min-height: 264px;"
-          class="intro-card mx-0 mb-0 card2"
-        >
+        <b-card class="intro-card card2 mx-0 mb-0 h-full">
           <div
             style="color: rgb(47, 72, 88);"
             class="flex"
@@ -51,10 +45,7 @@
         </b-card>
       </div>
       <div class="p-4 md:w-1/2 xl:w-1/3">
-        <b-card
-          style="min-height: 264px;"
-          class="intro-card mx-0 mb-0 card3"
-        >
+        <b-card class="intro-card card3 mx-0 mb-0 h-full">
           <div
             style="color: rgb(47, 72, 88);"
             class="flex"
