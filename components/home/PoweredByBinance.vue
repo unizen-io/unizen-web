@@ -99,13 +99,13 @@
             />
             <p
               style="color: #2F4858;"
-              class="pt-7 text-xl mb-4"
+              class="pt-7 text-xl text-center mb-4"
             >
               <b>Binance Security</b>
             </p>
             <p
               style="color: #2F4858;"
-              class="-mt-5 text-base mb-4"
+              class="-mt-5 text-base text-center mb-4"
             >
               Reliable custody & trading
             </p>
