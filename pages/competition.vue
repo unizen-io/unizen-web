@@ -230,6 +230,9 @@ export default {
     //   this.startConfettiRain()
     // }
   },
+  beforeDestroy () {
+    this.$confetti.remove()
+  },
   methods: {
     getTimer () {
     //   const date = new Date(this.competitionEndDate - this.currentTime * 1000)
