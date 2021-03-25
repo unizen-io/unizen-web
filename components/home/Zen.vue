@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container mx-auto px-8">
     <div class="sm:hidden">
       <nuxt-picture
         loading="lazy"
@@ -33,8 +33,8 @@
     </div>
     <div class="hidden sm:block">
       <div
-        style="max-width: 1920px; height: 1080px;"
-        class="mx-auto relative pt-24"
+        style="height: 1080px;"
+        class="relative pt-24"
       >
         <nuxt-picture
           class="macbook"
@@ -44,7 +44,7 @@
           src="/img/iMac-landscape.png"
           alt="iMac"
         />
-        <b-card class="text-box max-w-lg mx-4">
+        <b-card class="text-box max-w-lg">
           <b-card-body class="flex">
             <p class="text-7xl px-4 w-1/3">
               🦄
