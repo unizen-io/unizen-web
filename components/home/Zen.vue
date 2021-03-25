@@ -34,7 +34,7 @@
     <div class="zen hidden sm:block">
       <div
         style="max-width: 1920px;"
-        class="zen mx-auto relative"
+        class="zen mx-auto relative pt-24"
       >
         <nuxt-picture
           class="macbook"
@@ -44,7 +44,7 @@
           src="/img/iMac-landscape.png"
           alt="iMac"
         />
-        <b-card class="text-box max-w-lg mx-4 mt-12">
+        <b-card class="text-box max-w-lg mx-4">
           <b-card-body class="flex">
             <p class="text-7xl px-4 w-1/3">
               🦄
