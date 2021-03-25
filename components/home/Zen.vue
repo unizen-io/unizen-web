@@ -31,10 +31,10 @@
         </b-list-group>
       </b-card>
     </div>
-    <div class="zen hidden sm:block">
+    <div class="hidden sm:block">
       <div
-        style="max-width: 1920px;"
-        class="zen mx-auto relative pt-24"
+        style="max-width: 1920px; height: 1080px;"
+        class="mx-auto relative pt-24"
       >
         <nuxt-picture
           class="macbook"
@@ -74,11 +74,6 @@
 </template>
 
 <style lang="scss">
-.zen {
-  height: 1080px;
-  margin-right: -430px;
-}
-
 .zen-item {
   background-color: #ffffff1c !important;
 }
