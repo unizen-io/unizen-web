@@ -1,11 +1,11 @@
 <template>
   <div class="partners">
-    <div class="container mx-auto px-20">
+    <div class="container mx-auto px-4">
       <div class="pt-12 flex flex-wrap">
         <div class="px-4 w-full md:w-1/2">
           <h1
             style="color: #f5f5f5 !important; font-family: Montserrat;"
-            class="text-6xl p-7"
+            class="text-6xl"
           >
             Our strategic partners.
           </h1><br>
@@ -13,7 +13,7 @@
         <div class="px-4 w-full md:w-1/2">
           <p
             style="color: #f5f5f5;"
-            class="text-xl p-7"
+            class="text-xl"
           >
             Unizen has aligned with key partners to provide best-in-class exchange, advisory and project support services. From enriched data feeds, to government compliance and incubation of new projects. All of this has been enabled by close collaborations with top-industry leaders in their respective domain.
           </p>
