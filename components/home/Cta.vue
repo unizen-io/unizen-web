@@ -8,7 +8,7 @@
         <div class="md:w-1/2">
           <h1
             style="color: #f5f5f5 !important; font-family: Montserrat;"
-            class="p-7 text-6xl"
+            class="p-7 text-5xl lg:text-7xl"
           >
             Providing a zen state of mind for traders
           </h1>

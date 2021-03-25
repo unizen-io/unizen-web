@@ -2,7 +2,7 @@
   <div
     id="header"
     ref="header"
-    class="mb-72"
+    style="margin-bottom: 428px;"
   >
     <div style="position: fixed;">
       <div

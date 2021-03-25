@@ -1,6 +1,6 @@
 <template>
   <div
-    style="margin-top: 0 !important;"
+    id="intro"
     class="container mx-auto px-4"
   >
     <b-card-group
@@ -75,6 +75,13 @@
 </template>
 
 <style lang="scss">
+// TODO: hack for now
+@media (min-width: 640px) {
+  #intro {
+    margin-top: -128px !important;
+  }
+}
+
 .intro-card {
   background: rgba(219, 219, 219, 0.185) !important;
   backdrop-filter: blur(15px);
