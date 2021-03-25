@@ -3,7 +3,7 @@
     style="background-image: linear-gradient(to bottom, #f5f5f5, #f4f4f4, #f2f3f2, #f1f1f1, #f0f0f0);"
     class="min-h-screen"
   >
-    <div class="container mx-auto px-8 pt-24">
+    <div class="max-w-5xl mx-auto px-8 pt-24 pb-12">
       <h1
         style="color: #2f4858 !important; font-family: Montserrat Medium !important;"
         class="contact font-bold py-12 mt-12 text-center"
