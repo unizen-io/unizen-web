@@ -61,10 +61,10 @@ export default {
   data () {
     return {
       expanded: 0,
-      tableData: [{ title: 'Team', content: 'Used for new hires and company expenses. Tokens are locked until May 2021 and vested Monthly for 10 Months.' },
+      tableData: [{ title: 'Team', content: 'Used for new hires and company expenses. Tokens are locked until August 2021 and vested Monthly for 10 Months.' },
         { title: 'Ecosystem Reserve / Security Insurance', content: 'Tokens allocated to protect the interest of the ZCX token holders in the event of an exchange hack. Reserve tokens will provide liquidity to the DAO upon its future creation. ' },
         { title: 'Foundation', content: 'Tokens will be utilized for Incubator Grants, Liquidity Provision, Marketing Initiatives, and overall expansion of the Zen Ecosystem.' },
-        { title: 'Partners & Advisors', content: 'Tokens are locked until May 2021 and vested Monthly for 10 Months.' },
+        { title: 'Partners & Advisors', content: 'Tokens are locked until August 2021 and vested Monthly for 10 Months.' },
         { title: 'Seed', content: '12.5% of purchased tokens will be unlocked upon the TGE (Token Generation Event).' + '\n\n' + '20% shall be unlocked every three months (90 days) thereafter, in arrears, over the remaining three quarters (270 days).' + '\n\n' + ' 27.5% will become unlocked on the last tranche of release cycle (360 days after TGE).' },
         { title: 'Strategic', content: '25% tokens released up to 14 days after TGE and additional 25% per quarter for three quarters (270 days duration).' },
         { title: 'Private Sale', content: '25% tokens released up to 14 days after TGE and additional 25% per quarter for three quarters (270 days duration).' }
