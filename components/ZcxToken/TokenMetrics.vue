@@ -1,80 +1,87 @@
 <template>
-  <b-container>
-    <b-row
-      class="pb-12"
-      cols="1"
-      cols-sm="1"
-      cols-md="1"
-      cols-lg="2"
-    >
-      <b-col class="p-7">
-        <p class="zen-text">
-          ZCX is an exchange-based utility token, created on the Ethereum blockchain as an ERC-20 token.<br><br>
-          Unizen Exchange operates on top of Binance Cloud’s trading and security infrastructure. The functionality of ZCX is analogous to that of BNB on Binance.<br><br>
-          A portion of the listing fees collected will  be distributed into the following allocations:<br>
+  <div class="container mx-auto px-8 pb-12 flex flex-wrap">
+    <div class="p-7 px-4 w-full lg:w-1/2">
+      <p
+        style="color: #2F4858;"
+        class="text-lg"
+      >
+        ZCX is an exchange-based utility token, created on the Ethereum blockchain as an ERC-20 token.<br><br>
+        Unizen Exchange operates on top of Binance Cloud’s trading and security infrastructure. The functionality of ZCX is analogous to that of BNB on Binance.<br><br>
+        A portion of the listing fees collected will  be distributed into the following allocations:<br>
+        <br>
+        <b-list-group flush>
+          <b-list-group-item class="zen-item">
+            <b>Insurance fund</b>
+          </b-list-group-item>
+          <b-list-group-item class="zen-item">
+            <b>Burn</b> - ZCX will be burned with every paid listing
+          </b-list-group-item>
+          <b-list-group-item class="zen-item" style="border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
+            <b>Staking rewards</b> - allocated to a staking pool
+          </b-list-group-item>
+        </b-list-group>
+        <!-- <ul>
+            <li><b>Insurance fund</b></li>
+            <li><b>Burn</b> - ZCX will be burned with every paid listing</li>
+            <li><b>Staking rewards</b> - allocated to a staking pool</li>
+          </ul> -->
+      </p>
+    </div>
+    <div class="order-first lg:order-last p-7 w-full lg:w-1/2">
+      <div class="flex flex-wrap">
+        <div class="px-4 w-1/2">
+          <small style="color: #6c757d;">TICKER</small>
           <br>
-          <b-list-group flush>
-            <b-list-group-item class="zen-item">
-              <b>Insurance fund</b>
-            </b-list-group-item>
-            <b-list-group-item class="zen-item">
-              <b>Burn</b> - ZCX will be burned with every paid listing
-            </b-list-group-item>
-            <b-list-group-item class="zen-item" style="border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
-              <b>Staking rewards</b> - allocated to a staking pool
-            </b-list-group-item>
-          </b-list-group>
-          <!-- <ul>
-              <li><b>Insurance fund</b></li>
-              <li><b>Burn</b> - ZCX will be burned with every paid listing</li>
-              <li><b>Staking rewards</b> - allocated to a staking pool</li>
-            </ul> -->
-        </p>
-      </b-col>
-      <b-col class="order-first lg:order-last p-7">
-        <b-row>
-          <b-col>
-            <small class="text-muted">TICKER</small>
-            <br>
-            <h2 class="text-3xl font-bold gradient-text">
-              ZCX
-            </h2>
-          </b-col>
-          <b-col>
-            <small class="text-muted">TOKEN TYPE</small>
-            <br>
-            <h2 class="text-3xl font-bold gradient-text">
-              ERC-20
-            </h2>
-          </b-col>
-          <div class="w-100" />
-          <b-col>
-            <small class="text-muted">CIRCULATING SUPPLY</small>
-            <br>
-            <h2 class="text-3xl font-bold gradient-text">
-              33.75m
-            </h2>
-          </b-col>
-          <b-col>
-            <small class="text-muted">TOTAL SUPPLY</small>
-            <br>
-            <h2 class="text-3xl font-bold gradient-text">
-              1b
-            </h2>
-          </b-col>
-          <div class="w-100" />
-          <b-col>
-            <br><small class="text-muted">CONTRACT ADDRESS</small><br>
-            <h5 class="text-xl">
-              {{ contract }} <a class="copy-icon" @click.stop.prevent="copyContract">❐ </a>
-              <a href="https://etherscan.io/token/0xc52c326331e9ce41f04484d3b5e5648158028804" class="copy-icon">⤤</a>
-            </h5>
-            <input id="contract" type="hidden" :value="contract">
-          </b-col>
-        </b-row>
-      </b-col>
-    </b-row>
-  </b-container>
+          <h2 class="text-3xl font-bold gradient-text">
+            ZCX
+          </h2>
+        </div>
+        <div class="px-4 w-1/2">
+          <small style="color: #6c757d;">TOKEN TYPE</small>
+          <br>
+          <h2 class="text-3xl font-bold gradient-text">
+            ERC-20
+          </h2>
+        </div>
+        <div class="px-4 w-1/2">
+          <small style="color: #6c757d;">CIRCULATING SUPPLY</small>
+          <br>
+          <h2 class="text-3xl font-bold gradient-text">
+            33.75m
+          </h2>
+        </div>
+        <div class="px-4 w-1/2">
+          <small style="color: #6c757d;">TOTAL SUPPLY</small>
+          <br>
+          <h2 class="text-3xl font-bold gradient-text">
+            1b
+          </h2>
+        </div>
+        <div class="px-4 w-full">
+          <br><small style="color: #6c757d;">CONTRACT ADDRESS</small><br>
+          <h5 class="text-xl">
+            {{ contract }}
+            &nbsp;
+            <a
+              class="copy-icon no-underline text-lg cursor-pointer"
+              @click.stop.prevent="copyContract"
+            >
+              ❐
+            </a>
+            &nbsp;
+            <!-- TODO: should not hardcode -->
+            <a
+              href="https://etherscan.io/token/0xc52c326331e9ce41f04484d3b5e5648158028804"
+              class="copy-icon no-underline text-lg cursor-pointer"
+            >
+              ⤤
+            </a>
+          </h5>
+          <input id="contract" type="hidden" :value="contract">
+        </div>
+      </div>
+    </div>
+  </div>
 </template>
 
 <script>
@@ -108,16 +115,11 @@ export default {
 
 <style lang="scss">
 a.copy-icon {
-  background: none !important;
-  text-decoration: none;
   color: #8B9298;
-  font-size: 18px;
 }
 
 a.copy-icon:hover {
-  cursor: pointer;
   color: $primary !important;
-  text-decoration: none;
 }
 
 .gradient-text {

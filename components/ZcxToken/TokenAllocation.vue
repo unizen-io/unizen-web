@@ -1,43 +1,59 @@
 <template>
   <div style="background-color: #EFEFEF;" class="mt-12">
-    <b-container class="mb-12 pb-12">
+    <div class="container mx-auto px-8 mb-12 pb-12">
       <h1 class="common-headline mx-auto">
         Token Sale & Allocation.
       </h1>
-      <b-row
-        cols="1"
-        cols-sm="1"
-        cols-md="1"
-        cols-lg="2"
-      >
-        <b-col>
-          <div class="chart-container">
-            <doughnut-chart :data="barChartData" :styles="myStyles" :options="barChartOptions" />
-            <div style="margin-top: -200px;" class="small-chart-text mb-12">
-              <center><small>Click a section of the chart more details.</small></center>
-            </div>
+      <div class="flex flex-wrap">
+        <div class="px-4 w-full lg:w-1/2">
+          <doughnut-chart :data="barChartData" :styles="myStyles" :options="barChartOptions" />
+          <div
+            style="margin-top: -230px; margin-bottom: 80px;"
+            class="mb-12 text-center"
+          >
+            <small>Click a section of the chart more details.</small>
           </div>
-        </b-col>
-        <b-col>
-          <div class="accordion" style="width: 100%;" role="tablist">
-            <b-card v-for="(row, index) in tableData" :key="row.title" no-body class="mb-1">
-              <b-card-header header-tag="header" :style="'background-color: '+barChartData.datasets[0].backgroundColor[index]+' !important;'" class="header-collapse p-1" role="tab">
-                <b-button block class="allo-btn" @click="expanded=index">
-                  {{ row.title }}
-                </b-button>
-              </b-card-header>
-              <b-collapse :id="'accordionG'+index" role="tabpanel" :visible="index == expanded">
-                <b-card-body>
-                  <b-card-text style="white-space: pre-line;">
-                    {{ row.content }}
-                  </b-card-text>
-                </b-card-body>
-              </b-collapse>
-            </b-card>
-          </div>
-        </b-col>
-      </b-row>
-    </b-container>
+        </div>
+        <div
+          class="accordion px-4 w-full lg:w-1/2"
+          role="tablist"
+        >
+          <b-card
+            v-for="(row, index) in tableData"
+            :key="row.title"
+            no-body
+            class="mb-1"
+          >
+            <b-card-header
+              header-tag="header"
+              :style="'background-color: '+barChartData.datasets[0].backgroundColor[index]+' !important;'"
+              class="header-collapse p-1"
+              role="tab"
+            >
+              <b-button
+                block
+                style="background: none !important; border: none !important; color: #2F4858 !important;"
+                class="font-bold hover:opacity-80"
+                @click="expanded=index"
+              >
+                {{ row.title }}
+              </b-button>
+            </b-card-header>
+            <b-collapse
+              :id="'accordionG' + index"
+              role="tabpanel"
+              :visible="index == expanded"
+            >
+              <b-card-body>
+                <b-card-text style="white-space: pre-line;">
+                  {{ row.content }}
+                </b-card-text>
+              </b-card-body>
+            </b-collapse>
+          </b-card>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -61,10 +77,10 @@ export default {
   data () {
     return {
       expanded: 0,
-      tableData: [{ title: 'Team', content: 'Used for new hires and company expenses. Tokens are locked until May 2021 and vested Monthly for 10 Months.' },
+      tableData: [{ title: 'Team', content: 'Used for new hires and company expenses. Tokens are locked until August 2021 and vested Monthly for 10 Months.' },
         { title: 'Ecosystem Reserve / Security Insurance', content: 'Tokens allocated to protect the interest of the ZCX token holders in the event of an exchange hack. Reserve tokens will provide liquidity to the DAO upon its future creation. ' },
         { title: 'Foundation', content: 'Tokens will be utilized for Incubator Grants, Liquidity Provision, Marketing Initiatives, and overall expansion of the Zen Ecosystem.' },
-        { title: 'Partners & Advisors', content: 'Tokens are locked until May 2021 and vested Monthly for 10 Months.' },
+        { title: 'Partners & Advisors', content: 'Tokens are locked until August 2021 and vested Monthly for 10 Months.' },
         { title: 'Seed', content: '12.5% of purchased tokens will be unlocked upon the TGE (Token Generation Event).' + '\n\n' + '20% shall be unlocked every three months (90 days) thereafter, in arrears, over the remaining three quarters (270 days).' + '\n\n' + ' 27.5% will become unlocked on the last tranche of release cycle (360 days after TGE).' },
         { title: 'Strategic', content: '25% tokens released up to 14 days after TGE and additional 25% per quarter for three quarters (270 days duration).' },
         { title: 'Private Sale', content: '25% tokens released up to 14 days after TGE and additional 25% per quarter for three quarters (270 days duration).' }
@@ -135,36 +151,11 @@ export default {
 }
 </script>
 <style lang="scss">
-.chart-container {
-  flex-grow: 1;
-  min-height: 0;
-
-  > div {
-    position: relative;
-    height: 100%;
-  }
-}
 .header-collapse {
   /* Create the gradient. */
   // background-image: linear-gradient(to right bottom, #00afae, #00b6b0, #00bdb1, #00c3b1, #00cab1, #00d0b1, #00d6b0, #00dcaf, #00e2ad, #00e9ab, #00efa8, #00f5a4);
   /* Set the background size and repeat properties. */
   background-size: 100%;
   background-repeat: repeat;
-}
-
-.allo-btn {
-  background: none !important;
-  border: none !important;
-  font-weight: bold !important;
-  color: $dark !important;
-}
-.allo-btn:after {
-  background: none !important;
-  border: none !important;
-}
-.allo-btn:hover {
-  background: none !important;
-  border: none !important;
-  opacity: 0.8;
 }
 </style>

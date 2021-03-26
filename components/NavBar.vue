@@ -27,25 +27,25 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="ml-auto">
-          <b-nav-item class="ml-auto" to="/">
+          <b-nav-item class="ml-auto my-2" to="/">
             HOME
           </b-nav-item>
-          <b-nav-item class="ml-auto" to="/blog">
+          <b-nav-item class="ml-auto my-2" to="/blog">
             BLOG
           </b-nav-item>
-          <b-nav-item class="ml-auto" href="#" disabled>
+          <b-nav-item class="ml-auto my-2" href="#" disabled>
             <span class="text-gray-400">TRADE</span>
           </b-nav-item>
-          <b-nav-item class="ml-auto" href="#" disabled>
+          <b-nav-item class="ml-auto my-2" href="#" disabled>
             <span class="text-gray-400">ZENX LABS</span>
           </b-nav-item>
-          <b-nav-item class="ml-auto" href="#" disabled>
+          <b-nav-item class="ml-auto my-2" href="#" disabled>
             <span class="text-gray-400">FLEXIBLE STAKING</span>
           </b-nav-item>
-          <b-nav-item class="ml-auto" to="/team">
+          <b-nav-item class="ml-auto my-2" to="/team">
             TEAM
           </b-nav-item>
-          <b-nav-item class="ml-auto" to="/contact">
+          <b-nav-item class="ml-auto my-2" to="/contact">
             CONTACT
           </b-nav-item>
         </b-navbar-nav>

@@ -1,33 +1,17 @@
 <template>
   <div>
-    <b-container>
+    <div class="container mx-auto px-8">
       <h1 class="common-headline mx-auto">
         Token Release Schedule.
       </h1>
-      <div id="line" class="chart-container">
-        <line-chart :styles="myStyles" :options="barChartOptions" />
+      <div id="line">
+        <line-chart
+          :styles="myStyles"
+          :options="barChartOptions"
+        />
       </div>
-      <!-- <b-row cols="12">
-        <b-col class="one-year-box" />
-        <b-col class="one-year-box" />
-        <div class="w-100" />
-        <b-col>
-          <center>
-            <b><p class="zen-text">
-              2021
-            </p></b>
-          </center>
-        </b-col>
-        <b-col>
-          <center>
-            <p class="zen-text">
-              <b>2022</b>
-            </p>
-          </center>
-        </b-col>
-      </b-row> -->
       <br><br><br>
-    </b-container>
+    </div>
   </div>
 </template>
 
@@ -138,15 +122,7 @@ export default {
   margin-top: -40px;
   margin-bottom: 20px;
 }
-.chart-container {
-  flex-grow: 1;
-  min-height: 0;
 
-  > div {
-    position: relative;
-    height: 100%;
-  }
-}
 .header-collapse {
   /* Create the gradient. */
   // background-image: linear-gradient(to right bottom, #00afae, #00b6b0, #00bdb1, #00c3b1, #00cab1, #00d0b1, #00d6b0, #00dcaf, #00e2ad, #00e9ab, #00efa8, #00f5a4);

@@ -2,7 +2,7 @@
   <div
     id="header"
     ref="header"
-    class="header"
+    style="margin-bottom: 428px;"
   >
     <div style="position: fixed;">
       <div
@@ -60,10 +60,6 @@ export default {
 </script>
 
 <style lang="scss">
-.header {
-  margin-bottom: 18rem;
-}
-
 h2.title {
   font-size: 8em;
   text-align: center;
@@ -86,7 +82,7 @@ h2.sub-title {
 #homeView {
   width: auto;
   -webkit-animation:fadeIn 2s; /* Safari & Chrome */
-  animation:fadeIn 2s;
+  animation: fadeIn 2s;
 }
 
 .layout-homepage {
@@ -111,11 +107,11 @@ h2.sub-title {
   height: 72px;
 }
 
-@-webkit-keyframes fadeIn{
-  0%{
+@-webkit-keyframes fadeIn {
+  0% {
     opacity: 0;
   }
-  100%{
+  100% {
     opacity: 1;
   }
 }

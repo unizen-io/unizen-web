@@ -33,10 +33,7 @@ export default {
     this.gradient.addColorStop(0.8, chartColors.color6)
     this.gradient.addColorStop(0.9, chartColors.color7)
     this.renderChart({
-      labels: ['Jan',
-        'Feb',
-        'Mar',
-        'April',
+      labels: ['April',
         'May',
         'Jun',
         'Jul',
@@ -44,7 +41,10 @@ export default {
         'Sep',
         'Oct',
         'Nov',
-        'Dec'],
+        'Dec',
+        'Jan',
+        'Feb',
+        'Mar'],
       // 'Jan',
       // 'Feb',
       // 'Mar',

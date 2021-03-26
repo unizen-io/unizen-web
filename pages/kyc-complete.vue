@@ -8,51 +8,46 @@
       src="/img/kyc.jpg"
       alt="KYC"
     />
-    <b-container>
-      <b-row class="vh-100 text-center" align-v="center">
-        <b-col sm />
-        <b-col sm>
-          <b-card class="kyc-card">
-            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
-              <circle
-                class="path circle"
-                fill="none"
-                stroke="#00f5a4"
-                stroke-width="6"
-                stroke-miterlimit="10"
-                cx="65.1"
-                cy="65.1"
-                r="62.1"
-              />
-              <polyline
-                class="path check"
-                fill="none"
-                stroke="#00f5a4"
-                stroke-width="6"
-                stroke-linecap="round"
-                stroke-miterlimit="10"
-                points="100.2,40.2 51.5,88.8 29.8,67.5 "
-              />
-            </svg>
-            <br>
-            <h3 class="text-3xl success">
-              Thank you!
-            </h3>
-            <h5 class="text-xl">
-              Your KYC application has been submitted for review by the Fractal Team. Please check your email for further steps.
-              <br><br>
-              Warmest regards,<br>
-              The Unizen Team
-            </h5>
-            <br>
-            <b-button variant="secondary" size="lg" to="/">
-              Return to Unizen
-            </b-button><br><br>
-          </b-card>
-        </b-col>
-        <b-col sm />
-      </b-row>
-    </b-container>
+    <div class="container mx-auto px-8 min-h-screen grid place-items-center">
+      <b-card class="kyc-card text-center w-1/3">
+        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+          <circle
+            class="path circle"
+            fill="none"
+            stroke="#00f5a4"
+            stroke-width="6"
+            stroke-miterlimit="10"
+            cx="65.1"
+            cy="65.1"
+            r="62.1"
+          />
+          <polyline
+            class="path check"
+            fill="none"
+            stroke="#00f5a4"
+            stroke-width="6"
+            stroke-linecap="round"
+            stroke-miterlimit="10"
+            points="100.2,40.2 51.5,88.8 29.8,67.5 "
+          />
+        </svg>
+        <br>
+        <h3 class="text-3xl success">
+          Thank you!
+        </h3>
+        <h5 class="text-xl">
+          Your KYC application has been submitted for review by the Fractal Team. Please check your email for further steps.
+          <br><br>
+          Warmest regards,<br>
+          The Unizen Team
+        </h5>
+        <br>
+        <b-button variant="secondary" size="lg" to="/">
+          Return to Unizen
+        </b-button>
+        <br><br>
+      </b-card>
+    </div>
   </div>
 </template>
 
@@ -77,7 +72,6 @@ export default {
 }
 
 .kyc-card {
-  text-align: center;
   min-width: 350px !important;
 }
 

@@ -1,6 +1,6 @@
 <template>
   <div class="mt-12 pt-12">
-    <b-container style="margin-bottom: 3rem;" class="py-12 mt-12">
+    <div class="container mx-auto px-8 py-12 mt-12 mb-12">
       <h1 class="privacy">
         Privacy Policy
       </h1>
@@ -8,7 +8,7 @@
         Privacy is important, but cookies are delicous.
       </h2>
       <b-card>
-        <b-container>
+        <div class="container mx-auto px-8">
           <p class="privacy">
             Cookies are small text files that are placed on your computer by websites that you visit. They are widely used in order to make websites work, or work more efficiently, as well as to provide information to the owners of the site. <br><br>
             If you chose to opt in, the ZEN Team will use the following Google Analytics cookies to collect information on how you are using our site: <br><br>
@@ -21,9 +21,9 @@
             You can read an overview of Google's privacy overview and data safeguarding article <a href="https://policies.google.com/privacy?hl=en-US">here</a>.<br><br>
             You can also download a <a href="https://chrome.google.com/webstore/detail/google-analytics-opt-out/fllaojicojecljbmefodhfapmkghcbnh">browser add-on</a> from Google to opt out of Google Analytics entirely.
           </p>
-        </b-container>
+        </div>
       </b-card>
-    </b-container>
+    </div>
   </div>
 </template>
 

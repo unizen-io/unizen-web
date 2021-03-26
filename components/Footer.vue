@@ -1,85 +1,74 @@
 <template>
   <div>
-    <b-row class="footer">
-      <b-container>
-        <b-row
-          class="py-12 px-12"
-          cols="2"
-          cols-md="4"
-          cols-sm="4"
-        >
-          <b-col>
-            <h2 class="footer-text">
-              General
-            </h2>
-            <nuxt-link to="/blog" class="footer-text">
-              Blog
-            </nuxt-link><br>
-            <nuxt-link to="/team" class="footer-text">
-              Team
-            </nuxt-link><br>
-            <nuxt-link to="/token" class="footer-text">
-              ZCX Token
-            </nuxt-link><br>
-            <nuxt-link to="/wenzen" class="footer-text">
-              Tournament of Altcoins
-            </nuxt-link><br>
-            <a class="footer-text footer-disabled">CoinMarketCap</a><br>
-            <a class="footer-text footer-disabled">CoinGecko</a><br>
-            <nuxt-link to="/contact" class="footer-text">
-              Contact Us
-            </nuxt-link>
-          </b-col>
-          <b-col>
-            <h2 class="footer-text">
-              Business
-            </h2>
-            <a class="footer-text footer-disabled">
-              Listing Application</a><br>
-            <nuxt-link to="/contact" class="footer-text">
-              Business Contact
-            </nuxt-link><br>
-            <nuxt-link to="/contact" class="footer-text">
-              Partnership Inquiry
-            </nuxt-link>
-          </b-col>
-          <b-col>
-            <h2 class="footer-text">
-              Technology
-            </h2>
-            <a class="footer-text footer-disabled">
-              API Doc</a><br>
-            <a class="footer-disabled footer-text">SDK</a><br>
-            <a href="https://github.com/unizen-io" class="footer-text">GitHub</a><br>
-            <a class="footer-disabled footer-text">Litepaper</a>
-          </b-col>
-          <b-col>
-            <h2 class="footer-text">
-              Social
-            </h2>
-            <ul class="social-networks bounce">
-              <li><a href="https://t.me/unizen_io" class="icon-telegram">Telegram</a></li>
-              <li><a href="https://www.linkedin.com/company/unizen-io" class="icon-linkedin">LinkedIn</a></li>
-              <li><a href="https://twitter.com/unizen_io" class="icon-twitter">Twitter</a></li>
-              <li><a href="https://github.com/unizen-io" class="icon-github">GitHub</a></li>
-              <li><a href="https://unizen-io.medium.com/" class="icon-medium">Medium</a></li>
-            </ul>
-          </b-col>
-        </b-row>
-      </b-container>
-      <div />
-    </b-row>
-    <b-row style="color: #f5f5f5;" class="bottom text-center pl-12 text-center" align-v="center">
+    <div class="footer-primary">
+      <div class="container mx-auto flex flex-wrap py-12 px-4">
+        <div class="px-4 w-1/2 md:w-1/4">
+          <h2 class="footer-text">
+            General
+          </h2>
+          <nuxt-link to="/blog" class="footer-text">
+            Blog
+          </nuxt-link><br>
+          <nuxt-link to="/team" class="footer-text">
+            Team
+          </nuxt-link><br>
+          <nuxt-link to="/token" class="footer-text">
+            ZCX Token
+          </nuxt-link><br>
+          <nuxt-link to="/wenzen" class="footer-text">
+            Tournament of Altcoins
+          </nuxt-link><br>
+          <a class="footer-text footer-disabled">CoinMarketCap</a><br>
+          <a class="footer-text footer-disabled">CoinGecko</a><br>
+          <nuxt-link to="/contact" class="footer-text">
+            Contact Us
+          </nuxt-link>
+        </div>
+        <div class="px-4 w-1/2 md:w-1/4">
+          <h2 class="footer-text">
+            Business
+          </h2>
+          <a class="footer-text footer-disabled">
+            Listing Application</a><br>
+          <nuxt-link to="/contact" class="footer-text">
+            Business Contact
+          </nuxt-link><br>
+          <nuxt-link to="/contact" class="footer-text">
+            Partnership Inquiry
+          </nuxt-link>
+        </div>
+        <div class="px-4 w-1/2 md:w-1/4">
+          <h2 class="footer-text">
+            Technology
+          </h2>
+          <a class="footer-text footer-disabled">
+            API Doc</a><br>
+          <a class="footer-disabled footer-text">SDK</a><br>
+          <a href="https://github.com/unizen-io" class="footer-text">GitHub</a><br>
+          <a class="footer-disabled footer-text">Litepaper</a>
+        </div>
+        <div class="px-4 w-1/2 md:w-1/4">
+          <h2 class="footer-text">
+            Social
+          </h2>
+          <ul class="social-networks bounce">
+            <li><a href="https://t.me/unizen_io" class="icon-telegram">Telegram</a></li>
+            <li><a href="https://www.linkedin.com/company/unizen-io" class="icon-linkedin">LinkedIn</a></li>
+            <li><a href="https://twitter.com/unizen_io" class="icon-twitter">Twitter</a></li>
+            <li><a href="https://github.com/unizen-io" class="icon-github">GitHub</a></li>
+            <li><a href="https://unizen-io.medium.com/" class="icon-medium">Medium</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div
+      style="color: #f5f5f5;"
+      class="footer-secondary text-center h-16 px-12 flex items-center"
+    >
       © 2021 - 2022 Unizen.io. All rights reserved.
-    </b-row>
+    </div>
   </div>
 </template>
-
-<script>
-export default {
-
-}
-</script>
 
 <style lang="scss">
 .footer-disabled {
@@ -98,14 +87,13 @@ a.footer-text {
   cursor: pointer;
 }
 
-.bottom {
+.footer-secondary {
   background-color: #29404e;
-  height: 4rem !important;
 }
 
-.footer {
-  min-height: 18rem;
+.footer-primary {
   background-color: $dark;
+  min-height: 18rem;
 }
 
 .social-networks {

@@ -10,11 +10,12 @@
 @import "mixins";
 // MEMO: opt in to use tailwindcss
 // @import "root";
-// @import "reboot"; // TODO: should block and open tailwindcss normalization `@tailwind base`
+// @import "reboot";
 // @import "type";
 @import "images";
 @import "code";
-@import "grid";
+// MEMO: opt in to use tailwindcss
+// @import "grid";
 @import "tables";
 @import "forms";
 @import "buttons";

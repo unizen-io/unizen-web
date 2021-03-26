@@ -1,39 +1,36 @@
 <template>
-  <div>
-    <b-row>
-      <b-container>
-        <b-row
-          class="mx-auto"
-          cols="1"
-          cols-sm="1"
-          cols-md="1"
-          cols-lg="2"
+  <div class="container mx-auto px-8">
+    <div class="mx-auto flex flex-wrap">
+      <div
+        v-for="card in utility"
+        :key="card.title"
+        class="w-full lg:w-1/2 px-4"
+      >
+        <b-card
+          style="min-height: 17.5rem"
+          class="mb-6"
         >
-          <b-col v-for="card in utility" :key="card.title" sm>
-            <b-card class="mb-6 utility-card">
-              <div class="flex">
-                <div class="w-1/4 px-4 text-center">
-                  <nuxt-img
-                    loading="lazy"
-                    format="webp"
-                    width="386"
-                    height="387"
-                    :src="card.img"
-                    :alt="card.title"
-                  />
-                </div>
-                <div class="w-3/4 px-4">
-                  <h3 class="text-3xl">
-                    <b>{{ card.title }}</b>
-                  </h3>
-                  <p v-html="card.content" />
-                </div>
-              </div>
-            </b-card>
-          </b-col>
-        </b-row>
-      </b-container>
-    </b-row>
+          <div class="flex">
+            <div class="w-1/4 px-4 text-center">
+              <nuxt-img
+                loading="lazy"
+                format="webp"
+                width="386"
+                height="387"
+                :src="card.img"
+                :alt="card.title"
+              />
+            </div>
+            <div class="w-3/4 px-4">
+              <h3 class="text-3xl">
+                <b>{{ card.title }}</b>
+              </h3>
+              <p v-html="card.content" />
+            </div>
+          </div>
+        </b-card>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -54,7 +51,7 @@ export default {
         },
         {
           title: 'Dynamic Multi-Asset Staking',
-          content: 'ZCX holders have the ability to stake their tokens to earn more ZCX. <br><br>The Unizen team also hosts and maintains an ever-growing pool of nodes from various projects in the space. A percentage of node rewards from that pool will also be distributed to ZCX stakers.',
+          content: 'ZCX holders have the ability to stake their tokens to earn a variety of other token assets. <br><br>The Unizen team also hosts and maintains an ever-growing pool of nodes from various projects in the space. A percentage of node rewards from that pool will also be distributed to ZCX stakers.',
           img: '/img/features/icon4.png'
         },
         {
@@ -67,9 +64,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.utility-card {
-  min-height: 17.5rem !important;
-}
-</style>

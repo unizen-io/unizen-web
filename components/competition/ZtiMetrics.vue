@@ -1,71 +1,69 @@
 <template>
-  <div>
-    <b-container>
-      <b-row class="my-2 mt-12">
-        <b-col class="mb-12">
-          <b-list-group flush>
-            <center>
-              <b-card text-variant="white" :style="'background: '+firstCompetitor.color+' !important;'">
-                <center>
-                  <h2 class="text-3xl">
-                    <b>{{ firstCompetitor.ZTI.score }}</b>
-                  </h2>
-                  <div class="w100" />
-                  ZTI SCORE
-                </center>
-              </b-card>
-              <br>
-              <b-list-group-item class="zen-item">
-                <b>{{ totalTweetsFirstCompetitor }}</b> tweets
-              </b-list-group-item>
-              <b-list-group-item class="zen-item">
-                <b>{{ totalTweetQuotesFirstCompetitor }}</b> quoted retweets
-              </b-list-group-item>
-              <b-list-group-item class="zen-item">
-                <b>{{ totalRetweetsFirstCompetitor }}</b> retweets
-              </b-list-group-item>
-              <b-list-group-item class="zen-item">
-                <b>{{ totalFavoritesFirstCompetitor }}</b> starred tweets
-              </b-list-group-item>
-              <b-list-group-item class="zen-item" style="border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
-                <b>{{ totalRepliesFirstCompetitor }}</b> tweet replies
-              </b-list-group-item>
-            </center>
-          </b-list-group>
-        </b-col>
-        <b-col>
-          <b-list-group flush>
-            <center>
-              <b-card text-variant="white" :style="'background: '+secondCompetitor.color+' !important;'">
-                <center>
-                  <h2 class="text-3xl">
-                    <b>{{ roundNumber(secondCompetitor.ZTI.score / secondCompetitor.mcapDiff) }}</b>
-                  </h2>
-                  <div class="w100" />
-                  ZTI SCORE
-                </center>
-              </b-card>
-              <br>
-              <b-list-group-item class="zen-item">
-                <b>{{ totalTweetsSecondCompetitor }}</b> tweets
-              </b-list-group-item>
-              <b-list-group-item class="zen-item">
-                <b>{{ totalTweetQuotesSecondCompetitor }}</b> quoted retweets
-              </b-list-group-item>
-              <b-list-group-item class="zen-item">
-                <b>{{ totalRetweetsSecondCompetitor }}</b> retweets
-              </b-list-group-item>
-              <b-list-group-item class="zen-item">
-                <b>{{ totalFavoritesSecondCompetitor }}</b> starred tweets
-              </b-list-group-item>
-              <b-list-group-item class="zen-item" style="border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
-                <b>{{ totalTweetRepliesSecondCompetitor }}</b> tweet replies
-              </b-list-group-item>
-            </center>
-          </b-list-group>
-        </b-col>
-      </b-row>
-    </b-container>
+  <div class="container mx-auto px-8">
+    <div class="flex space-x-8">
+      <div class="flex-1">
+        <b-list-group flush>
+          <center>
+            <b-card text-variant="white" :style="'background: '+firstCompetitor.color+' !important;'">
+              <center>
+                <h2 class="text-3xl">
+                  <b>{{ firstCompetitor.ZTI.score }}</b>
+                </h2>
+                <div class="w100" />
+                ZTI SCORE
+              </center>
+            </b-card>
+            <br>
+            <b-list-group-item class="zen-item">
+              <b>{{ totalTweetsFirstCompetitor }}</b> tweets
+            </b-list-group-item>
+            <b-list-group-item class="zen-item">
+              <b>{{ totalTweetQuotesFirstCompetitor }}</b> quoted retweets
+            </b-list-group-item>
+            <b-list-group-item class="zen-item">
+              <b>{{ totalRetweetsFirstCompetitor }}</b> retweets
+            </b-list-group-item>
+            <b-list-group-item class="zen-item">
+              <b>{{ totalFavoritesFirstCompetitor }}</b> starred tweets
+            </b-list-group-item>
+            <b-list-group-item class="zen-item" style="border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
+              <b>{{ totalRepliesFirstCompetitor }}</b> tweet replies
+            </b-list-group-item>
+          </center>
+        </b-list-group>
+      </div>
+      <div class="flex-1">
+        <b-list-group flush>
+          <center>
+            <b-card text-variant="white" :style="'background: '+secondCompetitor.color+' !important;'">
+              <center>
+                <h2 class="text-3xl">
+                  <b>{{ roundNumber(secondCompetitor.ZTI.score / secondCompetitor.mcapDiff) }}</b>
+                </h2>
+                <div class="w100" />
+                ZTI SCORE
+              </center>
+            </b-card>
+            <br>
+            <b-list-group-item class="zen-item">
+              <b>{{ totalTweetsSecondCompetitor }}</b> tweets
+            </b-list-group-item>
+            <b-list-group-item class="zen-item">
+              <b>{{ totalTweetQuotesSecondCompetitor }}</b> quoted retweets
+            </b-list-group-item>
+            <b-list-group-item class="zen-item">
+              <b>{{ totalRetweetsSecondCompetitor }}</b> retweets
+            </b-list-group-item>
+            <b-list-group-item class="zen-item">
+              <b>{{ totalFavoritesSecondCompetitor }}</b> starred tweets
+            </b-list-group-item>
+            <b-list-group-item class="zen-item" style="border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
+              <b>{{ totalTweetRepliesSecondCompetitor }}</b> tweet replies
+            </b-list-group-item>
+          </center>
+        </b-list-group>
+      </div>
+    </div>
   </div>
 </template>
 

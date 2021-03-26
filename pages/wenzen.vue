@@ -1,77 +1,83 @@
 <template>
   <div class="py-12 my-12">
-    <b-row>
-      <b-col>
-        <h1 class="common-headline mx-auto mt-6">
-          The Tournament of Altcoins.
-        </h1>
-        <div class="w-100" />
-        <br><center>
-          <small class="text-muted">POWERED BY</small>
-          <nuxt-img
-            class="mb-12 pb-12"
-            format="webp"
-            width="240"
-            height="70"
-            src="/img/partners/lunarcrush.png"
-            alt="lunarcrush"
-          />
-        </center>
-      </b-col>
-    </b-row>
-    <b-container>
-      <b-row
-        class="mb-12"
-        cols="1"
-        cols-md="2"
-        cols-sm="1"
-      >
-        <b-col class="pt-4">
-          <p class="zen-text">
-            At <b>Unizen</b>, we want to make <u>all</u> digital assets available for our users in an easy-to-use, secure and highly compliant manner. In order to get the latest and greatest at the top of the queue, we've spear headed an initiative called <code>#TournamentofAlts</code>. <br><br>This is a <b>Unizen</b> hosted competition where the winner gets a free listing on our CEX module with Binance-shared liquidity and top tier market making support. <br><br>The semi-finals will last for <u>24 hours</u> and the final round will run for <u>48 hours</u>. The Altcoin, in the finals, with the highest <b>UNIZEN Smart Score™</b> when the timer runs out - will win the free listing.<br><br>
-            The respective communities of each finalist can directly influence the outcome of the competition by supporting their favorite project with <i id="popover-target-1">positive sentiment</i> and <i id="popover-target-2">factually driven marketing</i> on <b>Twitter</b>. <br><br>We're leveraging the smart data feeds of our partner <b>LunarCrush</b> to monitor community sentiment over any digital asset on <b>Twitter</b>.
+    <div>
+      <h1 class="headline text-center pt-16 mx-auto mt-6">
+        The Tournament of Altcoins.
+      </h1>
+      <div class="flex flex-col items-center">
+        <small style="color: #6c757d;">POWERED BY</small>
+        <nuxt-img
+          class="mb-12 pb-12"
+          format="webp"
+          width="240"
+          height="70"
+          src="/img/partners/lunarcrush.png"
+          alt="lunarcrush"
+        />
+      </div>
+    </div>
+    <div class="container mx-auto px-8">
+      <div class="mb-12 flex flex-wrap">
+        <div class="p-4 w-full md:w-1/2 space-y-4">
+          <p
+            style="color: #2F4858;"
+            class="text-lg"
+          >
+            At <strong>Unizen</strong>, we want to make <u>all</u> digital assets available for our users in an easy-to-use, secure and highly compliant manner. In order to get the latest and greatest at the top of the queue, we've spear headed an initiative called <code>#TournamentofAlts</code>. <br><br>This is a <strong>Unizen</strong> hosted competition where the winner gets a free listing on our CEX module with Binance-shared liquidity and top tier market making support. <br><br>The semi-finals will last for <u>24 hours</u> and the final round will run for <u>48 hours</u>. The Altcoin, in the finals, with the highest <strong>UNIZEN Smart Score™</strong> when the timer runs out - will win the free listing.<br><br>
+            The respective communities of each finalist can directly influence the outcome of the competition by supporting their favorite project with <i id="popover-target-1">positive sentiment</i> and <i id="popover-target-2">factually driven marketing</i> on <strong>Twitter</strong>. <br><br>We're leveraging the smart data feeds of our partner <strong>LunarCrush</strong> to monitor community sentiment over any digital asset on <strong>Twitter</strong>.
           </p>
-          <b-popover target="popover-target-1" triggers="hover" placement="top">
-            <b>OOoOooOOoooooOOOooOoOooOOOOoOF!!!!</b><br><br> <a href="#">$CASHTAG</a>
+          <b-popover
+            target="popover-target-1"
+            triggers="hover"
+            placement="top"
+          >
+            <strong>OOoOooOOoooooOOOooOoOooOOOOoOF!!!!</strong>
+            <br>
+            <br>
+            <a href="#">$CASHTAG</a>
           </b-popover>
-          <b-popover target="popover-target-2" triggers="hover" placement="top">
+          <b-popover
+            target="popover-target-2"
+            triggers="hover"
+            placement="top"
+          >
             <template #title>
               shill
             </template>
             A person engaged in advertising. The shill attempts to spread buzz by personally endorsing the product in public forums.
           </b-popover>
-          <br><br>
-          <nuxt-link to="/competition" class="introduction d-none d-sm-block">
+          <nuxt-link
+            to="/competition"
+            class="competition-link hidden w-72 h-14 rounded sm:grid place-items-center text-base text-white no-underline mx-auto"
+          >
             Competition
           </nuxt-link>
-          <br>
-          <div class="w-100" />
-        </b-col>
-        <b-col style="padding-left:10px;">
-          <b-row>
-            <b-col>
-              <b-card class="data-descriptor" title="ZSS Score">
-                <p>
-                  The <b>UNIZEN Smart Score™</b> (ZSS), is a custom dataset of aggregated LunarCrush powered social sentiment data. It is the combined metric of <b>ZTI</b> and <b>ZSI</b>. It is also the <u>sole determinator</u> of the competition.
-                </p>
-              </b-card>
-              <b-card class="data-descriptor" title="ZTI Score">
-                <p>
-                  The <b>UNIZEN Twitter Indicator™</b> (ZTI) is an aggregate of twitter activity over a selected digital asset. More specifically, it's an aggregate of <code>number of tweets</code>, <code>quoted retweets</code>, <code>retweets</code>, <code>replies</code> and <code>favorites</code>.
-                </p>
-              </b-card>
-              <b-card class="data-descriptor" title="ZSI Score">
-                <p>
-                  The <b>UNIZEN Sentiment Indicator™</b> (ZSI) score, is an aggregate of <i>"bullish"</i> sentiment around a digital asset, on twitter. It leverages <b>LunarCrush</b> powered deep learning algorithms and language processing to determine the social sentiment.
-                </p>
-              </b-card>
-              <br><br><br>
-              <nuxt-link to="/competition" class="introduction d-block d-sm-none" />
-            </b-col>
-          </b-row>
-        </b-col>
-      </b-row>
-    </b-container>
+        </div>
+        <div class="px-4 w-full md:w-1/2">
+          <b-card class="mb-4" title="ZSS Score">
+            <p>
+              The <strong>UNIZEN Smart Score™</strong> (ZSS), is a custom dataset of aggregated LunarCrush powered social sentiment data. It is the combined metric of <strong>ZTI</strong> and <strong>ZSI</strong>. It is also the <u>sole determinator</u> of the competition.
+            </p>
+          </b-card>
+          <b-card class="mb-4" title="ZTI Score">
+            <p>
+              The <strong>UNIZEN Twitter Indicator™</strong> (ZTI) is an aggregate of twitter activity over a selected digital asset. More specifically, it's an aggregate of <code>number of tweets</code>, <code>quoted retweets</code>, <code>retweets</code>, <code>replies</code> and <code>favorites</code>.
+            </p>
+          </b-card>
+          <b-card class="mb-4" title="ZSI Score">
+            <p>
+              The <strong>UNIZEN Sentiment Indicator™</strong> (ZSI) score, is an aggregate of <i>"bullish"</i> sentiment around a digital asset, on twitter. It leverages <strong>LunarCrush</strong> powered deep learning algorithms and language processing to determine the social sentiment.
+            </p>
+          </b-card>
+          <nuxt-link
+            to="/competition"
+            class="competition-link sm:hidden w-72 h-14 rounded grid place-items-center text-base text-white no-underline mx-auto"
+          >
+            Competition
+          </nuxt-link>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -90,12 +96,43 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-h1.common-headline {
-  margin-bottom: 0 !important;
-  padding-bottom: 0 !important;
+.headline {
+  color: $dark !important;
 }
 
-.data-descriptor {
-  margin-bottom: 1rem;
+a.competition-link {
+  position: relative;
+  background-image: linear-gradient(to right, #00f5a4, #00e8ac, #00dcb2, #00ceb4, #00c1b3, #00c1b3, #00c1b3, #00c1b3, #00ceb4, #00dcb2, #00e8ac, #00f5a4);    background-size: 400%;
+}
+a.competition-link:hover {
+  animation: animate 8s linear infinite;
+  text-decoration: none;
+}
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+a.competition-link:before {
+  content: '';
+  position: absolute;
+  top: -5px;
+  left: -5px;
+  bottom: -5px;
+  right: -5px;
+  z-index: -1;
+  background-image: linear-gradient(to right, #00f5a4, #00e8ac, #00dcb2, #00ceb4, #00c1b3, #00c1b3, #00c1b3, #00c1b3, #00ceb4, #00dcb2, #00e8ac, #00f5a4);    background-size: 400%;
+  background-size: 400%;
+  border-radius: 40px;
+  opacity: 0;
+  transition: 1s;
+}
+a.competition-link:hover:before {
+  filter: blur(20px);
+  opacity: 1;
+  animation: animate 8s linear infinite;
 }
 </style>
