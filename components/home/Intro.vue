@@ -78,7 +78,7 @@
 // TODO: hack for now
 @media (min-width: 640px) {
   #intro {
-    margin-top: -128px !important;
+    margin-top: -108px !important;
   }
 }
 

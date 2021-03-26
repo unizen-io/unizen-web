@@ -32,8 +32,9 @@
       </b-card>
     </div>
     <div class="hidden sm:block">
+      <!-- TODO: could calculate automatically/correctly using CSS-in-JS -->
       <div
-        style="height: 1034px;"
+        style="height: 990px;"
         class="relative pt-24"
       >
         <nuxt-picture
@@ -81,8 +82,8 @@
 .macbook > img {
   position: absolute;
   top: 0;
-  left: 160px;
-  width: 100%;
+  left: 240px;
+  width: 1200px;
   object-fit: cover;
 }
 
