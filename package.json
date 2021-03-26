@@ -15,7 +15,8 @@
     "@fortawesome/free-regular-svg-icons": "^5.15.3",
     "@nuxtjs/axios": "^5.12.2",
     "@nuxtjs/sitemap": "^2.4.0",
-    "bootstrap-vue": "^2.17.3"
+    "bootstrap-vue": "^2.17.3",
+    "tailwindcss-filters": "^3.0.0"
   },
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.15.3",

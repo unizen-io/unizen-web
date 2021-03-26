@@ -5,7 +5,7 @@
         <b-list-group flush>
           <center>
             <b-card
-              class="shadow-sm"
+              class="shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur"
               text-variant="white"
               :style="'background: ' + firstCompetitor.color + ' !important;'"
             >
@@ -34,7 +34,7 @@
         <b-list-group flush>
           <center>
             <b-card
-              class="shadow-sm"
+              class="shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur"
               text-variant="white"
               :style="'background: ' + secondCompetitor.color + ' !important;'"
             >

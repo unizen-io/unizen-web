@@ -8,7 +8,7 @@
       >
         <b-card
           style="min-height: 17.5rem"
-          class="mb-6 shadow-sm"
+          class="mb-6 shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur"
         >
           <div class="flex">
             <div class="w-1/4 px-4 text-center">

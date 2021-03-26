@@ -1,82 +1,80 @@
 <template>
-  <div>
-    <b-navbar
-      toggleable="lg"
-      fixed="top"
-      type="light"
-      class="unizen-navbar shadow h-20 z-50"
-      :class="{ 'navbar--hidden': !showNavbar }"
+  <b-navbar
+    toggleable="lg"
+    fixed="top"
+    type="light"
+    class="unizen-navbar shadow h-20 z-50 bg-unizenGray bg-opacity-20 backdrop-blur"
+    :class="{ 'navbar--hidden': !showNavbar }"
+  >
+    <nuxt-link
+      class="flex items-center py-1 mr-4 text-xl"
+      :to="PAGES.HOME"
     >
-      <nuxt-link
-        class="flex items-center py-1 mr-4 text-xl"
-        :to="PAGES.HOME"
-      >
-        <MiniLogoIcon
-          width="30"
-          height="30"
-        />
-        <nuxt-img
-          format="webp"
-          width="120"
-          height="19"
-          src="/img/text-logo-large.png"
-        />
-      </nuxt-link>
-      <b-navbar-toggle target="nav-collapse" />
-      <b-collapse
-        id="nav-collapse"
-        is-nav
-      >
-        <b-navbar-nav class="ml-auto">
-          <b-nav-item
-            class="ml-auto my-2"
-            :to="PAGES.HOME"
-          >
-            HOME
-          </b-nav-item>
-          <b-nav-item
-            class="ml-auto my-2"
-            :to="PAGES.BLOG"
-          >
-            BLOG
-          </b-nav-item>
-          <b-nav-item
-            class="ml-auto my-2"
-            href="#"
-            disabled
-          >
-            <span class="text-gray-400">TRADE</span>
-          </b-nav-item>
-          <b-nav-item
-            class="ml-auto my-2"
-            href="#"
-            disabled
-          >
-            <span class="text-gray-400">ZENX LABS</span>
-          </b-nav-item>
-          <b-nav-item
-            class="ml-auto my-2"
-            href="#"
-            disabled
-          >
-            <span class="text-gray-400">FLEXIBLE STAKING</span>
-          </b-nav-item>
-          <b-nav-item
-            class="ml-auto my-2"
-            :to="PAGES.TEAM"
-          >
-            TEAM
-          </b-nav-item>
-          <b-nav-item
-            class="ml-auto my-2"
-            :to="PAGES.CONTACT"
-          >
-            CONTACT
-          </b-nav-item>
-        </b-navbar-nav>
-      </b-collapse>
-    </b-navbar>
-  </div>
+      <MiniLogoIcon
+        width="30"
+        height="30"
+      />
+      <nuxt-img
+        format="webp"
+        width="120"
+        height="19"
+        src="/img/text-logo-large.png"
+      />
+    </nuxt-link>
+    <b-navbar-toggle target="nav-collapse" />
+    <b-collapse
+      id="nav-collapse"
+      is-nav
+    >
+      <b-navbar-nav class="ml-auto">
+        <b-nav-item
+          class="ml-auto my-2"
+          :to="PAGES.HOME"
+        >
+          HOME
+        </b-nav-item>
+        <b-nav-item
+          class="ml-auto my-2"
+          :to="PAGES.BLOG"
+        >
+          BLOG
+        </b-nav-item>
+        <b-nav-item
+          class="ml-auto my-2"
+          href="#"
+          disabled
+        >
+          <span class="text-gray-400">TRADE</span>
+        </b-nav-item>
+        <b-nav-item
+          class="ml-auto my-2"
+          href="#"
+          disabled
+        >
+          <span class="text-gray-400">ZENX LABS</span>
+        </b-nav-item>
+        <b-nav-item
+          class="ml-auto my-2"
+          href="#"
+          disabled
+        >
+          <span class="text-gray-400">FLEXIBLE STAKING</span>
+        </b-nav-item>
+        <b-nav-item
+          class="ml-auto my-2"
+          :to="PAGES.TEAM"
+        >
+          TEAM
+        </b-nav-item>
+        <b-nav-item
+          class="ml-auto my-2"
+          :to="PAGES.CONTACT"
+        >
+          CONTACT
+        </b-nav-item>
+      </b-navbar-nav>
+    </b-collapse>
+  </b-navbar>
 </template>
 
 <script>
@@ -130,8 +128,6 @@ export default {
 <style lang="scss" scoped>
 // ray test touch <
 .unizen-navbar {
-  background: rgba(219, 219, 219, 0.185) !important;
-  backdrop-filter: blur(15px);
   transform: translate3d(0, 0, 0);
   transition: 0.3s all ease-out;
 }

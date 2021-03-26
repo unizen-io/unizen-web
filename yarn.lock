@@ -10308,6 +10308,13 @@ tailwind-config-viewer@^1.5.1:
     portfinder "^1.0.26"
     replace-in-file "^6.1.0"
 
+tailwindcss-filters@^3.0.0:
+  version "3.0.0"
+  resolved "https://registry.yarnpkg.com/tailwindcss-filters/-/tailwindcss-filters-3.0.0.tgz#d5d40ca018a54b1aa2bdc57aeb6677529c24c8d8"
+  integrity sha512-xhortqs8fSp9id17EnneYhmruA5DfU6K0zvN6/mgDlEXKaHthjXlR74Ta+4lrX5Lp7tp6YigB09WO0TOWn7VEQ==
+  dependencies:
+    lodash "^4.17.15"
+
 tailwindcss@^2.0.4:
   version "2.0.4"
   resolved "https://registry.yarnpkg.com/tailwindcss/-/tailwindcss-2.0.4.tgz#cf13e62738c3a27065664e449d93b66ee2945506"

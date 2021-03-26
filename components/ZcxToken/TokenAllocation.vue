@@ -22,7 +22,7 @@
             v-for="(row, index) in tableData"
             :key="row.title"
             no-body
-            class="mb-1 shadow-sm"
+            class="mb-1 shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur"
           >
             <b-card-header
               header-tag="header"

@@ -10,7 +10,7 @@
         img-alt="Image not found"
         img-top
         tag="article"
-        class="article-card h-full shadow-sm"
+        class="article-card h-full shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur"
       >
         <b-card-text>
           <!-- TODO: should create an independent component -->

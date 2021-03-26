@@ -107,7 +107,7 @@
             </div>
           </div>
           <div class="w-full lg:w-9/12">
-            <b-card class="shadow-sm">
+            <b-card class="shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
               <p v-html="advisor.desc" />
             </b-card>
           </div>

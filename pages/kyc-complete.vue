@@ -9,7 +9,7 @@
       alt="KYC"
     />
     <div class="container mx-auto px-8 min-h-screen grid place-items-center">
-      <b-card class="kyc-card text-center w-1/3 shadow-sm">
+      <b-card class="kyc-card text-center w-1/3 shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
         <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
           <circle
             class="path circle"

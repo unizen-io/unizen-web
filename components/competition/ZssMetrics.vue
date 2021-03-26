@@ -1,7 +1,7 @@
 <template>
   <div class="container mx-auto px-8">
     <b-card
-      class="shadow-sm"
+      class="shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur"
       text-variant="white"
       :style="'background-image: linear-gradient(to right,' + firstCompetitor.color + ',' + secondCompetitor.color + ') !important;'"
     >

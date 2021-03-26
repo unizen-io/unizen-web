@@ -8,7 +8,7 @@
       class="sm:flex sm:flex-wrap mx-0"
     >
       <div class="p-4 md:w-1/2 xl:w-1/3">
-        <b-card class="intro-card card1 mx-0 mb-0 h-full shadow-sm">
+        <b-card class="card1 mx-0 mb-0 h-full shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
           <div
             style="color: rgb(47, 72, 88);"
             class="flex"
@@ -28,7 +28,7 @@
         </b-card>
       </div>
       <div class="p-4 md:w-1/2 xl:w-1/3">
-        <b-card class="intro-card card2 mx-0 mb-0 h-full shadow-sm">
+        <b-card class="card2 mx-0 mb-0 h-full shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
           <div
             style="color: rgb(47, 72, 88);"
             class="flex"
@@ -48,7 +48,7 @@
         </b-card>
       </div>
       <div class="p-4 md:w-1/2 xl:w-1/3">
-        <b-card class="intro-card card3 mx-0 mb-0 h-full shadow-sm">
+        <b-card class="card3 mx-0 mb-0 h-full shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
           <div
             style="color: rgb(47, 72, 88);"
             class="flex"
@@ -80,11 +80,6 @@
   #intro {
     margin-top: -108px !important;
   }
-}
-
-.intro-card {
-  background: rgba(219, 219, 219, 0.185) !important;
-  backdrop-filter: blur(15px);
 }
 
 .card1 {

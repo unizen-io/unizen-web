@@ -8,12 +8,30 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-    extend: {}
+    extend: {
+      backgroundColor: {
+        unizenGray: '#dbdbdb'
+      }
+    },
+    filter: { // defaults to {}
+      none: 'none',
+      grayscale: 'grayscale(1)',
+      invert: 'invert(1)',
+      sepia: 'sepia(1)'
+    },
+    backdropFilter: { // defaults to {}
+      none: 'none',
+      blur: 'blur(20px)'
+    }
   },
   variants: {
-    extend: {}
+    extend: {},
+    filter: ['responsive'], // defaults to ['responsive']
+    backdropFilter: ['responsive'] // defaults to ['responsive']
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-filters')
+  ],
   // TODO: should remove after completely dropping bootstrap
   important: true
 }
