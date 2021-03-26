@@ -15,7 +15,7 @@
         :error-message="error.message"
       />
       <div v-else>
-        <b-card>
+        <b-card class="shadow-sm">
           We would love to talk to you about any business inquiry or partner proposal. If this relates to support for any of our exchange modules, please reach out to support@unizen.io.
         </b-card>
         <br>

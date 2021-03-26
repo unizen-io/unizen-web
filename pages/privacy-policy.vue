@@ -7,7 +7,7 @@
       <h2 class="privacy">
         Privacy is important, but cookies are delicous.
       </h2>
-      <b-card>
+      <b-card class="shadow-sm">
         <div class="container mx-auto px-8">
           <p class="privacy">
             Cookies are small text files that are placed on your computer by websites that you visit. They are widely used in order to make websites work, or work more efficiently, as well as to provide information to the owners of the site. <br><br>

@@ -10,7 +10,7 @@
         img-alt="Image not found"
         img-top
         tag="article"
-        class="article-card h-full"
+        class="article-card h-full shadow-sm"
       >
         <b-card-text>
           <!-- TODO: should create an independent component -->

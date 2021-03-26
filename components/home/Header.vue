@@ -43,14 +43,15 @@ export default {
   },
 
   mounted () {
-    if (this.$route.name === 'index') {
-      // MEMO: https://forum.vuejs.org/t/document-getelementbyid-in-shadow-dom-custom-web-element/59957
-      const canvasProject = this.$refs.canvasProject
-      const header = this.$refs.header
-      header.appendChild(canvasProject)
-      waves.methods.initAnimation(canvasProject)
-      waves.methods.animate()
-    }
+    // ray test touch <
+    console.log('ray : ***** [Header]')
+    // ray test touch >
+    // MEMO: https://forum.vuejs.org/t/document-getelementbyid-in-shadow-dom-custom-web-element/59957
+    const canvasProject = this.$refs.canvasProject
+    const header = this.$refs.header
+    header.appendChild(canvasProject)
+    waves.methods.initAnimation(canvasProject)
+    waves.methods.animate()
   },
 
   beforeDestroy () {
@@ -72,6 +73,7 @@ h2.sub-title {
   color: $dark;
 }
 
+// ray test touch <
 #canvas-project {
   position: absolute !important;
   margin-top: -330px;
@@ -79,6 +81,8 @@ h2.sub-title {
   width: 100% !important;
   z-index: -1;
 }
+// ray test touch >
+
 #homeView {
   width: auto;
   -webkit-animation:fadeIn 2s; /* Safari & Chrome */
@@ -87,8 +91,6 @@ h2.sub-title {
 
 .layout-homepage {
   height: auto;
-  // overflow-x: hidden;
-  // overflow-y: hidden;
   -webkit-perspective: 500px;
   -moz-perspective: 500px;
   perspective: 500px;

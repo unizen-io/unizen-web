@@ -11,6 +11,8 @@
     "scrollbars",
     "tailwindcss",
     "truetype",
-    "unizen"
-  ]
+    "unizen",
+    "wenzen"
+  ],
+  "git.enableCommitSigning": true
 }

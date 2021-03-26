@@ -107,7 +107,7 @@
             </div>
           </div>
           <div class="w-full lg:w-9/12">
-            <b-card>
+            <b-card class="shadow-sm">
               <p v-html="advisor.desc" />
             </b-card>
           </div>

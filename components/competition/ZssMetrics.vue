@@ -1,6 +1,10 @@
 <template>
   <div class="container mx-auto px-8">
-    <b-card text-variant="white" :style="'background-image: linear-gradient(to right,' + firstCompetitor.color + ',' + secondCompetitor.color + ') !important;'">
+    <b-card
+      class="shadow-sm"
+      text-variant="white"
+      :style="'background-image: linear-gradient(to right,' + firstCompetitor.color + ',' + secondCompetitor.color + ') !important;'"
+    >
       <div class="text-3xl flex space-x-4 text-center">
         <div class="flex-1">
           <strong>{{ firstCompetitor.ZSS.score }}</strong>

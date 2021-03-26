@@ -4,7 +4,11 @@
       <div class="flex-1">
         <b-list-group flush>
           <center>
-            <b-card text-variant="white" :style="'background: '+firstCompetitor.color+' !important;'">
+            <b-card
+              class="shadow-sm"
+              text-variant="white"
+              :style="'background: ' + firstCompetitor.color + ' !important;'"
+            >
               <center>
                 <h2 class="text-3xl">
                   <b>{{ firstCompetitor.ZSI.score }}</b>
@@ -29,7 +33,11 @@
       <div class="flex-1">
         <b-list-group flush>
           <center>
-            <b-card text-variant="white" :style="'background: '+secondCompetitor.color+' !important;'">
+            <b-card
+              class="shadow-sm"
+              text-variant="white"
+              :style="'background: ' + secondCompetitor.color + ' !important;'"
+            >
               <center>
                 <h2 class="text-3xl">
                   <b>{{ roundNumber(secondCompetitor.ZSI.score / secondCompetitor.mcapDiff) }}</b>

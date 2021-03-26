@@ -11,7 +11,7 @@ export default {
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
-    '~assets/scss/colors.scss'
+    '~assets/scss/global.scss'
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
@@ -26,9 +26,11 @@ export default {
     }
   ],
 
+  // ray test touch <
   // TODO: could be better with explicit component registration
   // Auto import components (https://go.nuxtjs.dev/config-components)
-  components: true,
+  // components: true,
+  // ray test touch >
 
   buildModules: [
     ['@nuxtjs/dotenv', { filename: '.env' }],

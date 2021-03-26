@@ -8,7 +8,7 @@
         src="/img/iMac-potrait.png"
         alt="iMac"
       />
-      <b-card class="text-box-mobile">
+      <b-card class="text-box-mobile shadow-sm">
         <p
           style="color: #2F4858;"
           class="text-lg"
@@ -45,7 +45,7 @@
           src="/img/iMac-landscape.png"
           alt="iMac"
         />
-        <b-card class="text-box max-w-lg">
+        <b-card class="text-box max-w-lg shadow-sm">
           <b-card-body class="flex">
             <p class="text-7xl px-4 w-1/3">
               🦄
@@ -90,7 +90,6 @@
 .text-box {
   background: rgba(219, 219, 219, 0.185) !important;
   backdrop-filter: blur(15px);
-  box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 20px 0px !important;
   -webkit-animation:fadeInUp 3s; /* Safari & Chrome */
   animation:fadeInUp 3s;
   min-width: 420px !important;
@@ -99,7 +98,6 @@
 .text-box-mobile {
   background: rgba(219, 219, 219, 0.185) !important;
   backdrop-filter: blur(15px);
-  box-shadow: rgba(0, 0, 0, 0.04) 0px 0px 20px 0px !important;
   -webkit-animation:fadeInUp 3s; /* Safari & Chrome */
   animation:fadeInUp 3s;
 }
