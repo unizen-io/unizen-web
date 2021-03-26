@@ -1,24 +1,18 @@
 <template>
-  <div class="mb-12">
-    <b-container>
-      <b-card text-variant="white" :style="'background-image: linear-gradient(to right,' + firstCompetitor.color + ',' + secondCompetitor.color + ') !important;'">
-        <center>
-          <h3 class="text-3xl">
-            <b-row>
-              <b-col>
-                <b>{{ firstCompetitor.ZSS.score }}</b>
-              </b-col>
-              <b-col>
-                ZSS
-              </b-col>
-              <b-col>
-                <b>{{ roundNumber(secondCompetitor.ZSS.score / secondCompetitor.mcapDiff) }}</b>
-              </b-col>
-            </b-row>
-          </h3>
-        </center>
-      </b-card>
-    </b-container>
+  <div class="container mx-auto px-8">
+    <b-card text-variant="white" :style="'background-image: linear-gradient(to right,' + firstCompetitor.color + ',' + secondCompetitor.color + ') !important;'">
+      <div class="text-3xl flex space-x-4 text-center">
+        <div class="flex-1">
+          <strong>{{ firstCompetitor.ZSS.score }}</strong>
+        </div>
+        <div class="flex-1">
+          ZSS
+        </div>
+        <div class="flex-1">
+          <strong>{{ roundNumber(secondCompetitor.ZSS.score / secondCompetitor.mcapDiff) }}</strong>
+        </div>
+      </div>
+    </b-card>
   </div>
 </template>
 

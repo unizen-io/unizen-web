@@ -1,9 +1,9 @@
 <template>
   <main id="main">
-    <div>
+    <div class="space-y-12">
       <Header />
-      <Intro />
       <Zen />
+      <Intro />
       <PoweredByBinance />
       <Cta />
       <TopArticles />

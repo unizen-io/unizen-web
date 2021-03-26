@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="main">
-      <b-container class="py-12 my-12">
+      <div class="container mx-auto px-8 py-12 my-12">
         <h1 class="py-12 mt-12">
           Blog.
         </h1>
@@ -14,7 +14,7 @@
           v-if="status === STATUSES.RESOLVED"
           :articles="articles"
         />
-      </b-container>
+      </div>
     </div>
   </div>
 </template>

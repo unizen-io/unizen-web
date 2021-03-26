@@ -1,69 +1,73 @@
 <template>
-  <div class="main">
-    <b-row>
-      <b-container class="pt-12 my-12">
-        <h1 class="blog py-12 mt-12 text-center">
-          Contact.
-        </h1>
-        <ErrorMessage
-          v-if="status === STATUSES.REJECTED"
-          :error-message="error.message"
-        />
-        <b-col v-else>
-          <b-card>
-            We would love to talk to you about any business inquiry or partner proposal. If this relates to support for any of our exchange modules, please reach out to support@unizen.io.
-          </b-card>
+  <div
+    style="background-image: linear-gradient(to bottom, #f5f5f5, #f4f4f4, #f2f3f2, #f1f1f1, #f0f0f0);"
+    class="min-h-screen"
+  >
+    <div class="max-w-5xl mx-auto px-8 pt-24 pb-12">
+      <h1
+        style="color: #2f4858 !important; font-family: Montserrat Medium !important;"
+        class="contact font-bold py-12 mt-12 text-center"
+      >
+        Contact.
+      </h1>
+      <ErrorMessage
+        v-if="status === STATUSES.REJECTED"
+        :error-message="error.message"
+      />
+      <div v-else>
+        <b-card>
+          We would love to talk to you about any business inquiry or partner proposal. If this relates to support for any of our exchange modules, please reach out to support@unizen.io.
+        </b-card>
+        <br>
+        <b-form
+          name="contactus"
+          @submit.prevent="sendForm"
+        >
+          <b-form-input
+            id="input-1"
+            v-model="name"
+            name="name"
+            novalidate="true"
+            placeholder="What's your name?"
+            size="lg"
+            :state="nameState"
+            trim
+          />
           <br>
-          <b-form
-            name="contactus"
-            @submit.prevent="sendForm"
+          <b-form-input
+            id="input-2"
+            v-model="email"
+            placeholder="What's your e-mail?"
+            name="email"
+            size="lg"
+            :state="emailState"
+            trim
+            required
+          />
+          <br>
+          <b-form-textarea
+            id="textarea-no-resize"
+            v-model="message"
+            placeholder="Enter a message..."
+            rows="12"
+            size="lg"
+            :state="messageState"
+            name="message"
+            required
+          />
+          <br>
+          <b-button
+            :disabled="status === STATUSES.PENDING"
+            variant="outline-primary"
+            size="lg"
+            class="w-full"
+            type="submit"
           >
-            <b-form-input
-              id="input-1"
-              v-model="name"
-              name="name"
-              novalidate="true"
-              placeholder="What's your name?"
-              size="lg"
-              :state="nameState"
-              trim
-            />
-            <br>
-            <b-form-input
-              id="input-2"
-              v-model="email"
-              placeholder="What's your e-mail?"
-              name="email"
-              size="lg"
-              :state="emailState"
-              trim
-              required
-            />
-            <br>
-            <b-form-textarea
-              id="textarea-no-resize"
-              v-model="message"
-              placeholder="Enter a message..."
-              rows="12"
-              size="lg"
-              :state="messageState"
-              name="message"
-              required
-            />
-            <br>
-            <b-button
-              :disabled="status === STATUSES.PENDING"
-              variant="outline-primary"
-              size="lg"
-              class="contact"
-              type="submit"
-            >
-              {{ status === STATUSES.PENDING ? "Submitting..." : "Send" }}
-            </b-button>
-          </b-form>
-        </b-col>
-      </b-container>
-    </b-row>
+            {{ status === STATUSES.PENDING ? "Submitting..." : "Send" }}
+          </b-button>
+        </b-form>
+      </div>
+    </div>
     <h1
       v-if="status === STATUSES.RESOLVED"
       class="text-center py-12 px-6"
@@ -170,20 +174,3 @@ export default {
   }
 }
 </script>
-
-<style lang="scss">
-.main {
-  background-image: linear-gradient(to bottom, #f5f5f5, #f4f4f4, #f2f3f2, #f1f1f1, #f0f0f0);
-  min-height: 1000px;
-}
-
-.contact {
-  width: 100% !important;
-}
-
-h1.blog {
-  font-family: Montserrat Medium!important;
-  color: #2f4858!important;
-  font-weight: 700;
-}
-</style>
