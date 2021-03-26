@@ -81,7 +81,7 @@
 .macbook > img {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 160px;
   width: 100%;
   object-fit: cover;
 }
