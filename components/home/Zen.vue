@@ -32,13 +32,10 @@
       </b-card>
     </div>
     <div class="hidden sm:block">
-      <!-- ray test touch < -->
       <div
         style="height: 1034px;"
         class="relative pt-24"
       >
-        <!-- ray test touch < -->
-        <!-- ray test touch < -->
         <nuxt-picture
           class="macbook"
           loading="lazy"
@@ -47,7 +44,6 @@
           src="/img/iMac-landscape.png"
           alt="iMac"
         />
-        <!-- ray test touch > -->
         <b-card class="text-box max-w-lg">
           <b-card-body class="flex">
             <p class="text-7xl px-4 w-1/3">
@@ -86,10 +82,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  // ray test touch <
-  // right:0;
   width: 100%;
-  // ray test touch >
   object-fit: cover;
 }
 
