@@ -4,7 +4,7 @@
       toggleable="lg"
       fixed="top"
       type="light"
-      class="unizen-navbar shadow"
+      class="unizen-navbar shadow h-20 z-50"
       :class="{ 'navbar--hidden': !showNavbar }"
     >
       <nuxt-link
@@ -132,8 +132,6 @@ export default {
 .unizen-navbar {
   background: rgba(219, 219, 219, 0.185) !important;
   backdrop-filter: blur(15px);
-  min-height: 5rem;
-  z-index: 99999 !important;
   transform: translate3d(0, 0, 0);
   transition: 0.3s all ease-out;
 }
