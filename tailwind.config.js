@@ -9,9 +9,16 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-      backgroundColor: {
-        unizenGray: '#dbdbdb'
-      }
+      colors: {
+        unizenGray: '#dbdbdb',
+        primary: {
+          DEFAULT: '#00d3b0',
+          dark: '#00f5a3'
+        }
+      },
+      textShadow: theme => ({
+        unizen: `0px 2px 27px ${theme('colors.primary.dark')}65`
+      })
     },
     filter: { // defaults to {}
       none: 'none',
@@ -30,7 +37,8 @@ module.exports = {
     backdropFilter: ['responsive'] // defaults to ['responsive']
   },
   plugins: [
-    require('tailwindcss-filters')
+    require('tailwindcss-filters'),
+    require('tailwindcss-textshadow')
   ],
   // TODO: should remove after completely dropping bootstrap
   important: true

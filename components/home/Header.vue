@@ -65,7 +65,6 @@ h2.title {
   font-size: 8em;
   text-align: center;
   font-family: Arista Alt;
-  text-shadow: 0px 2px 27px #00f5a365;
 }
 h2.sub-title {
   margin-top: -0.5rem;

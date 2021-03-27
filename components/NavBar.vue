@@ -30,7 +30,7 @@
         <b-nav-item
           v-for="navigationItem in NAVIGATION_LINKS"
           :key="navigationItem.title"
-          class="ml-auto py-2 uppercase"
+          class="ml-auto py-2 uppercase hover:text-shadow-unizen"
           :class="{ 'pointer-events-none': !!navigationItem.disabled }"
           :to="navigationItem.url"
           :disabled="!!navigationItem.disabled"
@@ -125,7 +125,6 @@ export default {
 // ray test touch <
 a:hover {
   color: $primary !important;
-  text-shadow: 0px 2px 27px rgba(0, 245, 163, 0.397);
 }
 // ray test touch >
 </style>
