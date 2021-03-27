@@ -2,7 +2,7 @@
   <div class="py-12 my-12">
     <div class="pb-12">
       <div class="container mx-auto px-8">
-        <h1 class="common-headline">
+        <h1 class="text-center pt-16 pb-24 text-tertiary">
           Meet the executive team.
         </h1>
         <div class="flex flex-wrap justify-center mb-12">
@@ -21,7 +21,7 @@
                 :alt="member.name"
               />
               <div class="overlay mt-8 rounded">
-                <div class="pt-4 text">
+                <div class="pt-4 text text-tertiary font-bold">
                   <ul class="text-center social-networks bounce mt-1">
                     <li v-if="member.telegram !== ''">
                       <a :href="member.telegram" class="icon-telegram">Telegram</a>
@@ -40,7 +40,7 @@
               </div>
             </div>
             <div>
-              <h5 class="text-xl text-center pt-4 team">
+              <h5 class="text-xl text-center pt-4 team text-tertiary font-bold">
                 {{ member.name }}
               </h5>
               <p class="text-center">
@@ -56,7 +56,7 @@
       class="my-12"
     >
       <div class="container mx-auto px-8">
-        <h1 class="common-headline">
+        <h1 class="text-center pt-16 pb-24 text-tertiary">
           Meet the advisors.
         </h1>
         <div
@@ -79,7 +79,7 @@
                 :alt="advisor.name"
               />
               <div class="overlay mt-8 rounded">
-                <div class="pt-4 text">
+                <div class="pt-4 text text-tertiary font-bold">
                   <ul class="text-center social-networks bounce mt-1">
                     <li v-if="advisor.telegram !== ''">
                       <a :href="advisor.telegram" class="icon-telegram">Telegram</a>
@@ -98,7 +98,7 @@
               </div>
             </div>
             <div>
-              <h5 class="text-xl text-center pt-4 team">
+              <h5 class="text-xl text-center pt-4 team text-tertiary font-bold">
                 {{ advisor.name }}
               </h5>
               <p class="text-center mb-4">
@@ -229,14 +229,10 @@ img.team {
 
 h5.team {
   font-family: Montserrat Medium !important;
-  color: $dark !important;
-  font-weight: bold;
 }
 
 .text {
   font-family: Montserrat Medium !important;
-  color: $dark !important;
-  font-weight: bold;
 }
 
 .overlay-container {

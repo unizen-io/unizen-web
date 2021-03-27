@@ -1,7 +1,7 @@
 <template>
   <div class="py-12 my-12">
     <div>
-      <h1 class="headline text-center pt-16 mx-auto mt-6">
+      <h1 class="text-center pt-16 mx-auto mt-6 text-tertiary">
         The Tournament of Altcoins.
       </h1>
       <div class="flex flex-col items-center">
@@ -96,10 +96,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.headline {
-  color: $dark !important;
-}
-
 a.competition-link {
   position: relative;
   background-image: linear-gradient(to right, #00f5a4, #00e8ac, #00dcb2, #00ceb4, #00c1b3, #00c1b3, #00c1b3, #00c1b3, #00ceb4, #00dcb2, #00e8ac, #00f5a4);    background-size: 400%;

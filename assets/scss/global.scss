@@ -1,13 +1,10 @@
 // All of your custom SCSS variables go first
-// ray test touch <
-$primary:       #00D3B0 ;
-// ray test touch >
-$secondary:     #00f5a4 ;
-$green:         #00AFAE ;
-$blue:          #008B9D ;
-$dak-blue:      #11687F ;
-$light:         #f5f5f5 ;
-$dark:          #2F4858 ;
+$primary:       #00d3b0;
+$secondary:     #00f5a4;
+$green:         #00afae;
+$blue:          #008b9d;
+$light:         #f5f5f5;
+$dark:          #2f4858;
 
 $enable-shadows: false;
 
@@ -23,13 +20,6 @@ body {
 h1 {
   font-family: Montserrat Semi-Bold;
   font-size: 2.3em !important;
-}
-
-h1.common-headline {
-  text-align: center;
-  padding-top: 4rem !important;
-  padding-bottom: 6rem !important;
-  color: $dark !important;
 }
 
 @font-face {
@@ -326,16 +316,16 @@ canvas {
 }
 
 @media (min-width: 576px) {
-    .card-columns {
-      column-count: 3;
-      column-gap: 1.25rem;
-      orphans: 1;
-      widows: 1;
-    }
-    .card-columns .card {
-      display: inline-block;
-      width: 100%;
-    }
+  .card-columns {
+    column-count: 3;
+    column-gap: 1.25rem;
+    orphans: 1;
+    widows: 1;
+  }
+  .card-columns .card {
+    display: inline-block;
+    width: 100%;
+  }
 }
 
 .accordion > .card {

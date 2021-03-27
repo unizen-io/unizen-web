@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="container mx-auto px-8">
-      <h1 class="common-headline mx-auto">
+      <h1 class="mx-auto text-center pt-16 pb-24 text-tertiary">
         Token Release Schedule.
       </h1>
       <div id="line">

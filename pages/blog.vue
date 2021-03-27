@@ -2,7 +2,7 @@
   <div>
     <div class="main">
       <div class="container mx-auto px-8 py-12 my-12">
-        <h1 class="py-12 mt-12">
+        <h1 class="py-12 mt-12 text-tertiary text-center font-bold">
           Blog.
         </h1>
         <LoadingMessage v-if="status === STATUSES.IDLE || status === STATUSES.PENDING" />
@@ -86,8 +86,5 @@ export default {
 
 h1 {
   font-family: Montserrat Medium !important;
-  color: $dark !important;
-  font-weight: bold;
-  text-align: center;
 }
 </style>

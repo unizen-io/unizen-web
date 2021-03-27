@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="footer-primary">
+    <div class="footer-primary bg-tertiary">
       <div class="container mx-auto flex flex-wrap py-12 px-4">
         <div class="px-4 w-1/2 md:w-1/4">
           <h2 class="footer-text">
@@ -95,7 +95,6 @@ h2.footer-text {
 }
 
 .footer-primary {
-  background-color: $dark;
   min-height: 18rem;
 }
 

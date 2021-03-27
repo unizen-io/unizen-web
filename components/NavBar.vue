@@ -7,7 +7,7 @@
     :class="{ 'navbar--hidden': !showNavbar }"
   >
     <nuxt-link
-      class="flex items-center py-1 mr-4 text-xl"
+      class="flex items-center py-1 mr-4 text-xl space-x-2"
       :to="PAGES.home.url"
     >
       <MiniLogoIcon
@@ -15,6 +15,7 @@
         height="30"
       />
       <nuxt-img
+        class="w-24"
         format="webp"
         width="120"
         height="19"
@@ -31,7 +32,7 @@
           v-for="navigationItem in NAVIGATION_LINKS"
           :key="navigationItem.title"
           class="ml-auto py-2"
-          link-classes=" uppercase hover:text-primary hover:text-shadow-unizen"
+          :link-classes="[{ 'text-tertiary': !navigationItem.disabled }, NAV_ITEM_LINK_CLASSES]"
           :class="{ 'pointer-events-none': !!navigationItem.disabled }"
           :to="navigationItem.url"
           :disabled="!!navigationItem.disabled"
@@ -75,6 +76,7 @@ export default {
   created () {
     this.NAVIGATION_LINKS = NAVIGATION_LINKS
     this.PAGES = PAGES
+    this.NAV_ITEM_LINK_CLASSES = 'uppercase hover:text-primary hover:text-shadow-unizen text-base font-bold duration-500'
   },
 
   methods: {
@@ -98,13 +100,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-// ray test touch <
 .unizen-navbar {
   transform: translate3d(0, 0, 0);
   transition: 0.3s all ease-out;
   min-height: 5rem;
 }
-// ray test touch >
 
 .unizen-navbar.navbar--hidden {
   box-shadow: none;
@@ -113,14 +113,5 @@ export default {
 
 .nav-item.nav-item.nav-item a {
   font-family: Lato Regular !important;
-  font-size: 0.9em;
-  font-weight: bold;
-  color: $dark;
-  -o-transition: .5s;
-  -ms-transition: .5s;
-  -moz-transition: .5s;
-  -webkit-transition: .5s;
-  /* ...and now for the proper property */
-  transition: .5s;
 }
 </style>

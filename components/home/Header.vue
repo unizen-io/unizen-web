@@ -22,7 +22,7 @@
               src="/img/green-text-logo-large.png"
               alt="Unizen"
             />
-            <h2 class="sub-title text-3xl">
+            <h2 class="text-3xl text-center text-tertiary -mt-2">
               Smart Exchange Ecosystem
             </h2>
           </div>
@@ -65,11 +65,6 @@ h2.title {
   font-size: 8em;
   text-align: center;
   font-family: Arista Alt;
-}
-h2.sub-title {
-  margin-top: -0.5rem;
-  text-align: center;
-  color: $dark;
 }
 
 // ray test touch <

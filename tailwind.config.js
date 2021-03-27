@@ -14,6 +14,9 @@ module.exports = {
         primary: {
           DEFAULT: '#00d3b0',
           dark: '#00f5a3'
+        },
+        tertiary: {
+          DEFAULT: '#2f4858'
         }
       },
       textShadow: theme => ({

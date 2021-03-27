@@ -1,7 +1,7 @@
 <template>
   <div style="background-color: #EFEFEF;" class="mt-12">
     <div class="container mx-auto px-8 mb-12 pb-12">
-      <h1 class="common-headline mx-auto">
+      <h1 class="mx-auto text-center pt-16 pb-24 text-tertiary">
         Token Sale & Allocation.
       </h1>
       <div class="flex flex-wrap">
