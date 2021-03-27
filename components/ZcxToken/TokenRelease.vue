@@ -112,10 +112,12 @@ export default {
 }
 </script>
 <style lang="scss">
-.one-year-box{
+.one-year-box {
+  // ray test touch <
   border-bottom: 3px $primary solid;
   border-right: 3px $primary solid;
   border-left: 3px $primary solid;
+  // ray test touch >
   margin-left: 10px;
   margin-right: 10px;
   height: 20px;

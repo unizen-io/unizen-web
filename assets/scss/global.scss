@@ -1,5 +1,7 @@
 // All of your custom SCSS variables go first
+// ray test touch <
 $primary:       #00D3B0 ;
+// ray test touch >
 $secondary:     #00f5a4 ;
 $green:         #00AFAE ;
 $blue:          #008B9D ;
@@ -21,7 +23,9 @@ body {
 h1 {
   font-family: Montserrat Semi-Bold;
   font-size: 2.3em !important;
+  // ray test touch <
   color: $primary !important;
+  // ray test touch >
 }
 
 h1.common-headline {

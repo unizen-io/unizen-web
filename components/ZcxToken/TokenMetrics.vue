@@ -119,12 +119,16 @@ a.copy-icon {
 }
 
 a.copy-icon:hover {
+  // ray test touch <
   color: $primary !important;
+  // ray test touch >
 }
 
 .gradient-text {
   /* Fallback: Set a background color. */
+  // ray test touch <
   background-color: $primary;
+  // ray test touch >
 
   /* Create the gradient. */
   background-image: linear-gradient(to right bottom, #00afae, #00b6b0, #00bdb1, #00c3b1, #00cab1, #00d0b1, #00d6b0, #00dcaf, #00e2ad, #00e9ab, #00efa8, #00f5a4);

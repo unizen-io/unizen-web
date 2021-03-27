@@ -12,7 +12,8 @@
     "tailwindcss",
     "truetype",
     "unizen",
-    "wenzen"
+    "wenzen",
+    "zenx"
   ],
   "git.enableCommitSigning": true
 }

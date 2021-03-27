@@ -8,7 +8,7 @@
   >
     <nuxt-link
       class="flex items-center py-1 mr-4 text-xl"
-      :to="PAGES.HOME"
+      :to="PAGES.home.url"
     >
       <MiniLogoIcon
         width="30"
@@ -28,49 +28,16 @@
     >
       <b-navbar-nav class="ml-auto">
         <b-nav-item
-          class="ml-auto my-2"
-          :to="PAGES.HOME"
+          v-for="navigationItem in NAVIGATION_LINKS"
+          :key="navigationItem.title"
+          class="ml-auto py-2 uppercase"
+          :class="{ 'pointer-events-none': !!navigationItem.disabled }"
+          :to="navigationItem.url"
+          :disabled="!!navigationItem.disabled"
         >
-          HOME
-        </b-nav-item>
-        <b-nav-item
-          class="ml-auto my-2"
-          :to="PAGES.BLOG"
-        >
-          BLOG
-        </b-nav-item>
-        <b-nav-item
-          class="ml-auto my-2"
-          href="#"
-          disabled
-        >
-          <span class="text-gray-400">TRADE</span>
-        </b-nav-item>
-        <b-nav-item
-          class="ml-auto my-2"
-          href="#"
-          disabled
-        >
-          <span class="text-gray-400">ZENX LABS</span>
-        </b-nav-item>
-        <b-nav-item
-          class="ml-auto my-2"
-          href="#"
-          disabled
-        >
-          <span class="text-gray-400">FLEXIBLE STAKING</span>
-        </b-nav-item>
-        <b-nav-item
-          class="ml-auto my-2"
-          :to="PAGES.TEAM"
-        >
-          TEAM
-        </b-nav-item>
-        <b-nav-item
-          class="ml-auto my-2"
-          :to="PAGES.CONTACT"
-        >
-          CONTACT
+          <span class="{ 'text-gray-400': navigationItem.disabled }">
+            {{ navigationItem.title }}
+          </span>
         </b-nav-item>
       </b-navbar-nav>
     </b-collapse>
@@ -79,7 +46,10 @@
 
 <script>
 import MiniLogoIcon from '@/assets/img/icons/mini-logo.svg?inline'
-import { PAGES } from '@/utils/constants/links'
+import {
+  PAGES,
+  NAVIGATION_LINKS
+} from '@/utils/constants/links'
 
 export default {
   components: {
@@ -102,6 +72,7 @@ export default {
   },
 
   created () {
+    this.NAVIGATION_LINKS = NAVIGATION_LINKS
     this.PAGES = PAGES
   },
 
@@ -133,7 +104,7 @@ export default {
 }
 // ray test touch >
 
-.navbar.navbar--hidden {
+.unizen-navbar.navbar--hidden {
   box-shadow: none;
   transform: translate3d(0, -100%, 0);
 }
@@ -151,8 +122,10 @@ export default {
   transition: .5s;
 }
 
+// ray test touch <
 a:hover {
   color: $primary !important;
   text-shadow: 0px 2px 27px rgba(0, 245, 163, 0.397);
 }
+// ray test touch >
 </style>

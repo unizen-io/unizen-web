@@ -83,7 +83,9 @@ h2.footer-text {
 }
 
 a.footer-text {
+  // ray test touch <
   color: $primary !important;
+  // ray test touch >
   cursor: pointer;
 }
 
