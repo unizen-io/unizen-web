@@ -6,21 +6,23 @@
           <h2 class="footer-text">
             General
           </h2>
-          <nuxt-link to="/blog" class="footer-text">
+          <nuxt-link to="/blog" class="text-primary hover:underline">
             Blog
           </nuxt-link><br>
-          <nuxt-link to="/team" class="footer-text">
+          <nuxt-link to="/team" class="text-primary hover:underline">
             Team
           </nuxt-link><br>
-          <nuxt-link to="/token" class="footer-text">
+          <nuxt-link to="/token" class="text-primary hover:underline">
             ZCX Token
           </nuxt-link><br>
-          <nuxt-link to="/wenzen" class="footer-text">
+          <nuxt-link to="/wenzen" class="text-primary hover:underline">
             Tournament of Altcoins
           </nuxt-link><br>
-          <a class="footer-text footer-disabled">CoinMarketCap</a><br>
-          <a class="footer-text footer-disabled">CoinGecko</a><br>
-          <nuxt-link to="/contact" class="footer-text">
+          <a class="text-primary footer-disabled">CoinMarketCap</a>
+          <br>
+          <a class="text-primary footer-disabled">CoinGecko</a>
+          <br>
+          <nuxt-link to="/contact" class="text-primary hover:underline">
             Contact Us
           </nuxt-link>
         </div>
@@ -28,12 +30,14 @@
           <h2 class="footer-text">
             Business
           </h2>
-          <a class="footer-text footer-disabled">
-            Listing Application</a><br>
-          <nuxt-link to="/contact" class="footer-text">
+          <a class="text-primary footer-disabled">
+            Listing Application
+          </a>
+          <br>
+          <nuxt-link to="/contact" class="text-primary hover:underline">
             Business Contact
           </nuxt-link><br>
-          <nuxt-link to="/contact" class="footer-text">
+          <nuxt-link to="/contact" class="text-primary hover:underline">
             Partnership Inquiry
           </nuxt-link>
         </div>
@@ -41,11 +45,15 @@
           <h2 class="footer-text">
             Technology
           </h2>
-          <a class="footer-text footer-disabled">
-            API Doc</a><br>
-          <a class="footer-disabled footer-text">SDK</a><br>
-          <a href="https://github.com/unizen-io" class="footer-text">GitHub</a><br>
-          <a class="footer-disabled footer-text">Litepaper</a>
+          <a class="text-primary footer-disabled">
+            API Doc
+          </a>
+          <br>
+          <a class="footer-disabled text-primary">SDK</a>
+          <br>
+          <a href="https://github.com/unizen-io" class="text-primary hover:underline">GitHub</a>
+          <br>
+          <a class="footer-disabled text-primary">Litepaper</a>
         </div>
         <div class="px-4 w-1/2 md:w-1/4">
           <h2 class="footer-text">
@@ -80,13 +88,6 @@ h2.footer-text {
   color: $light !important;
   font-size: 1.4em;
   margin-top: 20px;
-}
-
-a.footer-text {
-  // ray test touch <
-  color: $primary !important;
-  // ray test touch >
-  cursor: pointer;
 }
 
 .footer-secondary {

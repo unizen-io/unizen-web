@@ -70,7 +70,7 @@
     </div>
     <h1
       v-if="status === STATUSES.RESOLVED"
-      class="text-center py-12 px-6"
+      class="text-center py-12 px-6 text-primary"
     >
       Thank you, we got your submission!
     </h1>

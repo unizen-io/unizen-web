@@ -21,10 +21,10 @@
           </b-list-group-item>
         </b-list-group>
         <!-- <ul>
-            <li><b>Insurance fund</b></li>
-            <li><b>Burn</b> - ZCX will be burned with every paid listing</li>
-            <li><b>Staking rewards</b> - allocated to a staking pool</li>
-          </ul> -->
+          <li><b>Insurance fund</b></li>
+          <li><b>Burn</b> - ZCX will be burned with every paid listing</li>
+          <li><b>Staking rewards</b> - allocated to a staking pool</li>
+        </ul> -->
       </p>
     </div>
     <div class="order-first lg:order-last p-7 w-full lg:w-1/2">
@@ -32,28 +32,28 @@
         <div class="px-4 w-1/2">
           <small style="color: #6c757d;">TICKER</small>
           <br>
-          <h2 class="text-3xl font-bold gradient-text">
+          <h2 class="text-3xl font-bold gradient-text bg-primary">
             ZCX
           </h2>
         </div>
         <div class="px-4 w-1/2">
           <small style="color: #6c757d;">TOKEN TYPE</small>
           <br>
-          <h2 class="text-3xl font-bold gradient-text">
+          <h2 class="text-3xl font-bold gradient-text bg-primary">
             ERC-20
           </h2>
         </div>
         <div class="px-4 w-1/2">
           <small style="color: #6c757d;">CIRCULATING SUPPLY</small>
           <br>
-          <h2 class="text-3xl font-bold gradient-text">
+          <h2 class="text-3xl font-bold gradient-text bg-primary">
             33.75m
           </h2>
         </div>
         <div class="px-4 w-1/2">
           <small style="color: #6c757d;">TOTAL SUPPLY</small>
           <br>
-          <h2 class="text-3xl font-bold gradient-text">
+          <h2 class="text-3xl font-bold gradient-text bg-primary">
             1b
           </h2>
         </div>
@@ -63,7 +63,7 @@
             {{ contract }}
             &nbsp;
             <a
-              class="copy-icon no-underline text-lg cursor-pointer"
+              class="copy-icon hover:text-primary no-underline text-lg cursor-pointer"
               @click.stop.prevent="copyContract"
             >
               ❐
@@ -72,7 +72,7 @@
             <!-- TODO: should not hardcode -->
             <a
               href="https://etherscan.io/token/0xc52c326331e9ce41f04484d3b5e5648158028804"
-              class="copy-icon no-underline text-lg cursor-pointer"
+              class="copy-icon hover:text-primary no-underline text-lg cursor-pointer"
             >
               ⤤
             </a>
@@ -118,18 +118,7 @@ a.copy-icon {
   color: #8B9298;
 }
 
-a.copy-icon:hover {
-  // ray test touch <
-  color: $primary !important;
-  // ray test touch >
-}
-
 .gradient-text {
-  /* Fallback: Set a background color. */
-  // ray test touch <
-  background-color: $primary;
-  // ray test touch >
-
   /* Create the gradient. */
   background-image: linear-gradient(to right bottom, #00afae, #00b6b0, #00bdb1, #00c3b1, #00cab1, #00d0b1, #00d6b0, #00dcaf, #00e2ad, #00e9ab, #00efa8, #00f5a4);
   /* Set the background size and repeat properties. */

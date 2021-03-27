@@ -3,7 +3,7 @@
     toggleable="lg"
     fixed="top"
     type="light"
-    class="unizen-navbar shadow h-20 z-50 bg-unizenGray bg-opacity-20 backdrop-blur"
+    class="unizen-navbar shadow z-50 bg-unizenGray bg-opacity-20 backdrop-blur"
     :class="{ 'navbar--hidden': !showNavbar }"
   >
     <nuxt-link
@@ -30,7 +30,8 @@
         <b-nav-item
           v-for="navigationItem in NAVIGATION_LINKS"
           :key="navigationItem.title"
-          class="ml-auto py-2 uppercase hover:text-shadow-unizen"
+          class="ml-auto py-2"
+          link-classes=" uppercase hover:text-primary hover:text-shadow-unizen"
           :class="{ 'pointer-events-none': !!navigationItem.disabled }"
           :to="navigationItem.url"
           :disabled="!!navigationItem.disabled"
@@ -101,6 +102,7 @@ export default {
 .unizen-navbar {
   transform: translate3d(0, 0, 0);
   transition: 0.3s all ease-out;
+  min-height: 5rem;
 }
 // ray test touch >
 
@@ -121,10 +123,4 @@ export default {
   /* ...and now for the proper property */
   transition: .5s;
 }
-
-// ray test touch <
-a:hover {
-  color: $primary !important;
-}
-// ray test touch >
 </style>
