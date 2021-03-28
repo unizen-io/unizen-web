@@ -26,12 +26,6 @@ export default {
     }
   ],
 
-  // ray test touch <
-  // TODO: could be better with explicit component registration
-  // Auto import components (https://go.nuxtjs.dev/config-components)
-  // components: true,
-  // ray test touch >
-
   buildModules: [
     ['@nuxtjs/dotenv', { filename: '.env' }],
     '@nuxtjs/eslint-module',
