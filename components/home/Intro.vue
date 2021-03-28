@@ -75,8 +75,8 @@
 </template>
 
 <style lang="scss">
-// TODO: hack for now
-@media (min-width: 640px) {
+// TODO: hack for now (hardcoded)
+@media (min-width: 768px) {
   #intro {
     margin-top: -108px !important;
   }

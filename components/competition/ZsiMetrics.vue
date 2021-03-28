@@ -18,13 +18,13 @@
               </center>
             </b-card>
             <br>
-            <b-list-group-item class="zen-item">
+            <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ socialContributorsFirstCompetitor }}</b> unique accounts tweeting
             </b-list-group-item>
-            <b-list-group-item class="zen-item">
+            <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ sentiment4FirstCompetitor }}</b> "bullish" tweets
             </b-list-group-item>
-            <b-list-group-item class="zen-item">
+            <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ sentiment5FirstCompetitor }}</b> very "bullish" tweets
             </b-list-group-item>
           </center>
@@ -47,13 +47,13 @@
               </center>
             </b-card>
             <br>
-            <b-list-group-item class="zen-item">
+            <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ socialContributorsSecondCompetitor }}</b> unique accounts tweeting
             </b-list-group-item>
-            <b-list-group-item class="zen-item">
+            <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ sentiment4SecondCompetitor }}</b> "bullish" tweets
             </b-list-group-item>
-            <b-list-group-item class="zen-item">
+            <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ sentiment5SecondCompetitor }}</b> very "bullish" tweets
             </b-list-group-item>
           </center>

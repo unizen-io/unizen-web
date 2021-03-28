@@ -7,13 +7,13 @@
         A portion of the listing fees collected will  be distributed into the following allocations:<br>
         <br>
         <b-list-group flush>
-          <b-list-group-item class="zen-item">
+          <b-list-group-item class="bg-white bg-opacity-20">
             <b>Insurance fund</b>
           </b-list-group-item>
-          <b-list-group-item class="zen-item">
+          <b-list-group-item class="bg-white bg-opacity-20">
             <b>Burn</b> - ZCX will be burned with every paid listing
           </b-list-group-item>
-          <b-list-group-item class="zen-item" style="border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
+          <b-list-group-item class="bg-white bg-opacity-20 rounded-b">
             <b>Staking rewards</b> - allocated to a staking pool
           </b-list-group-item>
         </b-list-group>

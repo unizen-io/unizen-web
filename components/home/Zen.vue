@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto px-8">
-    <div class="sm:hidden">
+    <div class="md:hidden">
       <nuxt-picture
         loading="lazy"
         width="1130"
@@ -16,19 +16,19 @@
           seamless user experience.
         </p>
         <b-list-group flush>
-          <b-list-group-item class="zen-item">
+          <b-list-group-item class="bg-white bg-opacity-20">
             ✔️ High regulatory compliance
           </b-list-group-item>
-          <b-list-group-item class="zen-item">
+          <b-list-group-item class="bg-white bg-opacity-20">
             ✔️ Fast listing times
           </b-list-group-item>
-          <b-list-group-item class="zen-item" style="border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
+          <b-list-group-item class="bg-white bg-opacity-20 rounded-b">
             ✔️ Highly competitive listing and trading fees
           </b-list-group-item>
         </b-list-group>
       </b-card>
     </div>
-    <div class="hidden sm:block">
+    <div class="hidden md:block">
       <!-- TODO: could calculate automatically/correctly using CSS-in-JS -->
       <div
         style="height: 990px;"
@@ -52,13 +52,13 @@
             </p>
           </b-card-body>
           <b-list-group flush>
-            <b-list-group-item class="zen-item">
+            <b-list-group-item class="bg-white bg-opacity-20">
               ✔️ High regulatory compliance
             </b-list-group-item>
-            <b-list-group-item class="zen-item">
+            <b-list-group-item class="bg-white bg-opacity-20">
               ✔️ Fast listing times
             </b-list-group-item>
-            <b-list-group-item class="zen-item" style="border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
+            <b-list-group-item class="bg-white bg-opacity-20 rounded-b">
               ✔️ Highly competitive listing and trading fees
             </b-list-group-item>
           </b-list-group>
@@ -69,10 +69,6 @@
 </template>
 
 <style lang="scss">
-.zen-item {
-  background-color: #ffffff1c !important;
-}
-
 .macbook > img {
   position: absolute;
   top: 0;
@@ -82,13 +78,13 @@
 }
 
 .text-box {
-  -webkit-animation:fadeInUp 3s; /* Safari & Chrome */
-  animation:fadeInUp 3s;
+  -webkit-animation: fadeInUp 3s; /* Safari & Chrome */
+  animation: fadeInUp 3s;
   min-width: 420px !important;
 }
 
 .text-box-mobile {
-  -webkit-animation:fadeInUp 3s; /* Safari & Chrome */
-  animation:fadeInUp 3s;
+  -webkit-animation: fadeInUp 3s; /* Safari & Chrome */
+  animation: fadeInUp 3s;
 }
 </style>
