@@ -15,10 +15,7 @@
             </h4>
           </div>
           <div class="px-4 md:w-1/3">
-            <h1
-              style="color: #2F4858 !important;"
-              class="text-center text-8xl"
-            >
+            <h1 class="text-center text-8xl text-tertiary">
               vs.
             </h1>
           </div>

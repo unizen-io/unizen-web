@@ -5,14 +5,14 @@
   >
     <div class="container mx-auto px-8 pt-48">
       <h1
-        style="color: #2f4858 !important; font-family: Montserrat Medium !important;"
-        class="contact font-bold text-center mt-24 mb-2"
+        style="font-family: Montserrat Medium !important;"
+        class="contact font-bold text-center mt-24 mb-2 text-tertiary"
       >
         THANKS!
       </h1>
       <h2
-        style="color: #2f4858 !important; font-family: Montserrat Medium !important;"
-        class="text-center text-xl"
+        style="font-family: Montserrat Medium !important;"
+        class="text-center text-xl text-tertiary"
       >
         Your contact request has been submitted.
       </h2>

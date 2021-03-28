@@ -19,10 +19,7 @@
     <div class="container mx-auto px-8">
       <div class="mb-12 flex flex-wrap">
         <div class="p-4 w-full md:w-1/2 space-y-4">
-          <p
-            style="color: #2F4858;"
-            class="text-lg"
-          >
+          <p class="text-lg text-tertiary">
             At <strong>Unizen</strong>, we want to make <u>all</u> digital assets available for our users in an easy-to-use, secure and highly compliant manner. In order to get the latest and greatest at the top of the queue, we've spear headed an initiative called <code>#TournamentofAlts</code>. <br><br>This is a <strong>Unizen</strong> hosted competition where the winner gets a free listing on our CEX module with Binance-shared liquidity and top tier market making support. <br><br>The semi-finals will last for <u>24 hours</u> and the final round will run for <u>48 hours</u>. The Altcoin, in the finals, with the highest <strong>UNIZEN Smart Score™</strong> when the timer runs out - will win the free listing.<br><br>
             The respective communities of each finalist can directly influence the outcome of the competition by supporting their favorite project with <i id="popover-target-1">positive sentiment</i> and <i id="popover-target-2">factually driven marketing</i> on <strong>Twitter</strong>. <br><br>We're leveraging the smart data feeds of our partner <strong>LunarCrush</strong> to monitor community sentiment over any digital asset on <strong>Twitter</strong>.
           </p>

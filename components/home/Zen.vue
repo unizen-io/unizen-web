@@ -9,10 +9,7 @@
         alt="iMac"
       />
       <b-card class="text-box-mobile shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
-        <p
-          style="color: #2F4858;"
-          class="text-lg"
-        >
+        <p class="text-lg text-tertiary">
           A new class of digital asset exchange that provides global traders and retail investors
           with access to exciting blockchain projects through the combined functionality of a secure
           CEX, DEX, AI-driven social sentiment indicators and Binance-level liquidity: all in one
@@ -50,10 +47,7 @@
             <p class="text-7xl px-4 w-1/3">
               🦄
             </p>
-            <p
-              style="color: #2F4858;"
-              class="text-lg px-4 flex-grow"
-            >
+            <p class="text-lg px-4 flex-grow text-tertiary">
               A new class of digital asset exchange that provides global traders and retail investors with access to exciting blockchain projects through the combined functionality of a secure CEX, DEX, AI-driven social sentiment indicators and Binance-level liquidity: all in one seamless user experience.
             </p>
           </b-card-body>

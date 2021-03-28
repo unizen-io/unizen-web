@@ -21,8 +21,8 @@
             :aria-label="`Link to ${article.title}`"
           >
             <h2
-              style="color: #2F4858 !important; font-family: Montserrat Medium !important;"
-              class="text-xl mb-2"
+              style="font-family: Montserrat Medium !important;"
+              class="text-xl mb-2 text-tertiary"
             >
               {{ article.title }}
             </h2>

@@ -32,8 +32,8 @@
             >
               <b-button
                 block
-                style="background: none !important; border: none !important; color: #2F4858 !important;"
-                class="font-bold hover:opacity-80"
+                style="background: none !important; border: none !important;"
+                class="font-bold hover:opacity-80 text-tertiary"
                 @click="expanded=index"
               >
                 {{ row.title }}

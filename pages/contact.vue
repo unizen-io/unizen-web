@@ -5,8 +5,8 @@
   >
     <div class="max-w-5xl mx-auto px-8 pt-24 pb-12">
       <h1
-        style="color: #2f4858 !important; font-family: Montserrat Medium !important;"
-        class="contact font-bold py-12 mt-12 text-center"
+        style="font-family: Montserrat Medium !important;"
+        class="contact font-bold py-12 mt-12 text-center text-tertiary"
       >
         Contact.
       </h1>
