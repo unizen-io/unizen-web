@@ -4,7 +4,10 @@
       <h1 class="mx-auto text-center pt-16 pb-24 text-tertiary">
         Token Release Schedule.
       </h1>
-      <div id="line">
+      <div
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      >
         <line-chart
           :styles="myStyles"
           :options="barChartOptions"

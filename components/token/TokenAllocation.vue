@@ -1,11 +1,15 @@
 <template>
-  <div style="background-color: #EFEFEF;" class="mt-12">
+  <div style="background-color: #efefef;" class="mt-12">
     <div class="container mx-auto px-8 mb-12 pb-12">
       <h1 class="mx-auto text-center pt-16 pb-24 text-tertiary">
         Token Sale & Allocation.
       </h1>
       <div class="flex flex-wrap">
-        <div class="px-4 w-full lg:w-1/2">
+        <div
+          class="px-4 w-full lg:w-1/2"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <doughnut-chart :data="barChartData" :styles="myStyles" :options="barChartOptions" />
           <div
             style="margin-top: -230px; margin-bottom: 80px;"
@@ -17,6 +21,8 @@
         <div
           class="accordion px-4 w-full lg:w-1/2"
           role="tablist"
+          data-aos="fade-up"
+          data-aos-duration="3000"
         >
           <b-card
             v-for="(row, index) in tableData"
@@ -26,8 +32,8 @@
           >
             <b-card-header
               header-tag="header"
-              :style="'background-color: '+barChartData.datasets[0].backgroundColor[index]+' !important;'"
-              class="header-collapse p-1"
+              :style="'background-color: ' + barChartData.datasets[0].backgroundColor[index] + ' !important;'"
+              class="p-1"
               role="tab"
             >
               <b-button
@@ -74,6 +80,7 @@ export default {
   components: {
     DoughnutChart
   },
+
   data () {
     return {
       expanded: 0,
@@ -150,9 +157,3 @@ export default {
   }
 }
 </script>
-<style lang="scss">
-.header-collapse {
-  background-size: 100%;
-  background-repeat: repeat;
-}
-</style>
