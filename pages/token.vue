@@ -11,10 +11,10 @@
 </template>
 
 <script>
-import TokenAllocation from '@/components/ZcxToken/TokenAllocation'
-import TokenMetrics from '@/components/ZcxToken/TokenMetrics'
-import TokenRelease from '@/components/ZcxToken/TokenRelease'
-import TokenUtility from '@/components/ZcxToken/TokenUtility'
+import TokenAllocation from '@/components/token/TokenAllocation'
+import TokenMetrics from '@/components/token/TokenMetrics'
+import TokenRelease from '@/components/token/TokenRelease'
+import TokenUtility from '@/components/token/TokenUtility'
 import { createSEOTags } from '@/utils/helpers/seo'
 
 export default {
