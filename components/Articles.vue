@@ -1,6 +1,6 @@
 <template>
   <div class="md:flex md:flex-wrap">
-    <div
+    <article
       v-for="article in articles"
       :key="article.title"
       class="md:w-1/2 lg:w-1/3 p-4"
@@ -46,7 +46,7 @@
           </div>
         </template>
       </b-card>
-    </div>
+    </article>
   </div>
 </template>
 

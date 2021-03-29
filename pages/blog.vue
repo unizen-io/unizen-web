@@ -1,20 +1,22 @@
 <template>
-  <div>
-    <div class="main">
-      <div class="container mx-auto px-8 py-12 my-12">
-        <h1 class="py-12 mt-12 text-tertiary text-center font-bold">
-          Blog.
-        </h1>
-        <LoadingMessage v-if="status === STATUSES.IDLE || status === STATUSES.PENDING" />
-        <ErrorMessage
-          v-if="status === STATUSES.REJECTED"
-          :error-message="error.message"
-        />
-        <Articles
-          v-if="status === STATUSES.RESOLVED"
-          :articles="articles"
-        />
-      </div>
+  <div class="main">
+    <div
+      class="container mx-auto px-8 py-12 my-12"
+      data-aos="fade-up"
+      data-aos-duration="2000"
+    >
+      <h1 class="py-12 mt-12 text-tertiary text-center font-bold">
+        Blog.
+      </h1>
+      <LoadingMessage v-if="status === STATUSES.IDLE || status === STATUSES.PENDING" />
+      <ErrorMessage
+        v-if="status === STATUSES.REJECTED"
+        :error-message="error.message"
+      />
+      <Articles
+        v-if="status === STATUSES.RESOLVED"
+        :articles="articles"
+      />
     </div>
   </div>
 </template>
