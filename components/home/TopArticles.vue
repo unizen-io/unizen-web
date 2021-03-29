@@ -1,5 +1,9 @@
 <template>
-  <div class="container mx-auto px-4">
+  <div
+    class="container mx-auto px-4"
+    data-aos="fade-up"
+    data-aos-duration="3000"
+  >
     <h1 class="mb-6 px-4 text-tertiary font-bold">
       Latest blog articles.
     </h1>

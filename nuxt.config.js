@@ -11,19 +11,20 @@ export default {
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [
-    '~assets/scss/global.scss'
+    '~/assets/scss/global.scss'
   ],
 
   // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
   plugins: [
     {
-      src: './plugins/GoogleAnalytics.js',
+      src: '~/plugins/google-analytics.js',
       mode: 'client'
     },
     {
       src: '~/plugins/vue-confetti.js',
       mode: 'client'
-    }
+    },
+    '~/plugins/aos.client.js'
   ],
 
   buildModules: [
