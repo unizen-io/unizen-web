@@ -1,10 +1,6 @@
 <template>
   <div class="main">
-    <div
-      class="container mx-auto px-8 py-12 my-12"
-      data-aos="fade-up"
-      data-aos-duration="2000"
-    >
+    <div class="container mx-auto px-8 py-12 my-12">
       <h1 class="py-12 mt-12 text-tertiary text-center font-bold">
         Blog.
       </h1>
@@ -16,6 +12,8 @@
       <Articles
         v-if="status === STATUSES.RESOLVED"
         :articles="articles"
+        data-aos="fade-up"
+        data-aos-duration="2000"
       />
     </div>
   </div>

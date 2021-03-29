@@ -1,9 +1,5 @@
 <template>
-  <div
-    class="container mx-auto px-4"
-    data-aos="fade-up"
-    data-aos-duration="2000"
-  >
+  <div class="container mx-auto px-4">
     <h1 class="mb-6 px-4 text-tertiary font-bold">
       Latest blog articles.
     </h1>
@@ -15,6 +11,8 @@
     <Articles
       v-if="status === STATUSES.RESOLVED"
       :articles="articles.slice(0, 3)"
+      data-aos="fade-up"
+      data-aos-duration="2000"
     />
   </div>
 </template>
