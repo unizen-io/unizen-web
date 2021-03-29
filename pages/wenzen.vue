@@ -17,8 +17,12 @@
       </div>
     </div>
     <div class="container mx-auto px-8">
-      <div class="mb-12 flex flex-wrap">
-        <div class="p-4 w-full md:w-1/2 space-y-4">
+      <div class="mb-12 md:flex md:flex-wrap">
+        <div
+          class="p-4 md:w-1/2 space-y-4"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <p class="text-lg text-tertiary">
             At <strong>Unizen</strong>, we want to make <u>all</u> digital assets available for our users in an easy-to-use, secure and highly compliant manner. In order to get the latest and greatest at the top of the queue, we've spear headed an initiative called <code>#TournamentofAlts</code>. <br><br>This is a <strong>Unizen</strong> hosted competition where the winner gets a free listing on our CEX module with Binance-shared liquidity and top tier market making support. <br><br>The semi-finals will last for <u>24 hours</u> and the final round will run for <u>48 hours</u>. The Altcoin, in the finals, with the highest <strong>UNIZEN Smart Score™</strong> when the timer runs out - will win the free listing.<br><br>
             The respective communities of each finalist can directly influence the outcome of the competition by supporting their favorite project with <i id="popover-target-1">positive sentiment</i> and <i id="popover-target-2">factually driven marketing</i> on <strong>Twitter</strong>. <br><br>We're leveraging the smart data feeds of our partner <strong>LunarCrush</strong> to monitor community sentiment over any digital asset on <strong>Twitter</strong>.
@@ -50,7 +54,11 @@
             Competition
           </nuxt-link>
         </div>
-        <div class="px-4 w-full md:w-1/2">
+        <div
+          class="px-4 md:w-1/2"
+          data-aos="fade-up"
+          data-aos-duration="3000"
+        >
           <b-card class="mb-4 shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur" title="ZSS Score">
             <p>
               The <strong>UNIZEN Smart Score™</strong> (ZSS), is a custom dataset of aggregated LunarCrush powered social sentiment data. It is the combined metric of <strong>ZTI</strong> and <strong>ZSI</strong>. It is also the <u>sole determinator</u> of the competition.
