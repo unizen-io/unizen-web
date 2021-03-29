@@ -39,8 +39,10 @@
     />
     <div v-if="competitionStarted" class="space-y-12">
       <div
-        style="background: #EFEFEF;"
+        style="background: #efefef;"
         class="container mx-auto px-8"
+        data-aos="fade-up"
+        data-aos-duration="2000"
       >
         <div class="mt-12 flex flex-wrap">
           <div class="px-4 w-full md:w-1/2">
@@ -84,14 +86,20 @@
       <ZtiMetrics
         :first-competitor="FirstCompetitor"
         :second-competitor="SecondCompetitor"
+        data-aos="fade-up"
+        data-aos-duration="2000"
       />
       <ZsiMetrics
         :first-competitor="FirstCompetitor"
         :second-competitor="SecondCompetitor"
+        data-aos="fade-up"
+        data-aos-duration="2000"
       />
       <ZssMetrics
         :first-competitor="FirstCompetitor"
         :second-competitor="SecondCompetitor"
+        data-aos="fade-up"
+        data-aos-duration="2000"
       />
     </div>
     <div v-else style="padding-bottom: 200px;" />
