@@ -10,7 +10,10 @@
         ref="canvasProject"
       />
     </div>
-    <div id="homeView" class="current-state ajaxhidden" style="visibility: inherit;">
+    <div
+      data-aos="fade-in"
+      data-aos-duration="2000"
+    >
       <div class="layout layout-homepage">
         <article class="slideshow">
           <div class="item">
@@ -77,12 +80,6 @@ h2.title {
 }
 // ray test touch >
 
-#homeView {
-  width: auto;
-  -webkit-animation:fadeIn 2s; /* Safari & Chrome */
-  animation: fadeIn 2s;
-}
-
 .layout-homepage {
   height: auto;
   -webkit-perspective: 500px;
@@ -95,20 +92,5 @@ h2.title {
 }
 .layout-homepage .slideshow .item {
   margin-top: 14rem;
-}
-.visual {
-  display: block;
-  margin: 0 auto;
-  width: 145px;
-  height: 72px;
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 </style>

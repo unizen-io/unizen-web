@@ -8,7 +8,12 @@
         src="/img/iMac-potrait.png"
         alt="iMac"
       />
-      <b-card class="text-box-mobile shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
+      <!-- TODO: should combine mobile and desktop versions into one -->
+      <b-card
+        class="shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      >
         <p class="text-lg text-tertiary">
           A new class of digital asset exchange that provides global traders and retail investors
           with access to exciting blockchain projects through the combined functionality of a secure
@@ -42,7 +47,12 @@
           src="/img/iMac-landscape.png"
           alt="iMac"
         />
-        <b-card class="text-box max-w-lg shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
+        <b-card
+          style="min-width: 420px !important;"
+          class="max-w-lg shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <b-card-body class="flex">
             <p class="text-7xl px-4 w-1/3">
               🦄
@@ -75,16 +85,5 @@
   left: 240px;
   width: 1200px;
   object-fit: cover;
-}
-
-.text-box {
-  -webkit-animation: fadeInUp 3s; /* Safari & Chrome */
-  animation: fadeInUp 3s;
-  min-width: 420px !important;
-}
-
-.text-box-mobile {
-  -webkit-animation: fadeInUp 3s; /* Safari & Chrome */
-  animation: fadeInUp 3s;
 }
 </style>

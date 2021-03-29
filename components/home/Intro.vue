@@ -7,8 +7,12 @@
       deck
       class="sm:flex sm:flex-wrap mx-0"
     >
-      <div class="p-4 md:w-1/2 xl:w-1/3">
-        <b-card class="card1 mx-0 mb-0 h-full shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
+      <div
+        class="p-4 md:w-1/2 xl:w-1/3"
+        data-aos="fade-up"
+        data-aos-duration="1000"
+      >
+        <b-card class="mx-0 mb-0 h-full shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
           <div
             style="color: rgb(47, 72, 88);"
             class="flex"
@@ -27,8 +31,12 @@
           </div>
         </b-card>
       </div>
-      <div class="p-4 md:w-1/2 xl:w-1/3">
-        <b-card class="card2 mx-0 mb-0 h-full shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
+      <div
+        class="p-4 md:w-1/2 xl:w-1/3"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      >
+        <b-card class="mx-0 mb-0 h-full shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
           <div
             style="color: rgb(47, 72, 88);"
             class="flex"
@@ -47,8 +55,12 @@
           </div>
         </b-card>
       </div>
-      <div class="p-4 md:w-1/2 xl:w-1/3">
-        <b-card class="card3 mx-0 mb-0 h-full shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
+      <div
+        class="p-4 md:w-1/2 xl:w-1/3"
+        data-aos="fade-up"
+        data-aos-duration="3000"
+      >
+        <b-card class="mx-0 mb-0 h-full shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
           <div
             style="color: rgb(47, 72, 88);"
             class="flex"
@@ -79,32 +91,6 @@
 @media (min-width: 768px) {
   #intro {
     margin-top: -108px !important;
-  }
-}
-
-.card1 {
-  -webkit-animation: fadeInUp 2s; /* Safari & Chrome */
-  animation: fadeInUp 2s;
-}
-
-.card2 {
-  -webkit-animation: fadeInUp 3s; /* Safari & Chrome */
-  animation: fadeInUp 3s;
-}
-
-.card3 {
-  -webkit-animation: fadeInUp 4s; /* Safari & Chrome */
-  animation: fadeInUp 4s;
-}
-
-@-webkit-keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    -webkit-transform: translateY(80px);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
   }
 }
 </style>

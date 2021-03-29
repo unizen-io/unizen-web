@@ -2,15 +2,23 @@
   <div class="partners">
     <div class="container mx-auto px-4">
       <div class="pt-12 flex flex-wrap">
-        <div class="px-4 w-full md:w-1/2">
+        <div
+          class="p-4 w-full md:w-1/2"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <h1
             style="color: #f5f5f5 !important; font-family: Montserrat;"
             class="text-6xl"
           >
             Our strategic partners.
-          </h1><br>
+          </h1>
         </div>
-        <div class="px-4 w-full md:w-1/2">
+        <div
+          class="p-4 w-full md:w-1/2"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <p
             style="color: #f5f5f5;"
             class="text-xl"

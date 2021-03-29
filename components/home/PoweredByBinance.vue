@@ -1,7 +1,7 @@
 <template>
   <div style="background: #EFEFEF;">
     <div class="py-12 container mx-auto px-4">
-      <div class="mt-12">
+      <div>
         <h3
           style="font-family: 'D DIN';"
           class="font-base px-4 text-tertiary"
@@ -23,11 +23,16 @@
           Unizen Exchange's centralized liquidity and platform is powered by Binance infrastructure, security and liquidity to enable a <a href="#" class="binance no-underline text-tertiary">ZEN state of mind</a> for traders.
         </p>
       </div>
-      <div class="mb-12 mt-6 sm:flex sm:flex-wrap">
-        <div class="flex-grow p-4 sm:w-1/2 md:w-1/3">
+      <div class="mt-6 sm:flex sm:flex-wrap">
+        <div
+          class="flex-grow p-4 sm:w-1/2 md:w-1/3"
+          data-aos="fade-up"
+          data-aos-duration="1000"
+        >
           <b-card class="h-full shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
             <nuxt-img
               class="m-auto w-40 h-40"
+              format="webp"
               loading="lazy"
               width="276"
               height="276"
@@ -45,10 +50,15 @@
             </p>
           </b-card>
         </div>
-        <div class="flex-grow p-4 sm:w-1/2 md:w-1/3">
+        <div
+          class="flex-grow p-4 sm:w-1/2 md:w-1/3"
+          data-aos="fade-up"
+          data-aos-duration="2000"
+        >
           <b-card class="h-full shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
             <nuxt-img
               class="m-auto w-40 h-40"
+              format="webp"
               loading="lazy"
               width="276"
               height="276"
@@ -66,10 +76,15 @@
             </p>
           </b-card>
         </div>
-        <div class="flex-grow p-4 sm:w-1/2 md:w-1/3">
+        <div
+          class="flex-grow p-4 sm:w-1/2 md:w-1/3"
+          data-aos="fade-up"
+          data-aos-duration="3000"
+        >
           <b-card class="h-full shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
             <nuxt-img
               class="m-auto w-40 h-40"
+              format="webp"
               loading="lazy"
               width="276"
               height="276"
