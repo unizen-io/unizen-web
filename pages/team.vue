@@ -5,13 +5,11 @@
         <h1 class="text-center pt-16 pb-24 text-tertiary">
           Meet the executive team.
         </h1>
-        <!-- ray test touch < -->
         <div
           class="flex flex-wrap justify-center mb-12"
           data-aos="fade-up"
           data-aos-duration="2000"
         >
-          <!-- ray test touch > -->
           <div
             v-for="member in team"
             :key="member.name"
@@ -69,6 +67,8 @@
           v-for="(advisor, index) in advisors"
           :key="advisor.name"
           class="mb-12 flex flex-wrap"
+          data-aos="fade-up"
+          data-aos-duration="2000"
         >
           <div
             class="w-full lg:w-3/12"
