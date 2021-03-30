@@ -28,19 +28,22 @@
       is-nav
     >
       <b-navbar-nav class="ml-auto">
-        <b-nav-item
+        <li
           v-for="navigationItem in NAVIGATION_LINKS"
           :key="navigationItem.title"
-          class="ml-auto py-2"
-          :link-classes="[{ 'text-tertiary': !navigationItem.disabled }, NAV_ITEM_LINK_CLASSES]"
-          :class="{ 'pointer-events-none': !!navigationItem.disabled }"
-          :to="navigationItem.url"
-          :disabled="!!navigationItem.disabled"
+          style="font-family: Lato Regular !important;"
+          class="ml-auto p-2"
+          :class="[
+            { 'text-tertiary': !navigationItem.disabled },
+            { 'text-black text-opacity-30': navigationItem.disabled },
+            { 'pointer-events-none': !!navigationItem.disabled },
+            NAV_ITEM_CLASSES
+          ]"
         >
-          <span class="{ 'text-gray-400': navigationItem.disabled }">
+          <nuxt-link :to="navigationItem.url">
             {{ navigationItem.title }}
-          </span>
-        </b-nav-item>
+          </nuxt-link>
+        </li>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -76,7 +79,7 @@ export default {
   created () {
     this.NAVIGATION_LINKS = NAVIGATION_LINKS
     this.PAGES = PAGES
-    this.NAV_ITEM_LINK_CLASSES = 'uppercase hover:text-primary hover:text-shadow-unizen text-base font-bold duration-500'
+    this.NAV_ITEM_CLASSES = 'uppercase hover:text-primary hover:text-shadow-unizen text-sm font-bold duration-500'
   },
 
   methods: {
@@ -109,9 +112,5 @@ export default {
 .unizen-navbar.navbar--hidden {
   box-shadow: none;
   transform: translate3d(0, -100%, 0);
-}
-
-.nav-item.nav-item.nav-item a {
-  font-family: Lato Regular !important;
 }
 </style>
