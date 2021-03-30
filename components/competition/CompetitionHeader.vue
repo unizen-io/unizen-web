@@ -57,57 +57,45 @@
       >
         <div class="px-4 w-1/2 md:w-1/4">
           <h1
-            style="font-family: D DIN; color: #f5f5f5 !important;"
-            class="text-center text-6xl p-7"
+            style="font-family: D DIN;"
+            class="text-center text-6xl p-7 text-unizenLight"
           >
             {{ timer.days }}
           </h1>
-          <p
-            style="color: #f5f5f5;"
-            class="text-center text-xl p-7"
-          >
+          <p class="text-center text-xl p-7 text-unizenLight">
             DAYS
           </p>
         </div>
         <div class="px-4 w-1/2 md:w-1/4">
           <h1
-            style="font-family: D DIN; color: #f5f5f5 !important;"
-            class="text-center text-6xl p-7"
+            style="font-family: D DIN;"
+            class="text-center text-6xl p-7 text-unizenLight"
           >
             {{ timer.hours }}
           </h1>
-          <p
-            style="color: #f5f5f5;"
-            class="text-center text-xl p-7"
-          >
+          <p class="text-center text-xl p-7 text-unizenLight">
             HOURS
           </p>
         </div>
         <div class="px-4 w-1/2 md:w-1/4">
           <h1
-            style="font-family: D DIN; color: #f5f5f5 !important;"
-            class="text-center text-6xl p-7"
+            style="font-family: D DIN;"
+            class="text-center text-6xl p-7 text-unizenLight"
           >
             {{ timer.minutes }}
           </h1>
-          <p
-            style="color: #f5f5f5;"
-            class="text-center text-xl p-7"
-          >
+          <p class="text-center text-xl p-7 text-unizenLight">
             MINUTES
           </p>
         </div>
         <div class="px-4 w-1/2 md:w-1/4">
           <h1
-            style="font-family: D DIN; color: #f5f5f5 !important;"
-            class="text-center text-6xl p-7"
+            style="font-family: D DIN;"
+            class="text-center text-6xl p-7 text-unizenLight"
           >
             {{ timer.seconds }}
           </h1>
-          <p
-            style="color: #f5f5f5;"
-            class="text-center text-xl p-7"
-          >
+          <p class="text-center text-xl p-7 text-unizenLight">
             SECONDS
           </p>
         </div>
@@ -119,8 +107,8 @@
       class="py-7 mb-6"
     >
       <h1
-        style="font-family: D DIN; color: #f5f5f5 !important;"
-        class="text-center text-6xl"
+        style="font-family: D DIN;"
+        class="text-center text-6xl text-unizenLight"
       >
         <strong>AND THE WINNER IS...</strong>
       </h1>
@@ -131,8 +119,8 @@
       class="py-7 mb-6"
     >
       <h1
-        style="font-family: D DIN; color: #f5f5f5 !important;"
-        class="text-center text-6xl"
+        style="font-family: D DIN;"
+        class="text-center text-6xl text-unizenLight"
       >
         <strong>WINNER</strong>
       </h1>
@@ -143,8 +131,8 @@
       class="py-7 mb-6"
     >
       <h1
-        style="font-family: D DIN; color: #f5f5f5 !important;"
-        class="text-center text-6xl"
+        style="font-family: D DIN;"
+        class="text-center text-6xl text-unizenLight"
       >
         {{ normalizeTimestamp(competitionStartTime) }}
       </h1>

@@ -11,6 +11,7 @@ module.exports = {
     extend: {
       colors: {
         unizenGray: '#dbdbdb',
+        unizenLight: '#f5f5f5',
         primary: {
           DEFAULT: '#00d3b0',
           dark: '#00f5a3'
