@@ -15,11 +15,11 @@
         <b-card class="mx-0 mb-0 h-full shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
           <div class="flex text-tertiary">
             <span class="text-5xl">🤝</span>
-            <b-card-text class="px-6">
+            <p class="px-6">
               <b>Deep Hybrid Liquidity</b>
               <br>
               Tap into centralized <span class="text-unizenYellow font-bold">Binance</span> shared- liquidity with top tier market maker support, or decentralized, network-agnostic, cross-chain liquidity. Both available right at your fingertips.
-            </b-card-text>
+            </p>
           </div>
         </b-card>
       </div>
@@ -31,11 +31,11 @@
         <b-card class="mx-0 mb-0 h-full shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
           <div class="flex text-tertiary">
             <span class="text-5xl">🦾</span>
-            <b-card-text class="px-6">
+            <p class="px-6">
               <b>Intuitive Platform</b>
               <br>
               UI/UX focused on a seamless, familiar and effective user experience across all trading applications with top industry, battle-tested security and performance powered by <span class="text-unizenYellow font-bold">Binance Cloud</span>.
-            </b-card-text>
+            </p>
           </div>
         </b-card>
       </div>
@@ -47,14 +47,14 @@
         <b-card class="mx-0 mb-0 h-full shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
           <div class="flex text-tertiary">
             <span class="text-5xl">💗</span>
-            <b-card-text class="px-6">
+            <p class="px-6">
               <b>ZenX Incubation</b>
               <br>
               360 incubator fully equipped to support projects
               from genesis of innovation to the finality of market realization.
               Get further faster with
               clarity of mission, positioning, product momentum and ecosystem empowerment.
-            </b-card-text>
+            </p>
           </div>
         </b-card>
       </div>
