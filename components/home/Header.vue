@@ -46,9 +46,6 @@ export default {
   },
 
   mounted () {
-    // ray test touch <
-    console.log('ray : ***** [Header mounted]')
-    // ray test touch >
     // MEMO: https://forum.vuejs.org/t/document-getelementbyid-in-shadow-dom-custom-web-element/59957
     const canvasProject = this.$refs.canvasProject
     const header = this.$refs.header
