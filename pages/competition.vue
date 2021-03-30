@@ -289,6 +289,8 @@ export default {
         })
         return competitor
       }).catch((error) => {
+        // TODO: should add error handler
+        // eslint-disable-next-line no-console
         console.log(error)
         this.errored = true
       }).finally(() => {
@@ -315,6 +317,8 @@ export default {
         }
         return competitor
       }).catch((error) => {
+        // TODO: should add error handler
+        // eslint-disable-next-line no-console
         console.log(error)
         this.errored = true
       }).finally(() => {
@@ -334,6 +338,8 @@ export default {
         })
         return competitor
       }).catch((error) => {
+        // TODO: should add error handler
+        // eslint-disable-next-line no-console
         console.log(error)
         this.errored = true
       }).finally(() => {
@@ -358,6 +364,8 @@ export default {
         }
         return competitor
       }).catch((error) => {
+        // TODO: should add error handler
+        // eslint-disable-next-line no-console
         console.log(error)
         this.errored = true
       }).finally(() => {

@@ -26,7 +26,8 @@
               <h3 class="text-3xl">
                 <b>{{ utility.title }}</b>
               </h3>
-              <p v-html="utility.content" />
+              <!-- eslint-disable-next-line vue/no-v-html -->
+              <div v-html="utility.content" />
             </div>
           </div>
         </b-card>

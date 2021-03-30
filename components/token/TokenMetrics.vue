@@ -5,23 +5,23 @@
       data-aos="fade-up"
       data-aos-duration="2000"
     >
-      <p class="text-lg text-tertiary">
+      <div class="text-lg text-tertiary">
         ZCX is an exchange-based utility token, created on the Ethereum blockchain as an ERC-20 token.<br><br>
         Unizen Exchange operates on top of Binance Cloud’s trading and security infrastructure. The functionality of ZCX is analogous to that of BNB on Binance.<br><br>
         A portion of the listing fees collected will  be distributed into the following allocations:<br>
         <br>
         <b-list-group flush>
           <b-list-group-item class="bg-white bg-opacity-20">
-            <b>Insurance fund</b>
+            <span class="font-bold">Insurance fund</span>
           </b-list-group-item>
           <b-list-group-item class="bg-white bg-opacity-20">
-            <b>Burn</b> - ZCX will be burned with every paid listing
+            <span class="font-bold">Burn</span> - ZCX will be burned with every paid listing
           </b-list-group-item>
           <b-list-group-item class="bg-white bg-opacity-20 rounded-b">
-            <b>Staking rewards</b> - allocated to a staking pool
+            <span class="font-bold">Staking rewards</span> - allocated to a staking pool
           </b-list-group-item>
         </b-list-group>
-      </p>
+      </div>
     </div>
     <div
       class="order-first lg:order-last p-7 w-full lg:w-1/2"
@@ -58,25 +58,24 @@
           </h2>
         </div>
         <div class="px-4 w-full">
-          <br><small style="color: #6c757d;">CONTRACT ADDRESS</small><br>
+          <small style="color: #6c757d;">CONTRACT ADDRESS</small>
+          <br>
           <h5 class="text-xl">
             {{ contract }}
-            &nbsp;
-            <a
-              class="copy-icon hover:text-primary no-underline text-lg cursor-pointer"
-              @click.stop.prevent="copyContract"
-            >
-              ❐
-            </a>
-            &nbsp;
-            <!-- TODO: should not hardcode -->
-            <a
-              href="https://etherscan.io/token/0xc52c326331e9ce41f04484d3b5e5648158028804"
-              class="copy-icon hover:text-primary no-underline text-lg cursor-pointer"
-            >
-              ⤤
-            </a>
           </h5>
+          <a
+            class="copy-icon hover:text-primary no-underline text-lg cursor-pointer"
+            @click.stop.prevent="copyContract"
+          >
+            ❐
+          </a>
+          <!-- TODO: should not hardcode -->
+          <a
+            href="https://etherscan.io/token/0xc52c326331e9ce41f04484d3b5e5648158028804"
+            class="copy-icon hover:text-primary no-underline text-lg cursor-pointer"
+          >
+            ⤤
+          </a>
           <input id="contract" type="hidden" :value="contract">
         </div>
       </div>
