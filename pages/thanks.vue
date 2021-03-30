@@ -5,7 +5,7 @@
   >
     <div
       class="container mx-auto px-8 pt-48"
-      data-aos="fade-up"
+      data-aos="fade-in"
       data-aos-duration="2000"
     >
       <h1

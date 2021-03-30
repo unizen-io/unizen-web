@@ -9,7 +9,11 @@
       alt="KYC"
     />
     <div class="container mx-auto px-8 min-h-screen grid place-items-center">
-      <b-card class="kyc-card text-center w-1/3 shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
+      <b-card
+        class="kyc-card text-center w-1/3 shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur"
+        data-aos="fade-in"
+        data-aos-duration="2000"
+      >
         <!-- TODO: should export as an SVG file and use `currentColor` -->
         <svg
           version="1.1"

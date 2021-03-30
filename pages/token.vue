@@ -1,6 +1,10 @@
 <template>
   <div class="mt-12 pt-12">
-    <h1 class="mx-auto mt-6 text-center pt-16 pb-24 text-tertiary">
+    <h1
+      class="mx-auto mt-6 text-center pt-16 pb-24 text-tertiary"
+      data-aos="fade-in"
+      data-aos-duration="2000"
+    >
       $ZCX Token.
     </h1>
     <TokenMetrics />

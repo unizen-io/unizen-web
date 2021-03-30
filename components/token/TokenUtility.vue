@@ -2,11 +2,11 @@
   <div class="container mx-auto px-8">
     <div class="mx-auto lg:flex lg:flex-wrap">
       <div
-        v-for="utility in utilities"
+        v-for="(utility, index) in utilities"
         :key="utility.title"
         class="lg:w-1/2 p-4"
-        data-aos="fade-up"
-        data-aos-duration="2000"
+        :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
+        :data-aos-duration="index % 2 === 0 ? '1000' : '2000'"
       >
         <b-card
           class="h-full shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur"

@@ -7,6 +7,8 @@
       <h1
         style="font-family: Montserrat Medium !important;"
         class="contact font-bold py-12 mt-12 text-center text-tertiary"
+        data-aos="fade-in"
+        data-aos-duration="2000"
       >
         Contact.
       </h1>
@@ -18,6 +20,7 @@
         v-else
         data-aos="fade-up"
         data-aos-duration="2000"
+        class="py-12"
       >
         <b-card class="shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
           We would love to talk to you about any business inquiry or partner proposal. If this relates to support for any of our exchange modules, please reach out to support@unizen.io.

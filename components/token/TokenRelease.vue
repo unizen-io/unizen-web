@@ -1,11 +1,15 @@
 <template>
   <div>
     <div class="container mx-auto px-8">
-      <h1 class="mx-auto text-center pt-16 pb-24 text-tertiary">
+      <h1
+        class="mx-auto text-center pt-16 pb-24 text-tertiary"
+        data-aos="fade-in"
+        data-aos-duration="2000"
+      >
         Token Release Schedule.
       </h1>
       <div
-        data-aos="fade-up"
+        data-aos="fade-in"
         data-aos-duration="2000"
       >
         <line-chart

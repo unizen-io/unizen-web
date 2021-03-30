@@ -1,6 +1,9 @@
 <template>
   <div class="py-12 my-12">
-    <div>
+    <div
+      data-aos="fade-in"
+      data-aos-duration="2000"
+    >
       <h1 class="text-center pt-16 mx-auto mt-6 text-tertiary">
         The Tournament of Altcoins.
       </h1>
@@ -20,7 +23,7 @@
       <div class="mb-12 md:flex md:flex-wrap">
         <div
           class="p-4 md:w-1/2 space-y-4"
-          data-aos="fade-up"
+          data-aos="fade-in"
           data-aos-duration="2000"
         >
           <p class="text-lg text-tertiary">
@@ -54,22 +57,33 @@
             Competition
           </nuxt-link>
         </div>
-        <div
-          class="px-4 md:w-1/2"
-          data-aos="fade-up"
-          data-aos-duration="3000"
-        >
-          <b-card class="mb-4 shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur" title="ZSS Score">
+        <div class="px-4 md:w-1/2">
+          <b-card
+            class="mb-4 shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur"
+            title="ZSS Score"
+            data-aos="fade-left"
+            data-aos-duration="1000"
+          >
             <p>
               The <strong>UNIZEN Smart Score™</strong> (ZSS), is a custom dataset of aggregated LunarCrush powered social sentiment data. It is the combined metric of <strong>ZTI</strong> and <strong>ZSI</strong>. It is also the <u>sole determinator</u> of the competition.
             </p>
           </b-card>
-          <b-card class="mb-4 shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur" title="ZTI Score">
+          <b-card
+            class="mb-4 shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur"
+            title="ZTI Score"
+            data-aos="fade-left"
+            data-aos-duration="2000"
+          >
             <p>
               The <strong>UNIZEN Twitter Indicator™</strong> (ZTI) is an aggregate of twitter activity over a selected digital asset. More specifically, it's an aggregate of <code>number of tweets</code>, <code>quoted retweets</code>, <code>retweets</code>, <code>replies</code> and <code>favorites</code>.
             </p>
           </b-card>
-          <b-card class="mb-4 shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur" title="ZSI Score">
+          <b-card
+            class="mb-4 shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur"
+            title="ZSI Score"
+            data-aos="fade-left"
+            data-aos-duration="3000"
+          >
             <p>
               The <strong>UNIZEN Sentiment Indicator™</strong> (ZSI) score, is an aggregate of <i>"bullish"</i> sentiment around a digital asset, on twitter. It leverages <strong>LunarCrush</strong> powered deep learning algorithms and language processing to determine the social sentiment.
             </p>

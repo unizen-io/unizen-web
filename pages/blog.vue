@@ -1,7 +1,11 @@
 <template>
   <div class="main">
     <div class="container mx-auto px-8 py-12 my-12">
-      <h1 class="py-12 mt-12 text-tertiary text-center font-bold">
+      <h1
+        class="py-12 mt-12 text-tertiary text-center font-bold"
+        data-aos="fade-in"
+        data-aos-duration="2000"
+      >
         Blog.
       </h1>
       <LoadingMessage v-if="status === STATUSES.IDLE || status === STATUSES.PENDING" />

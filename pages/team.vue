@@ -2,18 +2,20 @@
   <div class="py-12 my-12">
     <div class="pb-12">
       <div class="container mx-auto px-8">
-        <h1 class="text-center pt-16 pb-24 text-tertiary">
-          Meet the executive team.
-        </h1>
-        <div
-          class="flex flex-wrap justify-center mb-12"
-          data-aos="fade-up"
+        <h1
+          class="text-center pt-16 pb-24 text-tertiary"
+          data-aos="fade-in"
           data-aos-duration="2000"
         >
+          Meet the executive team.
+        </h1>
+        <div class="flex flex-wrap justify-center mb-12">
           <div
-            v-for="member in team"
+            v-for="(member, index) in team"
             :key="member.name"
             class="p-4 w-80"
+            data-aos="fade-in"
+            :data-aos-duration="0 + 1000 * (index % 4)"
           >
             <div class="overlay-container text-center">
               <nuxt-img
@@ -60,7 +62,11 @@
       class="my-12"
     >
       <div class="container mx-auto px-8">
-        <h1 class="text-center pt-16 pb-24 text-tertiary">
+        <h1
+          class="text-center pt-16 pb-24 text-tertiary"
+          data-aos="fade-in"
+          data-aos-duration="2000"
+        >
           Meet the advisors.
         </h1>
         <div

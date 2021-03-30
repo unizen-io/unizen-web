@@ -1,6 +1,10 @@
 <template>
-  <div class="container mx-auto px-4">
-    <h1 class="mb-6 px-4 text-tertiary font-bold">
+  <div class="container mx-auto px-4 py-12">
+    <h1
+      class="mb-6 px-4 text-tertiary font-bold"
+      data-aos="fade-in"
+      data-aos-duration="2000"
+    >
       Latest blog articles.
     </h1>
     <LoadingMessage v-if="status === STATUSES.IDLE || status === STATUSES.PENDING" />
@@ -11,8 +15,6 @@
     <Articles
       v-if="status === STATUSES.RESOLVED"
       :articles="articles.slice(0, 3)"
-      data-aos="fade-up"
-      data-aos-duration="2000"
     />
   </div>
 </template>

@@ -41,7 +41,7 @@
       <div
         style="background: #efefef;"
         class="container mx-auto px-8"
-        data-aos="fade-up"
+        data-aos="fade-in"
         data-aos-duration="2000"
       >
         <div class="mt-12 flex flex-wrap">

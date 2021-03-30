@@ -1,13 +1,17 @@
 <template>
   <div style="background-color: #efefef;" class="mt-12">
     <div class="container mx-auto px-8 mb-12 pb-12">
-      <h1 class="mx-auto text-center pt-16 pb-24 text-tertiary">
+      <h1
+        class="mx-auto text-center pt-16 pb-24 text-tertiary"
+        data-aos="fade-in"
+        data-aos-duration="2000"
+      >
         Token Sale & Allocation.
       </h1>
       <div class="flex flex-wrap">
         <div
           class="px-4 w-full lg:w-1/2"
-          data-aos="fade-up"
+          data-aos="fade-in"
           data-aos-duration="2000"
         >
           <doughnut-chart :data="barChartData" :styles="myStyles" :options="barChartOptions" />
@@ -21,7 +25,7 @@
         <div
           class="accordion px-4 w-full lg:w-1/2"
           role="tablist"
-          data-aos="fade-up"
+          data-aos="fade-in"
           data-aos-duration="3000"
         >
           <b-card

@@ -4,7 +4,7 @@
       <div class="pt-12 flex flex-wrap">
         <div
           class="p-4 w-full md:w-1/2"
-          data-aos="fade-up"
+          data-aos="fade-in"
           data-aos-duration="2000"
         >
           <h1
@@ -16,8 +16,8 @@
         </div>
         <div
           class="p-4 w-full md:w-1/2"
-          data-aos="fade-up"
-          data-aos-duration="2000"
+          data-aos="fade-in"
+          data-aos-duration="3000"
         >
           <p class="text-xl text-unizenLight">
             Unizen has aligned with key partners to provide best-in-class exchange, advisory and project support services. From enriched data feeds, to government compliance and incubation of new projects. All of this has been enabled by close collaborations with top-industry leaders in their respective domain.

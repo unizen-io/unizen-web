@@ -2,9 +2,10 @@
   <div class="container mx-auto px-8 pb-12 flex flex-wrap">
     <div
       class="p-7 px-4 w-full lg:w-1/2"
-      data-aos="fade-up"
+      data-aos="fade-in"
       data-aos-duration="2000"
     >
+      <!-- ray test touch > -->
       <div class="text-lg text-tertiary">
         ZCX is an exchange-based utility token, created on the Ethereum blockchain as an ERC-20 token.<br><br>
         Unizen Exchange operates on top of Binance Cloud’s trading and security infrastructure. The functionality of ZCX is analogous to that of BNB on Binance.<br><br>
@@ -25,9 +26,10 @@
     </div>
     <div
       class="order-first lg:order-last p-7 w-full lg:w-1/2"
-      data-aos="fade-up"
+      data-aos="fade-in"
       data-aos-duration="3000"
     >
+      <!-- ray test touch > -->
       <div class="flex flex-wrap">
         <div class="px-4 w-1/2">
           <small style="color: #6c757d;">TICKER</small>

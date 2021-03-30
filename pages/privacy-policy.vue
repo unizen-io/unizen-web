@@ -1,22 +1,27 @@
 <template>
   <div class="mt-12 pt-12">
     <div class="container mx-auto px-8 py-12 mt-12 mb-12">
-      <h1
-        style="font-family: Montserrat Medium !important;"
-        class="text-tertiary font-bold text-center"
+      <div
+        data-aos="fade-in"
+        data-aos-duration="2000"
       >
-        Privacy Policy
-      </h1>
-      <h2
-        style="font-family: Montserrat Medium !important;"
-        class="text-tertiary text-center mb-24 text-xl"
-      >
-        Privacy is important, but cookies are delicous.
-      </h2>
+        <h1
+          style="font-family: Montserrat Medium !important;"
+          class="text-tertiary font-bold text-center"
+        >
+          Privacy Policy
+        </h1>
+        <h2
+          style="font-family: Montserrat Medium !important;"
+          class="text-tertiary text-center mb-24 text-xl"
+        >
+          Privacy is important, but cookies are delicous.
+        </h2>
+      </div>
       <b-card
         class="shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur"
-        data-aos="fade-up"
-        data-aos-duration="2000"
+        data-aos="fade-in"
+        data-aos-duration="3000"
       >
         <div
           style="font-family: Montserrat Medium;"
