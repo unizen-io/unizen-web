@@ -17,6 +17,9 @@ module.exports = {
         },
         tertiary: {
           DEFAULT: '#2f4858'
+        },
+        unizenYellow: {
+          DEFAULT: '#f0b90b'
         }
       },
       textShadow: theme => ({
