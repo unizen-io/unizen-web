@@ -80,14 +80,13 @@ export default {
     }
   },
   computed: {
-
     fillData () {
       const chartData = {
         labels: ['ZSI Score', 'ZTI Score'],
         datasets: [
           {
             borderWidth: 0,
-            hoverBackgroundColor: '#00F5A4',
+            hoverBackgroundColor: '#00f5a4',
             // backgroundColor: ["red", "orange", "yellow"],
             label: this.competitorAsset,
             backgroundColor: this.competitorColor,
@@ -95,7 +94,7 @@ export default {
           },
           {
             borderWidth: 0,
-            hoverBackgroundColor: '#00F5A4',
+            hoverBackgroundColor: '#00f5a4',
             // backgroundColor: ["red", "orange", "yellow"],
             label: this.challengerAsset,
             backgroundColor: this.challengerColor,

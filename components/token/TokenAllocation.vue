@@ -97,7 +97,7 @@ export default {
         datasets: [
           {
             borderWidth: 0,
-            hoverBackgroundColor: '#00F5A4',
+            hoverBackgroundColor: '#00f5a4',
             // label: 'Income',
             // backgroundColor: ["red", "orange", "yellow"],
             backgroundColor: [chartColors.color1, chartColors.color2, chartColors.color3, chartColors.color4, chartColors.color5, chartColors.color6, chartColors.color7],

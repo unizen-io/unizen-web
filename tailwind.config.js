@@ -15,8 +15,13 @@ module.exports = {
           DEFAULT: '#00d3b0',
           dark: '#00f5a3'
         },
+        secondary: {
+          // TODO: should use this instead of hardcoded value
+          DEFAULT: '#00f5a4'
+        },
         tertiary: {
-          DEFAULT: '#2f4858'
+          DEFAULT: '#2f4858',
+          dark: '#212529'
         },
         unizenYellow: {
           DEFAULT: '#f0b90b'

@@ -88,7 +88,7 @@ export default {
         datasets: [
           {
             borderWidth: 0,
-            hoverBackgroundColor: '#00F5A4',
+            hoverBackgroundColor: '#00f5a4',
             // label: 'Income',
             // backgroundColor: ["red", "orange", "yellow"],
             backgroundColor: [this.challengerColor, this.competitorColor],
