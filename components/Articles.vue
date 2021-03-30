@@ -12,28 +12,26 @@
         tag="article"
         class="article-card h-full shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur"
       >
-        <b-card-text>
-          <!-- TODO: should create an independent component -->
-          <a
-            :href="article.link"
-            target="_blank"
-            rel="noopener"
-            :aria-label="`Link to ${article.title}`"
+        <!-- TODO: should create an independent component -->
+        <a
+          :href="article.link"
+          target="_blank"
+          rel="noopener"
+          :aria-label="`Link to ${article.title}`"
+        >
+          <h2
+            style="font-family: Montserrat Medium !important;"
+            class="text-xl mb-2 text-tertiary"
           >
-            <h2
-              style="font-family: Montserrat Medium !important;"
-              class="text-xl mb-2 text-tertiary"
-            >
-              {{ article.title }}
-            </h2>
-          </a>
-          <p
-            style="font-family: Montserrat Medium;"
-            class="text-sm mb-4"
-          >
-            {{ article.content | extractTextFromHTMLString | truncate(200, '...') }}
-          </p>
-        </b-card-text>
+            {{ article.title }}
+          </h2>
+        </a>
+        <p
+          style="font-family: Montserrat Medium;"
+          class="text-sm mb-4"
+        >
+          {{ article.content | extractTextFromHTMLString | truncate(200, '...') }}
+        </p>
         <template #footer>
           <div class="flex justify-between items-center">
             <MiniLogoIcon
