@@ -58,44 +58,44 @@
         <div class="px-4 w-1/2 md:w-1/4">
           <h1
             style="font-family: D DIN;"
-            class="text-center text-6xl p-7 text-unizenLight"
+            class="text-center text-6xl p-7 text-unizenGray-light"
           >
             {{ timer.days }}
           </h1>
-          <p class="text-center text-xl p-7 text-unizenLight">
+          <p class="text-center text-xl p-7 text-unizenGray-light">
             DAYS
           </p>
         </div>
         <div class="px-4 w-1/2 md:w-1/4">
           <h1
             style="font-family: D DIN;"
-            class="text-center text-6xl p-7 text-unizenLight"
+            class="text-center text-6xl p-7 text-unizenGray-light"
           >
             {{ timer.hours }}
           </h1>
-          <p class="text-center text-xl p-7 text-unizenLight">
+          <p class="text-center text-xl p-7 text-unizenGray-light">
             HOURS
           </p>
         </div>
         <div class="px-4 w-1/2 md:w-1/4">
           <h1
             style="font-family: D DIN;"
-            class="text-center text-6xl p-7 text-unizenLight"
+            class="text-center text-6xl p-7 text-unizenGray-light"
           >
             {{ timer.minutes }}
           </h1>
-          <p class="text-center text-xl p-7 text-unizenLight">
+          <p class="text-center text-xl p-7 text-unizenGray-light">
             MINUTES
           </p>
         </div>
         <div class="px-4 w-1/2 md:w-1/4">
           <h1
             style="font-family: D DIN;"
-            class="text-center text-6xl p-7 text-unizenLight"
+            class="text-center text-6xl p-7 text-unizenGray-light"
           >
             {{ timer.seconds }}
           </h1>
-          <p class="text-center text-xl p-7 text-unizenLight">
+          <p class="text-center text-xl p-7 text-unizenGray-light">
             SECONDS
           </p>
         </div>
@@ -108,7 +108,7 @@
     >
       <h1
         style="font-family: D DIN;"
-        class="text-center text-6xl text-unizenLight"
+        class="text-center text-6xl text-unizenGray-light"
       >
         <strong>AND THE WINNER IS...</strong>
       </h1>
@@ -120,7 +120,7 @@
     >
       <h1
         style="font-family: D DIN;"
-        class="text-center text-6xl text-unizenLight"
+        class="text-center text-6xl text-unizenGray-light"
       >
         <strong>WINNER</strong>
       </h1>
@@ -132,12 +132,12 @@
     >
       <h1
         style="font-family: D DIN;"
-        class="text-center text-6xl text-unizenLight"
+        class="text-center text-6xl text-unizenGray-light"
       >
         {{ normalizeTimestamp(competitionStartTime) }}
       </h1>
       <div class="flex flex-col items-center mt-12">
-        <small style="color: #6c757d;">POWERED BY</small><br>
+        <small class="text-unizenGray-dark">POWERED BY</small><br>
         <nuxt-img
           class="mb-12 pb-12"
           format="webp"

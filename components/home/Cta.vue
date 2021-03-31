@@ -8,7 +8,7 @@
         <div class="md:w-1/2">
           <h1
             style="font-family: Montserrat;"
-            class="p-7 text-5xl lg:text-7xl text-unizenLight"
+            class="p-7 text-5xl lg:text-7xl text-unizenGray-light"
             data-aos="fade-in"
             data-aos-duration="2000"
           >
@@ -17,7 +17,7 @@
         </div>
         <div class="md:w-1/2 flex flex-col justify-between items-center">
           <p
-            class="p-7 text-xl text-unizenLight"
+            class="p-7 text-xl text-unizenGray-light"
             data-aos="fade-in"
             data-aos-duration="3000"
           >
