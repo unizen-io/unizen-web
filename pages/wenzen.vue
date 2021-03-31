@@ -8,7 +8,7 @@
         The Tournament of Altcoins.
       </h1>
       <div class="flex flex-col items-center">
-        <small style="color: #6c757d;">POWERED BY</small>
+        <small class="text-unizenGray-dark">POWERED BY</small>
         <nuxt-img
           class="mb-12 pb-12"
           format="webp"

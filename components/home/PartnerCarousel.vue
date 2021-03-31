@@ -9,7 +9,7 @@
         >
           <h1
             style="font-family: Montserrat;"
-            class="text-6xl text-unizenLight"
+            class="text-6xl text-unizenGray-light"
           >
             Our strategic partners.
           </h1>
@@ -19,7 +19,7 @@
           data-aos="fade-in"
           data-aos-duration="3000"
         >
-          <p class="text-xl text-unizenLight">
+          <p class="text-xl text-unizenGray-light">
             Unizen has aligned with key partners to provide best-in-class exchange, advisory and project support services. From enriched data feeds, to government compliance and incubation of new projects. All of this has been enabled by close collaborations with top-industry leaders in their respective domain.
           </p>
         </div>

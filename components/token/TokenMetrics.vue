@@ -32,52 +32,55 @@
       <!-- ray test touch > -->
       <div class="flex flex-wrap">
         <div class="px-4 w-1/2">
-          <small style="color: #6c757d;">TICKER</small>
+          <small class="text-unizenGray-dark">TICKER</small>
           <br>
           <h2 class="text-3xl font-bold gradient-text bg-primary">
             ZCX
           </h2>
         </div>
         <div class="px-4 w-1/2">
-          <small style="color: #6c757d;">TOKEN TYPE</small>
+          <small class="text-unizenGray-dark">TOKEN TYPE</small>
           <br>
           <h2 class="text-3xl font-bold gradient-text bg-primary">
             ERC-20
           </h2>
         </div>
         <div class="px-4 w-1/2">
-          <small style="color: #6c757d;">CIRCULATING SUPPLY</small>
+          <small class="text-unizenGray-dark">CIRCULATING SUPPLY</small>
           <br>
           <h2 class="text-3xl font-bold gradient-text bg-primary">
             33.75m
           </h2>
         </div>
         <div class="px-4 w-1/2">
-          <small style="color: #6c757d;">TOTAL SUPPLY</small>
+          <small class="text-unizenGray-dark">TOTAL SUPPLY</small>
           <br>
           <h2 class="text-3xl font-bold gradient-text bg-primary">
             1b
           </h2>
         </div>
         <div class="px-4 w-full">
-          <small style="color: #6c757d;">CONTRACT ADDRESS</small>
-          <br>
-          <h5 class="text-xl">
-            {{ contract }}
-          </h5>
-          <a
-            class="copy-icon hover:text-primary no-underline text-lg cursor-pointer"
-            @click.stop.prevent="copyContract"
-          >
-            ❐
-          </a>
-          <!-- TODO: should not hardcode -->
-          <a
-            href="https://etherscan.io/token/0xc52c326331e9ce41f04484d3b5e5648158028804"
-            class="copy-icon hover:text-primary no-underline text-lg cursor-pointer"
-          >
-            ⤤
-          </a>
+          <small class="block text-unizenGray-dark">
+            CONTRACT ADDRESS
+          </small>
+          <div class="flex space-x-1">
+            <h5 class="text-base sm:text-xl">
+              {{ contract }}
+            </h5>
+            <a
+              class="copy-icon hover:text-primary no-underline text-lg cursor-pointer"
+              @click.stop.prevent="copyContract"
+            >
+              ❐
+            </a>
+            <!-- TODO: should not hardcode -->
+            <a
+              href="https://etherscan.io/token/0xc52c326331e9ce41f04484d3b5e5648158028804"
+              class="copy-icon hover:text-primary no-underline text-lg cursor-pointer"
+            >
+              ⤤
+            </a>
+          </div>
           <input id="contract" type="hidden" :value="contract">
         </div>
       </div>

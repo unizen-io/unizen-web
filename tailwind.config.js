@@ -10,8 +10,11 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        unizenGray: '#dbdbdb',
-        unizenLight: '#f5f5f5',
+        unizenGray: {
+          light: '#f5f5f5',
+          DEFAULT: '#dbdbdb',
+          dark: '#6c757d'
+        },
         primary: {
           DEFAULT: '#00d3b0',
           dark: '#00f5a3'

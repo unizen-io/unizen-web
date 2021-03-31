@@ -40,7 +40,7 @@
               width="30"
               height="30"
             />
-            <small style="color: #6c757d;">
+            <small class="text-unizenGray-dark">
               Last updated {{ formatDate(article.publishedDate) }} ago
             </small>
           </div>

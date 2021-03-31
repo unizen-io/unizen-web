@@ -3,7 +3,7 @@
     <div class="footer-primary bg-tertiary">
       <div class="container mx-auto flex flex-wrap py-12 px-4">
         <div class="px-4 w-1/2 md:w-1/4">
-          <h2 class="mt-5 text-unizenLight text-2xl">
+          <h2 class="mt-5 text-unizenGray-light text-2xl">
             General
           </h2>
           <nuxt-link to="/blog" class="text-primary hover:underline">
@@ -27,7 +27,7 @@
           </nuxt-link>
         </div>
         <div class="px-4 w-1/2 md:w-1/4">
-          <h2 class="mt-5 text-unizenLight text-2xl">
+          <h2 class="mt-5 text-unizenGray-light text-2xl">
             Business
           </h2>
           <a class="text-primary footer-disabled">
@@ -42,7 +42,7 @@
           </nuxt-link>
         </div>
         <div class="px-4 w-1/2 md:w-1/4">
-          <h2 class="mt-5 text-unizenLight text-2xl">
+          <h2 class="mt-5 text-unizenGray-light text-2xl">
             Technology
           </h2>
           <a class="text-primary footer-disabled">
@@ -56,7 +56,7 @@
           <a class="footer-disabled text-primary">Litepaper</a>
         </div>
         <div class="px-4 w-1/2 md:w-1/4">
-          <h2 class="mt-5 text-unizenLight text-2xl">
+          <h2 class="mt-5 text-unizenGray-light text-2xl">
             Social
           </h2>
           <ul class="social-networks bounce">
@@ -69,7 +69,7 @@
         </div>
       </div>
     </div>
-    <div class="footer-secondary text-center h-16 px-12 flex items-center text-unizenLight">
+    <div class="footer-secondary text-center h-16 px-12 flex items-center text-unizenGray-light">
       © 2021 - 2022 Unizen.io. All rights reserved.
     </div>
   </div>
