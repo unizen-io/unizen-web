@@ -40,7 +40,7 @@
     "hooper": "^0.3.4",
     "node-sass": "^5.0.0",
     "nuxt": "^2.15.3",
-    "nuxt-socket-io": "^1.1.13",
+    "nuxt-socket-io": "^1.1.15",
     "postcss": "7",
     "sass-loader": "^10.1.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",

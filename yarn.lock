@@ -7373,10 +7373,10 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-nuxt-socket-io@^1.1.13:
-  version "1.1.14"
-  resolved "https://registry.yarnpkg.com/nuxt-socket-io/-/nuxt-socket-io-1.1.14.tgz#9947fdf433ef73ab63a9cf82158257db26ad8b9e"
-  integrity sha512-LT9MMYJOQ1IQJoeaySeL1CuMSGFCoH3pxao7nsAvhZKnJGyd6neX/D7DCJyzCxCHafnXfGV5vEwOkyBmMHXxkw==
+nuxt-socket-io@^1.1.15:
+  version "1.1.15"
+  resolved "https://registry.yarnpkg.com/nuxt-socket-io/-/nuxt-socket-io-1.1.15.tgz#2cf2bd51915ac0d90cffedad07b00981de45b6ba"
+  integrity sha512-oLOix2ZdFIMsMrSqEG6dY+YDLfabzk6P8ZC0VwptUU/Nf9+0bIzw3ZhTFpJgeYfx9qaFP35+i7QP+hFjvSnzjg==
   dependencies:
     "@nuxt/types" "^2.14.7"
     "@types/socket.io-client" "^1.4.34"
