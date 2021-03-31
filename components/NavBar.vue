@@ -3,7 +3,7 @@
     toggleable="lg"
     fixed="top"
     type="light"
-    class="unizen-navbar shadow z-50 bg-unizenGray bg-opacity-20 backdrop-blur"
+    class="unizen-navbar shadow-unizen z-50 bg-unizenGray bg-opacity-20 backdrop-blur"
     :class="{ 'navbar--hidden': !showNavbar }"
   >
     <nuxt-link

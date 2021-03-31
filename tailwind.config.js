@@ -30,7 +30,10 @@ module.exports = {
       },
       textShadow: theme => ({
         unizen: `0px 2px 27px ${theme('colors.primary.dark')}65`
-      })
+      }),
+      boxShadow: {
+        unizen: '0 0 30px 0 rgba(196, 202, 214, .5)'
+      }
     },
     filter: { // defaults to {}
       none: 'none',
