@@ -26,45 +26,18 @@
       </div>
     </div>
     <div class="text-center">
-      <Hooper :settings="cardsHooper">
-        <Slide>
+      <Hooper :settings="CARDS_HOOPER">
+        PARTNER_IMAGES
+        <Slide
+          v-for="partnerImage in PARTNER_IMAGES"
+          :key="partnerImage.src"
+        >
           <nuxt-img
-            loading="lazy"
             format="webp"
-            width="337"
-            height="70"
-            src="/img/partners/blockunify.png"
-            alt="Blockunify"
-          />
-        </Slide>
-        <Slide>
-          <nuxt-img
-            loading="lazy"
-            format="webp"
-            width="261"
-            height="70"
-            src="/img/partners/jun.png"
-            alt="Jun"
-          />
-        </Slide>
-        <Slide>
-          <nuxt-img
-            loading="lazy"
-            format="webp"
-            width="240"
-            height="70"
-            src="/img/partners/lunarcrush.png"
-            alt="Lunarcrush"
-          />
-        </Slide>
-        <Slide>
-          <nuxt-img
-            loading="lazy"
-            format="webp"
-            width="300"
-            height="70"
-            src="/img/partners/betrust.png"
-            alt="Betrust"
+            :width="partnerImage.width"
+            :height="partnerImage.height"
+            :src="partnerImage.src"
+            :alt="partnerImage.alt"
           />
         </Slide>
         <HooperNavigation slot="hooper-addons" />
@@ -89,16 +62,41 @@ export default {
     HooperNavigation
   },
 
-  data () {
-    return {
-      cardsHooper: {
-        itemsToSlide: 1,
-        itemsToShow: 4,
-        infiniteScroll: true,
-        playSpeed: 8000,
-        autoPlay: true,
-        wheelControl: false
+  created () {
+    this.PARTNER_IMAGES = [
+      {
+        width: 337,
+        height: 70,
+        src: '/img/partners/blockunify.png',
+        alt: 'Blockunify'
+      },
+      {
+        width: 261,
+        height: 70,
+        src: '/img/partners/jun.png',
+        alt: 'Jun'
+      },
+      {
+        width: 240,
+        height: 70,
+        src: '/img/partners/lunarcrush.png',
+        alt: 'Lunarcrush'
+      },
+      {
+        width: 300,
+        height: 70,
+        src: '/img/partners/betrust.png',
+        alt: 'Betrust'
       }
+    ]
+
+    this.CARDS_HOOPER = {
+      itemsToSlide: 1,
+      itemsToShow: 4,
+      infiniteScroll: true,
+      playSpeed: 8000,
+      autoPlay: true,
+      wheelControl: false
     }
   }
 }
