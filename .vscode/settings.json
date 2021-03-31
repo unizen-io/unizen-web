@@ -10,7 +10,11 @@
     "nuxtjs",
     "scrollbars",
     "tailwindcss",
+    "textshadow",
     "truetype",
-    "unizen"
-  ]
+    "unizen",
+    "wenzen",
+    "zenx"
+  ],
+  "git.enableCommitSigning": true
 }

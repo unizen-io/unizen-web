@@ -1,5 +1,6 @@
 <template>
   <main id="main">
+    <!-- ray test touch < -->
     <div class="space-y-12">
       <Header />
       <Zen />
@@ -9,6 +10,7 @@
       <TopArticles />
       <PartnerCarousel />
     </div>
+    <!-- ray test touch > -->
   </main>
 </template>
 

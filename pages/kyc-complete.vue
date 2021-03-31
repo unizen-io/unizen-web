@@ -9,12 +9,22 @@
       alt="KYC"
     />
     <div class="container mx-auto px-8 min-h-screen grid place-items-center">
-      <b-card class="kyc-card text-center w-1/3">
-        <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 130.2 130.2">
+      <b-card
+        class="kyc-card text-center w-1/3 shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur"
+        data-aos="fade-in"
+        data-aos-duration="2000"
+      >
+        <!-- TODO: should export as an SVG file and use `currentColor` -->
+        <svg
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 130.2 130.2"
+          class="text-secondary"
+        >
           <circle
             class="path circle"
             fill="none"
-            stroke="#00f5a4"
+            stroke="currentColor"
             stroke-width="6"
             stroke-miterlimit="10"
             cx="65.1"
@@ -24,7 +34,7 @@
           <polyline
             class="path check"
             fill="none"
-            stroke="#00f5a4"
+            stroke="currentColor"
             stroke-width="6"
             stroke-linecap="round"
             stroke-miterlimit="10"
@@ -42,18 +52,28 @@
           The Unizen Team
         </h5>
         <br>
-        <b-button variant="secondary" size="lg" to="/">
+        <nuxt-link
+          class="bg-secondary h-12 inline-flex justify-center items-center rounded text-xl px-4 text-tertiary-dark"
+          :to="PAGES.home.url"
+        >
           Return to Unizen
-        </b-button>
-        <br><br>
+        </nuxt-link>
+        <br>
+        <br>
       </b-card>
     </div>
   </div>
 </template>
 
 <script>
+import { PAGES } from '@/utils/constants/links'
+
 export default {
-  layout: 'kyc'
+  layout: 'kyc',
+
+  created () {
+    this.PAGES = PAGES
+  }
 }
 </script>
 

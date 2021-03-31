@@ -7,16 +7,19 @@
       <div class="md:flex md:flex-wrap py-12">
         <div class="md:w-1/2">
           <h1
-            style="color: #f5f5f5 !important; font-family: Montserrat;"
-            class="p-7 text-5xl lg:text-7xl"
+            style="font-family: Montserrat;"
+            class="p-7 text-5xl lg:text-7xl text-unizenLight"
+            data-aos="fade-in"
+            data-aos-duration="2000"
           >
             Providing a zen state of mind for traders
           </h1>
         </div>
         <div class="md:w-1/2 flex flex-col justify-between items-center">
           <p
-            style="color: #f5f5f5;"
-            class="p-7 text-xl"
+            class="p-7 text-xl text-unizenLight"
+            data-aos="fade-in"
+            data-aos-duration="3000"
           >
             Traders are spending hours everyday to stay in touch with the latest market conditions and social sentiment. They also typically hop between multiple exchanges.
             It’s a very time consuming, stressful and sometimes a risky activity, that most traders do as a part-time occupation, which limits their personal time with family and other self-healing activities. At Unizen we want to make all digital assets available under the same roof.

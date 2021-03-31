@@ -1,10 +1,17 @@
 <template>
   <div>
     <div class="container mx-auto px-8">
-      <h1 class="common-headline mx-auto">
+      <h1
+        class="mx-auto text-center pt-16 pb-24 text-tertiary"
+        data-aos="fade-in"
+        data-aos-duration="2000"
+      >
         Token Release Schedule.
       </h1>
-      <div id="line">
+      <div
+        data-aos="fade-in"
+        data-aos-duration="2000"
+      >
         <line-chart
           :styles="myStyles"
           :options="barChartOptions"
@@ -111,39 +118,3 @@ export default {
   }
 }
 </script>
-<style lang="scss">
-.one-year-box{
-  border-bottom: 3px $primary solid;
-  border-right: 3px $primary solid;
-  border-left: 3px $primary solid;
-  margin-left: 10px;
-  margin-right: 10px;
-  height: 20px;
-  margin-top: -40px;
-  margin-bottom: 20px;
-}
-
-.header-collapse {
-  /* Create the gradient. */
-  // background-image: linear-gradient(to right bottom, #00afae, #00b6b0, #00bdb1, #00c3b1, #00cab1, #00d0b1, #00d6b0, #00dcaf, #00e2ad, #00e9ab, #00efa8, #00f5a4);
-  /* Set the background size and repeat properties. */
-  background-size: 100%;
-  background-repeat: repeat;
-}
-
-.allo-btn {
-  background: none !important;
-  border: none !important;
-  font-weight: bold !important;
-  color: $dark !important;
-}
-.allo-btn:after {
-  background: none !important;
-  border: none !important;
-}
-.allo-btn:hover {
-  background: none !important;
-  border: none !important;
-  opacity: 0.8;
-}
-</style>

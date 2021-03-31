@@ -1,82 +1,83 @@
 <template>
   <div class="container mx-auto px-8 pb-12 flex flex-wrap">
-    <div class="p-7 px-4 w-full lg:w-1/2">
-      <p
-        style="color: #2F4858;"
-        class="text-lg"
-      >
+    <div
+      class="p-7 px-4 w-full lg:w-1/2"
+      data-aos="fade-in"
+      data-aos-duration="2000"
+    >
+      <!-- ray test touch > -->
+      <div class="text-lg text-tertiary">
         ZCX is an exchange-based utility token, created on the Ethereum blockchain as an ERC-20 token.<br><br>
         Unizen Exchange operates on top of Binance Cloud’s trading and security infrastructure. The functionality of ZCX is analogous to that of BNB on Binance.<br><br>
         A portion of the listing fees collected will  be distributed into the following allocations:<br>
         <br>
         <b-list-group flush>
-          <b-list-group-item class="zen-item">
-            <b>Insurance fund</b>
+          <b-list-group-item class="bg-white bg-opacity-20">
+            <span class="font-bold">Insurance fund</span>
           </b-list-group-item>
-          <b-list-group-item class="zen-item">
-            <b>Burn</b> - ZCX will be burned with every paid listing
+          <b-list-group-item class="bg-white bg-opacity-20">
+            <span class="font-bold">Burn</span> - ZCX will be burned with every paid listing
           </b-list-group-item>
-          <b-list-group-item class="zen-item" style="border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
-            <b>Staking rewards</b> - allocated to a staking pool
+          <b-list-group-item class="bg-white bg-opacity-20 rounded-b">
+            <span class="font-bold">Staking rewards</span> - allocated to a staking pool
           </b-list-group-item>
         </b-list-group>
-        <!-- <ul>
-            <li><b>Insurance fund</b></li>
-            <li><b>Burn</b> - ZCX will be burned with every paid listing</li>
-            <li><b>Staking rewards</b> - allocated to a staking pool</li>
-          </ul> -->
-      </p>
+      </div>
     </div>
-    <div class="order-first lg:order-last p-7 w-full lg:w-1/2">
+    <div
+      class="order-first lg:order-last p-7 w-full lg:w-1/2"
+      data-aos="fade-in"
+      data-aos-duration="3000"
+    >
+      <!-- ray test touch > -->
       <div class="flex flex-wrap">
         <div class="px-4 w-1/2">
           <small style="color: #6c757d;">TICKER</small>
           <br>
-          <h2 class="text-3xl font-bold gradient-text">
+          <h2 class="text-3xl font-bold gradient-text bg-primary">
             ZCX
           </h2>
         </div>
         <div class="px-4 w-1/2">
           <small style="color: #6c757d;">TOKEN TYPE</small>
           <br>
-          <h2 class="text-3xl font-bold gradient-text">
+          <h2 class="text-3xl font-bold gradient-text bg-primary">
             ERC-20
           </h2>
         </div>
         <div class="px-4 w-1/2">
           <small style="color: #6c757d;">CIRCULATING SUPPLY</small>
           <br>
-          <h2 class="text-3xl font-bold gradient-text">
+          <h2 class="text-3xl font-bold gradient-text bg-primary">
             33.75m
           </h2>
         </div>
         <div class="px-4 w-1/2">
           <small style="color: #6c757d;">TOTAL SUPPLY</small>
           <br>
-          <h2 class="text-3xl font-bold gradient-text">
+          <h2 class="text-3xl font-bold gradient-text bg-primary">
             1b
           </h2>
         </div>
         <div class="px-4 w-full">
-          <br><small style="color: #6c757d;">CONTRACT ADDRESS</small><br>
+          <small style="color: #6c757d;">CONTRACT ADDRESS</small>
+          <br>
           <h5 class="text-xl">
             {{ contract }}
-            &nbsp;
-            <a
-              class="copy-icon no-underline text-lg cursor-pointer"
-              @click.stop.prevent="copyContract"
-            >
-              ❐
-            </a>
-            &nbsp;
-            <!-- TODO: should not hardcode -->
-            <a
-              href="https://etherscan.io/token/0xc52c326331e9ce41f04484d3b5e5648158028804"
-              class="copy-icon no-underline text-lg cursor-pointer"
-            >
-              ⤤
-            </a>
           </h5>
+          <a
+            class="copy-icon hover:text-primary no-underline text-lg cursor-pointer"
+            @click.stop.prevent="copyContract"
+          >
+            ❐
+          </a>
+          <!-- TODO: should not hardcode -->
+          <a
+            href="https://etherscan.io/token/0xc52c326331e9ce41f04484d3b5e5648158028804"
+            class="copy-icon hover:text-primary no-underline text-lg cursor-pointer"
+          >
+            ⤤
+          </a>
           <input id="contract" type="hidden" :value="contract">
         </div>
       </div>
@@ -93,6 +94,7 @@ export default {
   },
   methods: {
     copyContract () {
+      // TODO: should refactor properly
       const testingCodeToCopy = document.querySelector('#contract')
       testingCodeToCopy.setAttribute('type', 'text') // hidden
       testingCodeToCopy.select()
@@ -115,17 +117,10 @@ export default {
 
 <style lang="scss">
 a.copy-icon {
-  color: #8B9298;
-}
-
-a.copy-icon:hover {
-  color: $primary !important;
+  color: #8b9298;
 }
 
 .gradient-text {
-  /* Fallback: Set a background color. */
-  background-color: $primary;
-
   /* Create the gradient. */
   background-image: linear-gradient(to right bottom, #00afae, #00b6b0, #00bdb1, #00c3b1, #00cab1, #00d0b1, #00d6b0, #00dcaf, #00e2ad, #00e9ab, #00efa8, #00f5a4);
   /* Set the background size and repeat properties. */

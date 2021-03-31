@@ -33,7 +33,8 @@ export default {
     this.gradient.addColorStop(0.8, chartColors.color6)
     this.gradient.addColorStop(0.9, chartColors.color7)
     this.renderChart({
-      labels: ['April',
+      labels: [
+        'April',
         'May',
         'Jun',
         'Jul',
@@ -44,7 +45,8 @@ export default {
         'Dec',
         'Jan',
         'Feb',
-        'Mar'],
+        'Mar'
+      ],
       // 'Jan',
       // 'Feb',
       // 'Mar',
@@ -71,7 +73,8 @@ export default {
           pointRadius: 3,
           fill: false,
           borderWidth: 4,
-          data: [33750000,
+          data: [
+            33750000,
             36600000,
             39450000,
             79800000,
@@ -82,7 +85,8 @@ export default {
             259050000,
             324900000,
             353250000,
-            381600000]
+            381600000
+          ]
           // 423700000,
           // 452050000,
           // 454900000,
@@ -94,7 +98,8 @@ export default {
           // 472000000,
           // 474850000,
           // 477700000,
-          // 480550000]
+          // 480550000
+          // ]
         }
       ]
     }, this.options)

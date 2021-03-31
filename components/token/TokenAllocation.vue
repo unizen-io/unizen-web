@@ -1,11 +1,19 @@
 <template>
-  <div style="background-color: #EFEFEF;" class="mt-12">
+  <div style="background-color: #efefef;" class="mt-12">
     <div class="container mx-auto px-8 mb-12 pb-12">
-      <h1 class="common-headline mx-auto">
+      <h1
+        class="mx-auto text-center pt-16 pb-24 text-tertiary"
+        data-aos="fade-in"
+        data-aos-duration="2000"
+      >
         Token Sale & Allocation.
       </h1>
       <div class="flex flex-wrap">
-        <div class="px-4 w-full lg:w-1/2">
+        <div
+          class="px-4 w-full lg:w-1/2"
+          data-aos="fade-in"
+          data-aos-duration="2000"
+        >
           <doughnut-chart :data="barChartData" :styles="myStyles" :options="barChartOptions" />
           <div
             style="margin-top: -230px; margin-bottom: 80px;"
@@ -17,23 +25,25 @@
         <div
           class="accordion px-4 w-full lg:w-1/2"
           role="tablist"
+          data-aos="fade-in"
+          data-aos-duration="3000"
         >
           <b-card
             v-for="(row, index) in tableData"
             :key="row.title"
             no-body
-            class="mb-1"
+            class="mb-1 shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur"
           >
             <b-card-header
               header-tag="header"
-              :style="'background-color: '+barChartData.datasets[0].backgroundColor[index]+' !important;'"
-              class="header-collapse p-1"
+              :style="'background-color: ' + barChartData.datasets[0].backgroundColor[index] + ' !important;'"
+              class="p-1"
               role="tab"
             >
               <b-button
                 block
-                style="background: none !important; border: none !important; color: #2F4858 !important;"
-                class="font-bold hover:opacity-80"
+                style="background: none !important; border: none !important;"
+                class="font-bold hover:opacity-80 text-tertiary"
                 @click="expanded=index"
               >
                 {{ row.title }}
@@ -74,6 +84,7 @@ export default {
   components: {
     DoughnutChart
   },
+
   data () {
     return {
       expanded: 0,
@@ -90,7 +101,7 @@ export default {
         datasets: [
           {
             borderWidth: 0,
-            hoverBackgroundColor: '#00F5A4',
+            hoverBackgroundColor: '#00f5a4',
             // label: 'Income',
             // backgroundColor: ["red", "orange", "yellow"],
             backgroundColor: [chartColors.color1, chartColors.color2, chartColors.color3, chartColors.color4, chartColors.color5, chartColors.color6, chartColors.color7],
@@ -150,12 +161,3 @@ export default {
   }
 }
 </script>
-<style lang="scss">
-.header-collapse {
-  /* Create the gradient. */
-  // background-image: linear-gradient(to right bottom, #00afae, #00b6b0, #00bdb1, #00c3b1, #00cab1, #00d0b1, #00d6b0, #00dcaf, #00e2ad, #00e9ab, #00efa8, #00f5a4);
-  /* Set the background size and repeat properties. */
-  background-size: 100%;
-  background-repeat: repeat;
-}
-</style>

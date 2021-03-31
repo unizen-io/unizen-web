@@ -3,7 +3,7 @@
     v-if="isOpen"
     toggleable="lg"
     fixed="bottom"
-    class="cookie-alert p-2.5 h-20 flex items-center flex-nowrap"
+    class="cookie-alert p-2.5 h-20 flex items-center flex-nowrap shadow-md z-50 bg-unizenGray bg-opacity-20 backdrop-blur"
   >
     <p>
       🍪 Can I use cookies for analytics? Read
@@ -71,10 +71,6 @@ export default {
 
 <style lang="scss" scoped>
 .cookie-alert {
-  background: rgba(219, 219, 219, 0.185) !important;
-  backdrop-filter: blur(15px);
-  box-shadow: 0 0 30px 0 rgba(196, 202, 214, 0.5) !important;
-  z-index: 99999 !important;
   transform: translate3d(0, 0, 0);
   transition: 0.3s all ease-out;
 }

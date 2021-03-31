@@ -1,14 +1,15 @@
 <template>
   <div class="container mx-auto px-8">
-    <div class="mx-auto flex flex-wrap">
+    <div class="mx-auto lg:flex lg:flex-wrap">
       <div
-        v-for="card in utility"
-        :key="card.title"
-        class="w-full lg:w-1/2 px-4"
+        v-for="(utility, index) in utilities"
+        :key="utility.title"
+        class="lg:w-1/2 p-4"
+        :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
+        :data-aos-duration="index % 2 === 0 ? '1000' : '2000'"
       >
         <b-card
-          style="min-height: 17.5rem"
-          class="mb-6"
+          class="h-full shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur"
         >
           <div class="flex">
             <div class="w-1/4 px-4 text-center">
@@ -17,15 +18,16 @@
                 format="webp"
                 width="386"
                 height="387"
-                :src="card.img"
-                :alt="card.title"
+                :src="utility.img"
+                :alt="utility.title"
               />
             </div>
             <div class="w-3/4 px-4">
               <h3 class="text-3xl">
-                <b>{{ card.title }}</b>
+                <b>{{ utility.title }}</b>
               </h3>
-              <p v-html="card.content" />
+              <!-- eslint-disable-next-line vue/no-v-html -->
+              <div v-html="utility.content" />
             </div>
           </div>
         </b-card>
@@ -38,7 +40,7 @@
 export default {
   data () {
     return {
-      utility: [
+      utilities: [
         {
           title: 'Exchange Governance',
           content: 'Empower a decentralized community to make key decisions in the Unizen Exchange, including but not limited to:<br><br><ul> <li>Listing votes for pre-identified candidates</li> <li>Augmenting the roadmap itself</li> <li>Customizing Unizen\'s UI</li></ul>',

@@ -10,7 +10,10 @@
         ref="canvasProject"
       />
     </div>
-    <div id="homeView" class="current-state ajaxhidden" style="visibility: inherit;">
+    <div
+      data-aos="fade-in"
+      data-aos-duration="2000"
+    >
       <div class="layout layout-homepage">
         <article class="slideshow">
           <div class="item">
@@ -22,7 +25,7 @@
               src="/img/green-text-logo-large.png"
               alt="Unizen"
             />
-            <h2 class="sub-title text-3xl">
+            <h2 class="text-3xl text-center text-tertiary -mt-2">
               Smart Exchange Ecosystem
             </h2>
           </div>
@@ -43,14 +46,12 @@ export default {
   },
 
   mounted () {
-    if (this.$route.name === 'index') {
-      // MEMO: https://forum.vuejs.org/t/document-getelementbyid-in-shadow-dom-custom-web-element/59957
-      const canvasProject = this.$refs.canvasProject
-      const header = this.$refs.header
-      header.appendChild(canvasProject)
-      waves.methods.initAnimation(canvasProject)
-      waves.methods.animate()
-    }
+    // MEMO: https://forum.vuejs.org/t/document-getelementbyid-in-shadow-dom-custom-web-element/59957
+    const canvasProject = this.$refs.canvasProject
+    const header = this.$refs.header
+    header.appendChild(canvasProject)
+    waves.methods.initAnimation(canvasProject)
+    waves.methods.animate()
   },
 
   beforeDestroy () {
@@ -64,14 +65,9 @@ h2.title {
   font-size: 8em;
   text-align: center;
   font-family: Arista Alt;
-  text-shadow: 0px 2px 27px #00f5a365;
-}
-h2.sub-title {
-  margin-top: -0.5rem;
-  text-align: center;
-  color: $dark;
 }
 
+// ray test touch <
 #canvas-project {
   position: absolute !important;
   margin-top: -330px;
@@ -79,16 +75,10 @@ h2.sub-title {
   width: 100% !important;
   z-index: -1;
 }
-#homeView {
-  width: auto;
-  -webkit-animation:fadeIn 2s; /* Safari & Chrome */
-  animation: fadeIn 2s;
-}
+// ray test touch >
 
 .layout-homepage {
   height: auto;
-  // overflow-x: hidden;
-  // overflow-y: hidden;
   -webkit-perspective: 500px;
   -moz-perspective: 500px;
   perspective: 500px;
@@ -99,20 +89,5 @@ h2.sub-title {
 }
 .layout-homepage .slideshow .item {
   margin-top: 14rem;
-}
-.visual {
-  display: block;
-  margin: 0 auto;
-  width: 145px;
-  height: 72px;
-}
-
-@-webkit-keyframes fadeIn {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
 }
 </style>

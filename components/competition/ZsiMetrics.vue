@@ -4,7 +4,11 @@
       <div class="flex-1">
         <b-list-group flush>
           <center>
-            <b-card text-variant="white" :style="'background: '+firstCompetitor.color+' !important;'">
+            <b-card
+              class="shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur"
+              text-variant="white"
+              :style="'background: ' + firstCompetitor.color + ' !important;'"
+            >
               <center>
                 <h2 class="text-3xl">
                   <b>{{ firstCompetitor.ZSI.score }}</b>
@@ -14,13 +18,13 @@
               </center>
             </b-card>
             <br>
-            <b-list-group-item class="zen-item">
+            <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ socialContributorsFirstCompetitor }}</b> unique accounts tweeting
             </b-list-group-item>
-            <b-list-group-item class="zen-item">
+            <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ sentiment4FirstCompetitor }}</b> "bullish" tweets
             </b-list-group-item>
-            <b-list-group-item class="zen-item">
+            <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ sentiment5FirstCompetitor }}</b> very "bullish" tweets
             </b-list-group-item>
           </center>
@@ -29,7 +33,11 @@
       <div class="flex-1">
         <b-list-group flush>
           <center>
-            <b-card text-variant="white" :style="'background: '+secondCompetitor.color+' !important;'">
+            <b-card
+              class="shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur"
+              text-variant="white"
+              :style="'background: ' + secondCompetitor.color + ' !important;'"
+            >
               <center>
                 <h2 class="text-3xl">
                   <b>{{ roundNumber(secondCompetitor.ZSI.score / secondCompetitor.mcapDiff) }}</b>
@@ -39,13 +47,13 @@
               </center>
             </b-card>
             <br>
-            <b-list-group-item class="zen-item">
+            <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ socialContributorsSecondCompetitor }}</b> unique accounts tweeting
             </b-list-group-item>
-            <b-list-group-item class="zen-item">
+            <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ sentiment4SecondCompetitor }}</b> "bullish" tweets
             </b-list-group-item>
-            <b-list-group-item class="zen-item">
+            <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ sentiment5SecondCompetitor }}</b> very "bullish" tweets
             </b-list-group-item>
           </center>
