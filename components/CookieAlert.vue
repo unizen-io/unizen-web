@@ -30,7 +30,6 @@
 </template>
 
 <script>
-// TODO: error prone (`The client-side rendered virtual DOM tree is not matching server-rendered content.`)
 import { bootstrap } from 'vue-gtag'
 
 export default {
@@ -39,11 +38,13 @@ export default {
       isOpen: false
     }
   },
-  created () {
+
+  mounted () {
     if (!this.getGDPR() === true) {
       this.isOpen = true
     }
   },
+
   methods: {
     deny () {
       if (process.browser) {
