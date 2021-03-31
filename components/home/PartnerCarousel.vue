@@ -2,64 +2,42 @@
   <div class="partners">
     <div class="container mx-auto px-4">
       <div class="pt-12 flex flex-wrap">
-        <div class="px-4 w-full md:w-1/2">
+        <div
+          class="p-4 w-full md:w-1/2"
+          data-aos="fade-in"
+          data-aos-duration="2000"
+        >
           <h1
-            style="color: #f5f5f5 !important; font-family: Montserrat;"
-            class="text-6xl"
+            style="font-family: Montserrat;"
+            class="text-6xl text-unizenGray-light"
           >
             Our strategic partners.
-          </h1><br>
+          </h1>
         </div>
-        <div class="px-4 w-full md:w-1/2">
-          <p
-            style="color: #f5f5f5;"
-            class="text-xl"
-          >
+        <div
+          class="p-4 w-full md:w-1/2"
+          data-aos="fade-in"
+          data-aos-duration="3000"
+        >
+          <p class="text-xl text-unizenGray-light">
             Unizen has aligned with key partners to provide best-in-class exchange, advisory and project support services. From enriched data feeds, to government compliance and incubation of new projects. All of this has been enabled by close collaborations with top-industry leaders in their respective domain.
           </p>
         </div>
       </div>
     </div>
     <div class="text-center">
-      <Hooper :settings="cardsHooper">
-        <Slide>
+      <Hooper :settings="CARDS_HOOPER">
+        PARTNER_IMAGES
+        <Slide
+          v-for="partnerImage in PARTNER_IMAGES"
+          :key="partnerImage.src"
+        >
           <nuxt-img
-            loading="lazy"
             format="webp"
-            width="337"
-            height="70"
-            src="/img/partners/blockunify.png"
-            alt="Blockunify"
-          />
-        </Slide>
-        <Slide>
-          <nuxt-img
-            loading="lazy"
-            format="webp"
-            width="261"
-            height="70"
-            src="/img/partners/jun.png"
-            alt="Jun"
-          />
-        </Slide>
-        <Slide>
-          <nuxt-img
-            loading="lazy"
-            format="webp"
-            width="240"
-            height="70"
-            src="/img/partners/lunarcrush.png"
-            alt="Lunarcrush"
-          />
-        </Slide>
-        <Slide>
-          <nuxt-img
-            loading="lazy"
-            format="webp"
-            width="300"
-            height="70"
-            src="/img/partners/betrust.png"
-            alt="Betrust"
+            :width="partnerImage.width"
+            :height="partnerImage.height"
+            :src="partnerImage.src"
+            :alt="partnerImage.alt"
           />
         </Slide>
         <HooperNavigation slot="hooper-addons" />
@@ -84,16 +62,41 @@ export default {
     HooperNavigation
   },
 
-  data () {
-    return {
-      cardsHooper: {
-        itemsToSlide: 1,
-        itemsToShow: 4,
-        infiniteScroll: true,
-        playSpeed: 8000,
-        autoPlay: true,
-        wheelControl: false
+  created () {
+    this.PARTNER_IMAGES = [
+      {
+        width: 337,
+        height: 70,
+        src: '/img/partners/blockunify.png',
+        alt: 'Blockunify'
+      },
+      {
+        width: 261,
+        height: 70,
+        src: '/img/partners/jun.png',
+        alt: 'Jun'
+      },
+      {
+        width: 240,
+        height: 70,
+        src: '/img/partners/lunarcrush.png',
+        alt: 'Lunarcrush'
+      },
+      {
+        width: 300,
+        height: 70,
+        src: '/img/partners/betrust.png',
+        alt: 'Betrust'
       }
+    ]
+
+    this.CARDS_HOOPER = {
+      itemsToSlide: 1,
+      itemsToShow: 4,
+      infiniteScroll: true,
+      playSpeed: 8000,
+      autoPlay: true,
+      wheelControl: false
     }
   }
 }

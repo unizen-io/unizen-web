@@ -1,20 +1,24 @@
 <template>
-  <div>
-    <div class="main">
-      <div class="container mx-auto px-8 py-12 my-12">
-        <h1 class="py-12 mt-12">
-          Blog.
-        </h1>
-        <LoadingMessage v-if="status === STATUSES.IDLE || status === STATUSES.PENDING" />
-        <ErrorMessage
-          v-if="status === STATUSES.REJECTED"
-          :error-message="error.message"
-        />
-        <Articles
-          v-if="status === STATUSES.RESOLVED"
-          :articles="articles"
-        />
-      </div>
+  <div class="main">
+    <div class="container mx-auto px-8 py-12 my-12">
+      <h1
+        class="py-12 mt-12 text-tertiary text-center font-bold"
+        data-aos="fade-in"
+        data-aos-duration="2000"
+      >
+        Blog.
+      </h1>
+      <LoadingMessage v-if="status === STATUSES.IDLE || status === STATUSES.PENDING" />
+      <ErrorMessage
+        v-if="status === STATUSES.REJECTED"
+        :error-message="error.message"
+      />
+      <Articles
+        v-if="status === STATUSES.RESOLVED"
+        :articles="articles"
+        data-aos="fade-up"
+        data-aos-duration="2000"
+      />
     </div>
   </div>
 </template>
@@ -86,8 +90,5 @@ export default {
 
 h1 {
   font-family: Montserrat Medium !important;
-  color: $dark !important;
-  font-weight: bold;
-  text-align: center;
 }
 </style>

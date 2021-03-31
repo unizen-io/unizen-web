@@ -1,6 +1,10 @@
 <template>
-  <div class="container mx-auto px-4">
-    <h1 class="mb-6 px-4">
+  <div class="container mx-auto px-4 py-12">
+    <h1
+      class="mb-6 px-4 text-tertiary font-bold"
+      data-aos="fade-in"
+      data-aos-duration="2000"
+    >
       Latest blog articles.
     </h1>
     <LoadingMessage v-if="status === STATUSES.IDLE || status === STATUSES.PENDING" />
@@ -67,7 +71,5 @@ export default {
 <style lang="scss" scoped>
 h1 {
   font-family: Montserrat Medium !important;
-  color: $dark !important;
-  font-weight: bold;
 }
 </style>

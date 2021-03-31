@@ -1,6 +1,10 @@
 <template>
   <div class="mt-12 pt-12">
-    <h1 class="common-headline mx-auto mt-6">
+    <h1
+      class="mx-auto mt-6 text-center pt-16 pb-24 text-tertiary"
+      data-aos="fade-in"
+      data-aos-duration="2000"
+    >
       $ZCX Token.
     </h1>
     <TokenMetrics />
@@ -11,10 +15,10 @@
 </template>
 
 <script>
-import TokenAllocation from '@/components/ZcxToken/TokenAllocation'
-import TokenMetrics from '@/components/ZcxToken/TokenMetrics'
-import TokenRelease from '@/components/ZcxToken/TokenRelease'
-import TokenUtility from '@/components/ZcxToken/TokenUtility'
+import TokenAllocation from '@/components/token/TokenAllocation'
+import TokenMetrics from '@/components/token/TokenMetrics'
+import TokenRelease from '@/components/token/TokenRelease'
+import TokenUtility from '@/components/token/TokenUtility'
 import { createSEOTags } from '@/utils/helpers/seo'
 
 export default {

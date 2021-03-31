@@ -5,8 +5,10 @@
   >
     <div class="max-w-5xl mx-auto px-8 pt-24 pb-12">
       <h1
-        style="color: #2f4858 !important; font-family: Montserrat Medium !important;"
-        class="contact font-bold py-12 mt-12 text-center"
+        style="font-family: Montserrat Medium !important;"
+        class="contact font-bold py-12 mt-12 text-center text-tertiary"
+        data-aos="fade-in"
+        data-aos-duration="2000"
       >
         Contact.
       </h1>
@@ -14,8 +16,13 @@
         v-if="status === STATUSES.REJECTED"
         :error-message="error.message"
       />
-      <div v-else>
-        <b-card>
+      <div
+        v-else
+        data-aos="fade-up"
+        data-aos-duration="2000"
+        class="py-12"
+      >
+        <b-card class="shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
           We would love to talk to you about any business inquiry or partner proposal. If this relates to support for any of our exchange modules, please reach out to support@unizen.io.
         </b-card>
         <br>
@@ -70,7 +77,7 @@
     </div>
     <h1
       v-if="status === STATUSES.RESOLVED"
-      class="text-center py-12 px-6"
+      class="text-center py-12 px-6 text-primary"
     >
       Thank you, we got your submission!
     </h1>

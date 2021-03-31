@@ -1,52 +1,52 @@
 <template>
   <div class="md:flex md:flex-wrap">
-    <div
-      v-for="article in articles"
+    <article
+      v-for="(article, index) in articles"
       :key="article.title"
       class="md:w-1/2 lg:w-1/3 p-4"
+      data-aos="fade-up"
+      :data-aos-duration="1000 + (index % 3) * 1000"
     >
       <b-card
         :img-src="article.thumbnail"
         img-alt="Image not found"
         img-top
         tag="article"
-        class="article-card h-full"
+        class="article-card h-full shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur"
       >
-        <b-card-text>
-          <!-- TODO: should create an independent component -->
-          <a
-            :href="article.link"
-            target="_blank"
-            rel="noopener"
-            :aria-label="`Link to ${article.title}`"
+        <!-- TODO: should create an independent component -->
+        <a
+          :href="article.link"
+          target="_blank"
+          rel="noopener"
+          :aria-label="`Link to ${article.title}`"
+        >
+          <h2
+            style="font-family: Montserrat Medium !important;"
+            class="text-xl mb-2 text-tertiary"
           >
-            <h2
-              style="color: #2F4858 !important; font-family: Montserrat Medium !important;"
-              class="text-xl mb-2"
-            >
-              {{ article.title }}
-            </h2>
-          </a>
-          <p
-            style="font-family: Montserrat Medium;"
-            class="text-sm mb-4"
-          >
-            {{ article.content | extractTextFromHTMLString | truncate(200, '...') }}
-          </p>
-        </b-card-text>
+            {{ article.title }}
+          </h2>
+        </a>
+        <p
+          style="font-family: Montserrat Medium;"
+          class="text-sm mb-4"
+        >
+          {{ article.content | extractTextFromHTMLString | truncate(200, '...') }}
+        </p>
         <template #footer>
           <div class="flex justify-between items-center">
             <MiniLogoIcon
               width="30"
               height="30"
             />
-            <small style="color: #6c757d;">
+            <small class="text-unizenGray-dark">
               Last updated {{ formatDate(article.publishedDate) }} ago
             </small>
           </div>
         </template>
       </b-card>
-    </div>
+    </article>
   </div>
 </template>
 

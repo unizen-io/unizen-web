@@ -4,7 +4,11 @@
       <div class="flex-1">
         <b-list-group flush>
           <center>
-            <b-card text-variant="white" :style="'background: '+firstCompetitor.color+' !important;'">
+            <b-card
+              class="shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur"
+              text-variant="white"
+              :style="'background: ' + firstCompetitor.color + ' !important;'"
+            >
               <center>
                 <h2 class="text-3xl">
                   <b>{{ firstCompetitor.ZTI.score }}</b>
@@ -14,19 +18,19 @@
               </center>
             </b-card>
             <br>
-            <b-list-group-item class="zen-item">
+            <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ totalTweetsFirstCompetitor }}</b> tweets
             </b-list-group-item>
-            <b-list-group-item class="zen-item">
+            <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ totalTweetQuotesFirstCompetitor }}</b> quoted retweets
             </b-list-group-item>
-            <b-list-group-item class="zen-item">
+            <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ totalRetweetsFirstCompetitor }}</b> retweets
             </b-list-group-item>
-            <b-list-group-item class="zen-item">
+            <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ totalFavoritesFirstCompetitor }}</b> starred tweets
             </b-list-group-item>
-            <b-list-group-item class="zen-item" style="border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
+            <b-list-group-item class="bg-white bg-opacity-20 rounded-b">
               <b>{{ totalRepliesFirstCompetitor }}</b> tweet replies
             </b-list-group-item>
           </center>
@@ -35,7 +39,11 @@
       <div class="flex-1">
         <b-list-group flush>
           <center>
-            <b-card text-variant="white" :style="'background: '+secondCompetitor.color+' !important;'">
+            <b-card
+              class="shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur"
+              text-variant="white"
+              :style="'background: ' + secondCompetitor.color + ' !important;'"
+            >
               <center>
                 <h2 class="text-3xl">
                   <b>{{ roundNumber(secondCompetitor.ZTI.score / secondCompetitor.mcapDiff) }}</b>
@@ -45,19 +53,19 @@
               </center>
             </b-card>
             <br>
-            <b-list-group-item class="zen-item">
+            <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ totalTweetsSecondCompetitor }}</b> tweets
             </b-list-group-item>
-            <b-list-group-item class="zen-item">
+            <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ totalTweetQuotesSecondCompetitor }}</b> quoted retweets
             </b-list-group-item>
-            <b-list-group-item class="zen-item">
+            <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ totalRetweetsSecondCompetitor }}</b> retweets
             </b-list-group-item>
-            <b-list-group-item class="zen-item">
+            <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ totalFavoritesSecondCompetitor }}</b> starred tweets
             </b-list-group-item>
-            <b-list-group-item class="zen-item" style="border-bottom-left-radius: 5px;border-bottom-right-radius: 5px;">
+            <b-list-group-item class="bg-white bg-opacity-20 rounded-b">
               <b>{{ totalTweetRepliesSecondCompetitor }}</b> tweet replies
             </b-list-group-item>
           </center>
