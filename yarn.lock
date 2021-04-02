@@ -7410,16 +7410,17 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-nuxt-socket-io@^1.1.15:
-  version "1.1.15"
-  resolved "https://registry.yarnpkg.com/nuxt-socket-io/-/nuxt-socket-io-1.1.15.tgz#2cf2bd51915ac0d90cffedad07b00981de45b6ba"
-  integrity sha512-oLOix2ZdFIMsMrSqEG6dY+YDLfabzk6P8ZC0VwptUU/Nf9+0bIzw3ZhTFpJgeYfx9qaFP35+i7QP+hFjvSnzjg==
+nuxt-socket-io@^1.1.17:
+  version "1.1.17"
+  resolved "https://registry.yarnpkg.com/nuxt-socket-io/-/nuxt-socket-io-1.1.17.tgz#b823a60df64fdcfd8afd1b9aadd25002bed0a537"
+  integrity sha512-MaIpK4uNu/TTe4hRzXS+t/decFLb/NUC5SxioBX7ixWjW0elIPTD+xXfFF8ja31tVKOESG4s6OL8Wp4wXQb4bQ==
   dependencies:
     "@nuxt/types" "^2.14.7"
     "@types/socket.io-client" "^1.4.34"
     glob "^7.1.6"
     socket.io "^3.1.0"
     socket.io-client "^3.1.0"
+    tiny-emitter "^2.1.0"
     vue-template-compiler "^2.6.12"
 
 nuxt@^2.15.3:
@@ -10594,6 +10595,11 @@ timsort@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/timsort/-/timsort-0.3.0.tgz#405411a8e7e6339fe64db9a234de11dc31e02bd4"
   integrity sha1-QFQRqOfmM5/mTbmiNN4R3DHgK9Q=
+
+tiny-emitter@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/tiny-emitter/-/tiny-emitter-2.1.0.tgz#1d1a56edfc51c43e863cbb5382a72330e3555423"
+  integrity sha512-NB6Dk1A9xgQPMoGqC5CVXn123gWyte215ONT5Pp5a0yt4nlEoO1ZWeCwpncaekPHXO60i47ihFnZPiRPjRMq4Q==
 
 tmp@^0.0.33:
   version "0.0.33"
