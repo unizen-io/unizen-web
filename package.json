@@ -51,5 +51,8 @@
     "vue-chartjs": "^3.5.1",
     "vue-confetti": "^2.2.1",
     "vue-gtag": "^1.10.0"
+  },
+  "resolutions": {
+    "is-svg": "4.2.2"
   }
 }
