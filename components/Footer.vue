@@ -70,10 +70,20 @@
       </div>
     </div>
     <div class="footer-secondary text-center h-16 px-12 flex items-center text-unizenGray-light">
-      © 2021 - 2022 Unizen.io. All rights reserved.
+      © 2021 - 2022 {{ PRODUCTION_DOMAIN }}. All rights reserved.
     </div>
   </div>
 </template>
+
+<script>
+import { PRODUCTION_DOMAIN } from '@/config'
+
+export default {
+  created () {
+    this.PRODUCTION_DOMAIN = PRODUCTION_DOMAIN
+  }
+}
+</script>
 
 <style lang="scss">
 .footer-disabled {

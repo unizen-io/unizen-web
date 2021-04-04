@@ -23,7 +23,7 @@
         class="py-12"
       >
         <b-card class="shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
-          We would love to talk to you about any business inquiry or partner proposal. If this relates to support for any of our exchange modules, please reach out to support@unizen.io.
+          We would love to talk to you about any business inquiry or partner proposal. If this relates to support for any of our exchange modules, please reach out to {{ `support@${PRODUCTION_DOMAIN}` }}.
         </b-card>
         <br>
         <b-form
@@ -87,7 +87,10 @@
 <script>
 import ErrorMessage from '@/components/ErrorMessage'
 import { createSEOTags } from '@/utils/helpers/seo'
-import { CONTACT_US_FORM_SUBMISSION_ENDPOINT } from '@/config'
+import {
+  CONTACT_US_FORM_SUBMISSION_ENDPOINT,
+  PRODUCTION_DOMAIN
+} from '@/config'
 import STATUSES from '@/utils/constants/statuses'
 
 export default {
@@ -141,6 +144,7 @@ export default {
 
   created () {
     this.STATUSES = STATUSES
+    this.PRODUCTION_DOMAIN = PRODUCTION_DOMAIN
   },
 
   methods: {

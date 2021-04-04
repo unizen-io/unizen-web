@@ -1,4 +1,5 @@
 import { createSEOTags } from './utils/helpers/seo'
+import { PRODUCTION_DOMAIN } from './config'
 
 export default {
   // ray test touch <
@@ -77,7 +78,7 @@ export default {
   // },
 
   sitemap: {
-    hostname: 'https://unizen.io',
+    hostname: `https://${PRODUCTION_DOMAIN}`,
     gzip: true,
     exclude: [
       '/secret'
