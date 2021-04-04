@@ -1,13 +1,13 @@
 /**
  * Creates SEO related meta tags for the header
  *
- * @param {Object} data The object holding all relevant SEO information for the current page (title,description,image,slug,viewport)
+ * @param {Object} data The object holding all relevant SEO information for the current page (title, description, image, slug, viewport)
  * @param {Object} baseTags Optional object holding additional default meta tags for the current page
  *
  * @return {Object} Merged object of base tags and generated meta tags object
  *
  */
-const createSEOTags = (data, baseTags) => {
+const createSEOTags = (data, baseTags = {}) => {
   const _seoTags = {
     // default page title
     title: data.title,
@@ -43,8 +43,10 @@ const createSEOTags = (data, baseTags) => {
     ]
   }
 
-  // return the combined array of header data
-  return { ...baseTags || {}, ..._seoTags }
+  return {
+    ...baseTags,
+    ..._seoTags
+  }
 }
 
 export {
