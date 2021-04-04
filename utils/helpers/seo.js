@@ -16,22 +16,30 @@ const createSEOTags = (data, baseTags = {}) => {
     title: data.title,
     // meta tags
     meta: [
-      // default meta tag description
+      // ray test touch <
+      // Primary
+      { hid: 'title', name: 'title', content: data.title },
       { hid: 'description', name: 'description', content: data.description },
-      // open graph tags (used by reddit, facebook, etc.)
-      { hid: 'og:type', property: 'og:type', content: data.type || 'website' },
-      { hid: 'og:site_name', property: 'og:site_name', content: data.title },
+
+      // Open Graph (used by reddit, facebook, etc.)
+      { hid: 'og:type', property: 'og:type', content: 'website' },
+      { hid: 'og:url', property: 'og:url', content: `https://${PRODUCTION_DOMAIN}/${(data.slug || '')}` },
       { hid: 'og:title', property: 'og:title', content: data.title },
       { hid: 'og:description', property: 'og:description', content: data.description },
-      { hid: 'og:image', property: 'og:image', content: data.image || '' }, // TODO: set default image
-      { hid: 'og:url', property: 'og:url', content: `https://${PRODUCTION_DOMAIN}/${(data.slug || '')}` },
-      // custom twitter tags (twitter cards)
+      { hid: 'og:image', property: 'og:image', content: data.image || `https://${PRODUCTION_DOMAIN}/unizen-meta-image.jpg` },
+      { hid: 'og:image:width', property: 'og:image:width', content: data.imageWidth || '1920' },
+      { hid: 'og:image:height', property: 'og:image:height', content: data.imageHeight || '719' },
+
+      // Twitter
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary' },
-      { hid: 'twitter:side', name: 'twitter:site', content: '@unizen_io' },
-      { hid: 'twitter:domain', property: 'twitter:domain', content: PRODUCTION_DOMAIN },
       { hid: 'twitter:url', property: 'twitter:url', content: `https://${PRODUCTION_DOMAIN}/${(data.slug || ' ')}` },
       { hid: 'twitter:title', name: 'twitter:title', content: data.title },
       { hid: 'twitter:description', name: 'twitter:description', content: data.description },
+      { hid: 'twitter:image', name: 'twitter:image', content: data.image || `https://${PRODUCTION_DOMAIN}/unizen-meta-image.jpg` },
+      { hid: 'twitter:site', name: 'twitter:site', content: '@unizen_io' },
+      { hid: 'twitter:domain', property: 'twitter:domain', content: PRODUCTION_DOMAIN },
+      // ray test touch >
+
       // additional meta tags for icon themes
       { hid: 'msapplication-TileColor', name: 'msapplication-TileColor', content: '#00aba9' },
       { hid: 'theme-color', name: 'theme-color', content: '#ffffff' }
