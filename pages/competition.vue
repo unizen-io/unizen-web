@@ -200,6 +200,7 @@ export default {
       sentimentData: []
     }
   },
+
   computed: {
     competitionEnded () {
       return this.currentTime > this.competitionEndDate
@@ -214,6 +215,7 @@ export default {
       return this.currentTime > this.competitionStartDate && this.currentTime < this.competitionEndDate
     }
   },
+
   watch: {
     competitionRunning (val) {
       if (val) {
@@ -221,6 +223,7 @@ export default {
       }
     }
   },
+
   created () {
     this.LcApiKey = LC_API_KEY
     // if (this.competitionStarted && !this.competitionEnded) {
@@ -231,6 +234,7 @@ export default {
       self.currentTime = Math.round((new Date()).getTime() / 1000)
     }, 1000)
   },
+
   mounted () {
     setInterval(() => this.getTimer(), 1000)
     if (this.competitionResults) {
@@ -240,9 +244,11 @@ export default {
     //   this.startConfettiRain()
     // }
   },
+
   beforeDestroy () {
     this.$confetti.remove()
   },
+
   methods: {
     getTimer () {
     //   const date = new Date(this.competitionEndDate - this.currentTime * 1000)
@@ -396,6 +402,8 @@ export default {
       this.$confetti.stop()
     }
   },
+
+  // ray test touch <
   head () {
     return createSEOTags({
       title: `Unizen: Smart Exchange Ecosystem - Competition ${this.FirstCompetitor.asset} vs ${this.SecondCompetitor.asset}`,
@@ -403,5 +411,6 @@ export default {
       slug: 'competition'
     })
   }
+  // ray test touch >
 }
 </script>

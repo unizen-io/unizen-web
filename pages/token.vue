@@ -29,6 +29,7 @@ export default {
     TokenUtility
   },
 
+  // ray test touch <
   head () {
     return createSEOTags({
       title: 'Unizen: Smart Exchange Ecosystem - ZCX Token',
@@ -36,5 +37,6 @@ export default {
       slug: 'token'
     })
   }
+  // ray test touch >
 }
 </script>
