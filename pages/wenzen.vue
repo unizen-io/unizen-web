@@ -104,7 +104,6 @@
 import { createSEOTags } from '@/utils/helpers/seo'
 
 export default {
-  // ray test touch <
   head () {
     return createSEOTags({
       title: 'Unizen: Smart Exchange Ecosystem - Wen Zen',
@@ -112,7 +111,6 @@ export default {
       slug: 'wenzen'
     })
   }
-  // ray test touch >
 }
 </script>
 

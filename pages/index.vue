@@ -35,14 +35,12 @@ export default {
     PartnerCarousel
   },
 
-  // ray test touch <
   head () {
     return createSEOTags({
       title: 'Unizen: Smart Exchange Ecosystem',
       description: 'Unizen is the easy, fast and secure way to buy any available digital asset'
     })
   }
-  // ray test touch >
 }
 </script>
 

@@ -2,7 +2,6 @@ import { createSEOTags } from './utils/helpers/seo'
 import { PRODUCTION_DOMAIN } from './config'
 
 export default {
-  // ray test touch <
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: createSEOTags({
     title: 'Unizen: Smart Exchange Ecosystem - Simple and Secure Cryptocurrency exchange with Enormous Liquidity',
@@ -10,7 +9,6 @@ export default {
     viewport: 'width=device-width, initial-scale=1',
     charset: 'utf-8'
   }),
-  // ray test touch >
 
   // Global CSS (https://go.nuxtjs.dev/config-css)
   css: [

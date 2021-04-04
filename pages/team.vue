@@ -224,7 +224,6 @@ export default {
     ]
   },
 
-  // ray test touch <
   head () {
     return createSEOTags({
       title: 'Unizen: Smart Exchange Ecosystem - Team and Advisors',
@@ -232,7 +231,6 @@ export default {
       slug: 'team'
     })
   }
-  // ray test touch >
 }
 </script>
 

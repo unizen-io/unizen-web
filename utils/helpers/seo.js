@@ -38,12 +38,12 @@ const createSEOTags = (data, baseTags = {}) => {
       { hid: 'twitter:site', name: 'twitter:site', content: '@unizen_io' },
       { hid: 'twitter:domain', property: 'twitter:domain', content: PRODUCTION_DOMAIN },
 
-      // additional meta tags for icon themes
+      // Additional meta tags for icon themes
       { hid: 'msapplication-TileColor', name: 'msapplication-TileColor', content: '#00aba9' },
       { hid: 'theme-color', name: 'theme-color', content: '#ffffff' }
     ],
     link: [
-      // icons for favicon, pwa etc.
+      // Icons for favicon, pwa etc.
       { hid: 'apple-touch-icon', rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
       { hid: 'favicon-32x32', rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
       { hid: 'favicon-16x16', rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },

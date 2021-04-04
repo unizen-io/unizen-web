@@ -176,7 +176,6 @@ export default {
     }
   },
 
-  // ray test touch <
   head () {
     return createSEOTags({
       title: 'Unizen: Smart Exchange Ecosystem - Contact Us.',
@@ -184,6 +183,5 @@ export default {
       slug: 'contact'
     })
   }
-  // ray test touch >
 }
 </script>

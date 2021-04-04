@@ -72,7 +72,6 @@ export default {
     this.STATUSES = STATUSES
   },
 
-  // ray test touch <
   head () {
     return createSEOTags({
       title: 'Unizen: Smart Exchange Ecosystem - Blog',
@@ -80,7 +79,6 @@ export default {
       slug: 'blog'
     })
   }
-  // ray test touch >
 }
 </script>
 

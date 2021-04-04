@@ -403,7 +403,6 @@ export default {
     }
   },
 
-  // ray test touch <
   head () {
     return createSEOTags({
       title: `Unizen: Smart Exchange Ecosystem - Competition ${this.FirstCompetitor.asset} vs ${this.SecondCompetitor.asset}`,
@@ -411,6 +410,5 @@ export default {
       slug: 'competition'
     })
   }
-  // ray test touch >
 }
 </script>
