@@ -114,8 +114,9 @@ import ZsiMetrics from '@/components/competition/ZsiMetrics'
 import ZssChart from '@/components/competition/ZssChart'
 import ZssMetrics from '@/components/competition/ZssMetrics'
 import ZtiMetrics from '@/components/competition/ZtiMetrics'
-import { createSEOTags } from '@/utils/helpers/seo'
 import { LC_API_KEY } from '@/config'
+import { createSEOTags } from '@/utils/helpers/seo'
+import { PAGES } from '@/utils/constants/links'
 
 export default {
   components: {
@@ -407,7 +408,7 @@ export default {
     return createSEOTags({
       title: `Unizen: Smart Exchange Ecosystem - Competition ${this.FirstCompetitor.asset} vs ${this.SecondCompetitor.asset}`,
       description: `Listing competition between ${this.FirstCompetitor.asset} and ${this.SecondCompetitor.asset}`,
-      slug: 'competition'
+      slug: PAGES.competition.url
     })
   }
 }

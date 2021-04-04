@@ -92,6 +92,7 @@ import {
   PRODUCTION_DOMAIN
 } from '@/config'
 import STATUSES from '@/utils/constants/statuses'
+import { PAGES } from '@/utils/constants/links'
 
 export default {
   components: {
@@ -180,7 +181,7 @@ export default {
     return createSEOTags({
       title: 'Unizen: Smart Exchange Ecosystem - Contact Us.',
       description: 'For business and partnerships inquiries.',
-      slug: 'contact'
+      slug: PAGES.contact.url
     })
   }
 }

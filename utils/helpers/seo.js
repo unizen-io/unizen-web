@@ -22,7 +22,7 @@ const createSEOTags = (data, baseTags = {}) => {
 
       // Open Graph (used by reddit, facebook, etc.)
       { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'og:url', property: 'og:url', content: `https://${PRODUCTION_DOMAIN}/${(data.slug || '')}` },
+      { hid: 'og:url', property: 'og:url', content: `https://${PRODUCTION_DOMAIN}${(data.slug || '')}` },
       { hid: 'og:title', property: 'og:title', content: data.title },
       { hid: 'og:description', property: 'og:description', content: data.description },
       { hid: 'og:image', property: 'og:image', content: data.image || `https://${PRODUCTION_DOMAIN}/unizen-meta-image.jpg` },
@@ -31,7 +31,7 @@ const createSEOTags = (data, baseTags = {}) => {
 
       // Twitter
       { hid: 'twitter:card', name: 'twitter:card', content: 'summary' },
-      { hid: 'twitter:url', property: 'twitter:url', content: `https://${PRODUCTION_DOMAIN}/${(data.slug || ' ')}` },
+      { hid: 'twitter:url', property: 'twitter:url', content: `https://${PRODUCTION_DOMAIN}${(data.slug || ' ')}` },
       { hid: 'twitter:title', name: 'twitter:title', content: data.title },
       { hid: 'twitter:description', name: 'twitter:description', content: data.description },
       { hid: 'twitter:image', name: 'twitter:image', content: data.image || `https://${PRODUCTION_DOMAIN}/unizen-meta-image.jpg` },

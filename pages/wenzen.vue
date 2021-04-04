@@ -102,13 +102,14 @@
 
 <script>
 import { createSEOTags } from '@/utils/helpers/seo'
+import { PAGES } from '@/utils/constants/links'
 
 export default {
   head () {
     return createSEOTags({
       title: 'Unizen: Smart Exchange Ecosystem - Wen Zen',
       decsription: 'Listing competition rules and unique social sentiment indexes',
-      slug: 'wenzen'
+      slug: PAGES.wenzen.url
     })
   }
 }

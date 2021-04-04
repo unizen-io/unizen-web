@@ -132,6 +132,7 @@
 
 <script>
 import { createSEOTags } from '@/utils/helpers/seo'
+import { PAGES } from '@/utils/constants/links'
 
 export default {
   created () {
@@ -228,7 +229,7 @@ export default {
     return createSEOTags({
       title: 'Unizen: Smart Exchange Ecosystem - Team and Advisors',
       description: 'The ZEN Team and Advisors. Greg Horowitt, Dr. Ian Sobieski, Eric Su, Brandon Dallman, Martin Granström, Sean Noga, Tom Sweeney, Alex Man',
-      slug: 'team'
+      slug: PAGES.team.url
     })
   }
 }
