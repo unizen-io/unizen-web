@@ -16,7 +16,6 @@ const createSEOTags = (data, baseTags = {}) => {
     title: data.title,
     // meta tags
     meta: [
-      // ray test touch <
       // Primary
       { hid: 'title', name: 'title', content: data.title },
       { hid: 'description', name: 'description', content: data.description },
@@ -38,7 +37,6 @@ const createSEOTags = (data, baseTags = {}) => {
       { hid: 'twitter:image', name: 'twitter:image', content: data.image || `https://${PRODUCTION_DOMAIN}/unizen-meta-image.jpg` },
       { hid: 'twitter:site', name: 'twitter:site', content: '@unizen_io' },
       { hid: 'twitter:domain', property: 'twitter:domain', content: PRODUCTION_DOMAIN },
-      // ray test touch >
 
       // additional meta tags for icon themes
       { hid: 'msapplication-TileColor', name: 'msapplication-TileColor', content: '#00aba9' },
@@ -47,10 +45,11 @@ const createSEOTags = (data, baseTags = {}) => {
     link: [
       // icons for favicon, pwa etc.
       { hid: 'apple-touch-icon', rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-touch-icon.png' },
-      { hid: 'icon32', rel: 'icon', type: 'image/png', sizes: '32x32', href: '/icon-32x32.png' },
-      { hid: 'icon16', rel: 'icon', type: 'image/png', sizes: '16x16', href: '/icon-16x16.png' },
+      { hid: 'favicon-32x32', rel: 'icon', type: 'image/png', sizes: '32x32', href: '/favicon-32x32.png' },
+      { hid: 'favicon-16x16', rel: 'icon', type: 'image/png', sizes: '16x16', href: '/favicon-16x16.png' },
       { hid: 'manifest', rel: 'manifest', href: '/site.webmanifest' },
-      { hid: 'mask-icon', rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbbab5' }
+      { hid: 'mask-icon', rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbbab5' },
+      { hid: 'favicon', rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
     ]
   }
 
