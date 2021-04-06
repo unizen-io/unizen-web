@@ -34,6 +34,7 @@ import {
   MEDIUM_FEED_URL
 } from '@/config/medium'
 import STATUSES from '@/utils/constants/statuses'
+import { PAGES } from '@/utils/constants/links'
 
 export default {
   components: {
@@ -76,7 +77,7 @@ export default {
     return createSEOTags({
       title: 'Unizen: Smart Exchange Ecosystem - Blog',
       description: 'Latest news and updates from Unizen Exchange.',
-      slug: 'blog'
+      slug: PAGES.blog.url
     })
   }
 }

@@ -20,6 +20,7 @@ import TokenMetrics from '@/components/token/TokenMetrics'
 import TokenRelease from '@/components/token/TokenRelease'
 import TokenUtility from '@/components/token/TokenUtility'
 import { createSEOTags } from '@/utils/helpers/seo'
+import { PAGES } from '@/utils/constants/links'
 
 export default {
   components: {
@@ -33,7 +34,7 @@ export default {
     return createSEOTags({
       title: 'Unizen: Smart Exchange Ecosystem - ZCX Token',
       description: 'The ZCX token, utility, tokenomics, release schedule, contract address',
-      slug: 'token'
+      slug: PAGES.token.url
     })
   }
 }
