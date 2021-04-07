@@ -177,6 +177,20 @@ export default {
 
     this.ADVISORS = [
       {
+        name: 'Gilbert Verdian',
+        img: '/img/advisors/gilbert.png',
+        role: 'CEO of Quant Network',
+        linkedin: 'https://www.linkedin.com/in/gverdian/',
+        twitter: 'https://twitter.com/gverdian',
+        github: '',
+        telegram: '',
+        desc: ` Gilbert has led a ground-breaking innovation as CEO of Quant Network and the Overledger Network to spearhead interoperability in the global financial and DLT sectors, and is widely recognized as the authority on decentralized compliant protocol development and implementation.
+              <br><br>
+              With over twenty years of industry experience in working for four governments and prestigious corporate institutions with C-Level accountability, Gilbert has dedicated his entire professional life to collaborating with regulators and corporations in the domains of cybersecurity and disruptive technologies.
+              <br><br>
+              Prior to joining Quant, Gilbert was CISO at Vocalink, Mastercard and was responsible for securing 6 Trillion pounds of annual transactions on the UK’s national critical payment infrastructure. He established the Blockchain ISO Standard TC307 in 2015, in which he chairs the Interoperability Working Group. He is a founding member of INATBA, and sits on various Government committees.`
+      },
+      {
         name: 'Dr. Ian Sobieski',
         img: '/img/advisors/ian.png',
         role: 'Chairman & Founder, Band of Angels',
