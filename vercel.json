@@ -8,7 +8,8 @@
 	      "useGeneratedStaticRoutes": true,
         "serverFiles": [
           "utils/helpers/seo.js",
-          "api/swr.js"
+          "api/swr.js",
+          "config/index.js"
         ]
       }
     }
