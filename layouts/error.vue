@@ -1,16 +1,27 @@
 <template>
-  <h1 class="mt-40 text-center">
-    {{ error.statusCode === 404 ? 'This page could not be found.' : 'There was an unknown error.' }}
-  </h1>
+  <div class="text-center">
+    <h1 class="mt-40">
+      {{ error.statusCode === 404 ? 'Page not found' : 'An error occurred' }}
+    </h1>
+    <nuxt-link :to="PAGES.home.url">
+      Home page
+    </nuxt-link>
+  </div>
 </template>
 
 <script>
+import { PAGES } from '@/utils/constants/links'
+
 export default {
   props: {
     error: {
       type: Object,
       required: true
     }
+  },
+
+  created () {
+    this.PAGES = PAGES
   }
 }
 </script>
