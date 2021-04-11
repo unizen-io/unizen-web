@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div ref="footerInnerRef">
     <div class="footer-primary bg-tertiary">
       <div class="container mx-auto flex flex-wrap py-12 px-4">
         <div class="px-4 w-1/2 md:w-1/4">
