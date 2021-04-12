@@ -1,9 +1,14 @@
 <template>
-  <div class="layout-default">
-    <NavBar />
-    <nuxt />
+  <div class="layout-default relative min-h-screen">
     <CookieAlert />
-    <Footer />
+    <main :style="{ paddingBottom: footerHeight + 'px' }">
+      <NavBar />
+      <nuxt />
+    </main>
+    <Footer
+      ref="footerRef"
+      class="absolute bottom-0 w-full"
+    />
   </div>
 </template>
 
@@ -17,6 +22,16 @@ export default {
     NavBar,
     CookieAlert,
     Footer
+  },
+
+  data () {
+    return {
+      footerHeight: 0
+    }
+  },
+
+  mounted () {
+    this.footerHeight = this.$refs.footerRef.$refs.footerInnerRef.clientHeight
   }
 }
 </script>

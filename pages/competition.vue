@@ -1,5 +1,5 @@
 <template>
-  <div class="pt-4 mt-12">
+  <div class="mt-20 pb-16">
     <center>
       <div class="mt-12 pt-12">
         <h5
@@ -37,7 +37,10 @@
       :competition-ended="competitionEnded"
       :competition-results="competitionResults"
     />
-    <div v-if="competitionStarted" class="space-y-12">
+    <div
+      v-if="competitionStarted"
+      class="space-y-12"
+    >
       <div
         style="background: #efefef;"
         class="container mx-auto px-8"
@@ -102,8 +105,6 @@
         data-aos-duration="2000"
       />
     </div>
-    <div v-else style="padding-bottom: 200px;" />
-    <br><br><br>
   </div>
 </template>
 
