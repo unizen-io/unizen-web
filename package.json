@@ -43,7 +43,7 @@
     "node-sass": "^5.0.0",
     "nuxt": "^2.15.4",
     "nuxt-socket-io": "^1.1.15",
-    "postcss": "7",
+    "postcss": "8",
     "sass-loader": "^10.1.0",
     "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "tailwindcss-textshadow": "^2.1.3",
