@@ -50,7 +50,7 @@
     "three": "^0.127.0",
     "vue-chartjs": "^3.5.1",
     "vue-confetti": "^2.2.1",
-    "vue-gtag": "^1.10.0"
+    "vue-gtag": "^1.12.0"
   },
   "resolutions": {
     "is-svg": "4.2.2"
