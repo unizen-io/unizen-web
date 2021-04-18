@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div ref="footerInnerRef">
     <div class="footer-primary bg-tertiary">
       <div class="container mx-auto flex flex-wrap py-12 px-4">
         <div class="px-4 w-1/2 md:w-1/4">
@@ -18,9 +18,9 @@
           <nuxt-link to="/wenzen" class="text-primary hover:underline">
             Tournament of Altcoins
           </nuxt-link><br>
-          <a class="text-primary footer-disabled">CoinMarketCap</a>
+          <a href="https://coinmarketcap.com/currencies/unizen/" class="text-primary hover:underline">CoinMarketCap</a>
           <br>
-          <a class="text-primary footer-disabled">CoinGecko</a>
+          <a href="https://www.coingecko.com/de/munze/unizen" class="text-primary hover:underline">CoinGecko</a>
           <br>
           <nuxt-link to="/contact" class="text-primary hover:underline">
             Contact Us

@@ -1,7 +1,7 @@
 <template>
   <div style="background: #EFEFEF;">
     <div class="py-12 container mx-auto px-4">
-      <div>
+      <div class="text-center">
         <h3
           style="font-family: 'D DIN';"
           class="font-base px-4 text-tertiary"
@@ -9,7 +9,7 @@
           Unizen Innovation Powered by:
         </h3>
         <nuxt-img
-          class="px-4"
+          class="px-4 mx-auto"
           loading="lazy"
           format="webp"
           width="490"
