@@ -18,9 +18,9 @@
           <nuxt-link to="/wenzen" class="text-primary hover:underline">
             Tournament of Altcoins
           </nuxt-link><br>
-          <a class="text-primary footer-disabled">CoinMarketCap</a>
+          <a href="https://coinmarketcap.com/currencies/unizen/" class="text-primary hover:underline">CoinMarketCap</a>
           <br>
-          <a class="text-primary footer-disabled">CoinGecko</a>
+          <a href="https://www.coingecko.com/de/munze/unizen" class="text-primary hover:underline">CoinGecko</a>
           <br>
           <nuxt-link to="/contact" class="text-primary hover:underline">
             Contact Us
