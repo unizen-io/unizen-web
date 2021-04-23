@@ -30,7 +30,7 @@
           <h2 class="mt-5 text-unizenGray-light text-2xl">
             Business
           </h2>
-          <a class="text-primary footer-disabled">
+          <a class="text-primary text-opacity-40 pointer-events-none">
             Listing Application
           </a>
           <br>
@@ -41,19 +41,29 @@
             Partnership Inquiry
           </nuxt-link>
         </div>
-        <div class="px-4 w-1/2 md:w-1/4">
+        <div class="px-4 w-1/2 md:w-1/4 flex flex-col">
           <h2 class="mt-5 text-unizenGray-light text-2xl">
             Technology
           </h2>
-          <a class="text-primary footer-disabled">
+          <a class="text-primary text-opacity-40 pointer-events-none">
             API Doc
           </a>
-          <br>
-          <a class="footer-disabled text-primary">SDK</a>
-          <br>
-          <a href="https://github.com/unizen-io" class="text-primary hover:underline">GitHub</a>
-          <br>
-          <a class="footer-disabled text-primary">Litepaper</a>
+          <a class="text-primary text-opacity-40 pointer-events-none">
+            SDK
+          </a>
+          <a
+            href="https://github.com/unizen-io"
+            class="text-primary hover:underline"
+          >
+            GitHub
+          </a>
+          <a
+            class="text-primary hover:underline"
+            href="/docs/unizen-v1-litepaper-2021-04-23-22-02.pdf"
+            download="unizen-v1-litepaper-2021-04-23-22-02"
+          >
+            Litepaper
+          </a>
         </div>
         <div class="px-4 w-1/2 md:w-1/4">
           <h2 class="mt-5 text-unizenGray-light text-2xl">
@@ -86,11 +96,6 @@ export default {
 </script>
 
 <style lang="scss">
-.footer-disabled {
-  opacity: 0.4;
-  pointer-events: none;
-}
-
 .footer-secondary {
   background-color: #29404e;
 }
