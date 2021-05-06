@@ -31,7 +31,7 @@
     "@nuxtjs/pwa": "^3.3.5",
     "@nuxtjs/style-resources": "^1.0.0",
     "@nuxtjs/svg": "^0.1.12",
-    "@nuxtjs/tailwindcss": "^4.0.3",
+    "@nuxtjs/tailwindcss": "^4.1.0",
     "@tailwindcss/postcss7-compat": "^2.0.4",
     "autoprefixer": "9",
     "babel-eslint": "^10.1.0",
