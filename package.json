@@ -40,7 +40,7 @@
     "eslint": "^7.23.0",
     "eslint-plugin-nuxt": "^1.0.0",
     "hooper": "^0.3.4",
-    "node-sass": "^5.0.0",
+    "node-sass": "^6.0.0",
     "nuxt": "^2.15.4",
     "nuxt-socket-io": "^1.1.15",
     "postcss": "7",
