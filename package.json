@@ -22,7 +22,7 @@
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.15.3",
     "@fortawesome/free-solid-svg-icons": "^5.15.3",
-    "@nuxt/image": "^0.4.1",
+    "@nuxt/image": "^0.4.10",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/eslint-config": "^6.0.0",
     "@nuxtjs/eslint-module": "^2.0.0",
