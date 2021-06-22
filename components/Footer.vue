@@ -64,6 +64,13 @@
           >
             Litepaper
           </a>
+          <a
+            class="text-primary hover:underline"
+            href="/docs/zenx-overview-formatted.pdf"
+            download="zenx-overview-formatted"
+          >
+            ZenX Incubator
+          </a>
         </div>
         <div class="px-4 w-1/2 md:w-1/4">
           <h2 class="mt-5 text-unizenGray-light text-2xl">
