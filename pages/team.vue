@@ -15,7 +15,7 @@
             :key="member.name"
             class="p-4 w-80"
             data-aos="fade-in"
-            :data-aos-duration="0 + 1000 * (index % 5)"
+            :data-aos-duration="0 + 1000 * (index % 1)"
           >
             <div class="overlay-container text-center">
               <nuxt-img
