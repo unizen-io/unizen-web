@@ -1,7 +1,7 @@
 <template>
   <div class="py-12 my-12">
     <div class="pb-12">
-      <div class="container mx-auto px-8">
+      <div class="container mx-auto px-4">
         <h1
           class="text-center pt-16 pb-24 text-tertiary"
           data-aos="fade-in"
@@ -9,13 +9,13 @@
         >
           Meet the executive team.
         </h1>
-        <div class="flex flex-wrap justify-center mb-12">
+        <div class="flex mb-12">
           <div
             v-for="(member, index) in TEAM"
             :key="member.name"
             class="p-4 w-80"
             data-aos="fade-in"
-            :data-aos-duration="0 + 1000 * (index % 4)"
+            :data-aos-duration="0 + 1000 * (index % 1)"
           >
             <div class="overlay-container text-center">
               <nuxt-img
@@ -139,7 +139,7 @@ export default {
     this.TEAM = [
       {
         name: 'Brandon Dallman',
-        img: '/img/team/brandon.png',
+        img: '/static/img/team/brandon.png',
         role: 'Chief Marketing Officer',
         linkedin: 'https://www.linkedin.com/in/brandon-dallmann-54b78212',
         twitter: 'https://twitter.com/cryptfaux',
@@ -148,7 +148,7 @@ export default {
       },
       {
         name: 'Martin Granström',
-        img: '/img/team/martin.png',
+        img: '/static/img/team/martin.png',
         role: 'Chief Technical Officer',
         linkedin: 'https://www.linkedin.com/in/martingranstrom/',
         twitter: '',
@@ -157,28 +157,37 @@ export default {
       },
       {
         name: 'Sean Noga',
-        img: '/img/team/sean.png',
+        img: '/static/img/team/sean.png',
         role: 'Chief Executive Officer',
-        linkedin: 'https://www.linkedin.com/in/sean-noga-142b923',
-        twitter: 'https://twitter.com/jun_capital',
+        linkedin: '',
+        twitter: 'https://twitter.com/seannogazen',
         github: '',
         telegram: 'https://t.me/NamasteCryptocurrency'
       },
       {
         name: 'Tom Sweeney',
-        img: '/img/team/tom.png',
+        img: '/static/img/team/tom.png',
         role: 'Chief Operating Officer',
         linkedin: 'https://www.linkedin.com/in/tomwsweeney/',
         twitter: 'https://twitter.com/jun_capital',
         github: '',
         telegram: 'https://t.me/tomsweeney'
+      },
+      {
+        name: 'James Taylor',
+        img: '/static/img/team/james.png',
+        role: 'Chief Business Development Officer',
+        linkedin: 'https://www.linkedin.com/in/jamesroberttaylor1/',
+        twitter: '',
+        github: '',
+        telegram: 'https://t.me/googleflip'
       }
     ]
 
     this.ADVISORS = [
       {
         name: 'Gilbert Verdian',
-        img: '/img/advisors/gilbert.png',
+        img: '/static/img/advisors/gilbert.png',
         role: 'CEO of Quant Network',
         linkedin: 'https://www.linkedin.com/in/gverdian/',
         twitter: 'https://twitter.com/gverdian',
@@ -192,7 +201,7 @@ export default {
       },
       {
         name: 'Dr. Ian Sobieski',
-        img: '/img/advisors/ian.png',
+        img: '/static/img/advisors/ian.png',
         role: 'Chairman & Founder, Band of Angels',
         linkedin: 'https://www.linkedin.com/in/ian-sobieski-a84157/',
         twitter: '',
@@ -208,7 +217,7 @@ export default {
       },
       {
         name: 'Greg Horowitt',
-        img: '/img/advisors/greg.png',
+        img: '/static/img/advisors/greg.png',
         role: 'Partner, Jun Capital Management',
         linkedin: 'https://www.linkedin.com/in/horowitt/',
         twitter: 'https://twitter.com/ghorowitt',
@@ -226,7 +235,7 @@ export default {
       },
       {
         name: 'Eric Su',
-        img: '/img/advisors/eric.png',
+        img: '/static/img/advisors/eric.png',
         role: 'CEO of Exnetwork Capital',
         linkedin: 'https://www.linkedin.com/in/ericsu/',
         twitter: 'https://twitter.com/ericzoo',

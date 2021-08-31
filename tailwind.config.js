@@ -29,6 +29,18 @@ module.exports = {
         },
         unizenYellow: {
           DEFAULT: '#f0b90b'
+        },
+        sifchainYellow: {
+          DEFAULT: '#CDAE46',
+          light: '#dddcd9'
+        },
+        uniswapPink: {
+          DEFAULT: '#F5086F',
+          light: '#f1e9ed'
+        },
+        binanceYellow: {
+          DEFAULT: '#EBB42D',
+          light: '#ece8de'
         }
       },
       textShadow: theme => ({

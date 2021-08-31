@@ -5,7 +5,7 @@
         loading="lazy"
         width="1130"
         height="1080"
-        src="/img/iMac-potrait.png"
+        src="/static/img/iMac-potrait2.png"
         alt="iMac"
       />
       <!-- TODO: should combine mobile and desktop versions into one -->
@@ -15,20 +15,19 @@
         data-aos-duration="2000"
       >
         <p class="text-lg text-tertiary">
-          A new class of digital asset exchange that provides global traders and retail investors
-          with access to exciting blockchain projects through the combined functionality of a secure
-          CEX, DEX, AI-driven social sentiment indicators and Binance-level liquidity: all in one
-          seamless user experience.
+          The first CeDeFi exchange that combines the functionality of first- and third-party CEX's and DEX's to satisfy both retail and institutional traders. <br><br>Unizen Exchange finds the most cost efficient trades across a multitude of exchange modules, including Binance, to provide the best offers, reliable performance, and a secure environment for high-volume trading. All in one seamless user experience.
         </p>
         <b-list-group flush>
           <b-list-group-item class="bg-white bg-opacity-20">
-            ✔️ High regulatory compliance
+            ✔️ High regulatory compliance.
           </b-list-group-item>
           <b-list-group-item class="bg-white bg-opacity-20">
-            ✔️ Fast listing times
+            ✔️ Find the best trades across multiple liquidity providers.
           </b-list-group-item>
           <b-list-group-item class="bg-white bg-opacity-20 rounded-b">
-            ✔️ Highly competitive listing and trading fees
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7" />
+            </svg> Interact with your favorite exchange with added benefits.
           </b-list-group-item>
         </b-list-group>
       </b-card>
@@ -44,7 +43,7 @@
           loading="lazy"
           width="1253"
           height="1034"
-          src="/img/iMac-landscape.png"
+          src="/static/img/iMac-landscape2.png"
           alt="iMac"
         />
         <b-card
@@ -54,22 +53,49 @@
           data-aos-duration="2000"
         >
           <b-card-body class="flex">
-            <p class="text-7xl px-4 w-1/3">
-              🦄
-            </p>
             <p class="text-lg px-4 flex-grow text-tertiary">
-              A new class of digital asset exchange that provides global traders and retail investors with access to exciting blockchain projects through the combined functionality of a secure CEX, DEX, AI-driven social sentiment indicators and Binance-level liquidity: all in one seamless user experience.
+              The first CeDeFi exchange that combines the functionality of first- and third-party CEX's and DEX's to satisfy both retail and institutional traders. <br><br>Unizen Exchange finds the most cost efficient trades across a multitude of exchange modules, including Binance, to provide the best offers, reliable performance, and a secure environment for high-volume trading. All in one seamless user experience.
             </p>
           </b-card-body>
           <b-list-group flush>
             <b-list-group-item class="bg-white bg-opacity-20">
-              ✔️ High regulatory compliance
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                style="float: left;"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#01d5a3"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+              </svg> High regulatory compliance.
             </b-list-group-item>
             <b-list-group-item class="bg-white bg-opacity-20">
-              ✔️ Fast listing times
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                style="float: left;"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#01d5a3"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+              </svg> Find the best trades across multiple liquidity providers.
             </b-list-group-item>
             <b-list-group-item class="bg-white bg-opacity-20 rounded-b">
-              ✔️ Highly competitive listing and trading fees
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                style="float: left;"
+                class="h-6 w-6"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="#01d5a3"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7" />
+              </svg>
+              <p class="pl-1">
+                Interact with your favorite exchange with added benefits.
+              </p>
             </b-list-group-item>
           </b-list-group>
         </b-card>

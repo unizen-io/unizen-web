@@ -32,6 +32,11 @@ export default {
   buildModules: [
     ['@nuxtjs/dotenv', { filename: '.env' }],
     '@nuxtjs/eslint-module',
+    // Next Image module https://image.nuxtjs.org/components/nuxt-img
+    ['@nuxt/image', {
+      provider: 'static',
+      dir: 'static'
+    }],
     ['@nuxtjs/fontawesome', {
       component: 'fa', // customize component name
       icons: [{
@@ -103,6 +108,8 @@ export default {
   },
 
   image: {
+    provider: 'ipx',
+    ipx: {},
     screens: {
       xm: 640,
       md: 768,
@@ -113,6 +120,7 @@ export default {
   },
 
   serverMiddleware: {
-    '/': '~/api/swr.js'
+    '/': '~/api/swr.js',
+    '/_ipx': '~/server/middleware/ipx.js'
   }
 }

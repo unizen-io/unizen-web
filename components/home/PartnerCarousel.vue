@@ -67,25 +67,25 @@ export default {
       {
         width: 337,
         height: 70,
-        src: '/img/partners/blockunify.png',
+        src: '/static//img/partners/blockunify.png',
         alt: 'Blockunify'
       },
       {
         width: 261,
         height: 70,
-        src: '/img/partners/jun.png',
+        src: '/static//img/partners/jun.png',
         alt: 'Jun'
       },
       {
         width: 240,
         height: 70,
-        src: '/img/partners/lunarcrush.png',
+        src: '/static//img/partners/lunarcrush.png',
         alt: 'Lunarcrush'
       },
       {
         width: 300,
         height: 70,
-        src: '/img/partners/betrust.png',
+        src: '/static//img/partners/betrust.png',
         alt: 'Betrust'
       }
     ]
