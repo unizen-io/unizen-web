@@ -22,7 +22,7 @@
               format="webp"
               width="1263"
               height="197"
-              src="/img/green-text-logo-large.png"
+              src="/static/img/green-text-logo-large.png"
               alt="Unizen"
             />
             <h2 class="text-3xl text-center text-tertiary mt-2">

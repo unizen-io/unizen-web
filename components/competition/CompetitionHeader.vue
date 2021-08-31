@@ -143,7 +143,7 @@
           format="webp"
           width="240"
           height="70"
-          src="/img/partners/lunarcrush.png"
+          src="/static/img/partners/lunarcrush.png"
           alt="Lunarcrush"
         />
       </div>

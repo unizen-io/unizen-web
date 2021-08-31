@@ -5,7 +5,7 @@
       loading="lazy"
       width="2400"
       height="1594"
-      src="/img/kyc.jpg"
+      src="/static/img/kyc.jpg"
       alt="KYC"
     />
     <div class="container mx-auto px-8 min-h-screen grid place-items-center">

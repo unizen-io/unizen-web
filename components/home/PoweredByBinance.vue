@@ -125,14 +125,14 @@
 export default {
   data () {
     return {
-      uniswapFirst: 'img/unizen_modules/uniswap.png',
-      uniswapSecond: 'img/unizen_modules/uniswap2.png',
+      uniswapFirst: '/static/img/unizen_modules/uniswap.png',
+      uniswapSecond: '/static/img/unizen_modules/uniswap2.png',
       uniswapHoverCursor: false,
-      sifchainFirst: 'img/unizen_modules/sifchain.png',
-      sifchainSecond: 'img/unizen_modules/sifchain2.png',
+      sifchainFirst: '/static/img/unizen_modules/sifchain.png',
+      sifchainSecond: '/static/img/unizen_modules/sifchain2.png',
       sifchainHoverCursor: false,
-      binanceFirst: 'img/unizen_modules/binance.png',
-      binanceSecond: 'img/unizen_modules/binance2.png',
+      binanceFirst: '/static/img/unizen_modules/binance.png',
+      binanceSecond: '/static/img/unizen_modules/binance2.png',
       binanceHoverCursor: false
     }
   },

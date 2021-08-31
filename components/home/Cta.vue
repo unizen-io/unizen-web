@@ -38,7 +38,7 @@
         loading="lazy"
         width="1920"
         height="1281"
-        src="/img/zen-background.jpg"
+        src="/static/img/zen-background.jpg"
         alt="Zen background"
       />
     </div>
