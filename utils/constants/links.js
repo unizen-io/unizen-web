@@ -44,16 +44,6 @@ const PAGES = Object.freeze({
     url: '#',
     title: 'trade',
     disabled: true
-  },
-  zenxLabs: {
-    url: '#',
-    title: 'zenx labs',
-    disabled: true
-  },
-  flexibleStaking: {
-    url: '#',
-    title: 'flexible staking',
-    disabled: true
   }
 })
 
@@ -61,8 +51,6 @@ const NAVIGATION_LINKS = [
   PAGES.home,
   PAGES.blog,
   PAGES.trade,
-  PAGES.zenxLabs,
-  PAGES.flexibleStaking,
   PAGES.team,
   PAGES.contact
 ]

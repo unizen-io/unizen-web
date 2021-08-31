@@ -14,11 +14,13 @@
       >
         <b-card class="mx-0 mb-0 h-full shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
           <div class="flex text-tertiary">
-            <span class="text-5xl">🤝</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-15 w-15" fill="none" viewBox="0 0 24 24" stroke="#01d5a3">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M8 16l2.879-2.879m0 0a3 3 0 104.243-4.242 3 3 0 00-4.243 4.242zM21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
             <p class="px-6">
-              <b>Deep Hybrid Liquidity</b>
+              <b>Trade Aggregation</b>
               <br>
-              Tap into centralized <span class="text-unizenYellow font-bold">Binance</span> shared- liquidity with top tier market maker support, or decentralized, network-agnostic, cross-chain liquidity. Both available right at your fingertips.
+              Find the most cost efficient trades across new and constantly improving third-party CeDeFi innovations, not limited to a single blockchain.
             </p>
           </div>
         </b-card>
@@ -30,11 +32,13 @@
       >
         <b-card class="mx-0 mb-0 h-full shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
           <div class="flex text-tertiary">
-            <span class="text-5xl">🦾</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-15 w-15" fill="none" viewBox="0 0 24 24" stroke="#01d5a3">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M9 14l6-6m-5.5.5h.01m4.99 5h.01M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16l3.5-2 3.5 2 3.5-2 3.5 2zM10 8.5a.5.5 0 11-1 0 .5.5 0 011 0zm5 5a.5.5 0 11-1 0 .5.5 0 011 0z" />
+            </svg>
             <p class="px-6">
-              <b>Intuitive Platform</b>
+              <b>Dynamic Multi-Asset Staking</b>
               <br>
-              UI/UX focused on a seamless, familiar and effective user experience across all trading applications with top industry, battle-tested security and performance powered by <span class="text-unizenYellow font-bold">Binance Cloud</span>.
+              Earn token rewards and private-sale allocations in hot blockchain projects by staking your deflationary ZCX in DMAS on the Unizen Ecosystem.
             </p>
           </div>
         </b-card>
@@ -46,14 +50,13 @@
       >
         <b-card class="mx-0 mb-0 h-full shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
           <div class="flex text-tertiary">
-            <span class="text-5xl">💗</span>
+            <svg xmlns="http://www.w3.org/2000/svg" class="h-15 w-15" fill="none" viewBox="0 0 24 24" stroke="#01d5a3">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+            </svg>
             <p class="px-6">
-              <b>ZenX Incubation</b>
+              <b>Dynamic Yield Staking Account</b>
               <br>
-              360 incubator fully equipped to support projects
-              from genesis of innovation to the finality of market realization.
-              Get further faster with
-              clarity of mission, positioning, product momentum and ecosystem empowerment.
+              Earn continuous yield on USDC and other stablecoins at a highly competitive yield, even compared to industry titans.
             </p>
           </div>
         </b-card>

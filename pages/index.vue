@@ -3,9 +3,9 @@
     <!-- ray test touch < -->
     <div class="space-y-12">
       <Header />
+      <PoweredByBinance />
       <Zen />
       <Intro />
-      <PoweredByBinance />
       <Cta />
       <TopArticles />
       <PartnerCarousel />

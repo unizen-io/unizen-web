@@ -25,8 +25,8 @@
               src="/img/green-text-logo-large.png"
               alt="Unizen"
             />
-            <h2 class="text-3xl text-center text-tertiary -mt-2">
-              Smart Exchange Ecosystem
+            <h2 class="text-3xl text-center text-tertiary mt-2">
+              Smart CeDeFi Ecosystem
             </h2>
           </div>
         </article>
