@@ -120,7 +120,7 @@ export default {
   },
 
   serverMiddleware: [
-    { path: '/', handler: '~/api/swr.js' },
-    { path: '/_ipx', handler: '~/server/middleware/ipx.js' }
+    { path: '/', handler: './api/swr.js' },
+    { path: '/_ipx', handler: './server/middleware/ipx.js' }
   ]
 }
