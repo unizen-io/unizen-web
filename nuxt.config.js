@@ -64,7 +64,8 @@ export default {
   modules: [
     '@nuxtjs/sitemap',
     'bootstrap-vue/nuxt',
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxt/image'
   ],
 
   bootstrapVue: {
