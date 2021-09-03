@@ -13,7 +13,8 @@
         "serverFiles": [
           "utils/helpers/seo.js",
           "api/swr.js",
-          "config/index.js"
+          "config/index.js",
+          "server/middleware/ipx.js"
         ]
       }
     }
