@@ -33,10 +33,6 @@ export default {
     ['@nuxtjs/dotenv', { filename: '.env' }],
     '@nuxtjs/eslint-module',
     // Next Image module https://image.nuxtjs.org/components/nuxt-img
-    ['@nuxt/image', {
-      provider: 'static',
-      dir: 'static'
-    }],
     ['@nuxtjs/fontawesome', {
       component: 'fa', // customize component name
       icons: [{
@@ -56,7 +52,6 @@ export default {
     '@nuxtjs/style-resources',
     '@nuxtjs/svg',
     '@nuxtjs/tailwindcss',
-    '@nuxt/image',
     '@nuxtjs/pwa',
     '@nuxtjs/google-analytics'
   ],
