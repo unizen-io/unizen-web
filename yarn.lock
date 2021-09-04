@@ -1200,17 +1200,17 @@
     node-html-parser "^3.2.0"
     ufo "^0.7.4"
 
-"@nuxt/image@^0.5.0":
-  version "0.5.0"
-  resolved "https://registry.yarnpkg.com/@nuxt/image/-/image-0.5.0.tgz#c297edc6d71d04d3ed7c377ad4ae052c3a442b8b"
-  integrity sha512-vajBLMj3cW9U+MkXAR3f2hDl/Imj/jdnrL2mlw6phcuApWG2R4hwntAWyr96JzBMhoSK9tv2dJTGx4k9VKK9vA==
+"@nuxt/image@^0.4.17":
+  version "0.4.17"
+  resolved "https://registry.yarnpkg.com/@nuxt/image/-/image-0.4.17.tgz#35eaf2de4c475839e9c7f12029510c2252998839"
+  integrity sha512-5eOGIpNHqugq0nKZzSM5BsYew9Akbx9RjIZdajxRU9J2CU//E43QY+fZh2BUCPQZkUYJWcDWo8qYexJyQzdMWg==
   dependencies:
     consola "^2.15.3"
     defu "^5.0.0"
     fs-extra "^10.0.0"
     hasha "^5.2.2"
     image-meta "^0.0.1"
-    ipx "^0.6.4"
+    ipx "^0.6.1"
     is-https "^4.0.0"
     lru-cache "^6.0.0"
     node-fetch "^2.6.1"
@@ -1218,7 +1218,7 @@
     rc9 "^1.2.0"
     requrl "^3.0.2"
     semver "^7.3.5"
-    ufo "^0.7.7"
+    ufo "^0.7.5"
     upath "^2.0.1"
 
 "@nuxt/loading-screen@^2.0.3":
@@ -6043,7 +6043,7 @@ ip@^1.1.5:
   resolved "https://registry.yarnpkg.com/ip/-/ip-1.1.5.tgz#bdded70114290828c0a039e72ef25f5aaec4354a"
   integrity sha1-vd7XARQpCCjAoDnnLvJfWq7ENUo=
 
-ipx@^0.6.4:
+ipx@^0.6.1:
   version "0.6.7"
   resolved "https://registry.yarnpkg.com/ipx/-/ipx-0.6.7.tgz#4db5418b368b4bc7925aacd134e68100e0e53ae1"
   integrity sha512-Y9xxAXfGqmupTTNH3l1V2mKWWfgVY+PJ9wN57h8NDcLZZxHAk3qYIRxbDKs+POn/dinpU3vQZjBBRe8Q7xnW1g==
@@ -10973,7 +10973,7 @@ ua-parser-js@^0.7.28:
   resolved "https://registry.yarnpkg.com/ua-parser-js/-/ua-parser-js-0.7.28.tgz#8ba04e653f35ce210239c64661685bf9121dec31"
   integrity sha512-6Gurc1n//gjp9eQNXjD9O3M/sMwVtN5S8Lv9bvOYBfKfDNiIIhqiyi01vMBO45u4zkDE420w/e0se7Vs+sIg+g==
 
-ufo@^0.7.4, ufo@^0.7.5, ufo@^0.7.7:
+ufo@^0.7.4, ufo@^0.7.5:
   version "0.7.9"
   resolved "https://registry.yarnpkg.com/ufo/-/ufo-0.7.9.tgz#0268e3734b413c9ed6f3510201f42372821b875c"
   integrity sha512-6t9LrLk3FhqTS+GW3IqlITtfRB5JAVr5MMNjpBECfK827W+Vh5Ilw/LhTcHWrt6b3hkeBvcbjx4Ti7QVFzmcww==
