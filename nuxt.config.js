@@ -36,7 +36,7 @@ export default {
     '@nuxtjs/eslint-module',
     // Next Image module https://image.nuxtjs.org/components/nuxt-img
     ['@nuxt/image', {
-      provider: 'static',
+      provider: 'ipx',
       dir: 'static'
     }],
     ['@nuxtjs/fontawesome', {
