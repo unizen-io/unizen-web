@@ -9,6 +9,7 @@
       "src": "nuxt.config.js",
       "use": "@nuxtjs/vercel-builder",
       "config": {
+	      "useGeneratedStaticRoutes": true,
         "serverFiles": [
           "utils/helpers/seo.js",
           "api/swr.js",

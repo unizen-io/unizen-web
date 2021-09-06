@@ -2,6 +2,8 @@ import { createSEOTags } from './utils/helpers/seo'
 import { PRODUCTION_DOMAIN } from './config'
 
 export default {
+  ssr:true,
+  target:'server',
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: createSEOTags({
     title: 'Unizen: Smart Exchange Ecosystem - Simple and Secure Cryptocurrency exchange with Enormous Liquidity',
