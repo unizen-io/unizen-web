@@ -64,6 +64,10 @@ export default {
   ],
 
   modules: [
+    ['@nuxt/image', {
+      provider: 'ipx',
+      dir: 'static'
+    }],
     '@nuxtjs/sitemap',
     'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
