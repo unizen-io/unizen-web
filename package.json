@@ -18,12 +18,12 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "aos": "^3.0.0-beta.6",
     "bootstrap-vue": "^2.17.3",
-    "tailwindcss-filters": "^3.0.0"
+    "tailwindcss-filters": "^3.0.0",
+    "@nuxt/image": "^0.5.0"
   },
   "devDependencies": {
     "@fortawesome/free-brands-svg-icons": "^5.15.4",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
-    "@nuxt/image": "^0.5.0",
     "@nuxtjs/dotenv": "^1.4.1",
     "@nuxtjs/eslint-config": "^6.0.1",
     "@nuxtjs/eslint-module": "^2.0.0",
@@ -54,7 +54,6 @@
     "vue-gtag": "^1.16.1"
   },
   "resolutions": {
-    "is-svg": "4.2.2",
-    "sharp": "0.27.0"
+    "is-svg": "4.2.2"
   }
 }
