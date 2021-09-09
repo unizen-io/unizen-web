@@ -9,7 +9,7 @@
         >
           Meet the executive team.
         </h1>
-        <div class="flex flex-wrap mb-12 justify-center">
+        <div class="flex flex-wrap mb-12 justify-around">
           <div
             v-for="(member, index) in TEAM"
             :key="member.name"
