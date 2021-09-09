@@ -7591,7 +7591,7 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-nuxt-socket-io@^1.1.22:
+nuxt-socket-io@^1.1.23:
   version "1.1.23"
   resolved "https://registry.yarnpkg.com/nuxt-socket-io/-/nuxt-socket-io-1.1.23.tgz#5f89011907d0c56246e62e18f19d2f06b1dd013e"
   integrity sha512-ItYiwOE1FFRw9mvq1VrDeoH1VZkhbOSNkOp9gGSnxCZZDJ9KTbitpGL3TPr2DkCCc997gJEENKz/PvEQExtx2g==
