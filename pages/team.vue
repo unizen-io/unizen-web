@@ -139,7 +139,7 @@ export default {
     this.TEAM = [
       {
         name: 'Brandon Dallman',
-        img: '/static/img/team/brandon.png',
+        img: '/img/team/brandon.png',
         role: 'Chief Marketing Officer',
         linkedin: 'https://www.linkedin.com/in/brandon-dallmann-54b78212',
         twitter: 'https://twitter.com/cryptfaux',
@@ -148,7 +148,7 @@ export default {
       },
       {
         name: 'Martin Granström',
-        img: '/static/img/team/martin.png',
+        img: '/img/team/martin.png',
         role: 'Chief Technical Officer',
         linkedin: 'https://www.linkedin.com/in/martingranstrom/',
         twitter: '',
@@ -157,7 +157,7 @@ export default {
       },
       {
         name: 'Sean Noga',
-        img: '/static/img/team/sean.png',
+        img: '/img/team/sean.png',
         role: 'Chief Executive Officer',
         linkedin: '',
         twitter: 'https://twitter.com/seannogazen',
@@ -166,7 +166,7 @@ export default {
       },
       {
         name: 'Tom Sweeney',
-        img: '/static/img/team/tom.png',
+        img: '/img/team/tom.png',
         role: 'Chief Operating Officer',
         linkedin: 'https://www.linkedin.com/in/tomwsweeney/',
         twitter: 'https://twitter.com/jun_capital',
@@ -175,7 +175,7 @@ export default {
       },
       {
         name: 'James Taylor',
-        img: '/static/img/team/james.png',
+        img: '/img/team/james.png',
         role: 'Chief Business Development Officer',
         linkedin: 'https://www.linkedin.com/in/jamesroberttaylor1/',
         twitter: '',
@@ -187,7 +187,7 @@ export default {
     this.ADVISORS = [
       {
         name: 'Gilbert Verdian',
-        img: '/static/img/advisors/gilbert.png',
+        img: '/img/advisors/gilbert.png',
         role: 'CEO of Quant Network',
         linkedin: 'https://www.linkedin.com/in/gverdian/',
         twitter: 'https://twitter.com/gverdian',
@@ -201,7 +201,7 @@ export default {
       },
       {
         name: 'Dr. Ian Sobieski',
-        img: '/static/img/advisors/ian.png',
+        img: '/img/advisors/ian.png',
         role: 'Chairman & Founder, Band of Angels',
         linkedin: 'https://www.linkedin.com/in/ian-sobieski-a84157/',
         twitter: '',
@@ -217,7 +217,7 @@ export default {
       },
       {
         name: 'Greg Horowitt',
-        img: '/static/img/advisors/greg.png',
+        img: '/img/advisors/greg.png',
         role: 'Partner, Jun Capital Management',
         linkedin: 'https://www.linkedin.com/in/horowitt/',
         twitter: 'https://twitter.com/ghorowitt',
@@ -235,7 +235,7 @@ export default {
       },
       {
         name: 'Eric Su',
-        img: '/static/img/advisors/eric.png',
+        img: '/img/advisors/eric.png',
         role: 'CEO of Exnetwork Capital',
         linkedin: 'https://www.linkedin.com/in/ericsu/',
         twitter: 'https://twitter.com/ericzoo',

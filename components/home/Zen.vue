@@ -5,7 +5,7 @@
         loading="lazy"
         width="1130"
         height="1080"
-        src="/static/img/iMac-potrait2.png"
+        src="/img/iMac-potrait2.png"
         alt="iMac"
       />
       <!-- TODO: should combine mobile and desktop versions into one -->
@@ -45,7 +45,7 @@
           loading="lazy"
           width="1253"
           height="1034"
-          src="/static/img/iMac-landscape2.png"
+          src="/img/iMac-landscape2.png"
           alt="iMac"
         />
         <b-card

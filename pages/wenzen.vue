@@ -14,7 +14,7 @@
           format="webp"
           width="240"
           height="70"
-          src="/static/img/partners/lunarcrush.png"
+          src="/img/partners/lunarcrush.png"
           alt="lunarcrush"
         />
       </div>
