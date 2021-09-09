@@ -9,11 +9,11 @@
         >
           Meet the executive team.
         </h1>
-        <div class="flex mb-12">
+        <div class="flex flex-wrap mb-12 justify-center">
           <div
             v-for="(member, index) in TEAM"
             :key="member.name"
-            class="p-4 w-80"
+            class="p-4 w-60"
             data-aos="fade-in"
             :data-aos-duration="0 + 1000 * (index % 1)"
           >

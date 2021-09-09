@@ -35,6 +35,7 @@
             { 'pointer-events-none': !!navigationItem.disabled },
             NAV_ITEM_CLASSES
           ]"
+          @click="toggleMenu"
         >
           <nuxt-link :to="navigationItem.url">
             {{ navigationItem.title }}
@@ -81,6 +82,9 @@ export default {
   },
 
   methods: {
+    toggleMenu () {
+      this.$root.$emit('bv::toggle::collapse', 'nav-collapse')
+    },
     onScroll () {
       const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
       if (currentScrollPosition < 0) {
