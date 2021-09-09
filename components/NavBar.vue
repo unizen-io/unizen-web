@@ -18,7 +18,7 @@
         height="14"
       />
     </nuxt-link>
-    <b-navbar-toggle target="nav-collapse" />
+    <b-navbar-toggle id="nav-collapse" target="nav-collapse" />
     <b-collapse
       id="nav-collapse"
       is-nav
@@ -83,7 +83,10 @@ export default {
 
   methods: {
     toggleMenu () {
-      this.$root.$emit('bv::toggle::collapse', 'nav-collapse')
+      const style = window.getComputedStyle(document.getElementById('nav-collapse'))
+      if (style.display !== 'none') {
+        this.$root.$emit('bv::toggle::collapse', 'nav-collapse')
+      }
     },
     onScroll () {
       const currentScrollPosition = window.pageYOffset || document.documentElement.scrollTop
