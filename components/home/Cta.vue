@@ -21,9 +21,9 @@
             data-aos="fade-in"
             data-aos-duration="3000"
           >
-            Retail traders are spending hours every day to stay in touch with the latest market conditions and social sentiment. They also typically hop between multiple exchanges. It’s a very time-consuming, stressful, and sometimes risky activity. At Unizen, we want to make all digital assets available under the same roof.
+            Retail traders are spending a great many hours every day to stay in touch with the latest market conditions and social sentiment. They also typically hop between multiple exchanges. It’s a very time-consuming, stressful, and sometimes risky activity. At Unizen, we want to make all digital assets available under the same roof.
             <br><br>
-            Institutional traders are hesitant about entering the crypto market due to low liquidity, security, and accessibility of existing exchanges. Unizen has institution-oriented modules where organizations, banks, funds, and governments can sell and buy digital assets, relying on fully compliant infrastructure and listings.
+            Institutional traders are hesitant about entering the crypto market due to low liquidity, security, and accessibility of existing exchanges. Unizen has institution-oriented modules whereby organizations, banks, funds, and governments can all sell and buy digital assets, relying on fully compliant infrastructure and listings.
           </p>
           <nuxt-link
             to=""

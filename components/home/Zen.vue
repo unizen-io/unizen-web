@@ -15,7 +15,9 @@
         data-aos-duration="2000"
       >
         <p class="text-lg text-tertiary">
-          The first CeDeFi exchange that combines the functionality of first- and third-party CEX's and DEX's to satisfy both retail and institutional traders. <br><br>Unizen Exchange finds the most cost efficient trades across a multitude of exchange modules, including Binance, to provide the best offers, reliable performance, and a secure environment for high-volume trading. All in one seamless user experience.
+          Unizen is the first CeDeFi exchange to combine the functionality of first-party and third-party CEX's and DEX's in order to meet the needs of both retail and institutional traders.
+
+          Unizen Exchange is able to find the most cost efficient trades across a multitude of exchange modules, including Binance, to provide the best offers, reliable performance, and a secure environment for high-volume trading. All in one seamless user experience.
         </p>
         <b-list-group flush>
           <b-list-group-item class="bg-white bg-opacity-20">
@@ -54,7 +56,9 @@
         >
           <b-card-body class="flex">
             <p class="text-lg px-4 flex-grow text-tertiary">
-              The first CeDeFi exchange that combines the functionality of first- and third-party CEX's and DEX's to satisfy both retail and institutional traders. <br><br>Unizen Exchange finds the most cost efficient trades across a multitude of exchange modules, including Binance, to provide the best offers, reliable performance, and a secure environment for high-volume trading. All in one seamless user experience.
+              Unizen is the first CeDeFi exchange to combine the functionality of first-party and third-party CEX's and DEX's in order to meet the needs of both retail and institutional traders.
+
+              Unizen Exchange is able to find the most cost efficient trades across a multitude of exchange modules, including Binance, to provide the best offers, reliable performance, and a secure environment for high-volume trading. All in one seamless user experience.
             </p>
           </b-card-body>
           <b-list-group flush>
