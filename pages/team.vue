@@ -1,7 +1,7 @@
 <template>
   <div class="py-12 my-12">
     <div class="pb-12">
-      <div class="container mx-auto px-8">
+      <div class="container mx-auto px-4">
         <h1
           class="text-center pt-16 pb-24 text-tertiary"
           data-aos="fade-in"
@@ -9,13 +9,13 @@
         >
           Meet the executive team.
         </h1>
-        <div class="flex flex-wrap justify-center mb-12">
+        <div class="flex mb-12">
           <div
             v-for="(member, index) in TEAM"
             :key="member.name"
             class="p-4 w-80"
             data-aos="fade-in"
-            :data-aos-duration="0 + 1000 * (index % 4)"
+            :data-aos-duration="0 + 1000 * (index % 1)"
           >
             <div class="overlay-container text-center">
               <nuxt-img
@@ -159,8 +159,8 @@ export default {
         name: 'Sean Noga',
         img: '/img/team/sean.png',
         role: 'Chief Executive Officer',
-        linkedin: 'https://www.linkedin.com/in/sean-noga-142b923',
-        twitter: 'https://twitter.com/jun_capital',
+        linkedin: '',
+        twitter: 'https://twitter.com/seannogazen',
         github: '',
         telegram: 'https://t.me/NamasteCryptocurrency'
       },
@@ -172,6 +172,15 @@ export default {
         twitter: 'https://twitter.com/jun_capital',
         github: '',
         telegram: 'https://t.me/tomsweeney'
+      },
+      {
+        name: 'James Taylor',
+        img: '/img/team/james.png',
+        role: 'Chief Business Development Officer',
+        linkedin: 'https://www.linkedin.com/in/jamesroberttaylor1/',
+        twitter: '',
+        github: '',
+        telegram: 'https://t.me/googleflip'
       }
     ]
 

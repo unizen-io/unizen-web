@@ -14,12 +14,8 @@
         width="30"
         height="30"
       />
-      <nuxt-img
-        class="w-24"
-        format="webp"
-        width="120"
-        height="19"
-        src="/img/text-logo-large.png"
+      <MiniLogoText
+        height="14"
       />
     </nuxt-link>
     <b-navbar-toggle target="nav-collapse" />
@@ -51,6 +47,7 @@
 
 <script>
 import MiniLogoIcon from '@/assets/img/icons/mini-logo.svg?inline'
+import MiniLogoText from '@/assets/img/logo-asset.svg?inline'
 import {
   PAGES,
   NAVIGATION_LINKS
@@ -58,7 +55,8 @@ import {
 
 export default {
   components: {
-    MiniLogoIcon
+    MiniLogoIcon,
+    MiniLogoText
   },
 
   data () {

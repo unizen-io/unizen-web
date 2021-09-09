@@ -32,6 +32,11 @@ export default {
   buildModules: [
     ['@nuxtjs/dotenv', { filename: '.env' }],
     '@nuxtjs/eslint-module',
+    // Next Image module https://image.nuxtjs.org/components/nuxt-img
+    ['@nuxt/image', {
+      provider: 'static',
+      dir: 'static'
+    }],
     ['@nuxtjs/fontawesome', {
       component: 'fa', // customize component name
       icons: [{
@@ -59,7 +64,8 @@ export default {
   modules: [
     '@nuxtjs/sitemap',
     'bootstrap-vue/nuxt',
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    '@nuxt/image'
   ],
 
   bootstrapVue: {
@@ -103,6 +109,8 @@ export default {
   },
 
   image: {
+    provider: 'ipx',
+    ipx: {},
     screens: {
       xm: 640,
       md: 768,
@@ -112,7 +120,8 @@ export default {
     }
   },
 
-  serverMiddleware: {
-    '/': '~/api/swr.js'
-  }
+  serverMiddleware: [
+    { path: '/', handler: '~/api/swr.js' },
+    { path: '/_ipx', handler: '~/server/middleware/ipx.js' }
+  ]
 }

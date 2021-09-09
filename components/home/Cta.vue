@@ -1,5 +1,5 @@
 <template>
-  <div class="container px-8 mx-auto">
+  <div class="container pt-8 px-8 mx-auto">
     <div
       style="min-height: 42rem;"
       class="relative shadow-md flex"
@@ -12,7 +12,7 @@
             data-aos="fade-in"
             data-aos-duration="2000"
           >
-            Providing a zen state of mind for traders
+            Unifying the trading experience for traders and institutions alike.
           </h1>
         </div>
         <div class="md:w-1/2 flex flex-col justify-between items-center">
@@ -21,14 +21,15 @@
             data-aos="fade-in"
             data-aos-duration="3000"
           >
-            Traders are spending hours everyday to stay in touch with the latest market conditions and social sentiment. They also typically hop between multiple exchanges.
-            It’s a very time consuming, stressful and sometimes a risky activity, that most traders do as a part-time occupation, which limits their personal time with family and other self-healing activities. At Unizen we want to make all digital assets available under the same roof.
+            Retail traders are spending a great many hours every day to stay in touch with the latest market conditions and social sentiment. They also typically hop between multiple exchanges. It’s a very time-consuming, stressful, and sometimes risky activity. At Unizen, we want to make all digital assets available under the same roof.
+            <br><br>
+            Institutional traders are hesitant about entering the crypto market due to low liquidity, security, and accessibility of existing exchanges. Unizen has institution-oriented modules whereby organizations, banks, funds, and governments can all sell and buy digital assets, relying on fully compliant infrastructure and listings.
           </p>
           <nuxt-link
-            to="/wenzen"
+            to=""
             class="wenzen-link w-72 h-14 rounded grid place-items-center text-base text-white no-underline m-7"
           >
-            wen zen?
+            Get started!
           </nuxt-link>
         </div>
       </div>

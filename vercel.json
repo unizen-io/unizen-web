@@ -2,6 +2,10 @@
   "version": 2,
   "builds": [
     {
+      "src": "package.json",
+      "use": "@vercel/node"
+    },
+    {
       "src": "nuxt.config.js",
       "use": "@nuxtjs/vercel-builder",
       "config": {
@@ -9,7 +13,8 @@
         "serverFiles": [
           "utils/helpers/seo.js",
           "api/swr.js",
-          "config/index.js"
+          "config/index.js",
+          "server/middleware/ipx.js"
         ]
       }
     }
