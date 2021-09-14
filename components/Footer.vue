@@ -6,22 +6,25 @@
           <h2 class="mt-5 text-unizenGray-light text-2xl">
             General
           </h2>
+          <nuxt-link to="/token" class="text-primary hover:underline">
+            ZCX Token
+          </nuxt-link><br>
           <nuxt-link to="/blog" class="text-primary hover:underline">
             Blog
           </nuxt-link><br>
           <nuxt-link to="/team" class="text-primary hover:underline">
             Team
           </nuxt-link><br>
-          <nuxt-link to="/token" class="text-primary hover:underline">
-            ZCX Token
-          </nuxt-link><br>
           <nuxt-link to="/wenzen" class="text-primary hover:underline">
             Tournament of Altcoins
           </nuxt-link><br>
-          <a href="https://coinmarketcap.com/currencies/unizen/" class="text-primary hover:underline">CoinMarketCap</a>
+          <a href="https://coinmarketcap.com/currencies/unizen/" class="text-primary hover:underline">Unizen on CoinMarketCap</a>
           <br>
-          <a href="https://www.coingecko.com/de/munze/unizen" class="text-primary hover:underline">CoinGecko</a>
+          <a href="https://www.coingecko.com/de/munze/unizen" class="text-primary hover:underline">Unizen on CoinGecko</a>
           <br>
+          <nuxt-link to="/privacy-policy" class="text-primary hover:underline">
+            Privacy Policy
+          </nuxt-link><br>
           <nuxt-link to="/contact" class="text-primary hover:underline">
             Contact Us
           </nuxt-link>
