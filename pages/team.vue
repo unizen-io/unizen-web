@@ -234,6 +234,18 @@ export default {
               Greg began his career working for one of the Berkshire Hathaway operating company where he spent over 17 years in various executive management roles before leaving to join his first Silicon Valley startup.`
       },
       {
+        name: 'Nicolas Racz',
+        img: '/img/advisors/ghost.png',
+        role: 'Co-Founder, CIO of 3GR LLC',
+        linkedin: 'https://www.linkedin.com/in/nicholas-racz-439041149/',
+        twitter: 'https://twitter.com/OfMiklos',
+        github: '',
+        telegram: '',
+        desc: ` Nicholas Racz is an expert on managing data in decentralized projects, particularly through systems that support compliance, Self-Sovereign Identities and KYC. As a leading decentralization researcher, he will also provide unique, data-driven insights on token ecosystem design and tokenomics. His expertise will help shape strategies to increase the utility of ZCX token and identify new growth areas.
+        <br><br>
+        His advisory experience at Outlier Ventures and Cheqd helps shape innovations in decentralized incubation and regulation. Having Nicholas Racz on board as a strategic advisor is another step towards combining decentralization and compliance throughout the Unizen ecosystem.`
+      },
+      {
         name: 'Eric Su',
         img: '/img/advisors/eric.png',
         role: 'CEO of Exnetwork Capital',
