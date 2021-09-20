@@ -234,7 +234,7 @@ export default {
               Greg began his career working for one of the Berkshire Hathaway operating company where he spent over 17 years in various executive management roles before leaving to join his first Silicon Valley startup.`
       },
       {
-        name: 'Nicolas Racz',
+        name: 'Nicholas Racz',
         img: '/img/advisors/ghost.png',
         role: 'Co-Founder, CIO of 3GR LLC',
         linkedin: 'https://www.linkedin.com/in/nicholas-racz-439041149/',
