@@ -25,12 +25,13 @@
             <br><br>
             Institutional traders are hesitant about entering the crypto market due to low liquidity, security, and accessibility of existing exchanges. Unizen has institution-oriented modules whereby organizations, banks, funds, and governments can all sell and buy digital assets, relying on fully compliant infrastructure and listings.
           </p>
-          <nuxt-link
-            to=""
+          <a
+            href="https://app.unizen.io"
+            target="_blank"
             class="wenzen-link w-72 h-14 rounded grid place-items-center text-base text-white no-underline m-7"
           >
             Get started!
-          </nuxt-link>
+          </a>
         </div>
       </div>
       <nuxt-picture

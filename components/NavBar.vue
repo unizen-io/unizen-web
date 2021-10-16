@@ -42,6 +42,14 @@
           </nuxt-link>
         </li>
       </b-navbar-nav>
+      <a
+        href="https://app.unizen.io"
+        target="_blank"
+        style="font-family: Lato Regular !important;"
+        class="wenzen-link w-32 h-10 rounded grid place-items-center text-sm font-bold text-white no-underline m-3"
+      >
+        ECOSYSTEM
+      </a>
     </b-collapse>
   </b-navbar>
 </template>

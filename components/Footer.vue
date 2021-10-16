@@ -25,6 +25,9 @@
           <nuxt-link to="/privacy-policy" class="text-primary hover:underline">
             Privacy Policy
           </nuxt-link><br>
+          <nuxt-link to="/terms-conditions" class="text-primary hover:underline">
+            Terms of Use
+          </nuxt-link><br>
           <nuxt-link to="/contact" class="text-primary hover:underline">
             Contact Us
           </nuxt-link>
