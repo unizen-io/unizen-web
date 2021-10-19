@@ -40,17 +40,16 @@ const PAGES = Object.freeze({
     url: '/wenzen',
     title: 'wenzen'
   },
-  trade: {
-    url: '#',
-    title: 'trade',
-    disabled: true
+  zcx: {
+    url: '/token',
+    title: 'zcx'
   }
 })
 
 const NAVIGATION_LINKS = [
   PAGES.home,
   PAGES.blog,
-  PAGES.trade,
+  PAGES.zcx,
   PAGES.team,
   PAGES.contact
 ]
