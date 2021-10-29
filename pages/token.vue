@@ -10,14 +10,12 @@
     <TokenMetrics />
     <TokenUtility />
     <TokenAllocation />
-    <TokenRelease />
   </div>
 </template>
 
 <script>
 import TokenAllocation from '@/components/token/TokenAllocation'
 import TokenMetrics from '@/components/token/TokenMetrics'
-import TokenRelease from '@/components/token/TokenRelease'
 import TokenUtility from '@/components/token/TokenUtility'
 import { createSEOTags } from '@/utils/helpers/seo'
 import { PAGES } from '@/utils/constants/links'
@@ -26,7 +24,6 @@ export default {
   components: {
     TokenAllocation,
     TokenMetrics,
-    TokenRelease,
     TokenUtility
   },
 
