@@ -243,6 +243,7 @@ export default {
     // if (this.currentTime > this.competitionEndDate) {
     //   this.startConfettiRain()
     // }
+    window.scrollTo(0, 0)
   },
 
   beforeDestroy () {
