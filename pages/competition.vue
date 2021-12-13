@@ -132,7 +132,7 @@ export default {
   data () {
     return {
       competitionStartDate: 1639391408, // Monday 25 January 2021 09:37:26
-      competitionEndDate: 1639395008, // Monday 25 January 2021 12:37:26
+      competitionEndDate: 1639402208, // Monday 25 January 2021 12:37:26
       currentTime: Math.round((new Date()).getTime() / 1000),
       updateInterval: 60000, // 1 min
       winner: null,
@@ -166,7 +166,7 @@ export default {
         }
       },
       SecondCompetitor: {
-        asset: 'A0',
+        asset: 'AZERO',
         company: 'Aleph Zero',
         color: '#1B43B2',
         mcapDiff: 1, // Times difference in mcap
