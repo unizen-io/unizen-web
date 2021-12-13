@@ -131,8 +131,8 @@ export default {
 
   data () {
     return {
-      competitionStartDate: 1612378800, // Monday 25 January 2021 09:37:26
-      competitionEndDate: 1612551600, // Monday 25 January 2021 12:37:26
+      competitionStartDate: 1639391408, // Monday 25 January 2021 09:37:26
+      competitionEndDate: 1639395008, // Monday 25 January 2021 12:37:26
       currentTime: Math.round((new Date()).getTime() / 1000),
       updateInterval: 60000, // 1 min
       winner: null,
@@ -141,8 +141,8 @@ export default {
       errored: false,
       loading: false,
       FirstCompetitor: {
-        asset: 'NOIA',
-        company: 'Syntropy Network',
+        asset: 'QNT',
+        company: 'Quant Network',
         color: '#171616',
         ZTI: {
           tweets: [],
@@ -166,10 +166,10 @@ export default {
         }
       },
       SecondCompetitor: {
-        asset: 'DAG',
-        company: 'Constellation Network',
+        asset: 'A0',
+        company: 'Aleph Zero',
         color: '#1B43B2',
-        mcapDiff: 1.2, // Times difference in mcap
+        mcapDiff: 1, // Times difference in mcap
         ZTI: {
           tweets: [],
           tweetQuotes: [],
