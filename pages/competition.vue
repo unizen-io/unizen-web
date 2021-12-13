@@ -131,8 +131,8 @@ export default {
 
   data () {
     return {
-      competitionStartDate: 1639405326, // Monday 25 January 2021 09:37:26
-      competitionEndDate: 1639358489, // Monday 25 January 2021 12:37:26
+      competitionStartDate: 1639405651, // Monday 25 January 2021 09:37:26
+      competitionEndDate: 1639444889, // Monday 25 January 2021 12:37:26
       currentTime: Math.round((new Date()).getTime() / 1000),
       updateInterval: 60000, // 1 min
       winner: null,
