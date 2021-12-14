@@ -87,20 +87,14 @@
       <ZtiMetrics
         :first-competitor="FirstCompetitor"
         :second-competitor="SecondCompetitor"
-        data-aos="fade-up"
-        data-aos-duration="2000"
       />
       <ZsiMetrics
         :first-competitor="FirstCompetitor"
         :second-competitor="SecondCompetitor"
-        data-aos="fade-up"
-        data-aos-duration="2000"
       />
       <ZssMetrics
         :first-competitor="FirstCompetitor"
         :second-competitor="SecondCompetitor"
-        data-aos="fade-up"
-        data-aos-duration="2000"
       />
     </div>
   </div>
@@ -243,7 +237,6 @@ export default {
     // if (this.currentTime > this.competitionEndDate) {
     //   this.startConfettiRain()
     // }
-    window.scrollTo(0, 0)
   },
 
   beforeDestroy () {
