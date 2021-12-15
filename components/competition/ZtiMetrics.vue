@@ -27,9 +27,9 @@
             <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ totalRetweetsFirstCompetitor }}</b> retweets
             </b-list-group-item>
-            <b-list-group-item class="bg-white bg-opacity-20">
+            <!-- <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ totalFavoritesFirstCompetitor }}</b> starred tweets
-            </b-list-group-item>
+            </b-list-group-item> -->
             <b-list-group-item class="bg-white bg-opacity-20 rounded-b">
               <b>{{ totalRepliesFirstCompetitor }}</b> tweet replies
             </b-list-group-item>
@@ -62,9 +62,9 @@
             <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ totalRetweetsSecondCompetitor }}</b> retweets
             </b-list-group-item>
-            <b-list-group-item class="bg-white bg-opacity-20">
+            <!-- <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ totalFavoritesSecondCompetitor }}</b> starred tweets
-            </b-list-group-item>
+            </b-list-group-item> -->
             <b-list-group-item class="bg-white bg-opacity-20 rounded-b">
               <b>{{ totalTweetRepliesSecondCompetitor }}</b> tweet replies
             </b-list-group-item>

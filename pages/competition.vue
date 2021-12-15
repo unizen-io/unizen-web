@@ -131,8 +131,8 @@ export default {
 
   data () {
     return {
-      competitionStartDate: 1639405651, // Monday 25 January 2021 09:37:26
-      competitionEndDate: 1639444889, // Monday 25 January 2021 12:37:26
+      competitionStartDate: 1639569301, // Monday 25 January 2021 09:37:26
+      competitionEndDate: 1639580091, // Monday 25 January 2021 12:37:26
       currentTime: Math.round((new Date()).getTime() / 1000),
       updateInterval: 60000, // 1 min
       winner: null,
@@ -141,15 +141,14 @@ export default {
       errored: false,
       loading: false,
       FirstCompetitor: {
-        asset: 'QNT',
-        company: 'Quant Network',
-        color: '#171616',
+        asset: 'ZNN',
+        company: 'Zenon Network',
+        color: '#3BDA57',
         ZTI: {
           tweets: [],
           tweetQuotes: [],
           retweets: [],
           replies: [],
-          favorites: [],
           ts: [],
           score: 0
         },
@@ -168,14 +167,13 @@ export default {
       SecondCompetitor: {
         asset: 'AZERO',
         company: 'Aleph Zero',
-        color: '#1B43B2',
+        color: '#00CCAB',
         mcapDiff: 1, // Times difference in mcap
         ZTI: {
           tweets: [],
           tweetQuotes: [],
           retweets: [],
           replies: [],
-          favorites: [],
           ts: [],
           score: 0
         },
@@ -288,11 +286,11 @@ export default {
       const url = 'https://api.lunarcrush.com/v2?data=assets&key=' + this.LcApiKey + '&symbol=' + competitor.asset + '&start=' + this.competitionStartDate + '&end=' + this.competitionEndDate + '&data_points=48time_series_indicators=tweets,tweet_quotes,tweet_retweets,tweet_replies,tweet_favorites'
       await this.$axios.$get(url, { progress: false }).then((response) => {
         response.data[0].timeSeries.forEach((value) => {
-          competitor.ZTI.tweets.push(value.tweets)
+          competitor.ZTI.tweets.push(value.tweet_favorites)
           competitor.ZTI.tweetQuotes.push(value.tweet_quotes)
           competitor.ZTI.retweets.push(value.tweet_retweets)
           competitor.ZTI.replies.push(value.tweet_replies)
-          competitor.ZTI.favorites.push(value.tweet_favorites)
+          // competitor.ZTI.favorites.push(value.tweet_favorites)
           competitor.ZTI.ts.push(value.time)
         })
         return competitor
@@ -316,11 +314,11 @@ export default {
         if (response.data[0].timeSeries.length <= 0) {
           return competitor
         } else if (timeSeriesLastObject.time !== competitor.ZTI.ts[competitor.ZTI.ts.length - 1]) {
-          competitor.ZTI.tweets.push(timeSeriesLastObject.tweets)
+          competitor.ZTI.tweets.push(timeSeriesLastObject.tweet_favorites)
           competitor.ZTI.tweetQuotes.push(timeSeriesLastObject.tweet_quotes)
           competitor.ZTI.retweets.push(timeSeriesLastObject.tweet_retweets)
           competitor.ZTI.replies.push(timeSeriesLastObject.tweet_replies)
-          competitor.ZTI.favorites.push(timeSeriesLastObject.tweet_favorites)
+          // competitor.ZTI.favorites.push(timeSeriesLastObject.tweet_favorites)
           competitor.ZTI.ts.push(timeSeriesLastObject.time)
         }
         return competitor
