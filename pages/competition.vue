@@ -384,7 +384,7 @@ export default {
       let ZSIScore = 0
       // ts arrays are the same length for both ZTI and ZSI
       for (let i = 0; i < competitor.ZTI.ts.length; i++) {
-        ZTIScore += competitor.ZTI.tweets[i] + competitor.ZTI.tweetQuotes[i] + competitor.ZTI.retweets[i] + competitor.ZTI.replies[i] + competitor.ZTI.favorites[i]
+        ZTIScore += competitor.ZTI.tweets[i] + competitor.ZTI.tweetQuotes[i] + competitor.ZTI.retweets[i] + competitor.ZTI.replies[i]
         ZSIScore += competitor.ZSI.sentiment4[i] + competitor.ZSI.sentiment5[i] + competitor.ZSI.socialContributors[i]
       }
 
