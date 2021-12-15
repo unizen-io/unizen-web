@@ -84,20 +84,20 @@ export default {
     secondCompetitor: { type: Object, default: null }
   },
   computed: {
-    // totalTweetsFirstCompetitor () {
-    //   let totalTweets = 0
-    //   for (let i = 0; i < this.firstCompetitor.ZTI.ts.length; i++) {
-    //     totalTweets += this.firstCompetitor.ZTI.tweets[i]
-    //   }
-    //   return totalTweets
-    // },
-    // totalTweetsSecondCompetitor () {
-    //   let totalTweets = 0
-    //   for (let i = 0; i < this.secondCompetitor.ZTI.ts.length; i++) {
-    //     totalTweets += this.secondCompetitor.ZTI.tweets[i]
-    //   }
-    //   return this.roundNumber(totalTweets / this.secondCompetitor.mcapDiff)
-    // },
+    totalTweetsFirstCompetitor () {
+      let totalTweets = 0
+      for (let i = 0; i < this.firstCompetitor.ZTI.ts.length; i++) {
+        totalTweets += this.firstCompetitor.ZTI.favorites[i]
+      }
+      return totalTweets
+    },
+    totalTweetsSecondCompetitor () {
+      let totalTweets = 0
+      for (let i = 0; i < this.secondCompetitor.ZTI.ts.length; i++) {
+        totalTweets += this.secondCompetitor.ZTI.favorites[i]
+      }
+      return this.roundNumber(totalTweets / this.secondCompetitor.mcapDiff)
+    },
     totalTweetQuotesFirstCompetitor () {
       let totalTweetQuotes = 0
       for (let i = 0; i < this.firstCompetitor.ZTI.ts.length; i++) {
@@ -153,21 +153,21 @@ export default {
         totalReplies += this.secondCompetitor.ZTI.replies[i]
       }
       return this.roundNumber(totalReplies / this.secondCompetitor.mcapDiff)
-    },
-    totalFavoritesFirstCompetitor () {
-      let totalFavorites = 0
-      for (let i = 0; i < this.firstCompetitor.ZTI.ts.length; i++) {
-        totalFavorites += this.firstCompetitor.ZTI.favorites[i]
-      }
-      return totalFavorites
-    },
-    totalFavoritesSecondCompetitor () {
-      let totalFavorites = 0
-      for (let i = 0; i < this.secondCompetitor.ZTI.ts.length; i++) {
-        totalFavorites += this.secondCompetitor.ZTI.favorites[i]
-      }
-      return this.roundNumber(totalFavorites / this.secondCompetitor.mcapDiff)
     }
+    // totalFavoritesFirstCompetitor () {
+    //   let totalFavorites = 0
+    //   for (let i = 0; i < this.firstCompetitor.ZTI.ts.length; i++) {
+    //     totalFavorites += this.firstCompetitor.ZTI.favorites[i]
+    //   }
+    //   return totalFavorites
+    // },
+    // totalFavoritesSecondCompetitor () {
+    //   let totalFavorites = 0
+    //   for (let i = 0; i < this.secondCompetitor.ZTI.ts.length; i++) {
+    //     totalFavorites += this.secondCompetitor.ZTI.favorites[i]
+    //   }
+    //   return this.roundNumber(totalFavorites / this.secondCompetitor.mcapDiff)
+    // }
   },
   methods: {
     roundNumber (val) {
