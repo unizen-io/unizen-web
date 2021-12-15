@@ -44,6 +44,8 @@
       <div
         style="background: #efefef;"
         class="container mx-auto px-8"
+        data-aos="fade-in"
+        data-aos-duration="2000"
       >
         <div class="mt-12 flex flex-wrap">
           <div class="px-4 w-full md:w-1/2">
@@ -87,14 +89,20 @@
       <ZtiMetrics
         :first-competitor="FirstCompetitor"
         :second-competitor="SecondCompetitor"
+        data-aos="fade-up"
+        data-aos-duration="2000"
       />
       <ZsiMetrics
         :first-competitor="FirstCompetitor"
         :second-competitor="SecondCompetitor"
+        data-aos="fade-up"
+        data-aos-duration="2000"
       />
       <ZssMetrics
         :first-competitor="FirstCompetitor"
         :second-competitor="SecondCompetitor"
+        data-aos="fade-up"
+        data-aos-duration="2000"
       />
     </div>
   </div>
@@ -137,7 +145,7 @@ export default {
         company: 'Zenon Network',
         color: '#3BDA57',
         ZTI: {
-          tweets: [],
+          favorites: [],
           tweetQuotes: [],
           retweets: [],
           replies: [],
@@ -162,7 +170,7 @@ export default {
         color: '#00CCAB',
         mcapDiff: 1, // Times difference in mcap
         ZTI: {
-          tweets: [],
+          favorites: [],
           tweetQuotes: [],
           retweets: [],
           replies: [],
@@ -278,11 +286,11 @@ export default {
       const url = 'https://api.lunarcrush.com/v2?data=assets&key=' + this.LcApiKey + '&symbol=' + competitor.asset + '&start=' + this.competitionStartDate + '&end=' + this.competitionEndDate + '&data_points=48time_series_indicators=tweets,tweet_quotes,tweet_retweets,tweet_replies,tweet_favorites'
       await this.$axios.$get(url, { progress: false }).then((response) => {
         response.data[0].timeSeries.forEach((value) => {
-          competitor.ZTI.tweets.push(value.tweet_favorites)
+          // competitor.ZTI.tweets.push(value.tweet_favorites)
           competitor.ZTI.tweetQuotes.push(value.tweet_quotes)
           competitor.ZTI.retweets.push(value.tweet_retweets)
           competitor.ZTI.replies.push(value.tweet_replies)
-          // competitor.ZTI.favorites.push(value.tweet_favorites)
+          competitor.ZTI.favorites.push(value.tweets)
           competitor.ZTI.ts.push(value.time)
         })
         return competitor
@@ -306,11 +314,11 @@ export default {
         if (response.data[0].timeSeries.length <= 0) {
           return competitor
         } else if (timeSeriesLastObject.time !== competitor.ZTI.ts[competitor.ZTI.ts.length - 1]) {
-          competitor.ZTI.tweets.push(timeSeriesLastObject.tweet_favorites)
+          // competitor.ZTI.tweets.push(timeSeriesLastObject.tweet_favorites)
           competitor.ZTI.tweetQuotes.push(timeSeriesLastObject.tweet_quotes)
           competitor.ZTI.retweets.push(timeSeriesLastObject.tweet_retweets)
           competitor.ZTI.replies.push(timeSeriesLastObject.tweet_replies)
-          // competitor.ZTI.favorites.push(timeSeriesLastObject.tweet_favorites)
+          competitor.ZTI.favorites.push(timeSeriesLastObject.tweets)
           competitor.ZTI.ts.push(timeSeriesLastObject.time)
         }
         return competitor
@@ -376,7 +384,7 @@ export default {
       let ZSIScore = 0
       // ts arrays are the same length for both ZTI and ZSI
       for (let i = 0; i < competitor.ZTI.ts.length; i++) {
-        ZTIScore += competitor.ZTI.tweets[i] + competitor.ZTI.tweetQuotes[i] + competitor.ZTI.retweets[i] + competitor.ZTI.replies[i]
+        ZTIScore += competitor.ZTI.favorites[i] + competitor.ZTI.tweetQuotes[i] + competitor.ZTI.retweets[i] + competitor.ZTI.replies[i]
         ZSIScore += competitor.ZSI.sentiment4[i] + competitor.ZSI.sentiment5[i] + competitor.ZSI.socialContributors[i]
       }
 

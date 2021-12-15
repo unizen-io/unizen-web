@@ -18,8 +18,11 @@
               </center>
             </b-card>
             <br>
-            <b-list-group-item class="bg-white bg-opacity-20">
+            <!-- <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ totalTweetsFirstCompetitor }}</b> tweets
+            </b-list-group-item> -->
+            <b-list-group-item class="bg-white bg-opacity-20">
+              <b>{{ totalTweetsFirstCompetitor }}</b> starred tweets
             </b-list-group-item>
             <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ totalTweetQuotesFirstCompetitor }}</b> quoted retweets
@@ -27,9 +30,7 @@
             <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ totalRetweetsFirstCompetitor }}</b> retweets
             </b-list-group-item>
-            <!-- <b-list-group-item class="bg-white bg-opacity-20">
-              <b>{{ totalFavoritesFirstCompetitor }}</b> starred tweets
-            </b-list-group-item> -->
+
             <b-list-group-item class="bg-white bg-opacity-20 rounded-b">
               <b>{{ totalRepliesFirstCompetitor }}</b> tweet replies
             </b-list-group-item>
@@ -53,8 +54,11 @@
               </center>
             </b-card>
             <br>
-            <b-list-group-item class="bg-white bg-opacity-20">
+            <!-- <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ totalTweetsSecondCompetitor }}</b> tweets
+            </b-list-group-item> -->
+            <b-list-group-item class="bg-white bg-opacity-20">
+              <b>{{ totalTweetsSecondCompetitor }}</b> starred tweets
             </b-list-group-item>
             <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ totalTweetQuotesSecondCompetitor }}</b> quoted retweets
@@ -62,9 +66,7 @@
             <b-list-group-item class="bg-white bg-opacity-20">
               <b>{{ totalRetweetsSecondCompetitor }}</b> retweets
             </b-list-group-item>
-            <!-- <b-list-group-item class="bg-white bg-opacity-20">
-              <b>{{ totalFavoritesSecondCompetitor }}</b> starred tweets
-            </b-list-group-item> -->
+
             <b-list-group-item class="bg-white bg-opacity-20 rounded-b">
               <b>{{ totalTweetRepliesSecondCompetitor }}</b> tweet replies
             </b-list-group-item>
