@@ -109,7 +109,7 @@
               Decentralized Exchange Module
             </p>
             <p class="text-center text-base text-tertiary">
-              Aggregate trades against omni-chain decentralized liquidty enabled by our SifChain module.
+              Aggregate trades against omni-chain decentralized liquidity enabled by our SifChain module.
             </p>
           </b-card>
         </div>
