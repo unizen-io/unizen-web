@@ -7592,10 +7592,10 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-nuxt-socket-io@^1.1.22:
-  version "1.1.23"
-  resolved "https://registry.yarnpkg.com/nuxt-socket-io/-/nuxt-socket-io-1.1.23.tgz#5f89011907d0c56246e62e18f19d2f06b1dd013e"
-  integrity sha512-ItYiwOE1FFRw9mvq1VrDeoH1VZkhbOSNkOp9gGSnxCZZDJ9KTbitpGL3TPr2DkCCc997gJEENKz/PvEQExtx2g==
+nuxt-socket-io@^2.0.2:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/nuxt-socket-io/-/nuxt-socket-io-2.0.2.tgz#a7c248eea34087b10acdfaa26f04fad3e11646e7"
+  integrity sha512-9VVrdZHvtUK0Vxuhh5MfUPKQamSSRYxMS9e5sqgyb4e1SKDm6+xZiWQ90TMQiKQ819TxOa11APvgavZFzN4O5A==
   dependencies:
     "@nuxt/types" "^2.15.5"
     glob "^7.1.7"
