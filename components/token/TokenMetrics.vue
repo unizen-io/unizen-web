@@ -89,10 +89,11 @@
 </template>
 
 <script>
+import { API_UNIZEN_IO } from '@/config/index'
+
 export default {
   async fetch () {
     try {
-      const API_UNIZEN_IO = 'https://api.unizen.io'
       const data = await this.$axios.$get(
         `${API_UNIZEN_IO}/data/circulation_supply`,
         { progress: false }
