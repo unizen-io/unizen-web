@@ -1,8 +1,8 @@
 <template>
   <div style="background-color: #efefef;" class="mt-12">
-    <div class="container mx-auto px-8 mb-12 pb-12">
+    <div class="container px-8 pb-12 mx-auto mb-12">
       <h1
-        class="mx-auto text-center pt-16 pb-24 text-tertiary"
+        class="pt-16 pb-24 mx-auto text-center text-tertiary"
         data-aos="fade-in"
         data-aos-duration="2000"
       >
@@ -10,7 +10,7 @@
       </h1>
       <div class="flex flex-wrap">
         <div
-          class="px-4 w-full lg:w-1/2"
+          class="w-full px-4 lg:w-1/2"
           data-aos="fade-in"
           data-aos-duration="2000"
         >
@@ -23,7 +23,7 @@
           </div>
         </div>
         <div
-          class="accordion px-4 w-full lg:w-1/2"
+          class="w-full px-4 accordion lg:w-1/2"
           role="tablist"
           data-aos="fade-in"
           data-aos-duration="3000"
@@ -88,10 +88,10 @@ export default {
   data () {
     return {
       expanded: 0,
-      tableData: [{ title: 'Team', content: 'Used for new hires and company expenses. Tokens are locked until August 2021 and vested Monthly for 10 Months.' },
+      tableData: [{ title: 'Team', content: 'Used for the founding team and future senior hires. Tokens have remained locked since TGE and will only be managed sold when vested.' },
         { title: 'Ecosystem Reserve / Security Insurance', content: 'Tokens allocated to protect the interest of the ZCX token holders in the event of an exchange hack. Reserve tokens will provide liquidity to the DAO upon its future creation. ' },
-        { title: 'Foundation', content: 'Tokens will be utilized for Incubator Grants, Liquidity Provision, Marketing Initiatives, and overall expansion of the Zen Ecosystem.' },
-        { title: 'Partners & Advisors', content: 'Tokens are locked until August 2021 and vested Monthly for 10 Months.' },
+        { title: 'Foundation', content: 'Tokens will be utilized for liquidity provisioning, marketing initiatives, operations, and overall expansion of the Zen ecosystem.' },
+        { title: 'Partners & Advisors', content: 'Used for advisors to Unizen and ZenX Labs and strategic partners. Tokens have remained locked since TGE and will be managed sold when vested and released.' },
         { title: 'Seed', content: '12.5% of purchased tokens will be unlocked upon the TGE (Token Generation Event).' + '\n\n' + '20% shall be unlocked every three months (90 days) thereafter, in arrears, over the remaining three quarters (270 days).' + '\n\n' + ' 27.5% will become unlocked on the last tranche of release cycle (360 days after TGE).' },
         { title: 'Strategic', content: '25% tokens released up to 14 days after TGE and additional 25% per quarter for three quarters (270 days duration).' },
         { title: 'Private Sale', content: '25% tokens released up to 14 days after TGE and additional 25% per quarter for three quarters (270 days duration).' }
