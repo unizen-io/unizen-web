@@ -1,10 +1,10 @@
 <template>
-  <div class="container mx-auto px-8">
+  <div class="container px-8 mx-auto">
     <div class="mx-auto lg:flex lg:flex-wrap">
       <div
         v-for="(utility, index) in utilities"
         :key="utility.title"
-        class="lg:w-1/2 p-4"
+        class="p-4 lg:w-1/2"
         :data-aos="index % 2 === 0 ? 'fade-right' : 'fade-left'"
         :data-aos-duration="index % 2 === 0 ? '1000' : '2000'"
       >
@@ -58,7 +58,7 @@ export default {
         },
         {
           title: 'Direct Access to ZenX Labs Portfolio',
-          content: 'Staking ZCX will also earn stakers tickets, which allows entrance to invest in early rounds of ZenX projects, along with Unizen hosted IEO\'s in the future.',
+          content: 'Staking ZCX earns tickets for stakers, which allows various forms of participation in ZenX projects.',
           img: '/img/features/icon1.png'
         }
       ]

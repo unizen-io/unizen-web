@@ -5,7 +5,10 @@ const LC_API_KEY = process.env.NUXT_ENV_LC_API
 
 const PRODUCTION_DOMAIN = 'unizen.io'
 
+const API_UNIZEN_IO = 'https://api.unizen.io'
+
 export {
+  API_UNIZEN_IO,
   CONTACT_US_FORM_SUBMISSION_ENDPOINT,
   LC_API_KEY,
   PRODUCTION_DOMAIN
