@@ -49,7 +49,6 @@ export default {
         `/feed/${MEDIUM_FEED_URL}`,
         { progress: false }
       )
-      console.log('data', data)
       this.articles = transformMediumArticles(data)
       this.status = STATUSES.RESOLVED
     } catch (error) {
