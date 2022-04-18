@@ -3,7 +3,7 @@
     <article
       v-for="(article, index) in articles"
       :key="article.title"
-      class="md:w-1/2 lg:w-1/3 p-4"
+      class="p-4 md:w-1/2 lg:w-1/3"
       data-aos="fade-up"
       :data-aos-duration="1000 + (index % 3) * 1000"
     >
@@ -12,7 +12,7 @@
         img-alt="Image not found"
         img-top
         tag="article"
-        class="article-card h-full shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur"
+        class="h-full shadow-sm article-card bg-unizenGray bg-opacity-20 backdrop-blur"
       >
         <!-- TODO: should create an independent component -->
         <a
@@ -23,19 +23,19 @@
         >
           <h2
             style="font-family: Montserrat Medium !important;"
-            class="text-xl mb-2 text-tertiary"
+            class="mb-2 text-xl text-tertiary"
           >
             {{ article.title }}
           </h2>
         </a>
         <p
           style="font-family: Montserrat Medium;"
-          class="text-sm mb-4"
+          class="mb-4 text-sm"
         >
           {{ article.content | extractTextFromHTMLString | truncate(200, '...') }}
         </p>
         <template #footer>
-          <div class="flex justify-between items-center">
+          <div class="flex items-center justify-between">
             <MiniLogoIcon
               width="30"
               height="30"

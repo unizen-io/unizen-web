@@ -1,7 +1,7 @@
 <template>
-  <div class="container mx-auto px-4 py-12">
+  <div class="container px-4 py-12 mx-auto">
     <h1
-      class="mb-6 px-4 text-tertiary font-bold"
+      class="px-4 mb-6 font-bold text-tertiary"
       data-aos="fade-in"
       data-aos-duration="2000"
     >
@@ -24,7 +24,6 @@ import Articles from '@/components/Articles'
 import LoadingMessage from '@/components/LoadingMessage'
 import ErrorMessage from '@/components/ErrorMessage'
 import {
-  RSS_TO_JSON_ENDPOINT,
   MEDIUM_FEED_URL
 } from '@/config/medium'
 import transformMediumArticles from '@/utils/helpers/transform-medium-articles'
@@ -40,10 +39,8 @@ export default {
   async fetch () {
     try {
       this.status = STATUSES.PENDING
-      // TODO: should improve performance by adopting SWR as it's called on the blog page
       const data = await this.$axios.$get(
-        `${RSS_TO_JSON_ENDPOINT}?rss_url=${MEDIUM_FEED_URL}`,
-        // TODO: should double-check
+        `/feed/${MEDIUM_FEED_URL}`,
         { progress: false }
       )
       this.articles = transformMediumArticles(data)

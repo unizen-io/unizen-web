@@ -65,7 +65,12 @@ export default {
     '@nuxtjs/sitemap',
     'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@nuxtjs/proxy'
+  ],
+
+  proxy: [
+    'https://medium.com/feed'
   ],
 
   bootstrapVue: {

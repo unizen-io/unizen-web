@@ -1,8 +1,8 @@
 <template>
   <div class="main">
-    <div class="container mx-auto px-8 py-12 my-12">
+    <div class="container px-8 py-12 mx-auto my-12">
       <h1
-        class="py-12 mt-12 text-tertiary text-center font-bold"
+        class="py-12 mt-12 font-bold text-center text-tertiary"
         data-aos="fade-in"
         data-aos-duration="2000"
       >
@@ -30,7 +30,6 @@ import ErrorMessage from '@/components/ErrorMessage'
 import { createSEOTags } from '@/utils/helpers/seo'
 import transformMediumArticles from '@/utils/helpers/transform-medium-articles'
 import {
-  RSS_TO_JSON_ENDPOINT,
   MEDIUM_FEED_URL
 } from '@/config/medium'
 import STATUSES from '@/utils/constants/statuses'
@@ -46,12 +45,11 @@ export default {
   async fetch () {
     try {
       this.status = STATUSES.PENDING
-      // TODO: could use `ohmyfetch` package
       const data = await this.$axios.$get(
-        `${RSS_TO_JSON_ENDPOINT}?rss_url=${MEDIUM_FEED_URL}`,
-        // TODO: should double-check
+        `/feed/${MEDIUM_FEED_URL}`,
         { progress: false }
       )
+      console.log('data', data)
       this.articles = transformMediumArticles(data)
       this.status = STATUSES.RESOLVED
     } catch (error) {
