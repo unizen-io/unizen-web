@@ -98,10 +98,13 @@ export default {
   build: {
     analyze: true,
     extend (config, { isDev, isClient }) {
-      config.node = {
-        canvas: 'empty'
+      if (isClient) {
+        const webpack = require('webpack')
+        config.plugins.push(
+          new webpack.IgnorePlugin(/canvas/, /jsdom$/)
+        )
       }
-   }
+    }
   },
 
   styleResources: {
