@@ -1,6 +1,5 @@
 import { createSEOTags } from './utils/helpers/seo'
 import { PRODUCTION_DOMAIN } from './config'
-import { MEDIUM_FEED_URL } from './config/medium'
 
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
@@ -71,7 +70,7 @@ export default {
   ],
 
   proxy: [
-    MEDIUM_FEED_URL
+    'https://medium.com/feed'
   ],
 
   bootstrapVue: {
