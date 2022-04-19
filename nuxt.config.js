@@ -76,7 +76,8 @@ export default {
         '^/medium': ''
       },
       changeOrigin: true,
-      ws: true
+      ws: false,
+      followRedirects: true
     }
   },
 
