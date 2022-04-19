@@ -9,25 +9,18 @@
     >
       <b-card
         :img-src="article.thumbnail"
+        @click="linkMedium(article.link)"
         img-alt="Image not found"
         img-top
         tag="article"
-        class="h-full shadow-sm article-card bg-unizenGray bg-opacity-20 backdrop-blur"
+        class="h-full shadow-sm cursor-pointer article-card bg-unizenGray bg-opacity-20 backdrop-blur"
       >
-        <!-- TODO: should create an independent component -->
-        <a
-          :href="article.link"
-          target="_blank"
-          rel="noopener"
-          :aria-label="`Link to ${article.title}`"
+        <h2
+          style="font-family: Montserrat Medium !important;"
+          class="mb-2 text-xl text-tertiary"
         >
-          <h2
-            style="font-family: Montserrat Medium !important;"
-            class="mb-2 text-xl text-tertiary"
-          >
-            {{ article.title }}
-          </h2>
-        </a>
+          {{ article.title }}
+        </h2>
         <p
           style="font-family: Montserrat Medium;"
           class="mb-4 text-sm"
@@ -75,6 +68,13 @@ export default {
   },
 
   methods: {
+    linkMedium (link) {
+      window.open(
+        link,
+        '_blank',
+        'noopener'
+      )
+    },
     formatDate (date) {
       return formatDistanceToNow(new Date(date))
     }
