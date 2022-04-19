@@ -69,9 +69,16 @@ export default {
     '@nuxtjs/proxy'
   ],
 
-  proxy: [
-    'https://medium.com/feed'
-  ],
+  proxy: {
+    '/medium': {
+      target: 'https://medium.com/feed',
+      pathRewrite: {
+        '^/medium': ''
+      },
+      changeOrigin: true,
+      ws: true
+    }
+  },
 
   bootstrapVue: {
     bootstrapCSS: false, // Or `css: false`

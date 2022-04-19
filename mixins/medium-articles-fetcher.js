@@ -7,8 +7,10 @@ const mediumArticlesFetcherMixin = {
   async fetch () {
     try {
       this.status = STATUSES.PENDING
-      const response = await fetch(FEED_URL)
-      const data = await response.text()
+      const data = await this.$axios.$get(
+        FEED_URL,
+        { progress: false }
+      )
       this.articles = transformMediumArticles(data)
       this.status = STATUSES.RESOLVED
     } catch (error) {

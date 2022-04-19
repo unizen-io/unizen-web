@@ -1,5 +1,5 @@
 
-const FEED_URL = 'feed/@unizen-io'
+const FEED_URL = '/medium/@unizen-io'
 
 export {
   FEED_URL
