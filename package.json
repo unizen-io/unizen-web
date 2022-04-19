@@ -18,6 +18,7 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "aos": "^3.0.0-beta.6",
     "bootstrap-vue": "^2.17.3",
+    "sass": "^1.50.1",
     "tailwindcss-filters": "^3.0.0",
     "universal-dom-parser": "^0.0.3"
   },
@@ -42,7 +43,6 @@
     "eslint": "^7.32.0",
     "eslint-plugin-nuxt": "^1.0.0",
     "hooper": "^0.3.4",
-    "node-sass": "^5.0.0",
     "nuxt": "^2.15.8",
     "nuxt-socket-io": "^1.1.22",
     "postcss": "^7.0.36",
