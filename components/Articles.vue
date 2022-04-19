@@ -13,7 +13,7 @@
         img-top
         tag="article"
         class="h-full shadow-sm cursor-pointer article-card bg-unizenGray bg-opacity-20 backdrop-blur"
-        @click="linkMedium(article.link)"
+        @click="handleArticleClick(article.link)"
       >
         <h2
           style="font-family: Montserrat Medium !important;"
@@ -68,7 +68,7 @@ export default {
   },
 
   methods: {
-    linkMedium (link) {
+    handleArticleClick (link) {
       window.open(
         link,
         '_blank',
