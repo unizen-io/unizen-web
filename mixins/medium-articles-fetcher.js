@@ -1,15 +1,13 @@
 
 import STATUSES from '@/utils/constants/statuses'
 import transformMediumArticles from '@/utils/helpers/transform-medium-articles'
-import { FEED_URL } from '@/config/medium'
 
 const mediumArticlesFetcherMixin = {
   async fetch () {
     try {
       this.status = STATUSES.PENDING
       const data = await this.$axios.$get(
-        FEED_URL,
-        { progress: false }
+        '/medium'
       )
       this.articles = transformMediumArticles(data)
       this.status = STATUSES.RESOLVED
@@ -17,8 +15,7 @@ const mediumArticlesFetcherMixin = {
       this.status = STATUSES.REJECTED
       this.error = error
     }
-  },
-  fetchOnServer: false
+  }
 }
 
 export default mediumArticlesFetcherMixin

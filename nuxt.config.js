@@ -71,7 +71,7 @@ export default {
 
   proxy: {
     '/medium': {
-      target: 'https://medium.com/feed',
+      target: 'https://medium.com/feed/@unizen-io',
       pathRewrite: {
         '^/medium': ''
       },
