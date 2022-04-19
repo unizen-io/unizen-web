@@ -9,11 +9,11 @@
     >
       <b-card
         :img-src="article.thumbnail"
-        @click="linkMedium(article.link)"
         img-alt="Image not found"
         img-top
         tag="article"
         class="h-full shadow-sm cursor-pointer article-card bg-unizenGray bg-opacity-20 backdrop-blur"
+        @click="linkMedium(article.link)"
       >
         <h2
           style="font-family: Montserrat Medium !important;"
