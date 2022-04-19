@@ -24,7 +24,7 @@ import Articles from '@/components/Articles'
 import LoadingMessage from '@/components/LoadingMessage'
 import ErrorMessage from '@/components/ErrorMessage'
 import {
-  MEDIUM_FEED_URL
+  FEED_URL
 } from '@/config/medium'
 import transformMediumArticles from '@/utils/helpers/transform-medium-articles'
 import STATUSES from '@/utils/constants/statuses'
@@ -40,7 +40,7 @@ export default {
     try {
       this.status = STATUSES.PENDING
       const data = await this.$axios.$get(
-        `/feed/${MEDIUM_FEED_URL}`,
+        `${FEED_URL}`,
         { progress: false }
       )
       this.articles = transformMediumArticles(data)

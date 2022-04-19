@@ -30,7 +30,7 @@ const cleanCDATA = content => content.replace('<![CDATA[', '').replace(']]>', ''
 
 const getThumbnailImage = (content) => {
   const pos1 = content.toLowerCase().indexOf('src="')
-  const pos2 = content.toLowerCase().indexOf('"', pos1 + 5)
+  const pos2 = pos1 && content.toLowerCase().indexOf('"', pos1 + 5)
   if (pos1 && pos2) {
     return content.substring(pos1 + 5, pos2)
   } else {

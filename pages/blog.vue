@@ -30,7 +30,7 @@ import ErrorMessage from '@/components/ErrorMessage'
 import { createSEOTags } from '@/utils/helpers/seo'
 import transformMediumArticles from '@/utils/helpers/transform-medium-articles'
 import {
-  MEDIUM_FEED_URL
+  FEED_URL
 } from '@/config/medium'
 import STATUSES from '@/utils/constants/statuses'
 import { PAGES } from '@/utils/constants/links'
@@ -46,7 +46,7 @@ export default {
     try {
       this.status = STATUSES.PENDING
       const data = await this.$axios.$get(
-        `/feed/${MEDIUM_FEED_URL}`,
+        `${FEED_URL}`,
         { progress: false }
       )
       this.articles = transformMediumArticles(data)
