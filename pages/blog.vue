@@ -1,8 +1,8 @@
 <template>
   <div class="main">
-    <div class="container mx-auto px-8 py-12 my-12">
+    <div class="container px-8 py-12 mx-auto my-12">
       <h1
-        class="py-12 mt-12 text-tertiary text-center font-bold"
+        class="py-12 mt-12 font-bold text-center text-tertiary"
         data-aos="fade-in"
         data-aos-duration="2000"
       >
@@ -28,13 +28,9 @@ import Articles from '@/components/Articles'
 import LoadingMessage from '@/components/LoadingMessage'
 import ErrorMessage from '@/components/ErrorMessage'
 import { createSEOTags } from '@/utils/helpers/seo'
-import transformMediumArticles from '@/utils/helpers/transform-medium-articles'
-import {
-  RSS_TO_JSON_ENDPOINT,
-  MEDIUM_FEED_URL
-} from '@/config/medium'
 import STATUSES from '@/utils/constants/statuses'
 import { PAGES } from '@/utils/constants/links'
+import mediumArticlesFetcherMixin from '@/mixins/medium-articles-fetcher'
 
 export default {
   components: {
@@ -42,24 +38,7 @@ export default {
     LoadingMessage,
     ErrorMessage
   },
-
-  async fetch () {
-    try {
-      this.status = STATUSES.PENDING
-      // TODO: could use `ohmyfetch` package
-      const data = await this.$axios.$get(
-        `${RSS_TO_JSON_ENDPOINT}?rss_url=${MEDIUM_FEED_URL}`,
-        // TODO: should double-check
-        { progress: false }
-      )
-      this.articles = transformMediumArticles(data)
-      this.status = STATUSES.RESOLVED
-    } catch (error) {
-      this.status = STATUSES.REJECTED
-      this.error = error
-    }
-  },
-
+  mixins: [mediumArticlesFetcherMixin],
   data () {
     return {
       articles: [],

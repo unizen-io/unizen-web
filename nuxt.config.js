@@ -65,7 +65,12 @@ export default {
     '@nuxtjs/sitemap',
     'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@nuxtjs/proxy'
+  ],
+
+  proxy: [
+    'https://medium.com/feed'
   ],
 
   bootstrapVue: {
@@ -91,7 +96,13 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-    analyze: true
+    analyze: true,
+    extend (config, { isDev, isClient }) {
+      const webpack = require('webpack')
+      config.plugins.push(
+        new webpack.IgnorePlugin(/canvas/, /jsdom$/)
+      )
+    }
   },
 
   styleResources: {
