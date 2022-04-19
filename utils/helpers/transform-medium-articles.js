@@ -9,6 +9,8 @@ const transformMediumArticles = (data) => {
   const itemsList = xml.getElementsByTagName('item')
   for (let i = 0; i < itemsList.length; i++) {
     const item = itemsList[i]
+    console.log('dd', cleanCDATA(item.getElementsByTagName('title')[0].innerHTML).toUpperCase())
+    console.log(getThumbnailImage(cleanCDATA(item.getElementsByTagName('content:encoded')[0].innerHTML)))
     articles.push({
       thumbnail: getThumbnailImage(cleanCDATA(item.getElementsByTagName('content:encoded')[0].innerHTML)),
       title: cleanCDATA(item.getElementsByTagName('title')[0].innerHTML).toUpperCase(),
@@ -27,11 +29,13 @@ const transformMediumArticles = (data) => {
 const cleanCDATA = content => content.replace('<![CDATA[', '').replace(']]>', '')
 
 const getThumbnailImage = (content) => {
-  const parser = new DOMParser()
-  const xml = parser.parseFromString(content, 'text/xml')
-  return xml.getElementsByTagName('img').length > 0
-    ? xml.getElementsByTagName('img')[0].getAttribute('src')
-    : undefined
+  const pos1 = content.toLowerCase().indexOf('src="')
+  const pos2 = content.toLowerCase().indexOf('"', pos1 + 5)
+  if (pos1 && pos2) {
+    return content.substring(pos1 + 5, pos2)
+  } else {
+    return undefined
+  }
 }
 
 export default transformMediumArticles
