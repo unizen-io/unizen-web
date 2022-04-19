@@ -28,12 +28,9 @@ import Articles from '@/components/Articles'
 import LoadingMessage from '@/components/LoadingMessage'
 import ErrorMessage from '@/components/ErrorMessage'
 import { createSEOTags } from '@/utils/helpers/seo'
-import transformMediumArticles from '@/utils/helpers/transform-medium-articles'
-import {
-  FEED_URL
-} from '@/config/medium'
 import STATUSES from '@/utils/constants/statuses'
 import { PAGES } from '@/utils/constants/links'
+import mediumArticlesFetcherMixin from '@/mixins/medium-articles-fetcher'
 
 export default {
   components: {
@@ -41,22 +38,7 @@ export default {
     LoadingMessage,
     ErrorMessage
   },
-
-  async fetch () {
-    try {
-      this.status = STATUSES.PENDING
-      const data = await this.$axios.$get(
-        `${FEED_URL}`,
-        { progress: false }
-      )
-      this.articles = transformMediumArticles(data)
-      this.status = STATUSES.RESOLVED
-    } catch (error) {
-      this.status = STATUSES.REJECTED
-      this.error = error
-    }
-  },
-
+  mixins: [mediumArticlesFetcherMixin],
   data () {
     return {
       articles: [],

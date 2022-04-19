@@ -1,7 +1,6 @@
 
 import DOMParser from 'universal-dom-parser'
 
-// TODO: could be better using Vue built-in utilities
 const transformMediumArticles = (data) => {
   const parser = new DOMParser()
   const xml = parser.parseFromString(data, 'text/xml')
@@ -9,8 +8,6 @@ const transformMediumArticles = (data) => {
   const itemsList = xml.getElementsByTagName('item')
   for (let i = 0; i < itemsList.length; i++) {
     const item = itemsList[i]
-    console.log('dd', cleanCDATA(item.getElementsByTagName('title')[0].innerHTML).toUpperCase())
-    console.log(getThumbnailImage(cleanCDATA(item.getElementsByTagName('content:encoded')[0].innerHTML)))
     articles.push({
       thumbnail: getThumbnailImage(cleanCDATA(item.getElementsByTagName('content:encoded')[0].innerHTML)),
       title: cleanCDATA(item.getElementsByTagName('title')[0].innerHTML).toUpperCase(),
