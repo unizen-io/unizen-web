@@ -8,7 +8,7 @@ const mediumArticlesFetcherMixin = {
     try {
       this.status = STATUSES.PENDING
       const data = await this.$axios.$get(
-        FEED_URL,
+        window.location.protocol + '//' + window.location.hostname + ':' + window.location.port + FEED_URL,
         { progress: false }
       )
       this.articles = transformMediumArticles(data)
