@@ -17,7 +17,8 @@ const mediumArticlesFetcherMixin = {
       this.status = STATUSES.REJECTED
       this.error = error
     }
-  }
+  },
+  fetchOnServer: false
 }
 
 export default mediumArticlesFetcherMixin
