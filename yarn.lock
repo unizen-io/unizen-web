@@ -5536,10 +5536,10 @@ glob-parent@^6.0.1:
   dependencies:
     is-glob "^4.0.1"
 
-glob@^7.0.0, glob@^7.1.2, glob@^7.1.3, glob@^7.1.4, glob@^7.1.6, glob@^7.1.7, glob@~7.1.1:
-  version "7.1.7"
-  resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.7.tgz#3b193e9233f01d42d0b3f78294bbeeb418f94a90"
-  integrity sha512-OvD9ENzPLbegENnYP5UUfJIirTg4+XwMWGaQfQTY0JenxNvvIKP3U3/tAQSPIu/lHxXYSZmpXlUHeqAIdKzBLQ==
+glob@^7.0.0, glob@^7.0.3, glob@^7.1.2, glob@^7.1.3, glob@^7.1.4, glob@^7.1.6, glob@^7.1.7:
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/glob/-/glob-7.2.0.tgz#d15535af7732e02e948f4c41628bd910293f6023"
+  integrity sha512-lmLf6gtyrPq8tTjSmrO94wBeQbFR3HbLHbuyD69wuyQkImp2hWqMGB47OX65FBkPffO641IP9jWa1z4ivqG26Q==
   dependencies:
     fs.realpath "^1.0.0"
     inflight "^1.0.4"
@@ -5548,10 +5548,10 @@ glob@^7.0.0, glob@^7.1.2, glob@^7.1.3, glob@^7.1.4, glob@^7.1.6, glob@^7.1.7, gl
     once "^1.3.0"
     path-is-absolute "^1.0.0"
 
-glob@^7.0.3:
-  version "7.2.0"
-  resolved "https://registry.yarnpkg.com/glob/-/glob-7.2.0.tgz#d15535af7732e02e948f4c41628bd910293f6023"
-  integrity sha512-lmLf6gtyrPq8tTjSmrO94wBeQbFR3HbLHbuyD69wuyQkImp2hWqMGB47OX65FBkPffO641IP9jWa1z4ivqG26Q==
+glob@~7.1.1:
+  version "7.1.7"
+  resolved "https://registry.yarnpkg.com/glob/-/glob-7.1.7.tgz#3b193e9233f01d42d0b3f78294bbeeb418f94a90"
+  integrity sha512-OvD9ENzPLbegENnYP5UUfJIirTg4+XwMWGaQfQTY0JenxNvvIKP3U3/tAQSPIu/lHxXYSZmpXlUHeqAIdKzBLQ==
   dependencies:
     fs.realpath "^1.0.0"
     inflight "^1.0.4"
@@ -7751,10 +7751,10 @@ number-is-nan@^1.0.0:
   resolved "https://registry.yarnpkg.com/number-is-nan/-/number-is-nan-1.0.1.tgz#097b602b53422a522c1afb8790318336941a011d"
   integrity sha1-CXtgK1NCKlIsGvuHkDGDNpQaAR0=
 
-nuxt-socket-io@^1.1.22:
-  version "1.1.23"
-  resolved "https://registry.yarnpkg.com/nuxt-socket-io/-/nuxt-socket-io-1.1.23.tgz#5f89011907d0c56246e62e18f19d2f06b1dd013e"
-  integrity sha512-ItYiwOE1FFRw9mvq1VrDeoH1VZkhbOSNkOp9gGSnxCZZDJ9KTbitpGL3TPr2DkCCc997gJEENKz/PvEQExtx2g==
+nuxt-socket-io@^2.0.3:
+  version "2.0.3"
+  resolved "https://registry.yarnpkg.com/nuxt-socket-io/-/nuxt-socket-io-2.0.3.tgz#b4ed5e1476db717f0349bb96d345d28387ba6ccc"
+  integrity sha512-5zgjLWqS9HVA0M7DNGoccKeyVKP2zfkXhc9+wm2xGYA/YQS6cFPHgBijQfJ6t36qlkFrkCOBq+jSoCpZID1zqA==
   dependencies:
     "@nuxt/types" "^2.15.5"
     glob "^7.1.7"
