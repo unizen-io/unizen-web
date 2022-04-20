@@ -1,7 +1,7 @@
 
 import STATUSES from '@/utils/constants/statuses'
 import transformMediumArticles from '@/utils/helpers/transform-medium-articles'
-import FEED_URL_PROXIED from '@/config/medium.js'
+import { FEED_URL_PROXIED } from '@/config/medium.js'
 
 const mediumArticlesFetcherMixin = {
   async fetch () {
