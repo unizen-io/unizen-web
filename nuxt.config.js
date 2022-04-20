@@ -87,7 +87,9 @@ export default {
   },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
+  axios: {
+    proxy: true
+  },
 
   // googleAnalytics: {
   //   id: process.env.NUXT_ENV_ANALYTICS_ID,
