@@ -51,7 +51,6 @@ export default {
   created () {
     this.STATUSES = STATUSES
   },
-
   head () {
     return createSEOTags({
       title: 'Unizen: Smart Exchange Ecosystem - Blog',

@@ -69,9 +69,17 @@ export default {
     '@nuxtjs/proxy'
   ],
 
-  proxy: [
-    'https://medium.com/feed'
-  ],
+  proxy: {
+    '/medium': {
+      target: 'https://medium.com/feed/@unizen-io',
+      pathRewrite: {
+        '^/medium': ''
+      },
+      changeOrigin: true,
+      ws: false,
+      followRedirects: true
+    }
+  },
 
   bootstrapVue: {
     bootstrapCSS: false, // Or `css: false`
@@ -79,7 +87,9 @@ export default {
   },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
+  axios: {
+    proxy: true
+  },
 
   // googleAnalytics: {
   //   id: process.env.NUXT_ENV_ANALYTICS_ID,
