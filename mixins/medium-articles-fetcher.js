@@ -1,13 +1,14 @@
 
 import STATUSES from '@/utils/constants/statuses'
 import transformMediumArticles from '@/utils/helpers/transform-medium-articles'
+import FEED_URL_PROXIED from '@/config/medium.js'
 
 const mediumArticlesFetcherMixin = {
   async fetch () {
     try {
       this.status = STATUSES.PENDING
       const data = await this.$axios.$get(
-        '/medium'
+        FEED_URL_PROXIED
       )
       this.articles = transformMediumArticles(data)
       this.status = STATUSES.RESOLVED

@@ -1,5 +1,6 @@
 import { createSEOTags } from './utils/helpers/seo'
 import { PRODUCTION_DOMAIN } from './config'
+import { FEED_URL } from './config/medium.js'
 
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
@@ -71,7 +72,7 @@ export default {
 
   proxy: {
     '/medium': {
-      target: 'https://medium.com/feed/@unizen-io',
+      target: FEED_URL,
       pathRewrite: {
         '^/medium': ''
       },
