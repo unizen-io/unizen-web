@@ -1,23 +1,38 @@
 
-// TODO: could be better using Vue built-in utilities
-const transformMediumArticles = (data) => {
-  const res = data.items // This is an array with the content. No feed, no info about author etc..
-  let articles = res.filter(item => item.categories.length > 0) // Filter for actual posts. Comments don't have categories, therefore can filter for items with categories bigger than 0
+import DOMParser from 'universal-dom-parser'
 
-  articles =
-    articles
-      .map(article => ({
-        thumbnail: article.thumbnail,
-        title: article.title,
-        content: article.content,
-        publishedDate: article.pubDate,
-        link: article.link
-      }))
-      .sort(function (a, b) {
-        return new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
-      })
+const transformMediumArticles = (data) => {
+  const parser = new DOMParser()
+  const xml = parser.parseFromString(data, 'text/xml')
+  let articles = []
+  const itemsList = xml.getElementsByTagName('item')
+  for (let i = 0; i < itemsList.length; i++) {
+    const item = itemsList[i]
+    articles.push({
+      thumbnail: getThumbnailImage(cleanCDATA(item.getElementsByTagName('content:encoded')[0].innerHTML)),
+      title: cleanCDATA(item.getElementsByTagName('title')[0].innerHTML).toUpperCase(),
+      publishedDate: item.getElementsByTagName('pubDate')[0].innerHTML,
+      link: item.getElementsByTagName('link')[0].innerHTML,
+      content: item.getElementsByTagName('content:encoded')[0].innerHTML
+    })
+  }
+  articles = articles.sort(function (a, b) {
+    return new Date(b.publishedDate).getTime() - new Date(a.publishedDate).getTime()
+  })
 
   return articles
+}
+
+const cleanCDATA = content => content.replace('<![CDATA[', '').replace(']]>', '')
+
+const getThumbnailImage = (content) => {
+  const pos1 = content.toLowerCase().indexOf('src="')
+  const pos2 = pos1 && content.toLowerCase().indexOf('"', pos1 + 5)
+  if (pos1 && pos2) {
+    return content.substring(pos1 + 5, pos2)
+  } else {
+    return undefined
+  }
 }
 
 export default transformMediumArticles

@@ -65,8 +65,21 @@ export default {
     '@nuxtjs/sitemap',
     'bootstrap-vue/nuxt',
     '@nuxtjs/axios',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@nuxtjs/proxy'
   ],
+
+  proxy: {
+    '/medium': {
+      target: 'https://medium.com/feed/@unizen-io',
+      pathRewrite: {
+        '^/medium': ''
+      },
+      changeOrigin: true,
+      ws: false,
+      followRedirects: true
+    }
+  },
 
   bootstrapVue: {
     bootstrapCSS: false, // Or `css: false`
@@ -74,7 +87,9 @@ export default {
   },
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
-  axios: {},
+  axios: {
+    proxy: true
+  },
 
   // googleAnalytics: {
   //   id: process.env.NUXT_ENV_ANALYTICS_ID,
@@ -91,7 +106,13 @@ export default {
 
   // Build Configuration (https://go.nuxtjs.dev/config-build)
   build: {
-    analyze: true
+    analyze: true,
+    extend (config, { isDev, isClient }) {
+      const webpack = require('webpack')
+      config.plugins.push(
+        new webpack.IgnorePlugin(/canvas/, /jsdom$/)
+      )
+    }
   },
 
   styleResources: {
