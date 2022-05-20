@@ -26,6 +26,10 @@ export default {
       src: '~/plugins/vue-confetti.js',
       mode: 'client'
     },
+    {
+      src: '~/plugins/twitter.js',
+      mode: 'client'
+    },
     '~/plugins/aos.client.js'
   ],
 
