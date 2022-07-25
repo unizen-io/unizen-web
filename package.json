@@ -38,7 +38,7 @@
     "@tailwindcss/postcss7-compat": "npm:@tailwindcss/postcss7-compat@^2.2.9",
     "autoprefixer": "^9.8.6",
     "babel-eslint": "^10.1.0",
-    "chart.js": "^2.9.4",
+    "chart.js": "^3.8.2",
     "date-fns": "^2.23.0",
     "eslint": "^7.32.0",
     "eslint-plugin-nuxt": "^1.0.0",
