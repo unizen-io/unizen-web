@@ -1,15 +1,15 @@
 <template>
   <div class="py-12 my-12">
     <div class="pb-12">
-      <div class="container mx-auto px-4">
+      <div class="container px-4 mx-auto">
         <h1
-          class="text-center pt-16 pb-24 text-tertiary"
+          class="pt-16 pb-24 text-center text-tertiary"
           data-aos="fade-in"
           data-aos-duration="2000"
         >
           Meet the executive team.
         </h1>
-        <div class="flex flex-wrap mb-12 justify-around">
+        <div class="flex flex-wrap justify-around mb-12">
           <div
             v-for="(member, index) in TEAM"
             :key="member.name"
@@ -17,18 +17,18 @@
             data-aos="fade-in"
             :data-aos-duration="0 + 1000 * (index % 1)"
           >
-            <div class="overlay-container text-center">
+            <div class="text-center overlay-container">
               <nuxt-img
-                class="team mx-auto p-1 rounded-full"
+                class="p-1 mx-auto rounded-full team"
                 format="webp"
                 width="187"
                 height="187"
                 :src="member.img"
                 :alt="member.name"
               />
-              <div class="overlay mt-8 rounded">
-                <div class="pt-4 text text-tertiary font-bold">
-                  <ul class="text-center social-networks bounce mt-1">
+              <div class="mt-8 rounded overlay">
+                <div class="pt-4 font-bold text text-tertiary">
+                  <ul class="mt-1 text-center social-networks bounce">
                     <li v-if="member.telegram !== ''">
                       <a :href="member.telegram" class="icon-telegram">Telegram</a>
                     </li>
@@ -46,7 +46,7 @@
               </div>
             </div>
             <div>
-              <h5 class="text-xl text-center pt-4 team text-tertiary font-bold">
+              <h5 class="pt-4 text-xl font-bold text-center team text-tertiary">
                 {{ member.name }}
               </h5>
               <p class="text-center">
@@ -61,9 +61,9 @@
       style="background-color: #EFEFEF;"
       class="my-12"
     >
-      <div class="container mx-auto px-8">
+      <div class="container px-8 mx-auto">
         <h1
-          class="text-center pt-16 pb-24 text-tertiary"
+          class="pt-16 pb-24 text-center text-tertiary"
           data-aos="fade-in"
           data-aos-duration="2000"
         >
@@ -72,7 +72,7 @@
         <div
           v-for="(advisor, index) in ADVISORS"
           :key="advisor.name"
-          class="mb-12 flex flex-wrap"
+          class="flex flex-wrap mb-12"
           data-aos="fade-up"
           data-aos-duration="2000"
         >
@@ -82,7 +82,7 @@
           >
             <div class="overlay-container">
               <nuxt-img
-                class="team mx-auto p-1 rounded-full"
+                class="p-1 mx-auto rounded-full team"
                 format="webp"
                 loading="lazy"
                 width="187"
@@ -90,9 +90,9 @@
                 :src="advisor.img"
                 :alt="advisor.name"
               />
-              <div class="overlay mt-8 rounded">
-                <div class="pt-4 text text-tertiary font-bold">
-                  <ul class="text-center social-networks bounce mt-1">
+              <div class="mt-8 rounded overlay">
+                <div class="pt-4 font-bold text text-tertiary">
+                  <ul class="mt-1 text-center social-networks bounce">
                     <li v-if="advisor.telegram !== ''">
                       <a :href="advisor.telegram" class="icon-telegram">Telegram</a>
                     </li>
@@ -110,10 +110,10 @@
               </div>
             </div>
             <div>
-              <h5 class="text-xl text-center pt-4 team text-tertiary font-bold">
+              <h5 class="pt-4 text-xl font-bold text-center team text-tertiary">
                 {{ advisor.name }}
               </h5>
-              <p class="text-center mb-4">
+              <p class="mb-4 text-center">
                 {{ advisor.role }}
               </p>
             </div>
@@ -137,15 +137,6 @@ import { PAGES } from '@/utils/constants/links'
 export default {
   created () {
     this.TEAM = [
-      {
-        name: 'Brandon Dallman',
-        img: '/img/team/brandon.png',
-        role: 'Chief Marketing Officer',
-        linkedin: 'https://www.linkedin.com/in/brandon-dallmann-54b78212',
-        twitter: 'https://twitter.com/cryptfaux',
-        github: '',
-        telegram: 'https://t.me/cryptfaux'
-      },
       {
         name: 'Martin Granström',
         img: '/img/team/martin.png',
