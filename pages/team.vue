@@ -30,16 +30,16 @@
                 <div class="pt-4 font-bold text text-tertiary">
                   <ul class="mt-1 text-center social-networks bounce">
                     <li v-if="member.telegram !== ''">
-                      <a :href="member.telegram" class="icon-telegram">Telegram</a>
+                      <a :href="member.telegram" class="icon-telegram" target="_blank">Telegram</a>
                     </li>
                     <li v-if="member.linkedin !== ''">
-                      <a :href="member.linkedin" class="mb-4 icon-linkedin">LinkedIn</a>
+                      <a :href="member.linkedin" class="mb-4 icon-linkedin" target="_blank">LinkedIn</a>
                     </li>
                     <li v-if="member.twitter !== ''">
-                      <a :href="member.twitter" class="icon-twitter">Twitter</a>
+                      <a :href="member.twitter" class="icon-twitter" target="_blank">Twitter</a>
                     </li>
                     <li v-if="member.github !== ''">
-                      <a :href="member.github" class="icon-github">GitHub</a>
+                      <a :href="member.github" class="icon-github" target="_blank">GitHub</a>
                     </li>
                   </ul>
                 </div>
@@ -94,16 +94,16 @@
                 <div class="pt-4 font-bold text text-tertiary">
                   <ul class="mt-1 text-center social-networks bounce">
                     <li v-if="advisor.telegram !== ''">
-                      <a :href="advisor.telegram" class="icon-telegram">Telegram</a>
+                      <a :href="advisor.telegram" class="icon-telegram" target="_blank">Telegram</a>
                     </li>
                     <li v-if="advisor.linkedin !== ''">
-                      <a :href="advisor.linkedin" class="mb-4 icon-linkedin">LinkedIn</a>
+                      <a :href="advisor.linkedin" class="mb-4 icon-linkedin" target="_blank">LinkedIn</a>
                     </li>
                     <li v-if="advisor.twitter !== ''">
-                      <a :href="advisor.twitter" class="icon-twitter">Twitter</a>
+                      <a :href="advisor.twitter" class="icon-twitter" target="_blank">Twitter</a>
                     </li>
                     <li v-if="advisor.github !== ''">
-                      <a :href="advisor.github" class="icon-github">GitHub</a>
+                      <a :href="advisor.github" class="icon-github" target="_blank">GitHub</a>
                     </li>
                   </ul>
                 </div>
@@ -157,7 +157,7 @@ export default {
       },
       {
         name: 'Tom Sweeney',
-        img: '/img/team/tom.png',
+        img: '/img/team/tom_sweeney_2.JPG',
         role: 'Chief Operating Officer',
         linkedin: 'https://www.linkedin.com/in/tomwsweeney/',
         twitter: 'https://twitter.com/jun_capital',
@@ -165,13 +165,13 @@ export default {
         telegram: 'https://t.me/tomsweeney'
       },
       {
-        name: 'James Taylor',
-        img: '/img/team/james.png',
-        role: 'Chief Business Development Officer',
-        linkedin: 'https://www.linkedin.com/in/jamesroberttaylor1/',
-        twitter: '',
+        name: 'Michael Healy',
+        img: '/img/team/michaelHealy.JPG',
+        role: 'Chief Strategy Officer',
+        linkedin: 'https://www.linkedin.com/in/michaelhealyco/',
+        twitter: 'https://twitter.com/michaelhealyco',
         github: '',
-        telegram: 'https://t.me/googleflip'
+        telegram: 'https://t.me/michael'
       }
     ]
 
