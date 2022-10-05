@@ -30,16 +30,16 @@
                 <div class="pt-4 font-bold text text-tertiary">
                   <ul class="mt-1 text-center social-networks bounce">
                     <li v-if="member.telegram !== ''">
-                      <a :href="member.telegram" class="icon-telegram">Telegram</a>
+                      <a :href="member.telegram" class="icon-telegram" target="_blank">Telegram</a>
                     </li>
                     <li v-if="member.linkedin !== ''">
-                      <a :href="member.linkedin" class="mb-4 icon-linkedin">LinkedIn</a>
+                      <a :href="member.linkedin" class="mb-4 icon-linkedin" target="_blank">LinkedIn</a>
                     </li>
                     <li v-if="member.twitter !== ''">
-                      <a :href="member.twitter" class="icon-twitter">Twitter</a>
+                      <a :href="member.twitter" class="icon-twitter" target="_blank">Twitter</a>
                     </li>
                     <li v-if="member.github !== ''">
-                      <a :href="member.github" class="icon-github">GitHub</a>
+                      <a :href="member.github" class="icon-github" target="_blank">GitHub</a>
                     </li>
                   </ul>
                 </div>
@@ -157,7 +157,7 @@ export default {
       },
       {
         name: 'Tom Sweeney',
-        img: '/img/team/tom_sweeney.JPG',
+        img: '/img/team/tom_sweeney_2.JPG',
         role: 'Chief Operating Officer',
         linkedin: 'https://www.linkedin.com/in/tomwsweeney/',
         twitter: 'https://twitter.com/jun_capital',
