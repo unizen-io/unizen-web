@@ -89,6 +89,7 @@
           class="flex-grow p-4 sm:w-1/2 md:w-1/3"
         >
           <b-card
+            href="https://pancakeswap.finance/"
             class="h-full transition duration-500 transform shadow-sm cursor-pointer bg-unizenGray hover:border-sifchainYellow hover:bg-sifchainYellow-light bg-opacity-20 backdrop-blur"
             @mouseover="pancakeHoverCursor = true"
             @mouseleave="pancakeHoverCursor = false"
@@ -107,6 +108,9 @@
             </p>
             <p class="mb-4 -mt-5 text-base text-center text-tertiary">
               Decentralized Exchange Module
+            </p>
+            <p class="text-base text-center text-tertiary">
+              The moon is made of pancakes.
             </p>
           </b-card>
         </div>
