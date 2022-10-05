@@ -1,10 +1,10 @@
 <template>
   <div style="background: #F3F4F3;">
-    <div class="py-12 container mx-auto px-4">
+    <div class="container px-4 py-12 mx-auto">
       <div class="text-center">
         <!-- <h3
           style="font-family: 'D DIN';"
-          class="font-base px-4 text-tertiary"
+          class="px-4 font-base text-tertiary"
         >
           Unizen Innovation Powered by:
         </h3>
@@ -20,7 +20,7 @@
       </div>
       <div class="">
         <p
-          class="text-center text-xl w-8/12 mx-auto text-tertiary"
+          class="w-8/12 mx-auto text-xl text-center text-tertiary"
           data-aos="fade-in"
           data-aos-duration="3000"
         >
@@ -31,87 +31,96 @@
         <div
           class="flex-grow p-4 sm:w-1/2 md:w-1/3"
         >
-          <b-card
-            class="transform cursor-pointer h-full shadow-sm bg-unizenGray hover:border-binanceYellow hover:bg-binanceYellow-light transition duration-500 bg-opacity-20 backdrop-blur"
-            @mouseover="binanceHoverCursor = true"
-            @mouseleave="binanceHoverCursor = false"
-          >
-            <nuxt-img
-              class="m-auto w-40 h-40"
-              format="webp"
-              loading="lazy"
-              width="276"
-              height="276"
-              :src="binanceHover"
-              alt="Binance performance"
-            />
-            <p class="pt-7 text-xl text-center mb-4 text-tertiary">
-              <b>Binance Cloud</b>
-            </p>
-            <p class="-mt-5 text-base text-center mb-4 text-tertiary">
-              Centralized Exchange Module
-            </p>
-            <p class="text-center text-base text-tertiary">
-              Tap into Binance Liquidity on the Unizen Ecosystem and earn trading discounts by holding ZCX.
-            </p>
-          </b-card>
+          <a href="https://trade.unizen.io/trade" target="_blank">
+            <b-card
+              class="h-full transition duration-500 transform shadow-sm cursor-pointer bg-unizenGray hover:border-binanceYellow hover:bg-binanceYellow-light bg-opacity-20 backdrop-blur"
+              @mouseover="binanceHoverCursor = true"
+              @mouseleave="binanceHoverCursor = false"
+            >
+              <nuxt-img
+                class="w-40 h-40 m-auto"
+                format="webp"
+                loading="lazy"
+                width="276"
+                height="276"
+                :src="binanceHover"
+                alt="Binance performance"
+              />
+              <p class="mb-4 text-xl text-center pt-7 text-tertiary">
+                <b>Binance Cloud</b>
+              </p>
+              <p class="mb-4 -mt-5 text-base text-center text-tertiary">
+                Centralized Exchange Module
+              </p>
+              <p class="text-base text-center text-tertiary">
+                Tap into Binance Liquidity on the Unizen Ecosystem and earn trading discounts by holding ZCX.
+              </p>
+            </b-card>
+          </a>
         </div>
         <div
           class="flex-grow p-4 sm:w-1/2 md:w-1/3"
         >
-          <b-card
-            href="https://www.uniswap.com"
-            class="transform cursor-pointer h-full shadow-sm bg-unizenGray hover:border-uniswapPink hover:bg-uniswapPink-light transition duration-500 bg-opacity-20 backdrop-blur"
-            @mouseover="uniswapHoverCursor = true"
-            @mouseleave="uniswapHoverCursor = false"
-          >
-            <nuxt-img
-              class="m-auto w-40 h-40"
-              format="webp"
-              loading="lazy"
-              width="276"
-              height="276"
-              :src="uniswapHover"
-              alt="Uniswap"
-            />
-            <p class="pt-7 text-xl text-center mb-4 text-tertiary">
-              <b>Uniswap</b>
-            </p>
-            <p class="-mt-5 text-base text-center mb-4 text-tertiary">
-              Decentralized Exchange Module
-            </p>
-            <p class="text-center text-base text-tertiary">
-              Interact and find cost efficient trades on the popular and battle-tested Uniswap Exchange.
-            </p>
-          </b-card>
+          <a
+            target="_blank"
+            href="https://www.uniswap.com/">
+            <b-card
+              class="h-full transition duration-500 transform shadow-sm cursor-pointer bg-unizenGray hover:border-uniswapPink hover:bg-uniswapPink-light bg-opacity-20 backdrop-blur"
+              @mouseover="uniswapHoverCursor = true"
+              @mouseleave="uniswapHoverCursor = false"
+            >
+              <nuxt-img
+                class="w-40 h-40 m-auto"
+                format="webp"
+                loading="lazy"
+                width="276"
+                height="276"
+                :src="uniswapHover"
+                alt="Uniswap"
+              />
+              <p class="mb-4 text-xl text-center pt-7 text-tertiary">
+                <b>Uniswap</b>
+              </p>
+              <p class="mb-4 -mt-5 text-base text-center text-tertiary">
+                Decentralized Exchange Module
+              </p>
+              <p class="text-base text-center text-tertiary">
+                Interact and find cost efficient trades on the popular and battle-tested Uniswap Exchange.
+              </p>
+            </b-card>
+          </a>
         </div>
         <div
           class="flex-grow p-4 sm:w-1/2 md:w-1/3"
         >
-          <b-card
-            class="transform cursor-pointer h-full shadow-sm bg-unizenGray hover:border-sifchainYellow hover:bg-sifchainYellow-light transition duration-500 bg-opacity-20 backdrop-blur"
-            @mouseover="sifchainHoverCursor = true"
-            @mouseleave="sifchainHoverCursor = false"
-          >
-            <nuxt-img
-              class="m-auto w-40 h-40"
-              format="webp"
-              loading="lazy"
-              width="276"
-              height="276"
-              :src="sifchainHover"
-              alt="Sifchain"
-            />
-            <p class="pt-7 text-xl text-center mb-4 text-tertiary">
-              <b>SifChain</b>
-            </p>
-            <p class="-mt-5 text-base text-center mb-4 text-tertiary">
-              Decentralized Exchange Module
-            </p>
-            <p class="text-center text-base text-tertiary">
-              Aggregate trades against omni-chain decentralized liquidity enabled by our SifChain module.
-            </p>
-          </b-card>
+          <a
+            target="_blank"
+            href="https://pancakeswap.finance/">
+            <b-card
+              class="h-full transition duration-500 transform shadow-sm cursor-pointer bg-unizenGray hover:border-sifchainYellow hover:bg-sifchainYellow-light bg-opacity-20 backdrop-blur"
+              @mouseover="pancakeHoverCursor = true"
+              @mouseleave="pancakeHoverCursor = false"
+            >
+              <nuxt-img
+                class="w-40 h-40 m-auto"
+                format="webp"
+                loading="lazy"
+                width="276"
+                height="276"
+                :src="pancakeHover"
+                alt="PancakeSwap"
+              />
+              <p class="mb-4 text-xl text-center pt-7 text-tertiary">
+                <b>PancakeSwap</b>
+              </p>
+              <p class="mb-4 -mt-5 text-base text-center text-tertiary">
+                Decentralized Exchange Module
+              </p>
+              <p class="text-base text-center text-tertiary">
+                The moon is made of pancakes.
+              </p>
+            </b-card>
+          </a>
         </div>
       </div>
       <br>
@@ -128,9 +137,9 @@ export default {
       uniswapFirst: '/img/unizen_modules/uniswap.png',
       uniswapSecond: '/img/unizen_modules/uniswap2.png',
       uniswapHoverCursor: false,
-      sifchainFirst: '/img/unizen_modules/sifchain.png',
-      sifchainSecond: '/img/unizen_modules/sifchain2.png',
-      sifchainHoverCursor: false,
+      pancakeFirst: '/img/unizen_modules/pancake.svg',
+      pancakeSecond: '/img/unizen_modules/pancake2.svg',
+      pancakeHoverCursor: false,
       binanceFirst: '/img/unizen_modules/binance.png',
       binanceSecond: '/img/unizen_modules/binance2.png',
       binanceHoverCursor: false
@@ -144,11 +153,11 @@ export default {
         return this.uniswapSecond
       }
     },
-    sifchainHover () {
-      if (this.sifchainHoverCursor === true) {
-        return this.sifchainFirst
+    pancakeHover () {
+      if (this.pancakeHoverCursor === true) {
+        return this.pancakeFirst
       } else {
-        return this.sifchainSecond
+        return this.pancakeSecond
       }
     },
     binanceHover () {
