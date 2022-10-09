@@ -163,15 +163,6 @@ export default {
         twitter: 'https://twitter.com/jun_capital',
         github: '',
         telegram: 'https://t.me/tomsweeney'
-      },
-      {
-        name: 'Michael Healy',
-        img: '/img/team/michaelHealy.JPG',
-        role: 'Chief Strategy Officer',
-        linkedin: 'https://www.linkedin.com/in/michaelhealyco/',
-        twitter: 'https://twitter.com/michaelhealyco',
-        github: '',
-        telegram: 'https://t.me/michael'
       }
     ]
 
