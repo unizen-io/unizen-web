@@ -52,7 +52,7 @@
     "three": "^0.145.0",
     "vue-chartjs": "^3.5.1",
     "vue-confetti": "^2.3.0",
-    "vue-gtag": "^1.16.1"
+    "vue-gtag": "^2.0.1"
   },
   "resolutions": {
     "is-svg": "4.2.2"
