@@ -11696,10 +11696,10 @@ vue-client-only@^2.0.0:
   resolved "https://registry.yarnpkg.com/vue-client-only/-/vue-client-only-2.1.0.tgz#1a67a47b8ecacfa86d75830173fffee3bf8a4ee3"
   integrity sha512-vKl1skEKn8EK9f8P2ZzhRnuaRHLHrlt1sbRmazlvsx6EiC3A8oWF8YCBrMJzoN+W3OnElwIGbVjsx6/xelY1AA==
 
-vue-confetti@^2.2.2:
-  version "2.2.2"
-  resolved "https://registry.yarnpkg.com/vue-confetti/-/vue-confetti-2.2.2.tgz#aa79f2cc1550382ede26faaee7ae5f67b110a023"
-  integrity sha512-6VMyfeDVkQ09Bdf2UKdjUIkXF3Jx7WUmoy4lkF9ohuVhw8J0vWf64nhdh8YqTPCxzrVnUKzoyKPyuxonaKtkSg==
+vue-confetti@^2.3.0:
+  version "2.3.0"
+  resolved "https://registry.yarnpkg.com/vue-confetti/-/vue-confetti-2.3.0.tgz#c8fbb0081a16ad8e5756ec63de8f454583ce054b"
+  integrity sha512-zmPniVzBKv0ie/BEXBR6Isi08hYSd6lS18b8VduG5BzZ2tv6bO/rlwISg+IpGY2XsqAFTXFdTC28YR+UPocnAw==
 
 vue-eslint-parser@^9.0.1, vue-eslint-parser@^9.0.3:
   version "9.1.0"
