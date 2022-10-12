@@ -41,7 +41,7 @@
     "chart.js": "^3.9.1",
     "date-fns": "^2.23.0",
     "eslint": "^7.32.0",
-    "eslint-plugin-nuxt": "^1.0.0",
+    "eslint-plugin-nuxt": "^4.0.0",
     "hooper": "^0.3.4",
     "nuxt": "^2.15.8",
     "nuxt-socket-io": "^2.0.3",
