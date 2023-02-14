@@ -8,7 +8,7 @@
         style="font-family: Montserrat Medium !important;"
         class="py-12 mt-12 font-bold text-center contact text-tertiary"
       >
-        Contact
+        Contact us
       </h1>
       <ErrorMessage
         v-if="status === STATUSES.REJECTED"
