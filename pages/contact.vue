@@ -19,7 +19,7 @@
         class="py-12"
       >
         <b-card class="shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
-          We would love to talk to you about any business inquiry or partner proposal. If this relates to support for any of our exchange modules, please reach out to {{ `support@${PRODUCTION_DOMAIN}` }}.
+          We would love to talk to you about any business inquiry or partner proposal. If this relates to support for any of our exchange modules, please reach out to {{ `support@${PRODUCTION_DOMAIN}` }}
         </b-card>
         <br>
         <b-form
