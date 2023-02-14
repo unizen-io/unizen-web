@@ -9,7 +9,7 @@
     "generate": "nuxt generate",
     "lint:js": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint": "yarn lint:js",
-    "vercel-build": "yarn global add node-gyp sharp",
+    "vercel-build": "export NODE_OPTIONS=--openssl-legacy-provider; yarn global add node-gyp sharp",
     "analyze-bundle": "yarn nuxt build --analyze"
   },
   "dependencies": {
