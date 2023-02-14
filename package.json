@@ -55,6 +55,7 @@
     "vue-gtag": "^1.16.1"
   },
   "resolutions": {
-    "is-svg": "4.2.2"
+    "is-svg": "4.2.2",
+    "postcss-nesting": "7.0.1"
   }
 }
