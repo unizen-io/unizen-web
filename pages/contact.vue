@@ -3,14 +3,12 @@
     style="background-image: linear-gradient(to bottom, #f5f5f5, #f4f4f4, #f2f3f2, #f1f1f1, #f0f0f0);"
     class="min-h-screen"
   >
-    <div class="max-w-5xl mx-auto px-8 pt-24 pb-12">
+    <div class="max-w-5xl px-8 pt-24 pb-12 mx-auto">
       <h1
         style="font-family: Montserrat Medium !important;"
-        class="contact font-bold py-12 mt-12 text-center text-tertiary"
-        data-aos="fade-in"
-        data-aos-duration="2000"
+        class="py-12 mt-12 font-bold text-center contact text-tertiary"
       >
-        Contact.
+        Contact
       </h1>
       <ErrorMessage
         v-if="status === STATUSES.REJECTED"
@@ -18,8 +16,6 @@
       />
       <div
         v-else
-        data-aos="fade-up"
-        data-aos-duration="2000"
         class="py-12"
       >
         <b-card class="shadow-sm bg-unizenGray bg-opacity-20 backdrop-blur">
@@ -77,7 +73,7 @@
     </div>
     <h1
       v-if="status === STATUSES.RESOLVED"
-      class="text-center py-12 px-6 text-primary"
+      class="px-6 py-12 text-center text-primary"
     >
       Thank you, we got your submission!
     </h1>
